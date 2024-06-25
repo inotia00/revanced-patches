@@ -33,7 +33,9 @@
             android:searchIcon="@null"
             android:queryHint="@string/revanced_extended_settings_search_title"
             android:layout_margin="5dp"
-            android:padding="5dp" />
+			android:queryBackground="@android:color/transparent"
+			app:queryBackground="@android:color/transparent"
+		/>
 
         <FrameLayout
             android:id="@+id/revanced_settings_fragments"
