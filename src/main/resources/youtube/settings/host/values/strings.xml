@@ -6,7 +6,7 @@
 
     <!-- Shared PreferenceScreen -->
     <string name="revanced_extended_settings_title">ReVanced Extended</string>
-    <string name="revanced_extended_settings_search_title">Search settings</string>
+    <string name="revanced_extended_settings_search_title">Search %s</string>
 
     <!-- Shared Category -->
     <string name="revanced_preference_category_experimental_flag">Experimental Flags</string>
