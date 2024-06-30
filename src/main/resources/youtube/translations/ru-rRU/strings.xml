@@ -82,6 +82,10 @@
     <string name="revanced_alt_thumbnail_stills_time_entry_3">Конец видео</string>
     <string name="revanced_alt_thumbnail_dearrow_error">DeArrow временно недоступен. (код состояния: %s)</string>
     <string name="revanced_alt_thumbnail_dearrow_error_generic">DeArrow временно недоступен.</string>
+    <string name="revanced_alt_thumbnail_alternative_domain_title">Использовать альтернативный домен картинок</string>
+    <string name="revanced_alt_thumbnail_alternative_domain_summary">Использовать \"yt4.ggpht.com\" для аватарок/постов сообщества вместо заблокированного в некоторых странах \"yt3.ggpht.com\"</string>
+
+
     <!-- PreferenceScreen: Feed -->
     <string name="revanced_preference_screen_feed_title">Лента</string>
     <string name="revanced_hide_album_card_title">Карточки альбомов</string>

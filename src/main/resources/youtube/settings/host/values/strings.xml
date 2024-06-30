@@ -89,7 +89,8 @@ Tap here to learn more about DeArrow."</string>
     <string name="revanced_alt_thumbnail_stills_time_entry_3">End of video</string>
     <string name="revanced_alt_thumbnail_dearrow_error">DeArrow temporarily unavailable. (status code: %s)</string>
     <string name="revanced_alt_thumbnail_dearrow_error_generic">DeArrow temporarily unavailable.</string>
-
+    <string name="revanced_alt_thumbnail_alternative_domain_title">Use alternative domain for all pictures</string>
+    <string name="revanced_alt_thumbnail_alternative_domain_summary">Use \"yt4.ggpht.com\" for avatars/community posts instead of blocked in some countries \"yt3.ggpht.com\"</string>
 
     <!-- PreferenceScreen: Feed -->
     <string name="revanced_preference_screen_feed_title">Feed</string>
