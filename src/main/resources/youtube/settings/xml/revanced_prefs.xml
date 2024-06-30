@@ -30,7 +30,8 @@
         <Preference android:title="@string/revanced_alt_thumbnail_stills_about_title" android:selectable="false" android:summary="@string/revanced_alt_thumbnail_stills_about_summary" />
         <SwitchPreference android:title="@string/revanced_alt_thumbnail_stills_fast_title" android:key="revanced_alt_thumbnail_stills_fast" android:summaryOn="@string/revanced_alt_thumbnail_stills_fast_summary_on" android:summaryOff="@string/revanced_alt_thumbnail_stills_fast_summary_off" />
         <ListPreference android:entries="@array/revanced_alt_thumbnail_stills_time_entries" android:title="@string/revanced_alt_thumbnail_stills_time_title" android:key="revanced_alt_thumbnail_stills_time" android:entryValues="@array/revanced_alt_thumbnail_stills_time_entry_values" />
-        <SwitchPreference android:title="@string/revanced_alt_thumbnail_alternative_domain_title" android:key="revanced_alt_thumbnail_alternative_domain" android:summary="@string/revanced_alt_thumbnail_alternative_domain_summary"/>
+        <SwitchPreference android:title="@string/revanced_alt_thumbnail_alternative_domain_enable_title" android:key="revanced_alt_thumbnail_alternative_domain_enable" android:summary="@string/revanced_alt_thumbnail_alternative_domain_enable_summary"/>
+        <app.revanced.integrations.shared.settings.preference.ResettableEditTextPreference android:hint="yt4.ggpht.com" android:title="@string/revanced_alt_thumbnail_alternative_domain_title" android:key="revanced_alt_thumbnail_alternative_domain_name" android:summary="@string/revanced_alt_thumbnail_alternative_domain_summary" android:inputType="textUri"/>
     </PreferenceScreen>PREFERENCE_SCREEN: ALTERNATIVE_THUMBNAILS -->
 
 

@@ -82,8 +82,10 @@
     <string name="revanced_alt_thumbnail_stills_time_entry_3">Конец видео</string>
     <string name="revanced_alt_thumbnail_dearrow_error">DeArrow временно недоступен. (код состояния: %s)</string>
     <string name="revanced_alt_thumbnail_dearrow_error_generic">DeArrow временно недоступен.</string>
-    <string name="revanced_alt_thumbnail_alternative_domain_title">Использовать альтернативный домен картинок</string>
-    <string name="revanced_alt_thumbnail_alternative_domain_summary">Использовать \"yt4.ggpht.com\" для аватарок/постов сообщества вместо заблокированного в некоторых странах \"yt3.ggpht.com\"</string>
+    <string name="revanced_alt_thumbnail_alternative_domain_enable_title">Использовать альтернативный домен для оригинальных картинок</string>
+    <string name="revanced_alt_thumbnail_alternative_domain_enable_summary">Этот параметр позволяет заменить домен, с которого YouTube получает оригинальные аватары, изображения публикаций сообщества и т.д.</string>
+    <string name="revanced_alt_thumbnail_alternative_domain_title">Установить домен</string>
+    <string name="revanced_alt_thumbnail_alternative_domain_summary">ВАЖНО: вводите только деменное имя, без \"https\:\/\/\"</string>
 
 
     <!-- PreferenceScreen: Feed -->
