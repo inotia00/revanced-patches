@@ -25,7 +25,7 @@
                 app:title="@string/revanced_extended_settings_title" />
         </FrameLayout>
 
-        <SearchView
+        <android.widget.SearchView
             android:id="@+id/search_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -33,6 +33,7 @@
             android:searchIcon="@null"
             android:queryBackground="@null"
             android:layout_margin="5dp"
+            android:theme="@style/revanced_searchbar_cursor"
             android:padding="5dp" />
 
         <FrameLayout

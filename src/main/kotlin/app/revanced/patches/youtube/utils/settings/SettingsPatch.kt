@@ -162,6 +162,15 @@ object SettingsPatch : BaseResourcePatch(
             context.copyResources("youtube/settings", resourceGroup)
         }
 
+        arrayOf(
+            ResourceGroup(
+                "drawable",
+                "revanced_cursor.xml",
+            )
+        ).forEach { resourceGroup ->
+            context.copyResources("youtube/settings", resourceGroup)
+        }
+
         /**
          * initialize ReVanced Extended Settings
          */
