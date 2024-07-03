@@ -150,6 +150,10 @@ object SettingsPatch : BaseResourcePatch(
 
         arrayOf(
             ResourceGroup(
+                "drawable",
+                "revanced_cursor.xml",
+            ),
+            ResourceGroup(
                 "layout",
                 "revanced_settings_preferences_category.xml",
                 "revanced_settings_with_toolbar.xml",
@@ -157,15 +161,6 @@ object SettingsPatch : BaseResourcePatch(
             ResourceGroup(
                 "xml",
                 "revanced_prefs.xml",
-            )
-        ).forEach { resourceGroup ->
-            context.copyResources("youtube/settings", resourceGroup)
-        }
-
-        arrayOf(
-            ResourceGroup(
-                "drawable",
-                "revanced_cursor.xml",
             )
         ).forEach { resourceGroup ->
             context.copyResources("youtube/settings", resourceGroup)
