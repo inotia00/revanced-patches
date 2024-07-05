@@ -91,8 +91,6 @@ Tap here to learn more about DeArrow."</string>
     <string name="revanced_alt_thumbnail_dearrow_error_generic">DeArrow temporarily unavailable.</string>
     <string name="revanced_alt_thumbnail_use_alternative_domain_title">Use alternative domain for images</string>
     <string name="revanced_alt_thumbnail_use_alternative_domain_summary">Replaces the domain that is blocked in some regions so that video thumbnails, channel avatars, community post images, etc. can be received.</string>
-    <string name="revanced_alt_thumbnail_alternative_domain_title">Alternative domain</string>
-    <string name="revanced_alt_thumbnail_alternative_domain_summary">The domain to fetch images from.\nNote: Only enter the domain name, i.e., without the \"https\:\/\/\" prefix.</string>
 
     <!-- PreferenceScreen: Feed -->
     <string name="revanced_preference_screen_feed_title">Feed</string>
