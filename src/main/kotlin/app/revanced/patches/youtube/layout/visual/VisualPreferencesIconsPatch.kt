@@ -250,6 +250,7 @@ object VisualPreferencesIconsPatch : BaseResourcePatch(
         "revanced_overlay_button_always_repeat",
         "revanced_overlay_button_copy_video_url",
         "revanced_overlay_button_copy_video_url_timestamp",
+        "revanced_overlay_button_mute_volume",
         "revanced_overlay_button_external_downloader",
         "revanced_overlay_button_speed_dialog",
         "revanced_overlay_button_time_ordered_playlist",

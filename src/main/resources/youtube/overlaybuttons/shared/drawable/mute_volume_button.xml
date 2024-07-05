@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector android:constantSize="true"
+		  xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:state_activated="true">
+		<bitmap android:src="@drawable/revanced_overlay_button_mute_volume" android:tint="@color/yt_white1"/>
+	</item>
+	<item android:state_activated="false">
+		<bitmap android:src="@drawable/revanced_overlay_button_mute_volume_off" android:tint="@color/yt_white1"/>
+	</item>
+</selector>
