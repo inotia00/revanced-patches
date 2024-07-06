@@ -864,7 +864,7 @@ Tap and hold to copy video URL with timestamp."</string>
     <string name="revanced_overlay_button_copy_video_url_timestamp_summary">"Tap to copy video URL with timestamp.
 Tap and hold to copy video timestamp."</string>
     <string name="revanced_overlay_button_mute_volume_title">Show mute volume button</string>
-    <string name="revanced_overlay_button_mute_volume_summary">"Tap to mute volume of the current video. Tap again to unmute."</string>
+    <string name="revanced_overlay_button_mute_volume_summary">Tap to mute volume of the current video. Tap again to unmute.</string>
     <string name="revanced_overlay_button_external_downloader_title">Show external download button</string>
     <string name="revanced_overlay_button_external_downloader_summary">Tap to launch external downloader.</string>
     <string name="revanced_overlay_button_speed_dialog_title">Show speed dialog button</string>

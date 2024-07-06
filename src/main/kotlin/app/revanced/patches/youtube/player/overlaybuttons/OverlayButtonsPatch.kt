@@ -103,7 +103,7 @@ object OverlayButtonsPatch : BaseResourcePatch(
                 "playlist_repeat_button.xml",
                 "playlist_shuffle_button.xml",
                 "revanced_repeat_icon.xml",
-                "mute_volume_button.xml",
+                "revanced_mute_volume_button.xml",
             )
         )
 
@@ -128,10 +128,10 @@ object OverlayButtonsPatch : BaseResourcePatch(
                     "revanced_time_ordered_playlist_icon.png",
                     "revanced_copy_icon.png",
                     "revanced_copy_icon_with_time.png",
-                    "revanced_overlay_button_mute_volume.png",
-                    "revanced_overlay_button_mute_volume_off.png",
                     "revanced_download_icon.png",
                     "revanced_speed_icon.png",
+                    "revanced_volume_muted.png",
+                    "revanced_volume_unmuted.png",
                     "revanced_whitelist_icon.png",
                     "yt_fill_arrow_repeat_white_24.png",
                     "yt_outline_arrow_repeat_1_white_24.png",
