@@ -111,4 +111,9 @@ Problemas conocidos:
     <string name="revanced_extended_settings_import_reset">Configuración restablecida por defecto</string>
     <string name="revanced_extended_settings_import_success">Configuración importada de %d</string>
     <string name="revanced_share_copy_settings_success">Ajustes copiados en el portapapeles.</string>
+    <string name="revanced_use_alternative_domain_title">Utilizar dominio alternativo para imágenes</string>
+
+    <string name="revanced_alternative_domain_title">Dominio alternativo</string>
+    <string name="revanced_alternative_domain_summary">El dominio del que se obtendrán las imágenes.\nNota: Introduzca solo el nombre del dominio, es decir, sin el prefijo \"https\:\/\/\".</string>
+
 </resources>

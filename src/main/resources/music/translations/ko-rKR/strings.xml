@@ -365,4 +365,9 @@
     <string name="revanced_extended_settings_import_success">%d 설정을 가져왔습니다.</string>
     <string name="revanced_extended_settings_reset">초기화</string>
     <string name="revanced_share_copy_settings_success">설정을 클립보드에 복사하였습니다.</string>
+    <string name="revanced_use_alternative_domain_title">이미지에 대체 도메인 사용하기</string>
+
+    <string name="revanced_alternative_domain_title">대체 도메인</string>
+    <string name="revanced_alternative_domain_summary">이미지를 가져올 대체 도메인을 입력하세요.\n알림: \'https\:\/\/\' 없이 도메인 이름만 입력해야 합니다.</string>
+
 </resources>

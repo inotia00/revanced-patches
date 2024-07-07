@@ -364,4 +364,9 @@ Cliquez sur le bouton Continuer et désactivez les optimisations de la batterie.
     <string name="revanced_extended_settings_import_success">%d paramètres ont étés importés.</string>
     <string name="revanced_extended_settings_reset">Réinitialiser</string>
     <string name="revanced_share_copy_settings_success">Paramètres copiés dans le presse-papier.</string>
+    <string name="revanced_use_alternative_domain_title">Utilis. domaine alternatif pour les images</string>
+
+    <string name="revanced_alternative_domain_title">Domaine alternatif</string>
+    <string name="revanced_alternative_domain_summary">Le domaine depuis lequel récupérer les images.\Nnote : Saisissez uniquement le nom de domaine, c\'est-à-dire, sans le préfixe \"https\:\/\/\".</string>
+
 </resources>
