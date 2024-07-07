@@ -24,4 +24,5 @@ object Constants {
     const val GENERAL_CLASS_DESCRIPTOR = "$GENERAL_PATH/GeneralPatch;"
     const val NAVIGATION_CLASS_DESCRIPTOR = "$NAVIGATION_PATH/NavigationPatch;"
     const val PLAYER_CLASS_DESCRIPTOR = "$PLAYER_PATH/PlayerPatch;"
+    const val ALTERNATIVE_DOMAIN_CLASS_DESCRIPTOR = "$MISC_PATH/AlternativeDomainPatch;"
 }

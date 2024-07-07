@@ -364,4 +364,9 @@
     <string name="revanced_extended_settings_import_success">Восстановлено %d настройки(ек).</string>
     <string name="revanced_extended_settings_reset">Сбросить</string>
     <string name="revanced_share_copy_settings_success">Настройки скопированы в буфер.</string>
+    <string name="revanced_use_alternative_domain_title">Использовать альтернативный домен картинок</string>
+    <string name="revanced_use_alternative_domain_summary">Заменяет домен, заблокированный в некоторых регионах, чтобы можно было получать миниатюры плейлистов, аватары каналов и т.д.</string>
+    <string name="revanced_alternative_domain_title">Альтернативный домен</string>
+    <string name="revanced_alternative_domain_summary">Домен для получения картинок.\nВажно: Вводите только название домена без префикса \"https\:\/\/\".</string>
+
 </resources>
