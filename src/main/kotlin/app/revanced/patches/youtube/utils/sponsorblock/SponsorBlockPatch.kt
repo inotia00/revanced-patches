@@ -92,47 +92,42 @@ object SponsorBlockPatch : BaseResourcePatch(
          * merge xml nodes from the host to their real xml files
          */
         // copy nodes from host resources to their real xml files
-        val hostingResourceStream =
-            inputStreamFromBundledResource(
-                "youtube/sponsorblock",
-                "shared/host/layout/youtube_controls_layout.xml",
-            )!!
-
         var modifiedControlsLayout = false
-        val editor = context.xmlEditor["res/layout/youtube_controls_layout.xml"]
 
-        // voting button id from the voting button view from the youtube_controls_layout.xml host file
-        val votingButtonId = "@+id/revanced_sb_voting_button"
+        inputStreamFromBundledResource(
+            "youtube/sponsorblock",
+            "shared/host/layout/youtube_controls_layout.xml",
+        )?.let { hostingResourceStream ->
+            val editor = context.xmlEditor["res/layout/youtube_controls_layout.xml"]
 
-        "RelativeLayout".copyXmlNode(
-            context.xmlEditor[hostingResourceStream],
-            editor
-        ).also {
-            val document = editor.file
-            val children = document.getElementsByTagName("RelativeLayout").item(0).childNodes
+            // voting button id from the voting button view from the youtube_controls_layout.xml host file
+            val votingButtonId = "@+id/revanced_sb_voting_button"
 
-            // Replace the startOf with the voting button view so that the button does not overlap
-            for (i in 1 until children.length) {
-                val view = children.item(i)
+            "RelativeLayout".copyXmlNode(
+                context.xmlEditor[hostingResourceStream],
+                editor
+            ).also {
+                val document = editor.file
+                val children = document.getElementsByTagName("RelativeLayout").item(0).childNodes
 
-                // Replace the attribute for a specific node only
-                if (!(
-                            view.hasAttributes() &&
-                                    view.attributes.getNamedItem(
-                                        "android:id",
-                                    ).nodeValue.endsWith("player_video_heading")
-                            )
-                ) {
-                    continue
+                // Replace the startOf with the voting button view so that the button does not overlap
+                for (i in 1 until children.length) {
+                    val view = children.item(i)
+
+                    val playerVideoHeading = view.hasAttributes() &&
+                            view.attributes.getNamedItem("android:id").nodeValue.endsWith("player_video_heading")
+
+                    // Replace the attribute for a specific node only
+                    if (!playerVideoHeading) continue
+
+                    view.attributes.getNamedItem("android:layout_toStartOf").nodeValue =
+                        votingButtonId
+
+                    modifiedControlsLayout = true
+                    break
                 }
-
-                view.attributes.getNamedItem("android:layout_toStartOf").nodeValue =
-                    votingButtonId
-
-                modifiedControlsLayout = true
-                break
-            }
-        }.close()
+            }.close()
+        }
 
         if (!modifiedControlsLayout) throw PatchException("Could not modify controls layout")
 

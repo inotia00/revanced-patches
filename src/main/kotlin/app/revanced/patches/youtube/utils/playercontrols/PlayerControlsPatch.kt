@@ -43,8 +43,8 @@ object PlayerControlsPatch : BytecodePatch(
 
     private lateinit var changeVisibilityMethod: MutableMethod
     private lateinit var changeVisibilityNegatedImmediatelyMethod: MutableMethod
-    private lateinit var initializeOverlayButtonsMethod: MutableMethod
-    private lateinit var initializeSponsorBlockButtonsMethod: MutableMethod
+    private lateinit var initializeBottomControlButtonMethod: MutableMethod
+    private lateinit var initializeTopControlButtonMethod: MutableMethod
 
     override fun execute(context: BytecodeContext) {
 
@@ -101,8 +101,8 @@ object PlayerControlsPatch : BytecodePatch(
         // region patch initialize of overlay button or SponsorBlock button
 
         mapOf(
-            BottomControlsInflateFingerprint to "initializeOverlayButtons",
-            ControlsLayoutInflateFingerprint to "initializeSponsorBlockButtons"
+            BottomControlsInflateFingerprint to "initializeBottomControlButton",
+            ControlsLayoutInflateFingerprint to "initializeTopControlButton"
         ).forEach { (fingerprint, methodName) ->
             fingerprint.resultOrThrow().let {
                 it.mutableMethod.apply {
@@ -135,14 +135,14 @@ object PlayerControlsPatch : BytecodePatch(
                 method.name == "changeVisibilityNegatedImmediately"
             }
 
-        initializeOverlayButtonsMethod =
+        initializeBottomControlButtonMethod =
             playerControlsMutableClass.methods.single { method ->
-                method.name == "initializeOverlayButtons"
+                method.name == "initializeBottomControlButton"
             }
 
-        initializeSponsorBlockButtonsMethod =
+        initializeTopControlButtonMethod =
             playerControlsMutableClass.methods.single { method ->
-                method.name == "initializeSponsorBlockButtons"
+                method.name == "initializeTopControlButton"
             }
 
         // endregion
@@ -167,14 +167,14 @@ object PlayerControlsPatch : BytecodePatch(
             "invoke-static {}, $classDescriptor->changeVisibilityNegatedImmediate()V"
         )
 
-    internal fun hookOverlayButtons(classDescriptor: String) {
-        initializeOverlayButtonsMethod.initializeHook(classDescriptor)
+    internal fun hookBottomControlButton(classDescriptor: String) {
+        initializeBottomControlButtonMethod.initializeHook(classDescriptor)
         changeVisibilityHook(classDescriptor)
         changeVisibilityNegatedImmediateHook(classDescriptor)
     }
 
-    internal fun hookSponsorBlockButtons(classDescriptor: String) {
-        initializeSponsorBlockButtonsMethod.initializeHook(classDescriptor)
+    internal fun hookTopControlButton(classDescriptor: String) {
+        initializeTopControlButtonMethod.initializeHook(classDescriptor)
         changeVisibilityHook(classDescriptor)
         changeVisibilityNegatedImmediateHook(classDescriptor)
     }

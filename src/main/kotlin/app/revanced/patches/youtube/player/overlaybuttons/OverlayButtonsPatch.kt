@@ -92,7 +92,7 @@ object OverlayButtonsPatch : BaseResourcePatch(
             "TimeOrderedPlaylist;",
             "Whitelists;"
         ).forEach { className ->
-            PlayerControlsPatch.hookOverlayButtons("$OVERLAY_BUTTONS_PATH/$className")
+            PlayerControlsPatch.hookBottomControlButton("$OVERLAY_BUTTONS_PATH/$className")
         }
 
         // Copy necessary resources for the overlay buttons.
@@ -102,7 +102,7 @@ object OverlayButtonsPatch : BaseResourcePatch(
                 "drawable",
                 "playlist_repeat_button.xml",
                 "playlist_shuffle_button.xml",
-                "revanced_repeat_icon.xml",
+                "revanced_repeat_button.xml",
                 "revanced_mute_volume_button.xml",
             )
         )
@@ -119,25 +119,25 @@ object OverlayButtonsPatch : BaseResourcePatch(
                 "youtube/overlaybuttons/$iconType",
                 ResourceGroup(
                     "drawable-$dpi",
-                    "ic_fullscreen_vertical_button.png",
                     "ic_vr.png",
                     "quantum_ic_fullscreen_exit_grey600_24.png",
                     "quantum_ic_fullscreen_exit_white_24.png",
                     "quantum_ic_fullscreen_grey600_24.png",
                     "quantum_ic_fullscreen_white_24.png",
-                    "revanced_time_ordered_playlist_icon.png",
-                    "revanced_copy_icon.png",
-                    "revanced_copy_icon_with_time.png",
-                    "revanced_download_icon.png",
-                    "revanced_speed_icon.png",
-                    "revanced_volume_muted.png",
-                    "revanced_volume_unmuted.png",
-                    "revanced_whitelist_icon.png",
+                    "revanced_time_ordered_playlist_button.png",
+                    "revanced_copy_button.png",
+                    "revanced_copy_timestamp_button.png",
+                    "revanced_download_button.png",
+                    "revanced_volume_muted_button.png",
+                    "revanced_volume_unmuted_button.png",
+                    "revanced_speed_button.png",
+                    "revanced_whitelist_button.png",
                     "yt_fill_arrow_repeat_white_24.png",
                     "yt_outline_arrow_repeat_1_white_24.png",
                     "yt_outline_arrow_shuffle_1_white_24.png",
                     "yt_outline_screen_full_exit_white_24.png",
                     "yt_outline_screen_full_white_24.png",
+                    "yt_outline_screen_full_vd_theme_24.png",
                     "yt_outline_screen_vertical_vd_theme_24.png"
                 ),
                 ResourceGroup(
