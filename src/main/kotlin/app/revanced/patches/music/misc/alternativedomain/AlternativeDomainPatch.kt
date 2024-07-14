@@ -5,6 +5,7 @@ import app.revanced.patches.music.utils.compatibility.Constants.COMPATIBLE_PACKA
 import app.revanced.patches.music.utils.settings.CategoryType
 import app.revanced.patches.music.utils.settings.SettingsPatch
 import app.revanced.util.patch.BaseBytecodePatch
+import java.io.Closeable
 
 @Suppress("unused")
 object AlternativeDomainPatch : BaseBytecodePatch(
@@ -15,9 +16,11 @@ object AlternativeDomainPatch : BaseBytecodePatch(
         SettingsPatch::class
     ),
     compatiblePackages = COMPATIBLE_PACKAGE
-) {
+), Closeable {
     override fun execute(context: BytecodeContext) {
-
+    }
+    // Use Closeable for lexicographic arrangement of settings.
+    override fun close() {
         SettingsPatch.addSwitchPreference(
             CategoryType.MISC,
             "revanced_use_alternative_domain",
@@ -28,6 +31,5 @@ object AlternativeDomainPatch : BaseBytecodePatch(
             "revanced_alternative_domain",
             "revanced_use_alternative_domain"
         )
-
     }
 }
