@@ -1,4 +1,4 @@
-package app.revanced.patches.youtube.alternativethumbnails.general.fingerprints
+package app.revanced.patches.shared.alternativedomain.fingerprints
 
 import app.revanced.patcher.extensions.or
 import app.revanced.patcher.fingerprint.MethodFingerprint

@@ -7,8 +7,6 @@ import app.revanced.patcher.extensions.InstructionExtensions.getInstructions
 import app.revanced.patcher.fingerprint.MethodFingerprint
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
-import app.revanced.patches.youtube.alternativethumbnails.general.fingerprints.MessageDigestImageUrlFingerprint
-import app.revanced.patches.youtube.alternativethumbnails.general.fingerprints.MessageDigestImageUrlParentFingerprint
 import app.revanced.patches.youtube.alternativethumbnails.general.fingerprints.cronet.RequestFingerprint
 import app.revanced.patches.youtube.alternativethumbnails.general.fingerprints.cronet.request.callback.OnFailureFingerprint
 import app.revanced.patches.youtube.alternativethumbnails.general.fingerprints.cronet.request.callback.OnResponseStartedFingerprint
@@ -32,40 +30,22 @@ object AlternativeThumbnailsPatch : BaseBytecodePatch(
     name = "Alternative thumbnails",
     description = "Adds options to replace video thumbnails using the DeArrow API or image captures from the video.",
     dependencies = setOf(
+        AlternativeDomainBytecodePatch::class,
         NavigationBarHookPatch::class,
         PlayerTypeHookPatch::class,
         SettingsPatch::class,
     ),
     compatiblePackages = COMPATIBLE_PACKAGE,
     fingerprints = setOf(
-        MessageDigestImageUrlParentFingerprint,
         OnResponseStartedFingerprint,
         RequestFingerprint,
     )
 ) {
-    private lateinit var loadImageUrlMethod: MutableMethod
-    private var loadImageUrlIndex = 0
-
     private lateinit var loadImageSuccessCallbackMethod: MutableMethod
     private var loadImageSuccessCallbackIndex = 0
 
     private lateinit var loadImageErrorCallbackMethod: MutableMethod
     private var loadImageErrorCallbackIndex = 0
-
-    /**
-     * @param highPriority If the hook should be called before all other hooks.
-     */
-    @Suppress("SameParameterValue")
-    private fun addImageUrlHook(targetMethodClass: String, highPriority: Boolean) {
-        loadImageUrlMethod.addInstructions(
-            if (highPriority) 0 else loadImageUrlIndex,
-            """
-                invoke-static { p1 }, $targetMethodClass->overrideImageURL(Ljava/lang/String;)Ljava/lang/String;
-                move-result-object p1
-                """
-        )
-        loadImageUrlIndex += 2
-    }
 
     /**
      * If a connection completed, which includes normal 200 responses but also includes
@@ -101,13 +81,6 @@ object AlternativeThumbnailsPatch : BaseBytecodePatch(
             fingerprint: MethodFingerprint,
             block: (MutableMethod) -> Unit
         ) = alsoResolve(fingerprint).also { block(it.mutableMethod) }
-
-        MessageDigestImageUrlFingerprint.resolveAndLetMutableMethod(
-            MessageDigestImageUrlParentFingerprint
-        ) {
-            loadImageUrlMethod = it
-            addImageUrlHook(ALTERNATIVE_THUMBNAILS_CLASS_DESCRIPTOR, true)
-        }
 
         OnSucceededFingerprint.resolveAndLetMutableMethod(OnResponseStartedFingerprint) {
             loadImageSuccessCallbackMethod = it

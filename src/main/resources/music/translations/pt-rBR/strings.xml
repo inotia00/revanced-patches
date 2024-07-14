@@ -364,9 +364,4 @@ Toque no botão continuar e desative as otimizações da bateria."</string>
     <string name="revanced_extended_settings_import_success">Configurações %d importadas</string>
     <string name="revanced_extended_settings_reset">Reiniciar</string>
     <string name="revanced_share_copy_settings_success">Configurações copiadas para área de transferência.</string>
-    <string name="revanced_use_alternative_domain_title">Usar domínio alternativo para imagens</string>
-
-    <string name="revanced_alternative_domain_title">Domínio alternativo</string>
-    <string name="revanced_alternative_domain_summary">O domínio para buscar imagens de.\nNota: Digite apenas o nome do domínio, ou seja, sem o prefixo \"https\:\/\/\".</string>
-
 </resources>

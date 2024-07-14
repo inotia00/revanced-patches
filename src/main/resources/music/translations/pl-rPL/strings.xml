@@ -364,8 +364,4 @@ Kontynuuj i wyłącz optymalizację baterii."</string>
     <string name="revanced_extended_settings_import_success">Zaimportowano ustawienia %d.</string>
     <string name="revanced_extended_settings_reset">Zresetuj</string>
     <string name="revanced_share_copy_settings_success">Skopiowano ustawienia do schowka.</string>
-    <string name="revanced_use_alternative_domain_title">Zastępcza domena dla obrazów</string>
-
-    <string name="revanced_alternative_domain_title">Alternatywna domena</string>
-    <string name="revanced_alternative_domain_summary">Domena, z której mają być pobierane obrazy.\nNotka: Wprowadź tylko nazwę domeny, tzn. bez prefiksu \"https\:\/\/\".</string>
 </resources>

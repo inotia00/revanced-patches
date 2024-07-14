@@ -350,6 +350,10 @@
     <string name="gms_core_dialog_continue_text">Продолжить</string>
     <string name="revanced_sanitize_sharing_links_title">Подчищать ссылки</string>
     <string name="revanced_sanitize_sharing_links_summary">Убирает параметры отслеживания запросов из адресов при отправке ссылки.</string>
+    <string name="revanced_use_alternative_domain_title">Использовать альтернативный домен картинок</string>
+    <string name="revanced_use_alternative_domain_summary">Заменяет домен, заблокированный в некоторых регионах, чтобы можно было получать миниатюры плейлистов, аватары каналов и т.д.</string>
+    <string name="revanced_alternative_domain_title">Альтернативный домен</string>
+    <string name="revanced_alternative_domain_summary">Домен для получения картинок.\nВажно: Вводите только название домена без префикса \"https\:\/\/\".</string>
     <string name="revanced_extended_settings_import_export_title">Восстановить / Извлечь настройки</string>
     <string name="revanced_extended_settings_import_export_summary">Восстановить или извлечь настройки.</string>
     <string name="revanced_extended_settings_export_as_file">Извлечь настройки в файл</string>
@@ -364,9 +368,4 @@
     <string name="revanced_extended_settings_import_success">Восстановлено %d настройки(ек).</string>
     <string name="revanced_extended_settings_reset">Сбросить</string>
     <string name="revanced_share_copy_settings_success">Настройки скопированы в буфер.</string>
-    <string name="revanced_use_alternative_domain_title">Использовать альтернативный домен картинок</string>
-    <string name="revanced_use_alternative_domain_summary">Заменяет домен, заблокированный в некоторых регионах, чтобы можно было получать миниатюры плейлистов, аватары каналов и т.д.</string>
-    <string name="revanced_alternative_domain_title">Альтернативный домен</string>
-    <string name="revanced_alternative_domain_summary">Домен для получения картинок.\nВажно: Вводите только название домена без префикса \"https\:\/\/\".</string>
-
 </resources>

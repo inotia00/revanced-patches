@@ -318,9 +318,4 @@
     <string name="revanced_extended_settings_import_reset">設定已重設為預設值</string>
     <string name="revanced_extended_settings_import_success">已匯入設定: %d</string>
     <string name="revanced_share_copy_settings_success">設定已複製到剪貼簿</string>
-    <string name="revanced_use_alternative_domain_title">圖像使用替代網域</string>
-    
-    <string name="revanced_alternative_domain_title">替代域名</string>
-    <string name="revanced_alternative_domain_summary">從中取得圖像網域。\n注意：只輸入域名, i.e., 不含 \"https\:\/\/\" 前綴。</string>
-
 </resources>

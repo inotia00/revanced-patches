@@ -391,6 +391,11 @@ Tap on the continue button and disable battery optimizations."</string>
     <string name="revanced_sanitize_sharing_links_title">Sanitize sharing links</string>
     <string name="revanced_sanitize_sharing_links_summary">Removes tracking query parameters from URLs when sharing links.</string>
 
+    <string name="revanced_use_alternative_domain_title">Use alternative domain for images</string>
+    <string name="revanced_use_alternative_domain_summary">Replaces the domain that is blocked in some regions so that playlist thumbnails, channel avatars, etc. can be received.</string>
+    <string name="revanced_alternative_domain_title">Alternative domain</string>
+    <string name="revanced_alternative_domain_summary">The domain to fetch images from.\nNote: Only enter the domain name, i.e., without the \"https\:\/\/\" prefix.</string>
+
     <string name="revanced_extended_settings_import_export_title">Import / Export settings</string>
     <string name="revanced_extended_settings_import_export_summary">Import or export settings.</string>
 
@@ -407,9 +412,5 @@ Tap on the continue button and disable battery optimizations."</string>
     <string name="revanced_extended_settings_import_success">Imported %d settings.</string>
     <string name="revanced_extended_settings_reset">Reset</string>
     <string name="revanced_share_copy_settings_success">Settings copied to clipboard.</string>
-    <string name="revanced_use_alternative_domain_title">Use alternative domain for images</string>
-    <string name="revanced_use_alternative_domain_summary">Replaces the domain that is blocked in some regions so that playlist thumbnails, channel avatars, etc. can be received.</string>
-    <string name="revanced_alternative_domain_title">Alternative domain</string>
-    <string name="revanced_alternative_domain_summary">The domain to fetch images from.\nNote: Only enter the domain name, i.e., without the \"https\:\/\/\" prefix.</string>
 
 </resources>

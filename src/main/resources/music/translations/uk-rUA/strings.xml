@@ -364,9 +364,4 @@
     <string name="revanced_extended_settings_import_success">Налаштування в кількості: %d успішно відновлено</string>
     <string name="revanced_extended_settings_reset">Скинути</string>
     <string name="revanced_share_copy_settings_success">Налаштування скопійовано до буфера обміну.</string>
-    <string name="revanced_use_alternative_domain_title">Використовувати альтернативний домен для зображень</string>
-
-    <string name="revanced_alternative_domain_title">Альтернативний домен</string>
-    <string name="revanced_alternative_domain_summary">Домен для отримання зображень.\nЗауваження: Вводьте лише ім\'я домену, тобто без префікса \"https\:\/\/\".</string>
-
 </resources>

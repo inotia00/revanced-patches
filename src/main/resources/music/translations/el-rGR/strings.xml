@@ -362,8 +362,4 @@
     <string name="revanced_extended_settings_import_success">Έγινε εισαγωγή %d ρυθμίσεων.</string>
     <string name="revanced_extended_settings_reset">Επαναφορά</string>
     <string name="revanced_share_copy_settings_success">Οι ρυθμίσεις αντιγράφηκαν στο πρόχειρο.</string>
-    <string name="revanced_use_alternative_domain_title">Εναλλακτικό domain για εικόνες</string>
-
-    <string name="revanced_alternative_domain_title">Εναλλακτικό domain</string>
-    <string name="revanced_alternative_domain_summary">Το domain από το οποίο θα ληφθούν οι εικόνες.\nΣημείωση: Εισάγετε μόνο το όνομα του domain, χωρίς το πρόθεμα \"https\:\/\/\".</string>
 </resources>
