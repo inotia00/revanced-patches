@@ -9,8 +9,8 @@ import app.revanced.util.patch.BaseBytecodePatch
 @Suppress("unused")
 object BypassImageRegionRestrictionsPatch : BaseBytecodePatch(
     name = "Bypass image region restrictions",
-    description = "Adds an option to use a different host for static images," +
-            "and can fix missing images that are blocked in some countries.",
+    description = "Adds an option to use a different host for static images, " +
+            "so that images blocked in some countries can be received.",
     dependencies = setOf(
         CronetImageUrlHookPatch::class,
         SettingsPatch::class,
