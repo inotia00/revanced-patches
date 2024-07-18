@@ -11,10 +11,10 @@ import org.w3c.dom.Element
 
 @Patch(
     name = "Change version code",
-    description = "Changes the version code of the app. By default the highest version code is set. " +
-            "If the version code is set to the same or higher value as an exisiting installation " +
-            "the app can be installed as an update. This can also prevent app stores from updating " +
-            "the app, except in the case of a root install (mount).",
+    description = "Changes the version code of the app to the value specified in options.json. " +
+            "Except when mounting, this can prevent app stores from updating the app and allow " +
+            "the app to be installed over an existing installation that has a higher version code. " +
+            "By default, the highest version code is set."
     use = false,
 )
 @Suppress("unused")
