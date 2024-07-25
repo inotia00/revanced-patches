@@ -525,6 +525,8 @@ Note:
     <string name="revanced_speed_overlay_value_title">Speed overlay value</string>
     <string name="revanced_speed_overlay_value_summary">Speed overlay value between 0-8.0.</string>
     <string name="revanced_speed_overlay_value_invalid_toast">Speed overlay value must be between 0-8.0. Reset to default values.</string>
+    <string name="revanced_disable_zoom_overlay_title">Disable zoom overlay</string>
+    <string name="revanced_disable_zoom_overlay_summary">Disable overlay when zoom the video players</string>
     <string name="revanced_hide_channel_watermark_title">Hide channel watermark</string>
     <string name="revanced_hide_channel_watermark_summary_on">Channel watermark is hidden.</string>
     <string name="revanced_hide_channel_watermark_summary_off">Channel watermark is shown.</string>
