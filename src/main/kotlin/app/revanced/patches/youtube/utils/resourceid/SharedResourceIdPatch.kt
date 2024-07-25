@@ -110,6 +110,7 @@ object SharedResourceIdPatch : ResourcePatch() {
     var VideoQualityBottomSheet = -1L
     var VarispeedUnavailableTitle = -1L
     var VideoQualityUnavailableAnnouncement = -1L
+    var VideoZoomSnapIndicator = -1L
     var VoiceSearch = -1L
     var YouTubeControlsOverlaySubtitleButton = -1L
     var YtOutlinePictureInPictureWhite = -1L
@@ -218,6 +219,7 @@ object SharedResourceIdPatch : ResourcePatch() {
         VarispeedUnavailableTitle = getId(STRING, "varispeed_unavailable_title")
         VideoQualityUnavailableAnnouncement =
             getId(STRING, "video_quality_unavailable_announcement")
+        VideoZoomSnapIndicator = getId(ID, "video_zoom_snap_indicator")
         VoiceSearch = getId(ID, "voice_search")
         YouTubeControlsOverlaySubtitleButton =
             getId(LAYOUT, "youtube_controls_overlay_subtitle_button")
