@@ -525,8 +525,6 @@ Note:
     <string name="revanced_speed_overlay_value_title">Speed overlay value</string>
     <string name="revanced_speed_overlay_value_summary">Speed overlay value between 0-8.0.</string>
     <string name="revanced_speed_overlay_value_invalid_toast">Speed overlay value must be between 0-8.0. Reset to default values.</string>
-    <string name="revanced_disable_zoom_overlay_title">Disable zoom overlay</string>
-    <string name="revanced_disable_zoom_overlay_summary">Disable overlay when zoom the video players</string>
     <string name="revanced_hide_channel_watermark_title">Hide channel watermark</string>
     <string name="revanced_hide_channel_watermark_summary_on">Channel watermark is hidden.</string>
     <string name="revanced_hide_channel_watermark_summary_off">Channel watermark is shown.</string>
@@ -572,6 +570,9 @@ Note:
 Autoplay can be changed in YouTube settings:
 Settings → Autoplay → Autoplay next video"</string>
     <string name="revanced_hide_suggested_video_end_screen_summary_off">Suggested video end screen is shown.</string>
+    <string name="revanced_hide_zoom_overlay_title">Hide zoom overlay</string>
+    <string name="revanced_hide_zoom_overlay_summary_on">Zoom overlay is hidden.</string>
+    <string name="revanced_hide_zoom_overlay_summary_off">Zoom overlay is shown.</string>
     <string name="revanced_skip_autoplay_countdown_title">Skip autoplay countdown</string>
     <string name="revanced_skip_autoplay_countdown_summary_on">If autoplay is enabled, the next video will play immediately.</string>
     <string name="revanced_skip_autoplay_countdown_summary_off">If autoplay is enabled, the next video will play after the countdown ends.</string>

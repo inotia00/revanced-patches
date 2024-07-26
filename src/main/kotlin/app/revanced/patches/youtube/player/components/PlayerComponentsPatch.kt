@@ -172,6 +172,21 @@ object PlayerComponentsPatch : BaseBytecodePatch(
 
         // endregion
 
+        // region patch for disable video zoom overlay
+
+        VideoZoomSnapIndicatorFingerprint.resultOrThrow().mutableMethod.apply {
+            addInstructionsWithLabels(
+                0, """
+                    invoke-static {}, $PLAYER_CLASS_DESCRIPTOR->disableZoomOverlay()Z
+                    move-result v0
+                    if-eqz v0, :off
+                    return-void
+                    """, ExternalLabel("off", getInstruction(0))
+            )
+        }
+
+        // endregion
+
         // region patch for hide channel watermark
 
         WatermarkFingerprint.resolve(
@@ -371,21 +386,6 @@ object PlayerComponentsPatch : BaseBytecodePatch(
 
                 )
             }
-        }
-
-        // endregion
-
-        // region patch for disable video zoom overlay
-
-        VideoZoomSnapIndicatorFingerprint.resultOrThrow().mutableMethod.apply {
-            addInstructionsWithLabels(
-                0, """
-                    invoke-static {}, $PLAYER_CLASS_DESCRIPTOR->disableZoomOverlay()Z
-                    move-result v0
-                    if-eqz v0, :default
-                    return-void
-                    """, ExternalLabel("default", getInstruction(0))
-            )
         }
 
         // endregion
