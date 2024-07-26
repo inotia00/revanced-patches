@@ -14,7 +14,7 @@ import org.w3c.dom.Element
     description = "Changes the version code of the app to the value specified in options.json. " +
             "Except when mounting, this can prevent app stores from updating the app and allow " +
             "the app to be installed over an existing installation that has a higher version code. " +
-            "By default, the highest version code is set."
+            "By default, the highest version code is set.",
     use = false,
 )
 @Suppress("unused")
