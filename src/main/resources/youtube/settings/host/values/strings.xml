@@ -1651,7 +1651,7 @@ Side effects include:
     <string name="revanced_watch_history_type_entry_1">Original</string>
     <string name="revanced_watch_history_type_entry_2">Replace domain</string>
     <string name="revanced_watch_history_type_entry_3">Block watch history</string>
-    <string name="revanced_watch_history_about_title">About watch history</string>
+    <string name="revanced_watch_history_about_title">Status of watch history</string>
     <string name="revanced_watch_history_about_status_blocked">• Watch history does not work.</string>
     <string name="revanced_watch_history_about_status_ios_replaced">"• Follows the watch history settings of Google account.
 • Watch history may not work with a brand account.
