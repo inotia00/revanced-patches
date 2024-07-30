@@ -1655,11 +1655,11 @@ Side effects include:
     <string name="revanced_watch_history_about_status_blocked">• Watch history does not work.</string>
     <string name="revanced_watch_history_about_status_ios_replaced">"• Follows the watch history settings of Google account.
 • Watch history may not work with a brand account.
-(Spoof client setting is turned on and iOS client is selected)"</string>
+(Spoof client setting is enabled and iOS client is selected)"</string>
     <string name="revanced_watch_history_about_status_ios_original">"• Follows the watch history settings of Google account.
 • Watch history may not work due to DNS or VPN.
 • Watch history may not work with a brand account.
-(Spoof client setting is turned on and iOS client is selected)"</string>
+(Spoof client setting is enabled and iOS client is selected)"</string>
     <string name="revanced_watch_history_about_status_android_replaced">• Follows the watch history settings of Google account.</string>
     <string name="revanced_watch_history_about_status_android_original">"• Follows the watch history settings of Google account.
 • Watch history may not work due to DNS or VPN."</string>
