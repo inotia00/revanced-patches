@@ -505,6 +505,9 @@ You tab → View channel → Menu → Settings"</string>
 Tap and hold to open YouTube settings."</string>
     <string name="revanced_replace_toolbar_create_button_type_summary_off">"Tap to open YouTube settings.
 Tap and hold to open RVX settings."</string>
+    <string name="revanced_hook_playlist_download_button_title">Override playlist download action</string>
+    <string name="revanced_hook_playlist_download_button_summary_off">Playlist download will behave like the original, and button might not appear.</string>
+    <string name="revanced_hook_playlist_download_button_summary_on">Playlist download button will be present, and the download will be handled by YTDLnis.</string>
 
 
     <!-- PreferenceScreen: Player -->

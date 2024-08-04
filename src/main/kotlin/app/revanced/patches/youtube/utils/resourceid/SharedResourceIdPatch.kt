@@ -17,6 +17,7 @@ import app.revanced.patches.shared.mapping.ResourceType.STYLE
 
 @Patch(dependencies = [ResourceMappingPatch::class])
 object SharedResourceIdPatch : ResourcePatch() {
+    var AccessibilityOfflineButtonSync = -1L
     var AccountSwitcherAccessibility = -1L
     var ActionBarRingo = -1L
     var ActionBarRingoBackground = -1L
@@ -121,6 +122,7 @@ object SharedResourceIdPatch : ResourcePatch() {
 
     override fun execute(context: ResourceContext) {
 
+        AccessibilityOfflineButtonSync = getId(STRING, "accessibility_offline_button_sync")
         AccountSwitcherAccessibility = getId(STRING, "account_switcher_accessibility_label")
         ActionBarRingo = getId(LAYOUT, "action_bar_ringo")
         ActionBarRingoBackground = getId(LAYOUT, "action_bar_ringo_background")
