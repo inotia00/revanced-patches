@@ -903,6 +903,9 @@ Tap and hold to undo."</string>
     <string name="revanced_external_downloader_package_name_title">External downloader package name</string>
     <string name="revanced_external_downloader_package_name_summary">Package name of your installed external downloader app, such as NewPipe or YTDLnis.</string>
     <string name="revanced_external_downloader_dialog_title">External downloader</string>
+    <string name="revanced_playlist_external_downloader_package_name_title">Playlist external downloader package name</string>
+    <string name="revanced_playlist_external_downloader_package_name_summary">Package name of your installed external downloader app used to download from playlists, currently only YTDLnis works.</string>
+    <string name="revanced_playlist_external_downloader_dialog_title">Playlist external downloader</string>
     <string name="revanced_external_downloader_not_installed_dialog_title">Warning</string>
     <string name="revanced_external_downloader_not_installed_dialog_message">"%1$s is not installed.
 Please download %2$s from the website."</string>

@@ -232,7 +232,8 @@
 
         <!-- SETTINGS: HOOK_DOWNLOAD_ACTIONS
         <SwitchPreference android:title="@string/revanced_hook_playlist_download_button_title" android:key="revanced_hook_playlist_download_button" android:defaultValue="true" android:summaryOn="@string/revanced_hook_playlist_download_button_summary_on" android:summaryOff="@string/revanced_hook_playlist_download_button_summary_off"/>
-        <SwitchPreference android:title="@string/revanced_external_downloader_action_title" android:key="revanced_external_downloader_action" android:defaultValue="false" android:summaryOn="@string/revanced_external_downloader_action_summary_on" android:summaryOff="@string/revanced_external_downloader_action_summary_off" />SETTINGS: HOOK_DOWNLOAD_ACTIONS -->
+        <SwitchPreference android:title="@string/revanced_external_downloader_action_title" android:key="revanced_external_downloader_action" android:defaultValue="false" android:summaryOn="@string/revanced_external_downloader_action_summary_on" android:summaryOff="@string/revanced_external_downloader_action_summary_off" />
+        <app.revanced.integrations.youtube.settings.preference.ExternalPlaylistDownloaderPreference android:title="@string/revanced_playlist_external_downloader_package_name_title" android:key="revanced_playlist_external_downloader_package_name" android:summary="@string/revanced_playlist_external_downloader_package_name_summary" />SETTINGS: HOOK_DOWNLOAD_ACTIONS -->
 
         <!-- SETTINGS: SPOOF_APP_VERSION
         <SwitchPreference android:title="@string/revanced_spoof_app_version_title" android:key="revanced_spoof_app_version" android:summaryOn="@string/revanced_spoof_app_version_summary_on" android:summaryOff="@string/revanced_spoof_app_version_summary_off" />
