@@ -107,6 +107,9 @@
         <item>com.deniscerri.ytdl</item>
     </string-array>
     <string-array name="revanced_external_downloader_video_website">
+        <item>https://github.com/TeamNewPipe/NewPipe/releases/latest</item>
+        <item>https://github.com/JunkFood02/Seal/releases/latest</item>
+        <item>https://github.com/polymorphicshade/Tubular/releases/latest</item>
         <item>https://github.com/deniscerri/ytdlnis/releases/latest</item>
     </string-array>
     <string-array name="revanced_external_downloader_playlist_label">
