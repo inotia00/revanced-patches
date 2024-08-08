@@ -1,4 +1,4 @@
-name: Release Workflow
+name: Ping Discord on release
 
 on:
   release:
