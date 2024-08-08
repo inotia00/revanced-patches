@@ -1,0 +1,22 @@
+name: Release Workflow
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  notify-discord:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: sarisia/actions-status-discord@v1
+        if: always()
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          username: ReVanced Extended
+          color: 0xff5252
+          nodetail: true
+          notimestamp: true
+          content: "<@&1271197877724643461>"
+          title: "Patches ${{ github.event.release.tag_name }} has been released!"
+          description: |
+            Read the changelog on the [releases page]( ${{github.event.repository.html_url }}/releases/tag/${{ github.event.release.tag_name }}).
