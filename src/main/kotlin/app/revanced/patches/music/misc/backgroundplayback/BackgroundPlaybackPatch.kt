@@ -23,7 +23,7 @@ import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 @Suppress("unused")
 object BackgroundPlaybackPatch : BaseBytecodePatch(
     name = "Remove background playback restrictions",
-    description = "Removes restrictions on background playback, including for kids videos.",
+    description = "Removes restrictions on background playback, including playing kids videos in the background.",
     compatiblePackages = COMPATIBLE_PACKAGE,
     fingerprints = setOf(
         BackgroundPlaybackManagerFingerprint,
