@@ -17,6 +17,6 @@ jobs:
           nodetail: true
           notimestamp: true
           content: "<@&1271197877724643461>"
-          title: "Patches ${{ github.event.release.tag_name }} has been released!"
+          title: "Patches `${{ github.event.release.tag_name }}` has been released!"
           description: |
-            Read the changelog on the [releases page]( ${{github.event.repository.html_url }}/releases/tag/${{ github.event.release.tag_name }}).
+            Click [here]( ${{github.event.repository.html_url }}/releases/tag/${{ github.event.release.tag_name }}) to read the changelog.
