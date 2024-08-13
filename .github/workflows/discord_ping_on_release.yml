@@ -19,4 +19,4 @@ jobs:
           content: "<@&1271197877724643461>"
           title: "Patches `${{ github.event.release.tag_name }}` has been released!"
           description: |
-            Click [here]( ${{github.event.repository.html_url }}/releases/tag/${{ github.event.release.tag_name }}) to read the changelog.
+            Click [here](${{ github.event.release.html_url }}) to read the changelog and release notes.
