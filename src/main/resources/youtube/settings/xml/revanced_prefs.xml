@@ -580,6 +580,7 @@
         <SwitchPreference android:title="@string/revanced_skip_preloaded_buffer_title" android:key="revanced_skip_preloaded_buffer" android:summary="@string/revanced_skip_preloaded_buffer_summary" />
         <SwitchPreference android:title="@string/revanced_skip_preloaded_buffer_toast_title" android:key="revanced_skip_preloaded_buffer_toast" android:summaryOn="@string/revanced_skip_preloaded_buffer_toast_summary_on" android:summaryOff="@string/revanced_skip_preloaded_buffer_toast_summary_off" android:dependency="revanced_skip_preloaded_buffer" />
         <SwitchPreference android:title="@string/revanced_spoof_device_dimensions_title" android:key="revanced_spoof_device_dimensions" android:summary="@string/revanced_spoof_device_dimensions_summary" />PREFERENCE_SCREEN: VIDEO -->
+        <SwitchPreference android:title="@string/revanced_show_toast_remember_video_quality_title" android:key="revanced_show_toast_remember_video_quality" android:defaultValue="true" android:summaryOn="@string/revanced_show_toast_remember_video_quality_summary_on" android:summaryOff="@string/revanced_show_toast_remember_video_quality_summary_off" />
 
         <!-- SETTINGS: REPLACE_AV1_CODEC
         <SwitchPreference android:title="@string/revanced_replace_av1_codec_title" android:key="revanced_replace_av1_codec" android:summary="@string/revanced_replace_av1_codec_summary" />SETTINGS: REPLACE_AV1_CODEC -->
