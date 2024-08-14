@@ -60,8 +60,13 @@ Side effect: Community post images may be blocked in fullscreen."</string>
     <string name="revanced_hide_get_premium_title">Hide YouTube Premium promotion</string>
     <string name="revanced_hide_get_premium_summary_on">YouTube Premium promotion is hidden.</string>
     <string name="revanced_hide_get_premium_summary_off">YouTube Premium promotion is shown.</string>
-
-
+    <string name="revanced_show_toast_remember_video_quality_title">Show a toast when changing the default video quality</string>
+    <string name="revanced_show_toast_remember_video_quality_summary_on">A toast will be shown when changing the default video quality.</string>
+    <string name="revanced_show_toast_remember_video_quality_summary_off">A toast will not be shown when changing the default video quality.</string>
+    <string name="revanced_show_toast_remember_video_speed_title">Show a toast when changing the default video speed</string>
+    <string name="revanced_show_toast_remember_video_speed_summary_on">A toast will be shown when changing the default video speed.</string>
+    <string name="revanced_show_toast_remember_video_speed_summary_off">A toast will not be shown when changing the default video speed.</string>
+    
     <!-- PreferenceScreen: Alternative thumbnails -->
     <string name="revanced_preference_screen_alt_thumbnails_title">Alternative thumbnails</string>
 
@@ -1238,6 +1243,7 @@ Limitations:
     <string name="revanced_skipped_preloaded_buffer">Skipped preloaded buffer.</string>
     <string name="revanced_skip_preloaded_buffer_title">Skip preloaded buffer</string>
     <string name="revanced_skip_preloaded_buffer_summary">"Skips the preloaded buffer at the start of videos to immediately apply the default video quality.
+
 
 Info:
 • When the video starts, there is a delay of approximately 0.3 seconds.
