@@ -250,7 +250,7 @@ Words with uppercase letters in the middle must be entered with the casing (ie: 
     <string name="revanced_hide_keyword_content_about_title">About keyword filtering</string>
     <string name="revanced_hide_keyword_content_about_summary">"Home / Subscription / Search results are filtered to hide content that matches keyword phrases.
 
-Limitations: 
+Limitations:
 • Some Shorts may not be hidden.
 • Some UI components may not be hidden.
 • Searching for a keyword may show no results."</string>
@@ -1256,6 +1256,15 @@ High quality may be unlocked on some videos that require high device dimensions,
 A different codec will be applied after about 20 seconds of buffering."</string>
     <string name="revanced_reject_av1_codec_toast">Fallback process causes about 20 seconds of buffering.</string>
     <string name="revanced_remember_playback_speed_toast">Changing default speed to %s.</string>
+    <string name="revanced_remember_video_quality_last_selected_summary_off">Quality changes only apply to the current video.</string>
+    <string name="revanced_remember_video_quality_last_selected_summary_on">Quality changes apply to all videos.</string>
+    <string name="revanced_remember_video_quality_last_selected_title">Remember video quality changes</string>
+    <string name="revanced_show_toast_remember_video_quality_title">Show a toast when changing the default video quality</string>
+    <string name="revanced_show_toast_remember_video_quality_summary_on">A toast will be shown when changing the default video quality.</string>
+    <string name="revanced_show_toast_remember_video_quality_summary_off">A toast will not be shown when changing the default video quality.</string>
+    <string name="revanced_show_toast_remember_video_speed_title">Show a toast when changing the default video speed</string>
+    <string name="revanced_show_toast_remember_video_speed_summary_on">A toast will be shown when changing the default video speed.</string>
+    <string name="revanced_show_toast_remember_video_speed_summary_off">A toast will not be shown when changing the default video speed.</string>
     <string name="revanced_remember_video_quality_mobile">Changing default mobile data quality to %s.</string>
     <string name="revanced_remember_video_quality_none">Failed to set video quality.</string>
     <string name="revanced_remember_video_quality_wifi">Changing default Wi-Fi quality to %s.</string>
