@@ -233,7 +233,7 @@ object OverlayButtonsPatch : BaseResourcePatch(
                     ResourceGroup(
                         "drawable-$dpi",
                         "yt_outline_gear_white_24.png",
-                        "yt_outline_chevron_down_white_24.png"
+                        "yt_outline_chevron_down_white_24.png",
                         "quantum_ic_closed_caption_off_grey600_24.png",
                         "quantum_ic_closed_caption_off_white_24.png",
                         "quantum_ic_closed_caption_white_24.png"
