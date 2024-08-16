@@ -250,7 +250,7 @@ Words with uppercase letters in the middle must be entered with the casing (ie: 
     <string name="revanced_hide_keyword_content_about_title">About keyword filtering</string>
     <string name="revanced_hide_keyword_content_about_summary">"Home / Subscription / Search results are filtered to hide content that matches keyword phrases.
 
-Limitations:
+Limitations: 
 • Some Shorts may not be hidden.
 • Some UI components may not be hidden.
 • Searching for a keyword may show no results."</string>
