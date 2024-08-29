@@ -45,9 +45,9 @@ abstract class BaseGmsCoreSupportResourcePatch(
         default = true,
         title = "Check GmsCore",
         description = """
-            Check if GmsCore is installed on the device when the app starts.
+            Check if GmsCore is installed on the device and has battery optimizations disabled when the app starts. 
             
-            If GmsCore is not installed on the device, the app won't work, so don't disable it if possible.
+            If GmsCore is not installed the app will not work, so disabling this is not recommended.
             """.trimIndentMultiline(),
         required = true,
     )
