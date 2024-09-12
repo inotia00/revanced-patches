@@ -627,11 +627,10 @@ object PlayerComponentsPatch : BaseBytecodePatch(
             val constIndex = getWideLiteralInstructionIndex(AudioVideoSwitchToggle)
             val viewIndex = getTargetIndexOrThrow(constIndex, Opcode.MOVE_RESULT_OBJECT)
             val viewRegister = getInstruction<OneRegisterInstruction>(viewIndex).registerA
-            val methodName = if (SettingsPatch.upward0629) "hideAudioVideoSwitchToggle" else "hideAudioVideoSwitchToggleFor0620"
 
             addInstruction(
                 viewIndex + 1,
-                "invoke-static {v$viewRegister}, $PLAYER_CLASS_DESCRIPTOR->$methodName(Landroid/view/View;)V"
+                "invoke-static {v$viewRegister}, $PLAYER_CLASS_DESCRIPTOR->hideAudioVideoSwitchToggle(Landroid/view/View;)V"
             )
         }
 

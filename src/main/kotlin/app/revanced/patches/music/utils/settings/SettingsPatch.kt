@@ -42,7 +42,6 @@ object SettingsPatch : BaseResourcePatch(
     private lateinit var customName: String
 
     lateinit var contexts: ResourceContext
-    internal var upward0629 = false
     internal var upward0636 = false
     internal var upward0642 = false
 
@@ -137,7 +136,6 @@ object SettingsPatch : BaseResourcePatch(
 
                         val playServicesVersion = node.textContent.toInt()
 
-                        upward0629 = 234700000 <= playServicesVersion
                         upward0636 = 240399000 <= playServicesVersion
                         upward0642 = 240999000 <= playServicesVersion
 
