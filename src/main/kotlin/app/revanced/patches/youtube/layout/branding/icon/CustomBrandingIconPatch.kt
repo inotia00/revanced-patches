@@ -30,6 +30,7 @@ object CustomBrandingIconPatch : BaseResourcePatch(
         "MMT" to "mmt",
         "Revancify Blue" to DEFAULT_ICON,
         "Revancify Red" to "revancify_red",
+        "Minimal" to "minimal",
         "YouTube" to "youtube"
     )
 
