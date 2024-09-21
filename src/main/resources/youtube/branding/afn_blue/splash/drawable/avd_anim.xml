@@ -1,0 +1,96 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:name="vector"
+            android:width="360dp"
+            android:height="360dp"
+            android:viewportWidth="360"
+            android:viewportHeight="360">
+            <group
+                android:name="group"
+                android:pivotX="180"
+                android:pivotY="180">
+                <path
+                    android:name="path_1"
+                    android:pathData="M 180 80 C 158.885 80 138.304 86.687 121.221 99.098 C 104.139 111.509 91.419 129.017 84.894 149.098 C 78.37 169.18 78.37 190.82 84.894 210.902 C 91.419 230.983 104.139 248.491 121.221 260.902 C 138.304 273.313 158.885 280 180 280 C 201.115 280 221.696 273.313 238.779 260.902 C 255.861 248.491 268.581 230.983 275.106 210.902 C 281.63 190.82 281.63 169.18 275.106 149.098 C 268.581 129.017 255.861 111.509 238.779 99.098 C 221.696 86.687 201.115 80 180 80 Z"
+                    android:fillColor="#111522"
+                    android:strokeWidth="1"/>
+            </group>
+            <group
+                android:name="group_1"
+                android:pivotX="180"
+                android:pivotY="180">
+                <path
+                    android:name="path_2"
+                    android:pathData="M 175.175 173.264 C 180.755 176.487 180.755 184.54 175.175 187.761 L 136.673 209.991 C 131.093 213.212 124.118 209.185 124.118 202.742 L 124.118 158.284 C 124.118 151.84 131.093 147.813 136.673 151.034 L 175.175 173.264 Z"
+                    android:fillColor="#386eff"
+                    android:strokeWidth="1"/>
+                <path
+                    android:name="path_3"
+                    android:pathData="M 227.906 166.424 C 238.322 172.439 238.322 187.472 227.906 193.485 L 174.337 224.413 C 163.922 230.427 150.901 222.91 150.901 210.882 L 150.901 149.027 C 150.901 137 163.922 129.484 174.337 135.497 L 227.906 166.424 Z"
+                    android:fillColor="#ffffff"
+                    android:strokeWidth="1"/>
+                <path
+                    android:name="path_4"
+                    android:pathData="M 150.901 159.251 L 175.175 173.264 C 180.755 176.487 180.755 184.54 175.175 187.761 L 150.901 201.776 L 150.901 159.251 Z"
+                    android:fillColor="#111522"
+                    android:strokeWidth="1"
+                    android:fillType="evenOdd"/>
+            </group>
+        </vector>
+    </aapt:attr>
+    <target android:name="group">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:startOffset="200"
+                    android:duration="600"
+                    android:valueFrom="0"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/overshoot_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:startOffset="200"
+                    android:duration="600"
+                    android:valueFrom="0"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/overshoot_interpolator"/>
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="group_1">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:startOffset="200"
+                    android:duration="600"
+                    android:valueFrom="0"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/overshoot_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:startOffset="200"
+                    android:duration="600"
+                    android:valueFrom="0"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/overshoot_interpolator"/>
+                <objectAnimator
+                    android:propertyName="rotation"
+                    android:startOffset="200"
+                    android:duration="600"
+                    android:valueFrom="0"
+                    android:valueTo="360"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/overshoot_interpolator"/>
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>
