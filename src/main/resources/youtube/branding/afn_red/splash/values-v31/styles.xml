@@ -2,6 +2,6 @@
 <resources>
     <style name="Base.Theme.YouTube.Launcher" parent="@style/Theme.AppCompat.DayNight.NoActionBar">
         <item name="android:windowSplashScreenAnimatedIcon">@drawable/avd_anim</item>
-        <item name="android:windowSplashScreenAnimationDuration">1500</item>
+        <item name="android:windowSplashScreenAnimationDuration">1000</item>
     </style>
 </resources>
