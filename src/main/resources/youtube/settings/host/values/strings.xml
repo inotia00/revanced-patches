@@ -1695,6 +1695,7 @@ AVC (H.264) has a maximum resolution of 1080p, and video playback will use more 
     <string name="revanced_icon_revancify_blue">Revancify Blue</string>
     <string name="revanced_icon_revancify_red">Revancify Red</string>
     <string name="revanced_icon_youtube">YouTube</string>
+    <string name="revanced_icon_youtube_minimal_header">YouTube (Minimal header)</string>
     <string name="revanced_label_default">Stock</string>
     <string name="revanced_patches_excluded">Excluded</string>
     <string name="revanced_patches_included">Included</string>

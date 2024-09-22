@@ -26,6 +26,8 @@ fun PatchOption<String>.lowerCaseOrThrow() = valueOrThrow()
 
 fun PatchOption<String>.underBarOrThrow() = lowerCaseOrThrow()
     .replace(" ", "_")
+    .replace("(", "")
+    .replace(")", "")
 
 fun Node.adoptChild(tagName: String, block: Element.() -> Unit) {
     val child = ownerDocument.createElement(tagName)
