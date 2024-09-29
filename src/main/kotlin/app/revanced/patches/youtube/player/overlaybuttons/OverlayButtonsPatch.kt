@@ -220,8 +220,8 @@ object OverlayButtonsPatch : BaseResourcePatch(
                             node.setAttribute("android:paddingRight", "0.0dip")
                             node.setAttribute("android:paddingBottom", "22.0dip")
                             if (heightIsNotZero && widthIsNotZero) {
-                                node.setAttribute("android:layout_height", if (WiderButtonsSpace) "54.0dip" else "48.0dip")
-                                node.setAttribute("android:layout_width", if (WiderButtonsSpace) "54.0dip" else "48.0dip")
+                                node.setAttribute("android:layout_height", if (WiderButtonsSpace) "56.0dip" else "48.0dip")
+                                node.setAttribute("android:layout_width", if (WiderButtonsSpace) "56.0dip" else "48.0dip")
                             }
                         } else if (timBarItem.containsKey(id)) {
                             node.setAttribute("android:layout_marginBottom", marginBottom)
