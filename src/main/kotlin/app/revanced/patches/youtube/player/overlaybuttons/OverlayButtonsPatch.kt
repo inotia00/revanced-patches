@@ -78,6 +78,15 @@ object OverlayButtonsPatch : BaseResourcePatch(
         description = "Change the icons at the top of the player.",
         required = true
     )
+	
+	// Option to choose wider between-buttons space
+    private val WiderButtonsSpace by booleanPatchOption(
+        key = "WiderButtonsSpace",
+        default = false,
+        title = "Wider between-buttons space",
+        description = "Prevent adjacent button presses by increasing the horizontal spacing between buttons.",
+        required = true
+    )
 
     /**
      * Main execution method for applying the patch.
@@ -160,11 +169,11 @@ object OverlayButtonsPatch : BaseResourcePatch(
         }
 
         // Merge XML nodes from the host to their respective XML files.
-        context.copyXmlNode(
-            "youtube/overlaybuttons/shared/host",
-            "layout/youtube_controls_bottom_ui_container.xml",
-            "android.support.constraint.ConstraintLayout"
-        )
+		context.copyXmlNode(
+			if (WiderButtonsSpace) "youtube/overlaybuttons/shared/host-wide" else "youtube/overlaybuttons/shared/host",
+			"layout/youtube_controls_bottom_ui_container.xml",
+			"android.support.constraint.ConstraintLayout"
+		)
 
         // Modify the layout of fullscreen button for newer YouTube versions (19.09.xx+)
         arrayOf(
@@ -198,10 +207,12 @@ object OverlayButtonsPatch : BaseResourcePatch(
                         )
 
                         // Adjust TimeBar and Chapter bottom padding
-                        val timBarItem = mutableMapOf(
-                            "@id/time_bar_chapter_title" to "16.0dip",
-                            "@id/timestamps_container" to "14.0dip"
-                        )
+						if (WiderButtonsSpace == false) {
+							val timBarItem = mutableMapOf(
+								"@id/time_bar_chapter_title" to "16.0dip",
+								"@id/timestamps_container" to "14.0dip"
+							)
+						}	
 
                         if (isButton) {
                             node.setAttribute("android:layout_marginBottom", marginBottom)
@@ -209,8 +220,8 @@ object OverlayButtonsPatch : BaseResourcePatch(
                             node.setAttribute("android:paddingRight", "0.0dip")
                             node.setAttribute("android:paddingBottom", "22.0dip")
                             if (heightIsNotZero && widthIsNotZero) {
-                                node.setAttribute("android:layout_height", "48.0dip")
-                                node.setAttribute("android:layout_width", "48.0dip")
+                                node.setAttribute("android:layout_height", if (WiderButtonsSpace) "54.0dip" else "48.0dip")
+                                node.setAttribute("android:layout_width", if (WiderButtonsSpace) "54.0dip" else "48.0dip")
                             }
                         } else if (timBarItem.containsKey(id)) {
                             node.setAttribute("android:layout_marginBottom", marginBottom)
@@ -259,3 +270,4 @@ object OverlayButtonsPatch : BaseResourcePatch(
         SettingsPatch.updatePatchStatus(this)
     }
 }
+
