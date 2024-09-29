@@ -278,7 +278,7 @@ Limitations:
     <string name="revanced_hide_upcoming_video_title">Hide UPCOMING video</string>
     <string name="revanced_hide_upcoming_video_summary">"Hide videos with UPCOMING label.
 
-Note: Enabling this also hide Notify me button."</string>
+Note: Enabling this also hides the Notify me button."</string>
 
     <!-- PreferenceScreen: Feed, PreferenceCategory: Feed, PreferenceScreen: Video filter, PreferenceCategory: View count filter -->
     <string name="revanced_preference_category_view_counts_filter">View count filter</string>
@@ -1241,7 +1241,7 @@ Limitations:
     <string name="revanced_hide_shorts_navigation_bar_summary_on">Navigation bar is hidden.</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">Navigation bar is shown.</string>
     <string name="revanced_shorts_navigation_bar_height_percentage_title">Height percentage of empty space</string>
-    <string name="revanced_shorts_navigation_bar_height_percentage_summary">Configures the height percentage of the empty space left when the navigation bar is hidden, between 0 and 100 (%).</string>
+    <string name="revanced_shorts_navigation_bar_height_percentage_summary">Configure the height percentage of the empty space left when the navigation bar is hidden, between 0 and 100 (%).</string>
     <string name="revanced_shorts_navigation_bar_height_percentage_invalid_toast">Height percentage must be between 0-100 (%).</string>
     <string name="revanced_replace_channel_handle_title">Replace channel handle</string>
     <string name="revanced_replace_channel_handle_summary_on">Channel name is used.</string>
