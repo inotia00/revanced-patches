@@ -48,7 +48,7 @@ object VisualPreferencesIconsPatch : BaseResourcePatch(
         description = """
             Whether to apply Visual preferences icons to all settings menus.
 
-            If true: icons are applied to the parent PreferenceScreen of YouTube settings, the parent PreferenceScreen of RVX settings and the RVX sub-settings (if supports).
+            If true: icons are applied to the parent PreferenceScreen of YouTube settings, the parent PreferenceScreen of RVX settings and the RVX sub-settings (if supported).
 
             If false: icons are applied only to the parent PreferenceScreen of YouTube settings and RVX settings.
             """.trimIndentMultiline(),
