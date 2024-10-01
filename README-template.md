@@ -1,6 +1,8 @@
 ## 🧩 ReVanced Patches
 
-ReVanced Extended Patches.
+ReVanced Extended Patches. 
+
+See the [documentation](https://github.com/inotia00/revanced-documentation#readme) to learn how to apply patches and build ReVanced Extended apps.
 
 ## 📋 List of patches in this repository
 
