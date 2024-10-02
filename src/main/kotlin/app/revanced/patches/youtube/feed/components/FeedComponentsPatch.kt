@@ -18,6 +18,7 @@ import app.revanced.patches.youtube.feed.components.fingerprints.ChannelListSubM
 import app.revanced.patches.youtube.feed.components.fingerprints.ChannelListSubMenuTabletSyntheticFingerprint
 import app.revanced.patches.youtube.feed.components.fingerprints.ChannelTabBuilderFingerprint
 import app.revanced.patches.youtube.feed.components.fingerprints.ChannelTabRendererFingerprint
+import app.revanced.patches.youtube.feed.components.fingerprints.ContentPillFingerprint
 import app.revanced.patches.youtube.feed.components.fingerprints.ElementParserFingerprint
 import app.revanced.patches.youtube.feed.components.fingerprints.ElementParserParentFingerprint
 import app.revanced.patches.youtube.feed.components.fingerprints.EngagementPanelUpdateFingerprint
@@ -78,6 +79,7 @@ object FeedComponentsPatch : BaseBytecodePatch(
         ChannelListSubMenuTabletFingerprint,
         ChannelListSubMenuTabletSyntheticFingerprint,
         ChannelTabRendererFingerprint,
+        ContentPillFingerprint,
         ElementParserParentFingerprint,
         EngagementPanelBuilderFingerprint,
         FilterBarHeightFingerprint,
@@ -122,6 +124,24 @@ object FeedComponentsPatch : BaseBytecodePatch(
                         "invoke-static {v$targetRegister}, $FEED_CLASS_DESCRIPTOR->$methodName(Landroid/view/View;)V"
                     )
                 }
+            }
+        }
+
+        // endregion
+
+        // region patch for hide tap to update button (Similar with latest video button)
+
+        ContentPillFingerprint.resultOrThrow().let {
+            it.mutableMethod.apply {
+                addInstructionsWithLabels(
+                    0,
+                    """
+                        invoke-static {}, $FEED_CLASS_DESCRIPTOR->hideLatestVideosButton()Z
+                        move-result v0
+                        if-eqz v0, :show
+                        return-void
+                        """, ExternalLabel("show", getInstruction(0))
+                )
             }
         }
 

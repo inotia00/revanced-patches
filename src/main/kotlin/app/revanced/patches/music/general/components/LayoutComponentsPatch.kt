@@ -9,7 +9,7 @@ import app.revanced.patcher.extensions.InstructionExtensions.replaceInstruction
 import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.util.smali.ExternalLabel
 import app.revanced.patches.music.general.components.fingerprints.ChipCloudFingerprint
-import app.revanced.patches.music.general.components.fingerprints.ContentPillInFingerprint
+import app.revanced.patches.music.general.components.fingerprints.ContentPillFingerprint
 import app.revanced.patches.music.general.components.fingerprints.FloatingButtonFingerprint
 import app.revanced.patches.music.general.components.fingerprints.FloatingButtonParentFingerprint
 import app.revanced.patches.music.general.components.fingerprints.HistoryMenuItemFingerprint
@@ -57,7 +57,7 @@ object LayoutComponentsPatch : BaseBytecodePatch(
     compatiblePackages = COMPATIBLE_PACKAGE,
     fingerprints = setOf(
         ChipCloudFingerprint,
-        ContentPillInFingerprint,
+        ContentPillFingerprint,
         FloatingButtonParentFingerprint,
         HistoryMenuItemFingerprint,
         HistoryMenuItemOfflineTabFingerprint,
@@ -208,7 +208,7 @@ object LayoutComponentsPatch : BaseBytecodePatch(
 
         // region patch for hide tap to update button
 
-        ContentPillInFingerprint.resultOrThrow().let {
+        ContentPillFingerprint.resultOrThrow().let {
             it.mutableMethod.apply {
                 addInstructionsWithLabels(
                     0,
