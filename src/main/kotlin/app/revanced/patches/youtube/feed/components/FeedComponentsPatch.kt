@@ -111,6 +111,7 @@ object FeedComponentsPatch : BaseBytecodePatch(
         mapOf(
             BreakingNewsFingerprint to "hideBreakingNewsShelf",                 // carousel shelf, only used to tablet layout.
             ChannelListSubMenuFingerprint to "hideSubscriptionsChannelSection", // subscriptions channel section
+            ContentPillFingerprint to "hideLatestVideosButton",                 // `tap to update` button
             LatestVideosButtonFingerprint to "hideLatestVideosButton",          // latest videos button
         ).forEach { (fingerprint, methodName) ->
             fingerprint.resultOrThrow().let {
@@ -124,24 +125,6 @@ object FeedComponentsPatch : BaseBytecodePatch(
                         "invoke-static {v$targetRegister}, $FEED_CLASS_DESCRIPTOR->$methodName(Landroid/view/View;)V"
                     )
                 }
-            }
-        }
-
-        // endregion
-
-        // region patch for hide tap to update button (Similar with latest video button)
-
-        ContentPillFingerprint.resultOrThrow().let {
-            it.mutableMethod.apply {
-                addInstructionsWithLabels(
-                    0,
-                    """
-                        invoke-static {}, $FEED_CLASS_DESCRIPTOR->hideLatestVideosButton()Z
-                        move-result v0
-                        if-eqz v0, :show
-                        return-void
-                        """, ExternalLabel("show", getInstruction(0))
-                )
             }
         }
 
