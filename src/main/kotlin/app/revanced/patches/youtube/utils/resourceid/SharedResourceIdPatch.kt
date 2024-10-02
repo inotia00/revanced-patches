@@ -42,6 +42,7 @@ object SharedResourceIdPatch : ResourcePatch() {
     var CompactLink = -1L
     var CompactListItem = -1L
     var ComponentLongClickListener = -1L
+    var ContentPill = -1L
     var ControlsLayoutStub = -1L
     var DarkBackground = -1L
     var DarkSplashAnimation = -1L
@@ -150,6 +151,7 @@ object SharedResourceIdPatch : ResourcePatch() {
         CompactLink = getId(LAYOUT, "compact_link")
         CompactListItem = getId(LAYOUT, "compact_list_item")
         ComponentLongClickListener = getId(ID, "component_long_click_listener")
+        ContentPill = getId(LAYOUT, "content_pill")
         ControlsLayoutStub = getId(ID, "controls_layout_stub")
         DarkBackground = getId(ID, "dark_background")
         DarkSplashAnimation = getId(ID, "dark_splash_animation")
