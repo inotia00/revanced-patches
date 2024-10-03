@@ -38,8 +38,13 @@ import app.revanced.patches.youtube.utils.integrations.Constants.FEED_PATH
 import app.revanced.patches.youtube.utils.navigation.NavigationBarHookPatch
 import app.revanced.patches.youtube.utils.playertype.PlayerTypeHookPatch
 import app.revanced.patches.youtube.utils.resourceid.SharedResourceIdPatch
+import app.revanced.patches.youtube.utils.resourceid.SharedResourceIdPatch.Bar
 import app.revanced.patches.youtube.utils.resourceid.SharedResourceIdPatch.CaptionToggleContainer
+import app.revanced.patches.youtube.utils.resourceid.SharedResourceIdPatch.ChannelListSubMenu
+import app.revanced.patches.youtube.utils.resourceid.SharedResourceIdPatch.ContentPill
+import app.revanced.patches.youtube.utils.resourceid.SharedResourceIdPatch.HorizontalCardList
 import app.revanced.patches.youtube.utils.settings.SettingsPatch
+import app.revanced.util.REGISTER_TEMPLATE_REPLACEMENT
 import app.revanced.util.alsoResolve
 import app.revanced.util.getReference
 import app.revanced.util.getWalkerMethod
@@ -47,6 +52,7 @@ import app.revanced.util.indexOfFirstInstruction
 import app.revanced.util.indexOfFirstInstructionOrThrow
 import app.revanced.util.indexOfFirstInstructionReversedOrThrow
 import app.revanced.util.indexOfFirstWideLiteralInstructionValueOrThrow
+import app.revanced.util.injectLiteralInstructionViewCall
 import app.revanced.util.patch.BaseBytecodePatch
 import app.revanced.util.resultOrThrow
 import com.android.tools.smali.dexlib2.Opcode
@@ -108,24 +114,35 @@ object FeedComponentsPatch : BaseBytecodePatch(
 
         // region patch for hide carousel shelf, subscriptions channel section, latest videos button
 
-        mapOf(
-            BreakingNewsFingerprint to "hideBreakingNewsShelf",                 // carousel shelf, only used to tablet layout.
-            ChannelListSubMenuFingerprint to "hideSubscriptionsChannelSection", // subscriptions channel section
-            ContentPillFingerprint to "hideLatestVideosButton",                 // `tap to update` button
-            LatestVideosButtonFingerprint to "hideLatestVideosButton",          // latest videos button
-        ).forEach { (fingerprint, methodName) ->
-            fingerprint.resultOrThrow().let {
-                it.mutableMethod.apply {
-                    val targetIndex = it.scanResult.patternScanResult!!.endIndex
-                    val targetRegister =
-                        getInstruction<OneRegisterInstruction>(targetIndex).registerA
-
-                    addInstruction(
-                        targetIndex + 1,
-                        "invoke-static {v$targetRegister}, $FEED_CLASS_DESCRIPTOR->$methodName(Landroid/view/View;)V"
-                    )
-                }
-            }
+        listOf(
+            // carousel shelf, only used to tablet layout.
+            Triple(
+                BreakingNewsFingerprint,
+                "hideBreakingNewsShelf",
+                HorizontalCardList
+            ),
+            // subscriptions channel section.
+            Triple(
+                ChannelListSubMenuFingerprint,
+                "hideSubscriptionsChannelSection",
+                ChannelListSubMenu
+            ),
+            // latest videos button
+            Triple(
+                ContentPillFingerprint,
+                "hideLatestVideosButton",
+                ContentPill
+            ),
+            Triple(
+                LatestVideosButtonFingerprint,
+                "hideLatestVideosButton",
+                Bar
+            ),
+        ).forEach { (fingerprint, methodName, literal) ->
+            val smaliInstruction = """
+                    invoke-static {v$REGISTER_TEMPLATE_REPLACEMENT}, $FEED_CLASS_DESCRIPTOR->$methodName(Landroid/view/View;)V
+                    """
+            fingerprint.injectLiteralInstructionViewCall(literal, smaliInstruction)
         }
 
         // endregion
