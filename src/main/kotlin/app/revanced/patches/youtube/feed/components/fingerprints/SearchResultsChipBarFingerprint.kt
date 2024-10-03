@@ -16,5 +16,5 @@ internal object SearchResultsChipBarFingerprint : LiteralValueFingerprint(
         Opcode.INVOKE_VIRTUAL,
         Opcode.MOVE_RESULT_OBJECT
     ),
-    literalSupplier = { BarContainerHeight }
+    literalSupplier = { BarContainerHeight },
 )

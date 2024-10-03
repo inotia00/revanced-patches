@@ -6,7 +6,7 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 import com.android.tools.smali.dexlib2.AccessFlags
 
 internal object AccessibilityOfflineButtonSyncFingerprint : LiteralValueFingerprint(
-    accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     returnType = "V",
-    literalSupplier = { AccessibilityOfflineButtonSync }
+    accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
+    literalSupplier = { AccessibilityOfflineButtonSync },
 )

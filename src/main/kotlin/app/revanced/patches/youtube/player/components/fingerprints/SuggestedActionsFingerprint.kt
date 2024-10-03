@@ -12,5 +12,5 @@ internal object SuggestedActionsFingerprint : LiteralValueFingerprint(
         Opcode.INVOKE_VIRTUAL,
         Opcode.MOVE_RESULT_OBJECT
     ),
-    literalSupplier = { SuggestedAction }
+    literalSupplier = { SuggestedAction },
 )

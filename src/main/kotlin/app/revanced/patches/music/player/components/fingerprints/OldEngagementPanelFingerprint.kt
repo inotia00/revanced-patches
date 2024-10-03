@@ -5,5 +5,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 internal object OldEngagementPanelFingerprint : LiteralValueFingerprint(
     returnType = "Z",
     parameters = emptyList(),
-    literalSupplier = { 45427672 }
+    literalSupplier = { 45427672 },
 )

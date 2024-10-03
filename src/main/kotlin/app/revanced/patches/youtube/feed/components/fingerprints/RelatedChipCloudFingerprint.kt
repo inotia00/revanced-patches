@@ -14,5 +14,5 @@ internal object RelatedChipCloudFingerprint : LiteralValueFingerprint(
         Opcode.INVOKE_VIRTUAL,
         Opcode.MOVE_RESULT_OBJECT
     ),
-    literalSupplier = { RelatedChipCloudMargin }
+    literalSupplier = { RelatedChipCloudMargin },
 )

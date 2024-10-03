@@ -4,5 +4,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 
 internal object TooltipContentFullscreenFingerprint : LiteralValueFingerprint(
     returnType = "V",
-    literalSupplier = { 45384061 }
+    literalSupplier = { 45384061 },
 )

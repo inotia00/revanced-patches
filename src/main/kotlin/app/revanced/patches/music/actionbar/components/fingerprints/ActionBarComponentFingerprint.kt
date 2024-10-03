@@ -17,5 +17,5 @@ internal object ActionBarComponentFingerprint : LiteralValueFingerprint(
         Opcode.SGET_OBJECT,
         Opcode.SGET_OBJECT
     ),
-    literalSupplier = { 99180 }
+    literalSupplier = { 99180 },
 )

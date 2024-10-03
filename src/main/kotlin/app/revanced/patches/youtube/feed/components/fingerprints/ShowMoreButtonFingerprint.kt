@@ -11,5 +11,5 @@ internal object ShowMoreButtonFingerprint : LiteralValueFingerprint(
         Opcode.INVOKE_STATIC,
         Opcode.MOVE_RESULT_OBJECT
     ),
-    literalSupplier = { ExpandButtonDown }
+    literalSupplier = { ExpandButtonDown },
 )

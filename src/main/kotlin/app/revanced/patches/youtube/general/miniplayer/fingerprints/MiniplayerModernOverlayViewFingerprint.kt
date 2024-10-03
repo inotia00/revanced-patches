@@ -10,8 +10,8 @@ import com.android.tools.smali.dexlib2.AccessFlags
  */
 @Suppress("SpellCheckingInspection")
 internal object MiniplayerModernOverlayViewFingerprint : LiteralValueFingerprint(
-    accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     returnType = "V",
+    accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     parameters = emptyList(),
-    literalSupplier = { ScrimOverlay }
+    literalSupplier = { ScrimOverlay },
 )

@@ -5,5 +5,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 
 internal object TermsOfServiceFingerprint : LiteralValueFingerprint(
     returnType = "Landroid/view/View;",
-    literalSupplier = { TosFooter }
+    literalSupplier = { TosFooter },
 )

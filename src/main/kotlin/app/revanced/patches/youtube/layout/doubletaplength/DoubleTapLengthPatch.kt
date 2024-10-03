@@ -4,9 +4,9 @@ import app.revanced.patcher.data.ResourceContext
 import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.patch.options.PatchOption.PatchExtensions.stringPatchOption
 import app.revanced.patches.youtube.utils.compatibility.Constants.COMPATIBLE_PACKAGE
-import app.revanced.patches.youtube.utils.settings.ResourceUtils.addEntryValues
 import app.revanced.patches.youtube.utils.settings.SettingsPatch
 import app.revanced.util.ResourceGroup
+import app.revanced.util.addEntryValues
 import app.revanced.util.copyResources
 import app.revanced.util.patch.BaseResourcePatch
 import java.nio.file.Files

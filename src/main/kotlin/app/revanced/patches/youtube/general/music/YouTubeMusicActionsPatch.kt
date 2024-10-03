@@ -8,9 +8,9 @@ import app.revanced.patches.youtube.general.music.fingerprints.AppDeepLinkFinger
 import app.revanced.patches.youtube.utils.compatibility.Constants.COMPATIBLE_PACKAGE
 import app.revanced.patches.youtube.utils.gms.GmsCoreSupportResourcePatch.PackageNameYouTubeMusic
 import app.revanced.patches.youtube.utils.integrations.Constants.GENERAL_PATH
-import app.revanced.patches.youtube.utils.settings.ResourceUtils.addEntryValues
 import app.revanced.patches.youtube.utils.settings.SettingsBytecodePatch
 import app.revanced.patches.youtube.utils.settings.SettingsPatch
+import app.revanced.util.addEntryValues
 import app.revanced.util.findMethodOrThrow
 import app.revanced.util.getReference
 import app.revanced.util.indexOfFirstInstructionOrThrow

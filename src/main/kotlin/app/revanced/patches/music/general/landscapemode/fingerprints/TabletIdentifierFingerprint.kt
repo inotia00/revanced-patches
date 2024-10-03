@@ -15,6 +15,6 @@ internal object TabletIdentifierFingerprint : LiteralValueFingerprint(
         Opcode.INVOKE_VIRTUAL,
         Opcode.MOVE_RESULT
     ),
-    literalSupplier = { IsTablet }
+    literalSupplier = { IsTablet },
 )
 

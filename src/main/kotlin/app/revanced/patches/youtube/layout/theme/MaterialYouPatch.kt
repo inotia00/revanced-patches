@@ -44,9 +44,6 @@ object MaterialYouPatch : BaseResourcePatch(
 
         context.copyXmlNode("youtube/materialyou/host", "values-v31/colors.xml", "resources")
 
-        /**
-         * Add settings
-         */
         context.updatePatchStatusTheme("MaterialYou")
 
         isMonetPatchIncluded = true

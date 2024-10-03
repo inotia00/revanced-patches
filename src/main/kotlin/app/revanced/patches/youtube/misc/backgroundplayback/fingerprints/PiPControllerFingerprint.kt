@@ -13,5 +13,5 @@ internal object PiPControllerFingerprint : LiteralValueFingerprint(
         Opcode.IF_NEZ,
         Opcode.INVOKE_DIRECT
     ),
-    literalSupplier = { 151635310 }
+    literalSupplier = { 151635310 },
 )

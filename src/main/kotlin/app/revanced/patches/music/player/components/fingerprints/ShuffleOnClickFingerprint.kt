@@ -16,9 +16,9 @@ internal object ShuffleOnClickFingerprint : MethodFingerprint(
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     parameters = listOf("Landroid/view/View;"),
     customFingerprint = { methodDef, _ ->
-                methodDef.containsWideLiteralInstructionValue(45468) &&
-                        methodDef.name == "onClick" &&
-                        indexOfAccessibilityInstruction(methodDef) >= 0
+        methodDef.containsWideLiteralInstructionValue(45468) &&
+                methodDef.name == "onClick" &&
+                indexOfAccessibilityInstruction(methodDef) >= 0
     }
 ) {
     fun indexOfAccessibilityInstruction(methodDef: Method) =

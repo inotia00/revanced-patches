@@ -12,6 +12,6 @@ internal object ChipCloudFingerprint : LiteralValueFingerprint(
         Opcode.INVOKE_STATIC,
         Opcode.MOVE_RESULT_OBJECT
     ),
-    literalSupplier = { ChipCloud }
+    literalSupplier = { ChipCloud },
 )
 

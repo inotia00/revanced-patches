@@ -1,6 +1,7 @@
 package app.revanced.patches.youtube.layout.theme
 
 import app.revanced.patcher.data.ResourceContext
+import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patcher.patch.annotation.Patch
 import app.revanced.patches.shared.drawable.DrawableColorPatch
@@ -10,28 +11,32 @@ import org.w3c.dom.Element
 @Patch(dependencies = [DrawableColorPatch::class])
 @Suppress("DEPRECATION")
 object BaseThemePatch : ResourcePatch() {
+    private const val SPLASH_SCREEN_COLOR_NAME = "splashScreenColor"
+    private const val SPLASH_SCREEN_COLOR_ATTRIBUTE = "?attr/$SPLASH_SCREEN_COLOR_NAME"
+
     override fun execute(context: ResourceContext) {
 
         DrawableColorPatch.injectCall("$UTILS_PATH/DrawableColorPatch;->getColor(I)I")
 
         // edit the resource files to change the splash screen color
-        val attrsPath = "res/values/attrs.xml"
-        val stylesPaths: List<String> = listOf(
-            "res/values/styles.xml", // Android 11 (and below)
-            "res/values-v31/styles.xml", // Android 12 (and above)
-        )
+        val attrsResourceFile = "res/values/attrs.xml"
+        val stylesResourceFiles =
+            listOf("values", "values-v31").map { valuesPath ->
+                "res/$valuesPath/styles.xml"
+            }.toTypedArray()
 
-        context.xmlEditor[attrsPath].use { editor ->
+        context.xmlEditor[attrsResourceFile].use { editor ->
             val file = editor.file
 
             (file.getElementsByTagName("resources").item(0) as Element).appendChild(
                 file.createElement("attr").apply {
                     setAttribute("format", "reference")
-                    setAttribute("name", "splashScreenColor")
+                    setAttribute("name", SPLASH_SCREEN_COLOR_NAME)
                 }
             )
         }
-        stylesPaths.forEachIndexed { pathIndex, stylesPath ->
+
+        stylesResourceFiles.forEachIndexed { pathIndex, stylesPath ->
             context.xmlEditor[stylesPath].use { editor ->
                 val file = editor.file
 
@@ -62,7 +67,7 @@ object BaseThemePatch : ResourcePatch() {
                                     }
 
                                     1 -> when (nodeAttributeName) {
-                                        "Base.Theme.YouTube.Launcher" -> "?attr/splashScreenColor"
+                                        "Base.Theme.YouTube.Launcher" -> SPLASH_SCREEN_COLOR_ATTRIBUTE
                                         else -> "null"
                                     }
 
@@ -78,12 +83,27 @@ object BaseThemePatch : ResourcePatch() {
             }
         }
 
-        arrayOf("drawable", "drawable-sw600dp").forEach { quantumLaunchScreenPath ->
-            context.xmlEditor["res/$quantumLaunchScreenPath/quantum_launchscreen_youtube.xml"].use { editor ->
-                val resourcesNode = editor.file.getElementsByTagName("item").item(0) as Element
+        val splashScreenResourceFiles =
+            listOf("drawable", "drawable-sw600dp").map { quantumLaunchScreenPath ->
+                "res/$quantumLaunchScreenPath/quantum_launchscreen_youtube.xml"
+            }.toTypedArray()
 
-                if (resourcesNode.attributes.getNamedItem("android:drawable") != null)
-                    resourcesNode.setAttribute("android:drawable", "?attr/splashScreenColor")
+        splashScreenResourceFiles.forEach editSplashScreen@{ resourceFile ->
+            context.xmlEditor[resourceFile].use { editor ->
+                val document = editor.file
+
+                val layerList = document.getElementsByTagName("layer-list").item(0) as Element
+
+                val childNodes = layerList.childNodes
+                for (i in 0 until childNodes.length) {
+                    val node = childNodes.item(i)
+                    if (node is Element && node.hasAttribute("android:drawable")) {
+                        node.setAttribute("android:drawable", SPLASH_SCREEN_COLOR_ATTRIBUTE)
+                        return@editSplashScreen
+                    }
+                }
+
+                throw PatchException("Failed to modify launch screen")
             }
         }
 

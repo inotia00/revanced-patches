@@ -7,9 +7,9 @@ import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 
 internal object AdvancedQualityBottomSheetFingerprint : LiteralValueFingerprint(
+    returnType = "L",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     parameters = listOf("L", "L", "L"),
-    returnType = "L",
     opcodes = listOf(
         Opcode.IGET_OBJECT,
         Opcode.INVOKE_STATIC,
@@ -36,5 +36,5 @@ internal object AdvancedQualityBottomSheetFingerprint : LiteralValueFingerprint(
         Opcode.IGET_OBJECT,
         Opcode.CONST_STRING
     ),
-    literalSupplier = { VideoQualityBottomSheet }
+    literalSupplier = { VideoQualityBottomSheet },
 )

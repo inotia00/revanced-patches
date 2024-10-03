@@ -5,5 +5,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 
 internal object BottomSheetBehaviorFingerprint : LiteralValueFingerprint(
     returnType = "V",
-    literalSupplier = { DesignBottomSheet }
+    literalSupplier = { DesignBottomSheet },
 )

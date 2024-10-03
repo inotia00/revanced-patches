@@ -4,5 +4,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 
 internal object FullscreenButtonViewStubFingerprint : LiteralValueFingerprint(
     returnType = "Z",
-    literalSupplier = { 45617294 }
+    literalSupplier = { 45617294 },
 )

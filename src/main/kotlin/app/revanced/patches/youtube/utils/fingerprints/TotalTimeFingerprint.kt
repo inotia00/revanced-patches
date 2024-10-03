@@ -5,5 +5,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 
 internal object TotalTimeFingerprint : LiteralValueFingerprint(
     returnType = "V",
-    literalSupplier = { TotalTime }
+    literalSupplier = { TotalTime },
 )

@@ -10,8 +10,8 @@ import com.android.tools.smali.dexlib2.AccessFlags
  */
 @Suppress("SpellCheckingInspection")
 internal object MiniplayerModernCloseButtonFingerprint : LiteralValueFingerprint(
-    accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     returnType = "Landroid/widget/ImageView;",
+    accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     parameters = emptyList(),
-    literalSupplier = { ModernMiniPlayerClose }
+    literalSupplier = { ModernMiniPlayerClose },
 )

@@ -7,9 +7,9 @@ import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 
 internal object QualityMenuViewInflateFingerprint : LiteralValueFingerprint(
+    returnType = "L",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     parameters = listOf("L", "L", "L"),
-    returnType = "L",
     opcodes = listOf(
         Opcode.INVOKE_SUPER,
         Opcode.CONST,
@@ -26,5 +26,5 @@ internal object QualityMenuViewInflateFingerprint : LiteralValueFingerprint(
         Opcode.MOVE_RESULT_OBJECT,
         Opcode.CHECK_CAST
     ),
-    literalSupplier = { VideoQualityBottomSheet }
+    literalSupplier = { VideoQualityBottomSheet },
 )

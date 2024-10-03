@@ -8,5 +8,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 internal object OldPlayerBackgroundFingerprint : LiteralValueFingerprint(
     returnType = "Z",
     parameters = emptyList(),
-    literalSupplier = { 45415319 }
+    literalSupplier = { 45415319 },
 )

@@ -6,5 +6,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 internal object AccountSwitcherAccessibilityLabelFingerprint : LiteralValueFingerprint(
     returnType = "V",
     parameters = listOf("L", "Ljava/lang/Object;"),
-    literalSupplier = { AccountSwitcherAccessibility }
+    literalSupplier = { AccountSwitcherAccessibility },
 )

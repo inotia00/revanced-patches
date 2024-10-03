@@ -13,5 +13,5 @@ internal object SetActionBarRingoFingerprint : LiteralValueFingerprint(
         Opcode.IGET_OBJECT,
         Opcode.INVOKE_STATIC
     ),
-    literalSupplier = { ActionBarRingo }
+    literalSupplier = { ActionBarRingo },
 )

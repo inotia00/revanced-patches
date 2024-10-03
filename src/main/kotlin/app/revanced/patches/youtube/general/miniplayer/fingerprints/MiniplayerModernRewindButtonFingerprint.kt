@@ -10,8 +10,8 @@ import com.android.tools.smali.dexlib2.AccessFlags
  */
 @Suppress("SpellCheckingInspection")
 internal object MiniplayerModernRewindButtonFingerprint : LiteralValueFingerprint(
-    accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     returnType = "Landroid/widget/ImageView;",
+    accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     parameters = emptyList(),
-    literalSupplier = { ModernMiniPlayerRewindButton }
+    literalSupplier = { ModernMiniPlayerRewindButton },
 )

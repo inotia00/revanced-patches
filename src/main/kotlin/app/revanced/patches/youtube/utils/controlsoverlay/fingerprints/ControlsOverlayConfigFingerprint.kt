@@ -10,5 +10,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
  */
 internal object ControlsOverlayConfigFingerprint : LiteralValueFingerprint(
     returnType = "Z",
-    literalSupplier = { 45427491 }
+    literalSupplier = { 45427491 },
 )

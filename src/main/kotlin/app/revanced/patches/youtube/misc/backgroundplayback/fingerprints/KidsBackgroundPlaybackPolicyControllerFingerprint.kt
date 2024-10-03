@@ -8,5 +8,5 @@ internal object KidsBackgroundPlaybackPolicyControllerFingerprint : LiteralValue
     returnType = "V",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     parameters = listOf("I", "L", "L"),
-    literalSupplier = { 5 }
+    literalSupplier = { 5 },
 )

@@ -9,5 +9,5 @@ internal object ShortsPivotLegacyFingerprint : LiteralValueFingerprint(
     returnType = "V",
     accessFlags = AccessFlags.PRIVATE or AccessFlags.FINAL,
     parameters = listOf("Z", "Z", "L"),
-    literalSupplier = { ReelForcedMuteButton }
+    literalSupplier = { ReelForcedMuteButton },
 )

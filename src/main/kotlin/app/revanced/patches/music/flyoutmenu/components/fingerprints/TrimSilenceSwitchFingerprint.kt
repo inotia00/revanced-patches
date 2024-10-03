@@ -8,6 +8,6 @@ import com.android.tools.smali.dexlib2.AccessFlags
 object TrimSilenceSwitchFingerprint : LiteralValueFingerprint(
     returnType = "Landroid/view/View;",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
-    literalSupplier = { TrimSilenceSwitch }
+    literalSupplier = { TrimSilenceSwitch },
 )
 

@@ -7,9 +7,9 @@ import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 
 internal object ToolBarButtonFingerprint : LiteralValueFingerprint(
+    returnType = "V",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     parameters = listOf("Landroid/view/MenuItem;"),
-    returnType = "V",
     opcodes = listOf(
         Opcode.INVOKE_INTERFACE,
         Opcode.MOVE_RESULT,
@@ -17,5 +17,5 @@ internal object ToolBarButtonFingerprint : LiteralValueFingerprint(
         Opcode.IGET_OBJECT,
         Opcode.INVOKE_VIRTUAL
     ),
-    literalSupplier = { MenuItemView }
+    literalSupplier = { MenuItemView },
 )

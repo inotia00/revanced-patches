@@ -4,5 +4,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 
 internal object SettingsMenuFingerprint : LiteralValueFingerprint(
     returnType = "Landroid/view/View;",
-    literalSupplier = { 16908351 }
+    literalSupplier = { 16908351 },
 )

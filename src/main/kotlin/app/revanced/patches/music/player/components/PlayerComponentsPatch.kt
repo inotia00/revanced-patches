@@ -747,7 +747,8 @@ object PlayerComponentsPatch : BaseBytecodePatch(
                         getReference<MethodReference>()?.returnType == "Ljava/lang/String;"
             }
             val enumRegister = getInstruction<FiveRegisterInstruction>(enumIndex).registerD
-            val enumClass = (getInstruction<ReferenceInstruction>(enumIndex).reference as MethodReference).parameterTypes.first()
+            val enumClass =
+                (getInstruction<ReferenceInstruction>(enumIndex).reference as MethodReference).parameterTypes.first()
 
             addInstruction(
                 enumIndex,
@@ -758,8 +759,10 @@ object PlayerComponentsPatch : BaseBytecodePatch(
 
             // region set static field
 
-            val shuffleClassIndex = indexOfFirstInstructionReversedOrThrow(accessibilityIndex, Opcode.CHECK_CAST)
-            val shuffleClass = getInstruction<ReferenceInstruction>(shuffleClassIndex).reference.toString()
+            val shuffleClassIndex =
+                indexOfFirstInstructionReversedOrThrow(accessibilityIndex, Opcode.CHECK_CAST)
+            val shuffleClass =
+                getInstruction<ReferenceInstruction>(shuffleClassIndex).reference.toString()
             val shuffleMutableClass = context.findClass { classDef ->
                 classDef.type == shuffleClass
             }!!.mutableClass

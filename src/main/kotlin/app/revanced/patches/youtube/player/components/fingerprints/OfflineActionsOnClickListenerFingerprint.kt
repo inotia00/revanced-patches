@@ -9,5 +9,5 @@ internal object OfflineActionsOnClickListenerFingerprint : LiteralValueFingerpri
     returnType = "V",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     parameters = listOf("Ljava/lang/String;"),
-    literalSupplier = { OfflineActionsVideoDeletedUndoSnackbarText }
+    literalSupplier = { OfflineActionsVideoDeletedUndoSnackbarText },
 )

@@ -5,5 +5,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 
 internal object RelatedEndScreenResultsFingerprint : LiteralValueFingerprint(
     returnType = "V",
-    literalSupplier = { AppRelatedEndScreenResults }
+    literalSupplier = { AppRelatedEndScreenResults },
 )

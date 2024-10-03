@@ -19,5 +19,5 @@ internal object MusicAdsFingerprint : LiteralValueFingerprint(
         Opcode.IPUT_WIDE,
         Opcode.CONST_4,
     ),
-    literalSupplier = { 4 }
+    literalSupplier = { 4 },
 )

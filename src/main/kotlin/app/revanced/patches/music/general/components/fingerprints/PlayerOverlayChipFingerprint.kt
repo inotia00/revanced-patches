@@ -8,5 +8,5 @@ import com.android.tools.smali.dexlib2.AccessFlags
 internal object PlayerOverlayChipFingerprint : LiteralValueFingerprint(
     returnType = "L",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
-    literalSupplier = { PlayerOverlayChip }
+    literalSupplier = { PlayerOverlayChip },
 )

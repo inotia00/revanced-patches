@@ -11,5 +11,5 @@ internal object MiniPlayerDefaultTextFingerprint : LiteralValueFingerprint(
         Opcode.SGET_OBJECT,
         Opcode.IF_NE
     ),
-    literalSupplier = { MiniPlayerDefaultText }
+    literalSupplier = { MiniPlayerDefaultText },
 )

@@ -8,5 +8,5 @@ import com.android.tools.smali.dexlib2.AccessFlags
 internal object MiniplayerModernDragAndDropFingerprint : LiteralValueFingerprint(
     accessFlags = AccessFlags.PUBLIC or AccessFlags.CONSTRUCTOR,
     parameters = listOf("L"),
-    literalSupplier = { 45628752 }
+    literalSupplier = { 45628752 },
 )

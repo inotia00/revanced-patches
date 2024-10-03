@@ -5,7 +5,7 @@ import com.android.tools.smali.dexlib2.AccessFlags
 
 internal object ShortsLiveStreamEmojiPickerOnClickListenerFingerprint : LiteralValueFingerprint(
     returnType = "V",
-    parameters = listOf("L"),
     accessFlags = AccessFlags.PUBLIC.value,
-    literalSupplier = { 126326492 }
+    parameters = listOf("L"),
+    literalSupplier = { 126326492 },
 )

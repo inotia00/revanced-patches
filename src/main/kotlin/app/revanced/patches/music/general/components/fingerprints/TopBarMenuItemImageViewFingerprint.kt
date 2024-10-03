@@ -9,6 +9,6 @@ internal object TopBarMenuItemImageViewFingerprint : LiteralValueFingerprint(
     returnType = "Landroid/view/View;",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     parameters = emptyList(),
-    literalSupplier = { TopBarMenuItemImageView }
+    literalSupplier = { TopBarMenuItemImageView },
 )
 

@@ -15,5 +15,5 @@ internal object FilterBarHeightFingerprint : LiteralValueFingerprint(
         Opcode.MOVE_RESULT,
         Opcode.IPUT
     ),
-    literalSupplier = { FilterBarHeight }
+    literalSupplier = { FilterBarHeight },
 )

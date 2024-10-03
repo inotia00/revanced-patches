@@ -7,9 +7,9 @@ import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 
 internal object ContextualMenuItemBuilderFingerprint : LiteralValueFingerprint(
+    returnType = "V",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL or AccessFlags.SYNTHETIC,
     parameters = listOf("L", "L"),
-    returnType = "V",
     opcodes = listOf(
         Opcode.CHECK_CAST,
         Opcode.INVOKE_VIRTUAL,
@@ -17,5 +17,5 @@ internal object ContextualMenuItemBuilderFingerprint : LiteralValueFingerprint(
         Opcode.MOVE_RESULT,
         Opcode.ADD_INT_2ADDR
     ),
-    literalSupplier = { PosterArtWidthDefault }
+    literalSupplier = { PosterArtWidthDefault },
 )

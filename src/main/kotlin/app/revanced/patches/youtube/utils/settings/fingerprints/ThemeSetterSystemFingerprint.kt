@@ -7,5 +7,5 @@ import com.android.tools.smali.dexlib2.Opcode
 internal object ThemeSetterSystemFingerprint : LiteralValueFingerprint(
     returnType = "L",
     opcodes = listOf(Opcode.RETURN_OBJECT),
-    literalSupplier = { Appearance }
+    literalSupplier = { Appearance },
 )

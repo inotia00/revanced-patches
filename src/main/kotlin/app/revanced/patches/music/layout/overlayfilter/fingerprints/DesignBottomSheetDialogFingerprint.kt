@@ -12,6 +12,6 @@ internal object DesignBottomSheetDialogFingerprint : LiteralValueFingerprint(
         Opcode.INVOKE_VIRTUAL,
         Opcode.MOVE_RESULT_OBJECT
     ),
-    literalSupplier = { DesignBottomSheetDialog }
+    literalSupplier = { DesignBottomSheetDialog },
 )
 

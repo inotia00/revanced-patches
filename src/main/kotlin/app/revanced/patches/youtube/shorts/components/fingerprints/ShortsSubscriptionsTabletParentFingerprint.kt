@@ -8,5 +8,5 @@ import com.android.tools.smali.dexlib2.AccessFlags
 internal object ShortsSubscriptionsTabletParentFingerprint : LiteralValueFingerprint(
     returnType = "V",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
-    literalSupplier = { ReelPlayerFooter }
+    literalSupplier = { ReelPlayerFooter },
 )

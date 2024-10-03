@@ -19,6 +19,6 @@ internal object TabLayoutTextFingerprint : LiteralValueFingerprint(
         Opcode.INVOKE_INTERFACE,
         Opcode.MOVE_RESULT
     ),
-    literalSupplier = { Text1 }
+    literalSupplier = { Text1 },
 )
 

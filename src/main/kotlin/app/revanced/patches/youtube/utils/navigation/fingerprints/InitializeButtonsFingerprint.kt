@@ -6,7 +6,7 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 import com.android.tools.smali.dexlib2.AccessFlags
 
 internal object InitializeButtonsFingerprint : LiteralValueFingerprint(
-    accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     returnType = "V",
-    literalSupplier = { ImageOnlyTab }
+    accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
+    literalSupplier = { ImageOnlyTab },
 )

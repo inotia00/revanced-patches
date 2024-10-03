@@ -4,5 +4,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 
 object TrimSilenceConfigFingerprint : LiteralValueFingerprint(
     returnType = "Z",
-    literalSupplier = { 45619123 }
+    literalSupplier = { 45619123 },
 )

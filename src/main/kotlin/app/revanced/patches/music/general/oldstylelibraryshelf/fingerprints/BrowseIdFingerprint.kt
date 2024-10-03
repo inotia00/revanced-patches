@@ -9,5 +9,5 @@ internal object BrowseIdFingerprint : LiteralValueFingerprint(
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     parameters = listOf("L"),
     strings = listOf("FEmusic_offline"),
-    literalSupplier = { 45358178 }
+    literalSupplier = { 45358178 },
 )

@@ -4,5 +4,5 @@ import app.revanced.patches.youtube.utils.resourceid.SharedResourceIdPatch.Compa
 import app.revanced.util.fingerprint.LiteralValueFingerprint
 
 internal object AccountListParentFingerprint : LiteralValueFingerprint(
-    literalSupplier = { CompactListItem }
+    literalSupplier = { CompactListItem },
 )

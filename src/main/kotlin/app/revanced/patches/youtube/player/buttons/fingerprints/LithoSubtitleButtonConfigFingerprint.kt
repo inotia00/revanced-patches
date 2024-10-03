@@ -10,5 +10,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
  */
 internal object LithoSubtitleButtonConfigFingerprint : LiteralValueFingerprint(
     returnType = "Z",
-    literalSupplier = { 45421555 }
+    literalSupplier = { 45421555 },
 )

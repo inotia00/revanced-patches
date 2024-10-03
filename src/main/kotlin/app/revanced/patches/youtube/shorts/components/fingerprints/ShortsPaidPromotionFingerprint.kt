@@ -9,5 +9,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
  * but due to the structure of ReVanced Patcher, the patch is applied to the method found first.
  */
 internal object ShortsPaidPromotionFingerprint : LiteralValueFingerprint(
-    literalSupplier = { BadgeLabel }
+    literalSupplier = { BadgeLabel },
 )

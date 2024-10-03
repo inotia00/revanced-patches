@@ -10,5 +10,5 @@ internal object LithoComponentOnClickListenerFingerprint : LiteralValueFingerpri
     returnType = "V",
     accessFlags = AccessFlags.PRIVATE or AccessFlags.STATIC,
     parameters = listOf("L"),
-    literalSupplier = { ComponentLongClickListener }
+    literalSupplier = { ComponentLongClickListener },
 )

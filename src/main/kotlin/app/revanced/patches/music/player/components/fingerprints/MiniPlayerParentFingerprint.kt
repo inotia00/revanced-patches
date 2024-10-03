@@ -9,5 +9,5 @@ internal object MiniPlayerParentFingerprint : LiteralValueFingerprint(
     returnType = "V",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     parameters = emptyList(),
-    literalSupplier = { MiniPlayerMdxPlaying }
+    literalSupplier = { MiniPlayerMdxPlaying },
 )

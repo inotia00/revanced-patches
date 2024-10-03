@@ -7,5 +7,5 @@ import com.android.tools.smali.dexlib2.AccessFlags
 
 internal object DrawerContentViewConstructorFingerprint : LiteralValueFingerprint(
     accessFlags = AccessFlags.PUBLIC or AccessFlags.CONSTRUCTOR,
-    literalSupplier = { DrawerContentView }
+    literalSupplier = { DrawerContentView },
 )

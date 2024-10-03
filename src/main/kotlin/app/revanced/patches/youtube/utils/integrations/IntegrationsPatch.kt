@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package app.revanced.patches.youtube.utils.integrations
 
 import app.revanced.patcher.patch.annotation.Patch

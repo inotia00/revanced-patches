@@ -15,5 +15,5 @@ internal object RemixGenericButtonFingerprint : LiteralValueFingerprint(
         Opcode.MOVE_RESULT,
         Opcode.FLOAT_TO_INT
     ),
-    literalSupplier = { RemixGenericButtonSize }
+    literalSupplier = { RemixGenericButtonSize },
 )

@@ -7,5 +7,5 @@ import com.android.tools.smali.dexlib2.AccessFlags
 
 internal object HorizontalTouchOffsetConstructorFingerprint : LiteralValueFingerprint(
     accessFlags = AccessFlags.PUBLIC or AccessFlags.CONSTRUCTOR,
-    literalSupplier = { SeekEasyHorizontalTouchOffsetToStartScrubbing }
+    literalSupplier = { SeekEasyHorizontalTouchOffsetToStartScrubbing },
 )

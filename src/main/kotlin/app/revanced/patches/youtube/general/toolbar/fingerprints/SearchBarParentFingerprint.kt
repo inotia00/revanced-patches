@@ -6,5 +6,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 object SearchBarParentFingerprint : LiteralValueFingerprint(
     returnType = "Landroid/view/View;",
     strings = listOf("voz-target-id"),
-    literalSupplier = { VoiceSearch }
+    literalSupplier = { VoiceSearch },
 )

@@ -18,5 +18,5 @@ internal object BackgroundPlaybackSettingsFingerprint : LiteralValueFingerprint(
         Opcode.IF_NEZ,
         Opcode.GOTO
     ),
-    literalSupplier = { BackgroundCategory }
+    literalSupplier = { BackgroundCategory },
 )

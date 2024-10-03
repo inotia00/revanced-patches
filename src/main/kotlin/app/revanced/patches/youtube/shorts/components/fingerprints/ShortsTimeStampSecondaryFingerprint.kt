@@ -7,5 +7,5 @@ import com.android.tools.smali.dexlib2.AccessFlags
 internal object ShortsTimeStampSecondaryFingerprint : LiteralValueFingerprint(
     returnType = "Z",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
-    literalSupplier = { 45638187 }
+    literalSupplier = { 45638187 },
 )

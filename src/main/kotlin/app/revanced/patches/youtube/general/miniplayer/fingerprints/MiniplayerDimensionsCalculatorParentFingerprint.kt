@@ -7,8 +7,8 @@ import com.android.tools.smali.dexlib2.AccessFlags
 
 @Suppress("SpellCheckingInspection")
 internal object MiniplayerDimensionsCalculatorParentFingerprint : LiteralValueFingerprint(
-    accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     returnType = "V",
+    accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     parameters = listOf("L"),
-    literalSupplier = { FloatyBarTopMargin }
+    literalSupplier = { FloatyBarTopMargin },
 )

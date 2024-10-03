@@ -11,5 +11,5 @@ internal object VideoQualityListFingerprint : LiteralValueFingerprint(
         Opcode.INVOKE_INTERFACE,
         Opcode.RETURN_VOID
     ),
-    literalSupplier = { QualityAuto }
+    literalSupplier = { QualityAuto },
 )

@@ -70,6 +70,47 @@ fun List<String>.getResourceGroup(fileNames: Array<String>) = map { directory ->
     )
 }
 
+fun ResourceContext.appendAppVersion(appVersion: String) {
+    addEntryValues(
+        "revanced_spoof_app_version_target_entries",
+        "@string/revanced_spoof_app_version_target_entry_" + appVersion.replace(".", "_"),
+        prepend = false
+    )
+    addEntryValues(
+        "revanced_spoof_app_version_target_entry_values",
+        appVersion,
+        prepend = false
+    )
+}
+
+fun ResourceContext.addEntryValues(
+    attributeName: String,
+    attributeValue: String,
+    path: String = "res/values/arrays.xml",
+    prepend: Boolean = true,
+) {
+    xmlEditor[path].use {
+        with(it.file) {
+            val resourcesNode = getElementsByTagName("resources").item(0) as Element
+
+            val newElement: Element = createElement("item")
+            for (i in 0 until resourcesNode.childNodes.length) {
+                val node = resourcesNode.childNodes.item(i) as? Element ?: continue
+
+                if (node.getAttribute("name") == attributeName) {
+                    newElement.appendChild(createTextNode(attributeValue))
+
+                    if (prepend) {
+                        node.appendChild(newElement)
+                    } else {
+                        node.insertBefore(newElement, node.firstChild)
+                    }
+                }
+            }
+        }
+    }
+}
+
 fun ResourceContext.copyFile(
     resourceGroup: List<ResourceGroup>,
     path: String,

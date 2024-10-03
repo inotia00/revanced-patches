@@ -5,5 +5,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 
 internal object MusicAppDeeplinkButtonParentFingerprint : LiteralValueFingerprint(
     returnType = "V",
-    literalSupplier = { MusicAppDeeplinkButtonView }
+    literalSupplier = { MusicAppDeeplinkButtonView },
 )

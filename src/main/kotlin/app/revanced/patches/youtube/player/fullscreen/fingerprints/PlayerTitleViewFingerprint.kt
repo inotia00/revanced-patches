@@ -5,5 +5,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 
 internal object PlayerTitleViewFingerprint : LiteralValueFingerprint(
     returnType = "V",
-    literalSupplier = { PlayerVideoTitleView }
+    literalSupplier = { PlayerVideoTitleView },
 )

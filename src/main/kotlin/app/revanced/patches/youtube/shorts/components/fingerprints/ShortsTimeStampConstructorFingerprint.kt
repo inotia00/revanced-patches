@@ -8,5 +8,5 @@ import com.android.tools.smali.dexlib2.AccessFlags
 internal object ShortsTimeStampConstructorFingerprint : LiteralValueFingerprint(
     returnType = "V",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.CONSTRUCTOR,
-    literalSupplier = { ReelVodTimeStampsContainer }
+    literalSupplier = { ReelVodTimeStampsContainer },
 )

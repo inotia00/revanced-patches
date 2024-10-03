@@ -10,6 +10,6 @@ internal object FloatingButtonParentFingerprint : LiteralValueFingerprint(
     accessFlags = AccessFlags.PROTECTED or AccessFlags.FINAL,
     parameters = listOf("L"),
     opcodes = listOf(Opcode.INVOKE_DIRECT),
-    literalSupplier = { 259982244 }
+    literalSupplier = { 259982244 },
 )
 

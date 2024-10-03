@@ -4,5 +4,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 
 internal object SoundSearchFingerprint : LiteralValueFingerprint(
     parameters = emptyList(),
-    literalSupplier = { 45625491 }
+    literalSupplier = { 45625491 },
 )

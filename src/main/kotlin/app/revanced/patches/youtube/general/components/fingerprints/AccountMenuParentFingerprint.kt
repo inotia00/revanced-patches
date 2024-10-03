@@ -11,5 +11,5 @@ internal object AccountMenuParentFingerprint : LiteralValueFingerprint(
         Opcode.INVOKE_VIRTUAL,
         Opcode.MOVE_RESULT_OBJECT
     ),
-    literalSupplier = { CompactLink }
+    literalSupplier = { CompactLink },
 )

@@ -5,8 +5,8 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 import com.android.tools.smali.dexlib2.AccessFlags
 
 internal object PlayerButtonFingerprint : LiteralValueFingerprint(
+    returnType = "V",
     accessFlags = AccessFlags.PRIVATE or AccessFlags.FINAL,
     parameters = emptyList(),
-    returnType = "V",
-    literalSupplier = { 11208 }
+    literalSupplier = { 11208 },
 )

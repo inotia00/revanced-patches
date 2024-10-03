@@ -6,7 +6,7 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 import com.android.tools.smali.dexlib2.AccessFlags
 
 internal object ReelWatchPagerFingerprint : LiteralValueFingerprint(
-    accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     returnType = "Landroid/view/View;",
-    literalSupplier = { ReelWatchPlayer }
+    accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
+    literalSupplier = { ReelWatchPlayer },
 )

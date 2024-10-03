@@ -5,5 +5,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 
 internal object TouchOutsideFingerprint : LiteralValueFingerprint(
     returnType = "Landroid/view/View;",
-    literalSupplier = { TouchOutside }
+    literalSupplier = { TouchOutside },
 )

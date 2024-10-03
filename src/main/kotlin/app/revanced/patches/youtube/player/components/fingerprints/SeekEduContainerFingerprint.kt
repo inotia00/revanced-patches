@@ -5,5 +5,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 
 internal object SeekEduContainerFingerprint : LiteralValueFingerprint(
     returnType = "V",
-    literalSupplier = { EasySeekEduContainer }
+    literalSupplier = { EasySeekEduContainer },
 )

@@ -9,5 +9,5 @@ internal object BottomSheetRecyclerViewFingerprint : LiteralValueFingerprint(
     returnType = "Lj${'$'}/util/Optional;",
     accessFlags = AccessFlags.PROTECTED or AccessFlags.FINAL,
     parameters = emptyList(),
-    literalSupplier = { BottomSheetRecyclerView }
+    literalSupplier = { BottomSheetRecyclerView },
 )

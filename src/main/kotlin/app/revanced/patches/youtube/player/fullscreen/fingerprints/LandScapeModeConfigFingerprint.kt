@@ -7,5 +7,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
  */
 internal object LandScapeModeConfigFingerprint : LiteralValueFingerprint(
     returnType = "Z",
-    literalSupplier = { 45446428 }
+    literalSupplier = { 45446428 },
 )

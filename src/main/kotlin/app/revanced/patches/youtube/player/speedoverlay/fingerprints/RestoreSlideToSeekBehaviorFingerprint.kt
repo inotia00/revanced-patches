@@ -11,5 +11,5 @@ internal object RestoreSlideToSeekBehaviorFingerprint : LiteralValueFingerprint(
     returnType = "Z",
     parameters = emptyList(),
     opcodes = listOf(Opcode.MOVE_RESULT),
-    literalSupplier = { 45411329 }
+    literalSupplier = { 45411329 },
 )

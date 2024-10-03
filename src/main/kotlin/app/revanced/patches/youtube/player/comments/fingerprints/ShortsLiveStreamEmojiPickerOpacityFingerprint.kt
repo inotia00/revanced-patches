@@ -9,5 +9,5 @@ internal object ShortsLiveStreamEmojiPickerOpacityFingerprint : LiteralValueFing
     returnType = "Landroid/widget/ImageView;",
     accessFlags = AccessFlags.PROTECTED or AccessFlags.FINAL,
     parameters = emptyList(),
-    literalSupplier = { EmojiPickerIcon }
+    literalSupplier = { EmojiPickerIcon },
 )

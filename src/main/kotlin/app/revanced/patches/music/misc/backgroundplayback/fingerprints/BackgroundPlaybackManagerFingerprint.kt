@@ -8,5 +8,5 @@ internal object BackgroundPlaybackManagerFingerprint : LiteralValueFingerprint(
     returnType = "Z",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.STATIC,
     parameters = listOf("L"),
-    literalSupplier = { 64657230 }
+    literalSupplier = { 64657230 },
 )

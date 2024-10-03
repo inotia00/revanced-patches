@@ -5,5 +5,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 
 internal object SeekBarConstructorFingerprint : LiteralValueFingerprint(
     returnType = "V",
-    literalSupplier = { InlineTimeBarAdBreakMarkerColor }
+    literalSupplier = { InlineTimeBarAdBreakMarkerColor },
 )

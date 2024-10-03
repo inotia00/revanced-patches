@@ -10,5 +10,5 @@ import com.android.tools.smali.dexlib2.AccessFlags
 internal object ImageSearchButtonConfigFingerprint : LiteralValueFingerprint(
     returnType = "Z",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
-    literalSupplier = { 45617544 }
+    literalSupplier = { 45617544 },
 )

@@ -7,5 +7,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
  */
 internal object SwipeToSwitchVideoFingerprint : LiteralValueFingerprint(
     returnType = "V",
-    literalSupplier = { 45631116 }
+    literalSupplier = { 45631116 },
 )

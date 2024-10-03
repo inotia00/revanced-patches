@@ -9,5 +9,5 @@ internal object CaptionsButtonFingerprint : LiteralValueFingerprint(
     returnType = "V",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     parameters = emptyList(),
-    literalSupplier = { CaptionToggleContainer }
+    literalSupplier = { CaptionToggleContainer },
 )

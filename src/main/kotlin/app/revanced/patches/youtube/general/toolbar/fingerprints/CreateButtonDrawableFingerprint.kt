@@ -4,5 +4,5 @@ import app.revanced.patches.youtube.utils.resourceid.SharedResourceIdPatch.YtOut
 import app.revanced.util.fingerprint.LiteralValueFingerprint
 
 internal object CreateButtonDrawableFingerprint : LiteralValueFingerprint(
-    literalSupplier = { YtOutlineVideoCamera }
+    literalSupplier = { YtOutlineVideoCamera },
 )

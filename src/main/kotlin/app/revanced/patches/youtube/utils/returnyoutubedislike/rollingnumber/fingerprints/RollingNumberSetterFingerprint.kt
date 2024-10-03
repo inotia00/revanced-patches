@@ -8,5 +8,5 @@ import com.android.tools.smali.dexlib2.Opcode
  */
 internal object RollingNumberSetterFingerprint : LiteralValueFingerprint(
     opcodes = listOf(Opcode.CHECK_CAST),
-    literalSupplier = { 45427773 }
+    literalSupplier = { 45427773 },
 )

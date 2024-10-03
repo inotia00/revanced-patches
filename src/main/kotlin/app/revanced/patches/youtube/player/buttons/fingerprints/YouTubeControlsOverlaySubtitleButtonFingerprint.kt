@@ -14,5 +14,5 @@ import com.android.tools.smali.dexlib2.AccessFlags
 internal object YouTubeControlsOverlaySubtitleButtonFingerprint : LiteralValueFingerprint(
     returnType = "L",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.STATIC,
-    literalSupplier = { YouTubeControlsOverlaySubtitleButton }
+    literalSupplier = { YouTubeControlsOverlaySubtitleButton },
 )

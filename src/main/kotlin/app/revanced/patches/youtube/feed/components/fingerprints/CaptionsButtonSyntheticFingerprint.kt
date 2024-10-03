@@ -9,5 +9,5 @@ internal object CaptionsButtonSyntheticFingerprint : LiteralValueFingerprint(
     returnType = "Landroid/view/View;",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL or AccessFlags.BRIDGE or AccessFlags.SYNTHETIC,
     parameters = listOf("Landroid/content/Context;"),
-    literalSupplier = { CaptionToggleContainer }
+    literalSupplier = { CaptionToggleContainer },
 )

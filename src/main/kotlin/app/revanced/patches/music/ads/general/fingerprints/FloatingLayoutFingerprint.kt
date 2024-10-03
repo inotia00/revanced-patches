@@ -9,5 +9,5 @@ internal object FloatingLayoutFingerprint : LiteralValueFingerprint(
     returnType = "Landroid/view/View;",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     parameters = emptyList(),
-    literalSupplier = { FloatingLayout }
+    literalSupplier = { FloatingLayout },
 )

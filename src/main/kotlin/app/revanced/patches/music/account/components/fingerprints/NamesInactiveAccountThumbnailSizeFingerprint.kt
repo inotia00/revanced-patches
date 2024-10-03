@@ -20,5 +20,5 @@ internal object NamesInactiveAccountThumbnailSizeFingerprint : LiteralValueFinge
         Opcode.MOVE_RESULT_OBJECT,
         Opcode.IF_EQZ
     ),
-    literalSupplier = { NamesInactiveAccountThumbnailSize }
+    literalSupplier = { NamesInactiveAccountThumbnailSize },
 )

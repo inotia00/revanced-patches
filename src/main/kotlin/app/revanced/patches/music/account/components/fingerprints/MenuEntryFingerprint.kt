@@ -5,5 +5,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 
 internal object MenuEntryFingerprint : LiteralValueFingerprint(
     returnType = "V",
-    literalSupplier = { MenuEntry }
+    literalSupplier = { MenuEntry },
 )

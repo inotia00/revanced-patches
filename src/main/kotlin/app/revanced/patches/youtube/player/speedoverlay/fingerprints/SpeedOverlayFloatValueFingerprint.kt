@@ -13,5 +13,5 @@ internal object SpeedOverlayFloatValueFingerprint : LiteralValueFingerprint(
     returnType = "V",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.CONSTRUCTOR,
     opcodes = listOf(Opcode.DOUBLE_TO_FLOAT),
-    literalSupplier = { 45411328 }
+    literalSupplier = { 45411328 },
 )

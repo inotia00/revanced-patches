@@ -4,5 +4,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 
 @Suppress("SpellCheckingInspection")
 internal object MiniplayerModernEnabledFingerprint : LiteralValueFingerprint(
-    literalSupplier = { 45622882 }
+    literalSupplier = { 45622882 },
 )

@@ -11,5 +11,5 @@ internal object SpeedOverlayFingerprint : LiteralValueFingerprint(
     returnType = "Z",
     parameters = emptyList(),
     opcodes = listOf(Opcode.MOVE_RESULT),
-    literalSupplier = { 45411330 }
+    literalSupplier = { 45411330 },
 )

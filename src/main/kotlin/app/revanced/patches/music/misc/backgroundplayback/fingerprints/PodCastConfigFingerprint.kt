@@ -8,5 +8,5 @@ internal object PodCastConfigFingerprint : LiteralValueFingerprint(
     returnType = "Z",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     parameters = emptyList(),
-    literalSupplier = { 45388403 }
+    literalSupplier = { 45388403 },
 )

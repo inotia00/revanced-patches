@@ -14,5 +14,5 @@ internal object PlaybackRateBottomSheetBuilderFingerprint : LiteralValueFingerpr
         Opcode.IGET_BOOLEAN,
         Opcode.IF_EQZ,
     ),
-    literalSupplier = { VarispeedUnavailableTitle }
+    literalSupplier = { VarispeedUnavailableTitle },
 )

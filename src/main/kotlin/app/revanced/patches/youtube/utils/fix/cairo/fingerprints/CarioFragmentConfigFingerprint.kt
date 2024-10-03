@@ -13,5 +13,5 @@ import com.android.tools.smali.dexlib2.AccessFlags
 internal object CarioFragmentConfigFingerprint : LiteralValueFingerprint(
     returnType = "Z",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
-    literalSupplier = { 45532100 }
+    literalSupplier = { 45532100 },
 )

@@ -12,5 +12,5 @@ internal object BottomControlsInflateFingerprint : LiteralValueFingerprint(
         Opcode.INVOKE_VIRTUAL,
         Opcode.MOVE_RESULT_OBJECT
     ),
-    literalSupplier = { BottomUiContainerStub }
+    literalSupplier = { BottomUiContainerStub },
 )

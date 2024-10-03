@@ -5,6 +5,6 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 
 internal object EndButtonsContainerFingerprint : LiteralValueFingerprint(
     returnType = "V",
-    literalSupplier = { EndButtonsContainer }
+    literalSupplier = { EndButtonsContainer },
 )
 

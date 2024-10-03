@@ -17,5 +17,5 @@ internal object ControlsLayoutInflateFingerprint : LiteralValueFingerprint(
         Opcode.INVOKE_VIRTUAL,
         Opcode.MOVE_RESULT_OBJECT
     ),
-    literalSupplier = { ControlsLayoutStub }
+    literalSupplier = { ControlsLayoutStub },
 )

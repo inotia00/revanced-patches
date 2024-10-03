@@ -17,5 +17,5 @@ internal object AccountMenuFooterFingerprint : LiteralValueFingerprint(
         Opcode.INVOKE_VIRTUAL,
         Opcode.IGET_OBJECT
     ),
-    literalSupplier = { PrivacyTosFooter }
+    literalSupplier = { PrivacyTosFooter },
 )

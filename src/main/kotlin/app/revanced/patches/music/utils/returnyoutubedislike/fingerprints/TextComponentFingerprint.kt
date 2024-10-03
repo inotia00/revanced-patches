@@ -7,5 +7,5 @@ import com.android.tools.smali.dexlib2.Opcode
 internal object TextComponentFingerprint : LiteralValueFingerprint(
     returnType = "V",
     opcodes = listOf(Opcode.CONST_HIGH16),
-    literalSupplier = { ButtonIconPaddingMedium }
+    literalSupplier = { ButtonIconPaddingMedium },
 )

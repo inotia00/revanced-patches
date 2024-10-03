@@ -6,8 +6,8 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 import com.android.tools.smali.dexlib2.AccessFlags
 
 internal object MenuItemInitializeFingerprint : LiteralValueFingerprint(
+    returnType = "V",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     parameters = listOf("Landroid/view/MenuItem;"),
-    returnType = "V",
-    literalSupplier = { CastMediaRouteButton }
+    literalSupplier = { CastMediaRouteButton },
 )

@@ -15,5 +15,5 @@ internal object FloatingMicrophoneFingerprint : LiteralValueFingerprint(
         Opcode.IF_EQZ,
         Opcode.RETURN_VOID
     ),
-    literalSupplier = { Fab }
+    literalSupplier = { Fab },
 )

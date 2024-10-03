@@ -10,5 +10,5 @@ internal object BackgroundPlaybackManagerFingerprint : LiteralValueFingerprint(
     accessFlags = AccessFlags.PUBLIC or AccessFlags.STATIC,
     parameters = listOf("L"),
     opcodes = listOf(Opcode.AND_INT_LIT16),
-    literalSupplier = { 64657230 }
+    literalSupplier = { 64657230 },
 )

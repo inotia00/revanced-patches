@@ -15,6 +15,6 @@ internal object DialogSolidFingerprint : LiteralValueFingerprint(
         Opcode.MOVE_RESULT_OBJECT,
         Opcode.INVOKE_STATIC
     ),
-    literalSupplier = { DialogSolid }
+    literalSupplier = { DialogSolid },
 )
 

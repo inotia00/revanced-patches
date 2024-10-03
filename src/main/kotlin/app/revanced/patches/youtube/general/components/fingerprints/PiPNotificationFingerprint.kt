@@ -9,5 +9,5 @@ internal object PiPNotificationFingerprint : LiteralValueFingerprint(
     returnType = "V",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     parameters = listOf("L"),
-    literalSupplier = { EditSettingsAction }
+    literalSupplier = { EditSettingsAction },
 )

@@ -5,5 +5,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 internal object CairoSeekbarConfigFingerprint : LiteralValueFingerprint(
     returnType = "Z",
     parameters = emptyList(),
-    literalSupplier = { 45617850 }
+    literalSupplier = { 45617850 },
 )

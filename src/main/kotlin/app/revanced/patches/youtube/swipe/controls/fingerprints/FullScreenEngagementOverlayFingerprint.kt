@@ -5,5 +5,5 @@ import app.revanced.util.fingerprint.LiteralValueFingerprint
 
 internal object FullScreenEngagementOverlayFingerprint : LiteralValueFingerprint(
     returnType = "V",
-    literalSupplier = { FullScreenEngagementOverlay }
+    literalSupplier = { FullScreenEngagementOverlay },
 )

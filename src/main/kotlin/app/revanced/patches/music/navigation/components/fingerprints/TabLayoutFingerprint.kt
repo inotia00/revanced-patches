@@ -10,6 +10,6 @@ internal object TabLayoutFingerprint : LiteralValueFingerprint(
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     parameters = emptyList(),
     strings = listOf("FEmusic_radio_builder"),
-    literalSupplier = { ColorGrey }
+    literalSupplier = { ColorGrey },
 )
 
