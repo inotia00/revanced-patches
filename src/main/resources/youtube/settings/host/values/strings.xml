@@ -344,6 +344,9 @@ Limitation: Back button on the toolbar may not work."</string>
     <string name="revanced_disable_auto_captions_title">Disable forced auto captions</string>
     <string name="revanced_disable_auto_captions_summary_on">Forced auto captions are disabled.</string>
     <string name="revanced_disable_auto_captions_summary_off">Forced auto captions are enabled.</string>
+    <string name="revanced_disable_video_chapter_title">Disable video chapter</string>
+    <string name="revanced_disable_video_chapter_summary_on">Video chapter are disabled.</string>
+    <string name="revanced_disable_video_chapter_summary_off">Video chapter are enabled.</string>
     <string name="revanced_disable_splash_animation_title">Disable splash animation</string>
     <string name="revanced_disable_splash_animation_summary_on">Splash animation is disabled.</string>
     <string name="revanced_disable_splash_animation_summary_off">Splash animation is enabled.</string>
