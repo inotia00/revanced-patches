@@ -253,6 +253,9 @@
 
         <!-- SETTINGS: DISABLE_AUTO_CAPTIONS
         <SwitchPreference android:title="@string/revanced_disable_auto_captions_title" android:key="revanced_disable_auto_captions" android:summaryOn="@string/revanced_disable_auto_captions_summary_on" android:summaryOff="@string/revanced_disable_auto_captions_summary_off" />SETTINGS: DISABLE_AUTO_CAPTIONS -->
+    
+        <!-- SETTINGS: DISABLE_VIDEO_CHAPTER
+        <SwitchPreference android:title="@string/revanced_disable_video_chapter_title" android:key="revanced_disable_video_chapter" android:summaryOn="@string/revanced_disable_video_chapter_summary_on" android:summaryOff="@string/revanced_disable_video_chapter_summary_off" />SETTINGS: DISABLE_VIDEO_CHAPTER -->
 
         <!-- SETTINGS: DISABLE_SPLASH_ANIMATION
         <SwitchPreference android:title="@string/revanced_disable_splash_animation_title" android:key="revanced_disable_splash_animation" android:summaryOn="@string/revanced_disable_splash_animation_summary_on" android:summaryOff="@string/revanced_disable_splash_animation_summary_off" />SETTINGS: DISABLE_SPLASH_ANIMATION -->
