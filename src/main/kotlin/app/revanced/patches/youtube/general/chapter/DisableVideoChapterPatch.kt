@@ -23,7 +23,7 @@ object DisableVideoChapterPatch : BaseBytecodePatch(
         TimelineMarkerArrayFingerprint.resultOrThrow().mutableMethod.addInstructionsWithLabels(
             0,
             """
-                invoke-static {}, $PLAYER_CLASS_DESCRIPTOR->disableVideoChapter()Z
+                invoke-static {}, $GENERAL_CLASS_DESCRIPTOR->disableVideoChapter()Z
                 move-result v0
                 if-eqz v0, :show_chapter
 
