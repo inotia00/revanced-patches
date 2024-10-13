@@ -9,8 +9,8 @@ import app.revanced.util.patch.BaseBytecodePatch
 
 @Suppress("unused")
 object ReturnYouTubeUsernamePatch : BaseBytecodePatch(
-    name = "Return YouTube Username",
-    description = "Adds option to replace YouTube Handle with Username in comments using YouTube Data API v3.",
+    name = "Return YouTube usernames",
+    description = "Adds an option to replace YouTube handles with usernames in comments using YouTube Data API v3.",
     dependencies = setOf(
         BaseReturnYouTubeUsernamePatch::class,
         SettingsPatch::class,

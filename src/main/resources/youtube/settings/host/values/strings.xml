@@ -388,8 +388,8 @@ If later turned off, it is recommended to clear the app data to prevent UI bugs.
     <string name="revanced_spoof_app_version_target_entry_18_17_43">18.17.43 - Restore old player flyout panel</string>
     <string name="revanced_spoof_app_version_target_entry_18_33_40">18.33.40 - Restore old Shorts action bar</string>
     <string name="revanced_spoof_app_version_target_entry_18_38_45">18.38.45 - Restore old default video quality behavior</string>
-    <string name="revanced_spoof_app_version_target_entry_18_48_39">18.48.39 - Disables views and likes from being updated in real time</string>
-    <string name="revanced_spoof_app_version_target_entry_19_13_37">19.13.37 - Restores old style Rolling number animations</string>
+    <string name="revanced_spoof_app_version_target_entry_18_48_39">18.48.39 - Disable views and likes from being updated in real time</string>
+    <string name="revanced_spoof_app_version_target_entry_19_13_37">19.13.37 - Restore old style Rolling number animations</string>
 
     <!-- PreferenceScreen: General, PreferenceCategory: General, PreferenceScreen: Account menu -->
     <string name="revanced_preference_screen_account_menu_title">Account menu</string>
@@ -629,7 +629,7 @@ You tab → View channel → Menu → Settings"</string>
     <string name="revanced_hide_youtube_doodles_summary_off">YouTube Doodles are shown.</string>
     <string name="revanced_hide_youtube_doodles_user_dialog_message">"YouTube Doodles show up a few days each year.
 
-If a YouTube Doodle is currently showing in your region and this hide setting is on, then the filter bar below the search bar will also be hidden."</string>
+If a YouTube Doodle is currently showing in your region and this setting is on, the filter bar below the search bar will also be hidden."</string>
 
     <string name="revanced_replace_toolbar_create_button_title">Replace Create button</string>
     <string name="revanced_replace_toolbar_create_button_summary">Replaces the Create button with the Settings button.</string>
@@ -1081,7 +1081,7 @@ Tap and hold to undo."</string>
     <string name="revanced_disable_seekbar_chapters_summary_off">Chapters are enabled in the seekbar.</string>
     <string name="revanced_hide_seekbar_chapter_label_title">Hide seekbar chapter labels</string>
     <string name="revanced_hide_seekbar_chapter_label_summary_on">Chapter labels next to the timestamp are hidden.</string>
-    <string name="revanced_hide_seekbar_chapter_label_summary_off">Chapter labels next to the timestamp are hidden.</string>
+    <string name="revanced_hide_seekbar_chapter_label_summary_off">Chapter labels next to the timestamp are shown.</string>
     <string name="revanced_hide_time_stamp_title">Hide timestamp</string>
     <string name="revanced_hide_time_stamp_summary_on">Timestamp is hidden.</string>
     <string name="revanced_hide_time_stamp_summary_off">Timestamp is shown.</string>
@@ -1483,18 +1483,18 @@ Limitation: Dislikes may not appear if the user is not logged in or in incognito
     <string name="revanced_ryd_video_likes_hidden_by_video_owner">Hidden</string>
 
 
-    <!-- PreferenceScreen: Return YouTube Username -->
-    <string name="revanced_preference_screen_return_youtube_username_title">Return YouTube Username</string>
+    <!-- PreferenceScreen: Return YouTube username -->
+    <string name="revanced_preference_screen_return_youtube_username_title">Return YouTube username</string>
 
-    <string name="revanced_return_youtube_username_enabled_title">Enable Return YouTube Username</string>
+    <string name="revanced_return_youtube_username_enabled_title">Enable Return YouTube username</string>
     <string name="revanced_return_youtube_username_enabled_summary_on">Username is used.</string>
     <string name="revanced_return_youtube_username_enabled_summary_off">Handle is used.</string>
     <string name="revanced_return_youtube_username_youtube_data_api_v3_developer_key_title">YouTube Data API key</string>
     <string name="revanced_return_youtube_username_youtube_data_api_v3_developer_key_summary">The developer key for using the YouTube Data API v3.</string>
     <string name="revanced_return_youtube_username_youtube_data_api_v3_about_title">About YouTube Data API key</string>
-    <string name="revanced_return_youtube_username_youtube_data_api_v3_about_summary">"YouTube Data API v3 Developer Key is required to replace Handle with Username.
+    <string name="revanced_return_youtube_username_youtube_data_api_v3_about_summary">"A YouTube Data API v3 Developer Key is required to replace handles with usernames.
 
-The daily quota for API keys on the free plan is 10,000, and 1 quota is used to replace Handle with Username for 1 comment.
+The daily quota for API keys on the free plan is 10,000, and 1 quota is used to replace a handle with a username for 1 comment.
 
 Click to see how to issue a API key."</string>
     <string name="revanced_return_youtube_username_youtube_data_api_v3_dialog_title">Issue YouTube Data API v3 developer key</string>

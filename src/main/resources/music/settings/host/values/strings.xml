@@ -318,17 +318,17 @@ Some features may not work properly in the old player layout."</string>
     <string name="revanced_ryd_video_likes_hidden_by_video_owner">Hidden</string>
 
 
-    <!-- PreferenceScreen: Return YouTube Username -->
-    <string name="revanced_preference_screen_return_youtube_username_title">Return YouTube Username</string>
+    <!-- PreferenceScreen: Return YouTube username -->
+    <string name="revanced_preference_screen_return_youtube_username_title">Return YouTube username</string>
 
-    <string name="revanced_return_youtube_username_enabled_title">Enable Return YouTube Username</string>
-    <string name="revanced_return_youtube_username_enabled_summary">Show Username instead of Handle in comments.</string>
+    <string name="revanced_return_youtube_username_enabled_title">Enable Return YouTube username</string>
+    <string name="revanced_return_youtube_username_enabled_summary">Replaces handles with usernames in comments.</string>
     <string name="revanced_return_youtube_username_youtube_data_api_v3_developer_key_title">YouTube Data API key</string>
     <string name="revanced_return_youtube_username_youtube_data_api_v3_developer_key_summary">The developer key for using the YouTube Data API v3.</string>
     <string name="revanced_return_youtube_username_youtube_data_api_v3_about_title">About YouTube Data API key</string>
-    <string name="revanced_return_youtube_username_youtube_data_api_v3_about_summary">"YouTube Data API v3 Developer Key is required to replace Handle with Username.
+    <string name="revanced_return_youtube_username_youtube_data_api_v3_about_summary">"A YouTube Data API v3 Developer Key is required to replace handles with usernames.
 
-The daily quota for API keys on the free plan is 10,000, and 1 quota is used to replace Handle with Username for 1 comment.
+The daily quota for API keys on the free plan is 10,000, and 1 quota is used to replace a handle with a username for 1 comment.
 
 Click to see how to issue a API key."</string>
     <string name="revanced_return_youtube_username_youtube_data_api_v3_dialog_title">Issue YouTube Data API v3 developer key</string>
