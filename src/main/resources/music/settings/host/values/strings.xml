@@ -318,10 +318,10 @@ Some features may not work properly in the old player layout."</string>
     <string name="revanced_ryd_video_likes_hidden_by_video_owner">Hidden</string>
 
 
-    <!-- PreferenceScreen: Return YouTube username -->
-    <string name="revanced_preference_screen_return_youtube_username_title">Return YouTube username</string>
+    <!-- PreferenceScreen: Return YouTube Username -->
+    <string name="revanced_preference_screen_return_youtube_username_title">Return YouTube Username</string>
 
-    <string name="revanced_return_youtube_username_enabled_title">Enable Return YouTube username</string>
+    <string name="revanced_return_youtube_username_enabled_title">Enable Return YouTube Username</string>
     <string name="revanced_return_youtube_username_enabled_summary">Replaces handles with usernames in comments.</string>
     <string name="revanced_return_youtube_username_youtube_data_api_v3_developer_key_title">YouTube Data API key</string>
     <string name="revanced_return_youtube_username_youtube_data_api_v3_developer_key_summary">The developer key for using the YouTube Data API v3.</string>
