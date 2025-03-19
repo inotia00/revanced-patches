@@ -122,17 +122,6 @@ public final class VideoInformation {
     }
 
     /**
-     * Injection point.  Called off the main thread.
-     *
-     * @param videoId The id of the last video loaded.
-     */
-    public static void setPlayerResponseVideoId(@NonNull String videoId) {
-        if (!playerResponseVideoId.equals(videoId)) {
-            playerResponseVideoId = videoId;
-        }
-    }
-
-    /**
      * @return If the player parameter is for a Age-restricted video.
      */
     public static boolean parameterIsAgeRestricted(@Nullable String parameter) {
@@ -147,11 +136,17 @@ public final class VideoInformation {
     }
 
     /**
-     * Injection point.
+     * Injection point.  Called off the main thread.
+     *
+     * @param videoId The id of the last video loaded.
      */
     @Nullable
-    public static String newPlayerResponseParameter(@NonNull String videoId, @Nullable String playerParameter) {
+    public static String setPlayerResponseVideoId(@NonNull String videoId, @Nullable String playerParameter) {
+        if (playerResponseVideoId.equals(videoId)) return;
+
+        playerResponseVideoId = videoId;
         playerResponseVideoIdIsSample = parameterIsSample(playerParameter);
+
         Logger.printDebug(() -> "videoId: " + videoId + ", playerParameter: " + playerParameter);
 
         return playerParameter; // Return the original value since we are observing and not modifying.

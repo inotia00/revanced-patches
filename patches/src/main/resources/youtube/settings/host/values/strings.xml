@@ -471,12 +471,6 @@ If later turned off, it is recommended to clear the app data to prevent UI bugs.
     <string name="revanced_spoof_app_version_target_title">Edit spoof app version</string>
     <string name="revanced_spoof_app_version_target_summary">Type the spoof app version target.</string>
     <string name="revanced_spoof_app_version_target_entry_title">Spoof app version target</string>
-    <string name="revanced_spoof_app_version_target_entry_17_41_37">17.41.37 - Restore old playlist shelf</string>
-    <string name="revanced_spoof_app_version_target_entry_18_05_40">18.05.40 - Restore old comment input box</string>
-    <string name="revanced_spoof_app_version_target_entry_18_17_43">18.17.43 - Restore old player flyout panel</string>
-    <string name="revanced_spoof_app_version_target_entry_18_33_40">18.33.40 - Restore old Shorts action bar</string>
-    <string name="revanced_spoof_app_version_target_entry_18_38_45">18.38.45 - Restore old default video quality behavior</string>
-    <string name="revanced_spoof_app_version_target_entry_18_48_39">18.48.39 - Disable views and likes from being updated in real time</string>
     <string name="revanced_spoof_app_version_target_entry_19_26_42">19.26.42 - Disable Cairo icon in navigation and toolbar</string>
     <string name="revanced_spoof_app_version_target_entry_19_33_37">19.33.37 - Restore old playback speed flyout panel</string>
 

@@ -247,18 +247,15 @@ val videoInformationPatch = bytecodePatch(
          * Set current video id
          */
         videoIdHook("$EXTENSION_CLASS_DESCRIPTOR->setVideoId(Ljava/lang/String;)V")
-        addPlayerResponseMethodHook(
-            Hook.VideoId(
-                "$EXTENSION_CLASS_DESCRIPTOR->setPlayerResponseVideoId(Ljava/lang/String;)V"
-            ),
-        )
+
         // Call before any other video id hooks,
-        // so they can use VideoInformation and check if the video id is for a Short.
+        // so they can use VideoInformation and check if the video id is for a Samples.
         addPlayerResponseMethodHook(
             Hook.PlayerParameterBeforeVideoId(
-                "$EXTENSION_CLASS_DESCRIPTOR->newPlayerResponseParameter(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+                "$EXTENSION_CLASS_DESCRIPTOR->setPlayerResponseVideoId(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
             )
         )
+
         /**
          * Hook current playback speed
          */

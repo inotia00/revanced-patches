@@ -41,7 +41,7 @@ public class PatchStatus {
     }
 
     public static String SpoofAppVersionDefaultString() {
-        return "18.17.43";
+        return "19.02.39";
     }
 
     public static boolean ToolBarComponents() {

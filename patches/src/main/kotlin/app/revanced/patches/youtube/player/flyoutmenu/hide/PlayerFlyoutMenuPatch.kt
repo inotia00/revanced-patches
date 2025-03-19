@@ -12,7 +12,6 @@ import app.revanced.patches.youtube.utils.extension.Constants.COMPONENTS_PATH
 import app.revanced.patches.youtube.utils.extension.Constants.PLAYER_CLASS_DESCRIPTOR
 import app.revanced.patches.youtube.utils.patch.PatchList.HIDE_PLAYER_FLYOUT_MENU
 import app.revanced.patches.youtube.utils.playertype.playerTypeHookPatch
-import app.revanced.patches.youtube.utils.playservice.is_18_39_or_greater
 import app.revanced.patches.youtube.utils.playservice.is_19_30_or_greater
 import app.revanced.patches.youtube.utils.playservice.versionCheckPatch
 import app.revanced.patches.youtube.utils.qualityMenuViewInflateFingerprint
@@ -116,13 +115,10 @@ val playerFlyoutMenuPatch = bytecodePatch(
 
         // region patch for hide pip mode menu
 
-        if (is_18_39_or_greater) {
-            pipModeConfigFingerprint.injectLiteralInstructionBooleanCall(
-                45427407L,
-                "$PLAYER_CLASS_DESCRIPTOR->hidePiPModeMenu(Z)Z"
-            )
-            settingArray += "SETTINGS: HIDE_PIP_MODE_MENU"
-        }
+        pipModeConfigFingerprint.injectLiteralInstructionBooleanCall(
+            45427407L,
+            "$PLAYER_CLASS_DESCRIPTOR->hidePiPModeMenu(Z)Z"
+        )
 
         // endregion
 

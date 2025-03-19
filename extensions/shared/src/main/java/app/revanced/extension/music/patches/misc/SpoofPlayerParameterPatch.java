@@ -28,15 +28,13 @@ public class SpoofPlayerParameterPatch {
      * Parameter to fix playback issues.
      * Used in YouTube Music Samples.
      */
-    private static final String PLAYER_PARAMETER_SAMPLES =
-            "8AEB2AUBogYVAUY4C8W9wrM-FdhjSW4MnCgH44uhkAcI";
+    private static final String PLAYER_PARAMETER_SAMPLES = "8AEB2AUB";
 
     /**
      * Parameter to fix playback issues.
      * Used in YouTube Shorts.
      */
-    private static final String PLAYER_PARAMETER_SHORTS =
-            "8AEByAMkuAQ0ogYVAePzwRN3uesV1sPI2x4-GkDYlvqUkAcC";
+    private static final String PLAYER_PARAMETER_SHORTS = "8AEByAMkuAQ0";
 
     /**
      * On app first start, the first video played usually contains a single non-default window setting value

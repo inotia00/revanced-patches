@@ -31,9 +31,6 @@ import app.revanced.patches.youtube.utils.navigation.navigationBarHookPatch
 import app.revanced.patches.youtube.utils.patch.PatchList.HIDE_FEED_FLYOUT_MENU
 import app.revanced.patches.youtube.utils.patch.PatchList.SHORTS_COMPONENTS
 import app.revanced.patches.youtube.utils.playertype.playerTypeHookPatch
-import app.revanced.patches.youtube.utils.playservice.is_18_31_or_greater
-import app.revanced.patches.youtube.utils.playservice.is_18_34_or_greater
-import app.revanced.patches.youtube.utils.playservice.is_19_02_or_greater
 import app.revanced.patches.youtube.utils.playservice.is_19_25_or_greater
 import app.revanced.patches.youtube.utils.playservice.is_19_28_or_greater
 import app.revanced.patches.youtube.utils.playservice.is_19_34_or_greater
@@ -174,10 +171,6 @@ private val shortsCustomActionsPatch = bytecodePatch(
     )
 
     execute {
-        if (!is_18_34_or_greater) {
-            return@execute
-        }
-
         // region hook toolbar more button
 
         hookToolBar("$EXTENSION_CUSTOM_ACTIONS_CLASS_DESCRIPTOR->setToolbarMenu")
@@ -204,10 +197,6 @@ private val shortsCustomActionsPatch = bytecodePatch(
         addLithoFilter(SHORTS_PLAYER_FLYOUT_MENU_FILTER_CLASS_DESCRIPTOR)
 
         // endregion
-
-        if (!is_19_02_or_greater) {
-            return@execute
-        }
 
         // region hook flyout menu
 
@@ -647,15 +636,6 @@ val shortsComponentPatch = bytecodePatch(
             settingArray += "SETTINGS: SHORTS_TIME_STAMP"
         }
 
-        if (is_18_34_or_greater) {
-            settingArray += "SETTINGS: SHORTS_CUSTOM_ACTIONS_SHARED"
-            settingArray += "SETTINGS: SHORTS_CUSTOM_ACTIONS_TOOLBAR"
-        }
-
-        if (is_19_02_or_greater) {
-            settingArray += "SETTINGS: SHORTS_CUSTOM_ACTIONS_FLYOUT_MENU"
-        }
-
         if (is_19_34_or_greater) {
             settingArray += "SETTINGS: SHORTS_REPEAT_STATE_BACKGROUND"
         }
@@ -786,40 +766,6 @@ val shortsComponentPatch = bytecodePatch(
 
                 else -> {
                     throw PatchException("Unknown returnType: $returnType")
-                }
-            }
-        }
-
-        // endregion
-
-        // region patch for hide subscribe button (non-litho)
-
-        // This method is deprecated since YouTube v18.31.xx.
-        if (!is_18_31_or_greater) {
-            val subscriptionFieldReference =
-                with(shortsSubscriptionsTabletParentFingerprint.methodOrThrow()) {
-                    val targetIndex =
-                        indexOfFirstLiteralInstructionOrThrow(reelPlayerFooter) - 1
-                    (getInstruction<ReferenceInstruction>(targetIndex)).reference as FieldReference
-                }
-            shortsSubscriptionsTabletFingerprint.methodOrThrow(
-                shortsSubscriptionsTabletParentFingerprint
-            ).apply {
-                implementation!!.instructions.filter { instruction ->
-                    val fieldReference =
-                        (instruction as? ReferenceInstruction)?.reference as? FieldReference
-                    instruction.opcode == Opcode.IGET &&
-                            fieldReference == subscriptionFieldReference
-                }.forEach { instruction ->
-                    val insertIndex = implementation!!.instructions.indexOf(instruction) + 1
-                    val register = (instruction as TwoRegisterInstruction).registerA
-
-                    addInstructions(
-                        insertIndex, """
-                            invoke-static {v$register}, $SHORTS_CLASS_DESCRIPTOR->hideShortsSubscribeButton(I)I
-                            move-result v$register
-                            """
-                    )
                 }
             }
         }

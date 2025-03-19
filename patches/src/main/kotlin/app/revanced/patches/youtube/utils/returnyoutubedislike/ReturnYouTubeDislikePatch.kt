@@ -18,8 +18,6 @@ import app.revanced.patches.youtube.utils.compatibility.Constants.COMPATIBLE_PAC
 import app.revanced.patches.youtube.utils.extension.Constants.COMPONENTS_PATH
 import app.revanced.patches.youtube.utils.extension.Constants.UTILS_PATH
 import app.revanced.patches.youtube.utils.patch.PatchList.RETURN_YOUTUBE_DISLIKE
-import app.revanced.patches.youtube.utils.playservice.is_18_34_or_greater
-import app.revanced.patches.youtube.utils.playservice.is_18_49_or_greater
 import app.revanced.patches.youtube.utils.playservice.versionCheckPatch
 import app.revanced.patches.youtube.utils.rollingNumberTextViewAnimationUpdateFingerprint
 import app.revanced.patches.youtube.utils.rollingNumberTextViewFingerprint
@@ -51,10 +49,6 @@ private val returnYouTubeDislikeRollingNumberPatch = bytecodePatch(
     dependsOn(versionCheckPatch)
 
     execute {
-        if (!is_18_49_or_greater) {
-            return@execute
-        }
-
         rollingNumberSetterFingerprint.matchOrThrow().let {
             it.method.apply {
                 val rollingNumberClassIndex = it.patternMatch!!.startIndex
@@ -211,12 +205,10 @@ private val returnYouTubeDislikeShortsPatch = bytecodePatch(
             }
         }
 
-        if (is_18_34_or_greater) {
-            hookSpannableString(
-                EXTENSION_RYD_CLASS_DESCRIPTOR,
-                "onCharSequenceLoaded"
-            )
-        }
+        hookSpannableString(
+            EXTENSION_RYD_CLASS_DESCRIPTOR,
+            "onCharSequenceLoaded"
+        )
     }
 }
 
@@ -264,11 +256,9 @@ val returnYouTubeDislikePatch = bytecodePatch(
         // endregion
 
         // Player response video id is needed to search for the video ids in Shorts litho components.
-        if (is_18_34_or_greater) {
-            addLithoFilter(FILTER_CLASS_DESCRIPTOR)
-            hookPlayerResponseVideoId("$FILTER_CLASS_DESCRIPTOR->newPlayerResponseVideoId(Ljava/lang/String;Z)V")
-            hookShortsVideoInformation("$FILTER_CLASS_DESCRIPTOR->newShortsVideoStarted(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JZ)V")
-        }
+        addLithoFilter(FILTER_CLASS_DESCRIPTOR)
+        hookPlayerResponseVideoId("$FILTER_CLASS_DESCRIPTOR->newPlayerResponseVideoId(Ljava/lang/String;Z)V")
+        hookShortsVideoInformation("$FILTER_CLASS_DESCRIPTOR->newShortsVideoStarted(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JZ)V")
 
         // endregion
 

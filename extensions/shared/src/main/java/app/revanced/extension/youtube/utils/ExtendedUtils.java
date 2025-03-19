@@ -92,11 +92,6 @@ public class ExtendedUtils extends PackageUtils {
     }
 
     private static boolean isAdditionalSettingsEnabled() {
-        // In the old player flyout panels, the video quality icon and additional quality icon are the same
-        // Therefore, additional Settings should not be blocked in old player flyout panels
-        if (isSpoofingToLessThan("18.22.00"))
-            return false;
-
         boolean additionalSettingsEnabled = true;
         final BooleanSetting[] additionalSettings = {
                 Settings.HIDE_PLAYER_FLYOUT_MENU_AMBIENT,

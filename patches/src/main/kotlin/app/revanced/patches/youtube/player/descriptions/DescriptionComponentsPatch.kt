@@ -14,8 +14,6 @@ import app.revanced.patches.youtube.utils.extension.Constants.COMPONENTS_PATH
 import app.revanced.patches.youtube.utils.extension.Constants.PLAYER_CLASS_DESCRIPTOR
 import app.revanced.patches.youtube.utils.patch.PatchList.DESCRIPTION_COMPONENTS
 import app.revanced.patches.youtube.utils.playertype.playerTypeHookPatch
-import app.revanced.patches.youtube.utils.playservice.is_18_49_or_greater
-import app.revanced.patches.youtube.utils.playservice.is_19_02_or_greater
 import app.revanced.patches.youtube.utils.playservice.versionCheckPatch
 import app.revanced.patches.youtube.utils.recyclerview.recyclerViewTreeObserverHook
 import app.revanced.patches.youtube.utils.recyclerview.recyclerViewTreeObserverPatch
@@ -60,56 +58,43 @@ val descriptionComponentsPatch = bytecodePatch(
         )
 
         // region patch for disable rolling number animation
-
-        // RollingNumber is applied to YouTube v18.49.37+.
-        // In order to maintain compatibility with YouTube v18.48.39 or previous versions,
-        // This patch is applied only to the version after YouTube v18.49.37.
-        if (is_18_49_or_greater) {
-            rollingNumberTextViewAnimationUpdateFingerprint.matchOrThrow(
-                rollingNumberTextViewFingerprint
-            ).let {
-                it.method.apply {
-                    val freeRegister = implementation!!.registerCount - parameters.size - 2
-                    val imageSpanIndex = it.patternMatch!!.startIndex
-                    val setTextIndex = indexOfFirstInstructionOrThrow {
-                        opcode == Opcode.INVOKE_VIRTUAL &&
-                                getReference<MethodReference>()?.name == "setText"
-                    }
-                    addInstruction(setTextIndex, "nop")
-                    addInstructionsWithLabels(
-                        imageSpanIndex, """
-                            invoke-static {}, $PLAYER_CLASS_DESCRIPTOR->disableRollingNumberAnimations()Z
-                            move-result v$freeRegister
-                            if-nez v$freeRegister, :disable_animations
-                            """, ExternalLabel("disable_animations", getInstruction(setTextIndex))
-                    )
+        rollingNumberTextViewAnimationUpdateFingerprint.matchOrThrow(
+            rollingNumberTextViewFingerprint
+        ).let {
+            it.method.apply {
+                val freeRegister = implementation!!.registerCount - parameters.size - 2
+                val imageSpanIndex = it.patternMatch!!.startIndex
+                val setTextIndex = indexOfFirstInstructionOrThrow {
+                    opcode == Opcode.INVOKE_VIRTUAL &&
+                            getReference<MethodReference>()?.name == "setText"
                 }
+                addInstruction(setTextIndex, "nop")
+                addInstructionsWithLabels(
+                    imageSpanIndex, """
+                        invoke-static {}, $PLAYER_CLASS_DESCRIPTOR->disableRollingNumberAnimations()Z
+                        move-result v$freeRegister
+                        if-nez v$freeRegister, :disable_animations
+                        """, ExternalLabel("disable_animations", getInstruction(setTextIndex))
+                )
             }
-
-            settingArray += "SETTINGS: DISABLE_ROLLING_NUMBER_ANIMATIONS"
         }
-
         // endregion
 
         // region patch for disable video description interaction and expand video description
 
         // since these patches are still A/B tested, they are classified as 'Experimental flags'.
-        if (is_19_02_or_greater) {
-            textViewComponentFingerprint.methodOrThrow().apply {
-                val insertIndex = indexOfTextIsSelectableInstruction(this)
-                val insertInstruction = getInstruction<FiveRegisterInstruction>(insertIndex)
+        textViewComponentFingerprint.methodOrThrow().apply {
+            val insertIndex = indexOfTextIsSelectableInstruction(this)
+            val insertInstruction = getInstruction<FiveRegisterInstruction>(insertIndex)
 
-                replaceInstruction(
-                    insertIndex,
-                    "invoke-static {v${insertInstruction.registerC}, v${insertInstruction.registerD}}, " +
-                            "$PLAYER_CLASS_DESCRIPTOR->disableVideoDescriptionInteraction(Landroid/widget/TextView;Z)V"
-                )
-            }
-
-            recyclerViewTreeObserverHook("$PLAYER_CLASS_DESCRIPTOR->onVideoDescriptionCreate(Landroid/support/v7/widget/RecyclerView;)V")
-
-            settingArray += "SETTINGS: DESCRIPTION_INTERACTION"
+            replaceInstruction(
+                insertIndex,
+                "invoke-static {v${insertInstruction.registerC}, v${insertInstruction.registerD}}, " +
+                        "$PLAYER_CLASS_DESCRIPTOR->disableVideoDescriptionInteraction(Landroid/widget/TextView;Z)V"
+            )
         }
+
+        recyclerViewTreeObserverHook("$PLAYER_CLASS_DESCRIPTOR->onVideoDescriptionCreate(Landroid/support/v7/widget/RecyclerView;)V")
 
         // endregion
 
