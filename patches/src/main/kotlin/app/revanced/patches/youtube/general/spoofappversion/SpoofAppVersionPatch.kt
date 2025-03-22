@@ -13,6 +13,10 @@ import app.revanced.patches.youtube.utils.extension.Constants.PATCH_STATUS_CLASS
 import app.revanced.patches.youtube.utils.fix.cairo.cairoFragmentPatch
 import app.revanced.patches.youtube.utils.indexOfGetDrawableInstruction
 import app.revanced.patches.youtube.utils.patch.PatchList.SPOOF_APP_VERSION
+import app.revanced.patches.youtube.utils.playservice.is_18_34_or_greater
+import app.revanced.patches.youtube.utils.playservice.is_18_39_or_greater
+import app.revanced.patches.youtube.utils.playservice.is_18_49_or_greater
+import app.revanced.patches.youtube.utils.playservice.is_19_01_or_greater
 import app.revanced.patches.youtube.utils.playservice.is_19_23_or_greater
 import app.revanced.patches.youtube.utils.playservice.is_19_28_or_greater
 import app.revanced.patches.youtube.utils.playservice.is_19_34_or_greater
@@ -41,6 +45,15 @@ private val spoofAppVersionBytecodePatch = bytecodePatch(
     dependsOn(versionCheckPatch)
 
     execute {
+        if (is_19_01_or_greater) {
+            findMethodOrThrow(PATCH_STATUS_CLASS_DESCRIPTOR) {
+                name == "SpoofAppVersionDefaultString"
+            }.replaceInstruction(
+                0,
+                "const-string v0, \"19.01.34\""
+            )
+        }
+
         if (!is_19_23_or_greater) {
             return@execute
         }
@@ -68,13 +81,6 @@ private val spoofAppVersionBytecodePatch = bytecodePatch(
                     """, ExternalLabel("ignore", getInstruction(jumpIndex))
             )
         }
-
-        findMethodOrThrow(PATCH_STATUS_CLASS_DESCRIPTOR) {
-            name == "SpoofAppVersionDefaultString"
-        }.replaceInstruction(
-            0,
-            "const-string v0, \"19.02.39\""
-        )
     }
 
 }
@@ -104,15 +110,43 @@ val spoofAppVersionPatch = resourcePatch(
             SPOOF_APP_VERSION
         )
 
-        if (!is_19_28_or_greater) {
+        // TODO: Remove this when the legacy code for YouTube 18.xx is cleaned up.
+        if (!is_19_01_or_greater) {
+            appendAppVersion("17.41.37")
+            appendAppVersion("18.05.40")
+            appendAppVersion("18.17.43")
+
+            if (is_18_34_or_greater) {
+                appendAppVersion("18.33.40")
+            } else {
+                return@execute
+            }
+
+            if (is_18_39_or_greater) {
+                appendAppVersion("18.38.45")
+            } else {
+                return@execute
+            }
+
+            if (is_18_49_or_greater) {
+                appendAppVersion("18.48.39")
+            }
+
             return@execute
         }
-        appendAppVersion("19.26.42")
 
-        if (!is_19_34_or_greater) {
+        appendAppVersion("19.01.34")
+
+        if (is_19_28_or_greater) {
+            appendAppVersion("19.26.42")
+        } else {
             return@execute
         }
-        appendAppVersion("19.33.37")
 
+        if (is_19_34_or_greater) {
+            appendAppVersion("19.33.37")
+        } else {
+            return@execute
+        }
     }
 }

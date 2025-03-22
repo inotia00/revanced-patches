@@ -9,7 +9,7 @@ import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 
 /**
  * This fingerprint is compatible with YouTube v18.35.xx~
- * Nonetheless, the patch works in YouTube v19.02.xx~
+ * Nonetheless, the patch works in YouTube v19.05.xx~
  */
 internal val textViewComponentFingerprint = legacyFingerprint(
     name = "textViewComponentFingerprint",

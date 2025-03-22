@@ -56,12 +56,20 @@ internal val interstitialsContainerFingerprint = legacyFingerprint(
 internal val showDialogCommandFingerprint = legacyFingerprint(
     name = "showDialogCommandFingerprint",
     returnType = "V",
-    parameters = listOf("[B", "L"),
     opcodes = listOf(
         Opcode.IF_EQ,
         Opcode.IGET_OBJECT,
         Opcode.INVOKE_VIRTUAL,
         Opcode.IGET, // get dialog code
     ),
-    literals = listOf(slidingDialogAnimation)
+    literals = listOf(slidingDialogAnimation),
+    // 18.43 and earlier has a different first parameter.
+    // Since this fingerprint is somewhat weak, work around by checking for both method parameter signatures.
+    customFingerprint = { method, _ ->
+        // 18.43 and earlier parameters are: "L", "L"
+        // 18.44+ parameters are "[B", "L"
+        val parameterTypes = method.parameterTypes
+
+        parameterTypes.size == 2 && parameterTypes[1].startsWith("L")
+    },
 )

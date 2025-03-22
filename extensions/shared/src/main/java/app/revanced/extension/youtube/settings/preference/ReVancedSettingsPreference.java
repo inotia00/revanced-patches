@@ -2,6 +2,7 @@ package app.revanced.extension.youtube.settings.preference;
 
 import static app.revanced.extension.shared.utils.StringRef.str;
 import static app.revanced.extension.shared.utils.Utils.isSDKAbove;
+import static app.revanced.extension.youtube.utils.ExtendedUtils.isSpoofingToLessThan;
 
 import android.preference.Preference;
 import android.preference.SwitchPreference;
@@ -68,7 +69,9 @@ public class ReVancedSettingsPreference extends ReVancedPreferenceFragment {
      * Enable/Disable Preference for External downloader settings
      */
     private static void ExternalDownloaderPreferenceLinks() {
+        // Override download button will not work if spoofed with YouTube 18.24.xx or earlier.
         enableDisablePreferences(
+                isSpoofingToLessThan("18.24.00"),
                 Settings.OVERRIDE_VIDEO_DOWNLOAD_BUTTON,
                 Settings.OVERRIDE_PLAYLIST_DOWNLOAD_BUTTON
         );

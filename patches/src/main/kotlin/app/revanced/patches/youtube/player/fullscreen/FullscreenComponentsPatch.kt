@@ -24,6 +24,7 @@ import app.revanced.patches.youtube.utils.layoutConstructorFingerprint
 import app.revanced.patches.youtube.utils.mainactivity.mainActivityResolvePatch
 import app.revanced.patches.youtube.utils.patch.PatchList.FULLSCREEN_COMPONENTS
 import app.revanced.patches.youtube.utils.playertype.playerTypeHookPatch
+import app.revanced.patches.youtube.utils.playservice.is_18_42_or_greater
 import app.revanced.patches.youtube.utils.playservice.is_19_41_or_greater
 import app.revanced.patches.youtube.utils.playservice.versionCheckPatch
 import app.revanced.patches.youtube.utils.resourceid.autoNavPreviewStub
@@ -286,7 +287,7 @@ val fullscreenComponentsPatch = bytecodePatch(
 
         // region patch for keep landscape mode
 
-        if (!is_19_41_or_greater) {
+        if (is_18_42_or_greater && !is_19_41_or_greater) {
             landScapeModeConfigFingerprint.methodOrThrow().apply {
                 val insertIndex = implementation!!.instructions.lastIndex
                 val insertRegister =

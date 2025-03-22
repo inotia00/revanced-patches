@@ -28,6 +28,8 @@ import app.revanced.extension.shared.settings.LongSetting;
 import app.revanced.extension.shared.settings.Setting;
 import app.revanced.extension.shared.settings.StringSetting;
 import app.revanced.extension.shared.settings.preference.SharedPrefCategory;
+import app.revanced.extension.shared.utils.Logger;
+import app.revanced.extension.shared.utils.Utils;
 import app.revanced.extension.youtube.patches.alternativethumbnails.AlternativeThumbnailsPatch.DeArrowAvailability;
 import app.revanced.extension.youtube.patches.alternativethumbnails.AlternativeThumbnailsPatch.StillImagesAvailability;
 import app.revanced.extension.youtube.patches.alternativethumbnails.AlternativeThumbnailsPatch.ThumbnailOption;
@@ -637,6 +639,16 @@ public class Settings extends BaseSettings {
 
     static {
         // region Migration initialized
+
+        // Old spoof versions that no longer work reliably.
+        String spoofAppVersionTarget = SPOOF_APP_VERSION_TARGET.get();
+        if (spoofAppVersionTarget.compareTo(SPOOF_APP_VERSION_TARGET.defaultValue) < 0) {
+            Utils.showToastShort(str("revanced_spoof_app_version_target_invalid_toast", spoofAppVersionTarget));
+            Utils.showToastShort(str("revanced_extended_reset_to_default_toast"));
+            Logger.printInfo(() -> "Resetting spoof app version target");
+            SPOOF_APP_VERSION_TARGET.resetToDefault();
+        }
+
         // Categories were previously saved without a 'sb_' key prefix, so they need an additional adjustment.
         Set<Setting<?>> sbCategories = new HashSet<>(Arrays.asList(
                 SB_CATEGORY_SPONSOR,

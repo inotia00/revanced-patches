@@ -13,6 +13,7 @@ import app.revanced.patches.youtube.utils.extension.Constants.PLAYER_CLASS_DESCR
 import app.revanced.patches.youtube.utils.fix.bottomui.cfBottomUIPatch
 import app.revanced.patches.youtube.utils.layoutConstructorFingerprint
 import app.revanced.patches.youtube.utils.patch.PatchList.HIDE_PLAYER_BUTTONS
+import app.revanced.patches.youtube.utils.playservice.is_18_31_or_greater
 import app.revanced.patches.youtube.utils.playservice.is_19_34_or_greater
 import app.revanced.patches.youtube.utils.playservice.versionCheckPatch
 import app.revanced.patches.youtube.utils.resourceid.autoNavToggle
@@ -76,17 +77,20 @@ val playerButtonsPatch = bytecodePatch(
 
         // region patch for hide captions button
 
-        lithoSubtitleButtonConfigFingerprint.methodOrThrow().apply {
-            val insertIndex = implementation!!.instructions.lastIndex
-            val insertRegister = getInstruction<OneRegisterInstruction>(insertIndex).registerA
+        if (is_18_31_or_greater) {
+            lithoSubtitleButtonConfigFingerprint.methodOrThrow().apply {
+                val insertIndex = implementation!!.instructions.lastIndex
+                val insertRegister = getInstruction<OneRegisterInstruction>(insertIndex).registerA
 
-            addInstructions(
-                insertIndex, """
-                    invoke-static {v$insertRegister}, $PLAYER_CLASS_DESCRIPTOR->hideCaptionsButton(Z)Z
-                    move-result v$insertRegister
-                    """
-            )
+                addInstructions(
+                    insertIndex, """
+                        invoke-static {v$insertRegister}, $PLAYER_CLASS_DESCRIPTOR->hideCaptionsButton(Z)Z
+                        move-result v$insertRegister
+                        """
+                )
+            }
         }
+
 
         youtubeControlsOverlaySubtitleButtonFingerprint.methodOrThrow().apply {
             val insertIndex = implementation!!.instructions.lastIndex

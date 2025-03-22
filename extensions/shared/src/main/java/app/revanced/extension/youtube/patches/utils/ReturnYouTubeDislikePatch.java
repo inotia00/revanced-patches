@@ -1,6 +1,7 @@
 package app.revanced.extension.youtube.patches.utils;
 
 import static app.revanced.extension.shared.returnyoutubedislike.ReturnYouTubeDislike.Vote;
+import static app.revanced.extension.youtube.utils.ExtendedUtils.isSpoofingToLessThan;
 
 import android.graphics.Rect;
 import android.graphics.drawable.ShapeDrawable;
@@ -47,6 +48,9 @@ import app.revanced.extension.youtube.shared.VideoInformation;
  */
 @SuppressWarnings("unused")
 public class ReturnYouTubeDislikePatch {
+
+    public static final boolean IS_SPOOFING_TO_NON_LITHO_SHORTS_PLAYER =
+            isSpoofingToLessThan("18.34.00");
 
     /**
      * RYD data for the current video on screen.
@@ -551,7 +555,8 @@ public class ReturnYouTubeDislikePatch {
             if (videoIdIsShort && (!isShortAndOpeningOrPlaying || !Settings.RYD_SHORTS.get())) {
                 return;
             }
-            final boolean waitForFetchToComplete = videoIdIsShort && !lastPlayerResponseWasShort;
+            final boolean waitForFetchToComplete = !IS_SPOOFING_TO_NON_LITHO_SHORTS_PLAYER
+                    && videoIdIsShort && !lastPlayerResponseWasShort;
 
             Logger.printDebug(() -> "Prefetching RYD for video: " + videoId);
             ReturnYouTubeDislike fetch = ReturnYouTubeDislike.getFetchForVideoId(videoId);
