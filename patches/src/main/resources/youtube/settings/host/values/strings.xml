@@ -480,7 +480,7 @@ If later turned off, it is recommended to clear the app data to prevent UI bugs.
     <string name="revanced_spoof_app_version_target_entry_19_01_34">19.01.34 - Disable video description interaction</string>
     <string name="revanced_spoof_app_version_target_entry_19_26_42">19.26.42 - Disable Cairo icon in navigation and toolbar</string>
     <string name="revanced_spoof_app_version_target_entry_19_33_37">19.33.37 - Restore old playback speed flyout panel</string>
-    <string name="revanced_spoof_app_version_target_invalid_toast">Spoof app version: Invalid target version: %s.</string>
+    <string name="revanced_spoof_app_version_target_invalid_toast">Invalid spoof app version: %s.</string>
 
     <!-- PreferenceScreen: General, PreferenceCategory: General, PreferenceScreen: Account menu -->
     <string name="revanced_preference_screen_account_menu_title">Account menu</string>
