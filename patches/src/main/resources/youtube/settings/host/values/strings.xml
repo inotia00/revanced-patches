@@ -1699,12 +1699,12 @@ No margins on top and bottom of player."</string>
     <string name="revanced_enable_swipe_brightness_title">Enable brightness gesture</string>
     <string name="revanced_enable_swipe_brightness_summary_on">"Fullscreen brightness swipe is enabled.
  
- Adjust brightness by swiping vertically on the left side of the screen."</string>
+Adjust brightness by swiping vertically on the left side of the screen."</string>
     <string name="revanced_enable_swipe_brightness_summary_off">Brightness swipe is disabled.</string>
     <string name="revanced_enable_swipe_volume_title">Enable volume gesture</string>
     <string name="revanced_enable_swipe_volume_summary_on">"Fullscreen volume swipe is enabled.
  
- Adjust volume by swiping vertically on the right side of the screen."</string>
+Adjust volume by swiping vertically on the right side of the screen."</string>
     <string name="revanced_enable_swipe_volume_summary_off">Volume swipe is disabled.</string>
     <string name="revanced_enable_save_and_restore_brightness_title">Enable save and restore brightness</string>
     <string name="revanced_enable_save_and_restore_brightness_summary_on">Save and restore brightness when exiting or entering fullscreen.</string>
