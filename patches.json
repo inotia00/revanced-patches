@@ -2510,7 +2510,7 @@
         "description": "The settings menu name that the RVX settings menu should be above.",
         "required": true,
         "type": "kotlin.String",
-        "default": "@string/about_key",
+        "default": "@string/parent_tools_key",
         "values": {
           "Parent settings": "@string/parent_tools_key",
           "General": "@string/general_key",

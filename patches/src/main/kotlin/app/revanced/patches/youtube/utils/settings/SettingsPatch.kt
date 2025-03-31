@@ -96,7 +96,7 @@ private val settingsBytecodePatch = bytecodePatch(
     }
 }
 
-private const val DEFAULT_ELEMENT = "@string/about_key"
+private const val DEFAULT_ELEMENT = "@string/parent_tools_key"
 private const val DEFAULT_LABEL = "RVX"
 
 private val SETTINGS_ELEMENTS_MAP = mapOf(
