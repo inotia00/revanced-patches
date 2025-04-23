@@ -84,7 +84,7 @@ class StreamingDataRequest private constructor(
 
     companion object {
         private const val AUTHORIZATION_HEADER = "Authorization"
-        private const val MAX_MILLISECONDS_TO_WAIT_FOR_FETCH = 20 * 1000
+        private const val MAX_MILLISECONDS_TO_WAIT_FOR_FETCH = 10 * 1000
 
         private val SPOOF_STREAMING_DATA_TYPE: YouTubeAppClient.ClientType =
             BaseSettings.SPOOF_STREAMING_DATA_TYPE.get()
@@ -97,11 +97,11 @@ class StreamingDataRequest private constructor(
 
         @GuardedBy("itself")
         val cache: MutableMap<String, StreamingDataRequest> = Collections.synchronizedMap(
-            object : LinkedHashMap<String, StreamingDataRequest>(100) {
-                private val CACHE_LIMIT = 50
+            object : LinkedHashMap<String, StreamingDataRequest>(1) {
+                private val CACHE_LIMIT = 10
 
                 override fun removeEldestEntry(eldest: Map.Entry<String, StreamingDataRequest>): Boolean {
-                    return size > CACHE_LIMIT // Evict the oldest entry if over the cache limit.
+                    return size >= CACHE_LIMIT // Evict the oldest entry if over the cache limit.
                 }
             })
 

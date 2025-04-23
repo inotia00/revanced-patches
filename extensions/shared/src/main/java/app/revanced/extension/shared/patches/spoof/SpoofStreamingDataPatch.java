@@ -37,12 +37,12 @@ public class SpoofStreamingDataPatch extends BlockRequestPatch {
      * Value: original video length [streamingData.formats.approxDurationMs]
      */
     private static final Map<String, Long> approxDurationMsMap = Collections.synchronizedMap(
-            new LinkedHashMap<>(10) {
-                private static final int CACHE_LIMIT = 5;
+            new LinkedHashMap<>(1) {
+                private static final int CACHE_LIMIT = 10;
 
                 @Override
                 protected boolean removeEldestEntry(Entry eldest) {
-                    return size() > CACHE_LIMIT; // Evict the oldest entry if over the cache limit.
+                    return size() >= CACHE_LIMIT; // Evict the oldest entry if over the cache limit.
                 }
             });
 

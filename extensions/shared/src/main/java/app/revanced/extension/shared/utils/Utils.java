@@ -129,15 +129,17 @@ public class Utils {
      */
     private static final ThreadPoolExecutor backgroundThreadPool = new ThreadPoolExecutor(
             3, // 3 threads always ready to go
-            Integer.MAX_VALUE,
+            10,
             10, // For any threads over the minimum, keep them alive 10 seconds after they go idle
             TimeUnit.SECONDS,
             new SynchronousQueue<>(),
             r -> { // ThreadFactory
                 Thread t = new Thread(r);
-                t.setPriority(Thread.MAX_PRIORITY); // run at max priority
+                t.setPriority(Thread.NORM_PRIORITY); // run at norm priority
                 return t;
-            });
+            },
+            ThreadPoolExecutor.DiscardPolicy()
+    );
 
     public static void runOnBackgroundThread(@NonNull Runnable task) {
         backgroundThreadPool.execute(task);
@@ -145,7 +147,10 @@ public class Utils {
 
     @NonNull
     public static <T> Future<T> submitOnBackgroundThread(@NonNull Callable<T> call) {
-        return backgroundThreadPool.submit(call);
+        ThreadPoolExecutor submitThreadPool = backgroundThreadPool;
+        submitThreadPool.allowCoreThreadTimeOut(true);
+
+        return submitThreadPool.submit(call);
     }
 
     /**
