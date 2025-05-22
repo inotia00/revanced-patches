@@ -489,7 +489,8 @@ Click to see how to issue an API key."</string>
 
 Find the official song if a music video is detected playing from an album.
 
-Limitations: Kids videos may not redirected."</string>
+Limitations: • Kids videos may not redirect.
+             • Full album playback / queue may break"</string>
     <string name="revanced_disable_music_video_in_album_redirect_type_title">Redirection type</string>
     <string name="revanced_disable_music_video_in_album_redirect_type_summary">Specifies how to redirect to official song.</string>
     <string name="revanced_disable_music_video_in_album_redirect_type_entry_redirect">Redirect</string>
