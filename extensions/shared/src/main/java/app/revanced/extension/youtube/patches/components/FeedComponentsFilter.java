@@ -36,7 +36,7 @@ public final class FeedComponentsFilter extends Filter {
     private final StringFilterGroup channelProfile;
     private final StringFilterGroup chipBar;
     private final StringFilterGroup communityPosts;
-    private final StringFilterGroup expandableChip;
+    private final StringFilterGroup expandableCard;
     private final StringFilterGroup horizontalShelves;
     private final ByteArrayFilterGroup ticketShelf;
     private final ByteArrayFilterGroup visitStoreButton;
@@ -83,7 +83,7 @@ public final class FeedComponentsFilter extends Filter {
         );
 
         final StringFilterGroup tasteBuilder = new StringFilterGroup(
-                Settings.HIDE_FEED_SURVEY,
+                Settings.HIDE_SURVEYS,
                 "selectable_item.eml",
                 "cell_button.eml"
         );
@@ -105,7 +105,7 @@ public final class FeedComponentsFilter extends Filter {
         );
 
         channelProfile = new StringFilterGroup(
-                Settings.HIDE_BROWSE_STORE_BUTTON,
+                Settings.HIDE_VISIT_STORE_BUTTON,
                 "channel_profile.eml",
                 "page_header.eml" // new layout
         );
@@ -115,26 +115,26 @@ public final class FeedComponentsFilter extends Filter {
                 "header_store_button"
         );
 
-        final StringFilterGroup channelMemberShelf = new StringFilterGroup(
-                Settings.HIDE_CHANNEL_MEMBER_SHELF,
+        final StringFilterGroup membersShelf = new StringFilterGroup(
+                Settings.HIDE_MEMBERS_SHELF,
                 "member_recognition_shelf"
         );
 
-        final StringFilterGroup channelProfileLinks = new StringFilterGroup(
-                Settings.HIDE_CHANNEL_PROFILE_LINKS,
+        final StringFilterGroup linksPreview = new StringFilterGroup(
+                Settings.HIDE_LINKS_PREVIEW,
                 "channel_header_links",
                 "attribution.eml" // new layout
         );
 
-        expandableChip = new StringFilterGroup(
-                Settings.HIDE_EXPANDABLE_CHIP,
+        expandableCard = new StringFilterGroup(
+                Settings.HIDE_EXPANDABLE_CARD,
                 INLINE_EXPANSION_PATH,
                 "inline_expander",
                 "expandable_metadata.eml"
         );
 
-        final StringFilterGroup feedSurvey = new StringFilterGroup(
-                Settings.HIDE_FEED_SURVEY,
+        final StringFilterGroup surveys = new StringFilterGroup(
+                Settings.HIDE_SURVEYS,
                 "feed_nudge",
                 "_survey"
         );
@@ -174,8 +174,8 @@ public final class FeedComponentsFilter extends Filter {
                 "mini_game_card.eml"
         );
 
-        final StringFilterGroup subscriptionsChannelBar = new StringFilterGroup(
-                Settings.HIDE_SUBSCRIPTIONS_CAROUSEL,
+        final StringFilterGroup subscribedChannelsBar = new StringFilterGroup(
+                Settings.HIDE_SUBSCRIBED_CHANNELS_BAR,
                 "subscriptions_channel_bar"
         );
 
@@ -211,20 +211,20 @@ public final class FeedComponentsFilter extends Filter {
         addPathCallbacks(
                 albumCard,
                 channelProfile,
-                channelMemberShelf,
-                channelProfileLinks,
                 chipBar,
-                expandableChip,
-                horizontalShelves,
-                feedSurvey,
+                expandableCard,
                 forYouShelf,
+                horizontalShelves,
                 imageShelf,
                 latestPosts,
+                linksPreview,
+                membersShelf,
                 movieShelf,
                 notifyMe,
                 playables,
-                subscriptionsChannelBar,
+                subscribedChannelsBar,
                 subscriptionsCategoryBar,
+                surveys,
                 ticketShelfLegacy
         );
 
@@ -285,7 +285,7 @@ public final class FeedComponentsFilter extends Filter {
                 return super.isFiltered(path, identifier, allValue, protobufBufferArray, matchedGroup, contentType, contentIndex);
             }
             return false;
-        } else if (matchedGroup == expandableChip) {
+        } else if (matchedGroup == expandableCard) {
             if (path.startsWith(FEED_VIDEO_PATH)) {
                 return super.isFiltered(path, identifier, allValue, protobufBufferArray, matchedGroup, contentType, contentIndex);
             }

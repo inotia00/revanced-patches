@@ -23,8 +23,8 @@ import app.revanced.extension.youtube.settings.Settings;
 @SuppressWarnings("unused")
 public final class AdsFilter extends Filter {
 
-    private final StringFilterGroup playerShoppingShelf;
-    private final ByteArrayFilterGroup playerShoppingShelfBuffer;
+    private final StringFilterGroup creatorStoreShelf;
+    private final ByteArrayFilterGroup creatorStoreShelfBuffer;
 
     public AdsFilter() {
 
@@ -94,6 +94,11 @@ public final class AdsFilter extends Filter {
                 "cta_shelf_card"
         );
 
+        final StringFilterGroup shoppingLinks = new StringFilterGroup(
+                Settings.HIDE_SHOPPING_LINKS,
+                "shopping_description_shelf"
+        );
+
         final StringFilterGroup viewProducts = new StringFilterGroup(
                 Settings.HIDE_VIEW_PRODUCTS,
                 "product_item",
@@ -113,6 +118,7 @@ public final class AdsFilter extends Filter {
                 merchandise,
                 paidContent,
                 selfSponsor,
+                shoppingLinks,
                 viewProducts,
                 webSearchPanel
         );
@@ -133,19 +139,19 @@ public final class AdsFilter extends Filter {
                 "watch_metadata_app_promo"
         );
 
-        playerShoppingShelf = new StringFilterGroup(
+        creatorStoreShelf = new StringFilterGroup(
                 null,
                 "horizontal_shelf.eml"
         );
 
-        playerShoppingShelfBuffer = new ByteArrayFilterGroup(
-                Settings.HIDE_PLAYER_STORE_SHELF,
+        creatorStoreShelfBuffer = new ByteArrayFilterGroup(
+                Settings.HIDE_CREATOR_STORE_SHELF,
                 "shopping_item_card_list.eml"
         );
 
         addPathCallbacks(
+                creatorStoreShelf,
                 generalAdsPath,
-                playerShoppingShelf,
                 viewProducts
         );
     }
@@ -153,8 +159,8 @@ public final class AdsFilter extends Filter {
     @Override
     public boolean isFiltered(String path, @Nullable String identifier, String allValue, byte[] protobufBufferArray,
                               StringFilterGroup matchedGroup, FilterContentType contentType, int contentIndex) {
-        if (matchedGroup == playerShoppingShelf) {
-            if (contentIndex == 0 && playerShoppingShelfBuffer.check(protobufBufferArray).isFiltered()) {
+        if (matchedGroup == creatorStoreShelf) {
+            if (contentIndex == 0 && creatorStoreShelfBuffer.check(protobufBufferArray).isFiltered()) {
                 return super.isFiltered(path, identifier, allValue, protobufBufferArray, matchedGroup, contentType, contentIndex);
             }
             return false;

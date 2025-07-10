@@ -118,7 +118,7 @@ val visualPreferencesIconsPatch = resourcePatch(
             "revanced_hide_toolbar_notification_button" -> "notification_key_icon"
             "revanced_preference_screen_account_menu" -> "account_switcher_key_icon"
             "revanced_preference_screen_channel_bar" -> "account_switcher_key_icon"
-            "revanced_preference_screen_channel_profile" -> "account_switcher_key_icon"
+            "revanced_preference_screen_channel_page" -> "account_switcher_key_icon"
             "revanced_preference_screen_comments" -> "revanced_hide_quick_actions_comment_button_icon"
             "revanced_preference_screen_general" -> "general_key_icon"
             "revanced_preference_screen_feed_flyout_menu" -> "revanced_preference_screen_player_flyout_menu_icon"
@@ -391,7 +391,7 @@ private var rvxPreferenceKey = setOf(
     "revanced_preference_screen_ambient_mode",
     "revanced_preference_screen_category_bar",
     "revanced_preference_screen_channel_bar",
-    "revanced_preference_screen_channel_profile",
+    "revanced_preference_screen_channel_page",
     "revanced_preference_screen_comments",
     "revanced_preference_screen_community_posts",
     "revanced_preference_screen_custom_filter",

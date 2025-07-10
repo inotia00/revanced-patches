@@ -56,8 +56,8 @@ public final class ShortsButtonFilter extends Filter {
                 REEL_CHANNEL_BAR_PATH
         );
 
-        StringFilterGroup fullVideoLinkLabel = new StringFilterGroup(
-                Settings.HIDE_SHORTS_FULL_VIDEO_LINK_LABEL,
+        StringFilterGroup videoLinkLabel = new StringFilterGroup(
+                Settings.HIDE_SHORTS_VIDEO_LINK_LABEL,
                 "reel_multi_format_link"
         );
 
@@ -133,7 +133,7 @@ public final class ShortsButtonFilter extends Filter {
 
         addPathCallbacks(
                 suggestedAction, actionButton, joinButton, subscribeButton, metaPanelButton,
-                paidPromotionButton, pausedOverlayButtons, channelBar, fullVideoLinkLabel,
+                paidPromotionButton, pausedOverlayButtons, channelBar, videoLinkLabel,
                 videoTitle, reelSoundMetadata, infoPanel, liveHeader, stickers,
                 likeButton, dislikeButton
         );
@@ -208,11 +208,11 @@ public final class ShortsButtonFilter extends Filter {
                         "yt_outline_search_"
                 ),
                 new ByteArrayFilterGroup(
-                        Settings.HIDE_SHORTS_SUPER_THANKS_BUTTON,
+                        Settings.HIDE_SHORTS_BUY_SUPER_THANKS_BUTTON,
                         "yt_outline_dollar_sign_heart_"
                 ),
                 new ByteArrayFilterGroup(
-                        Settings.HIDE_SHORTS_USE_TEMPLATE_BUTTON,
+                        Settings.HIDE_SHORTS_USE_THIS_TEMPLATE_BUTTON,
                         "yt_outline_template_add"
                 ),
                 new ByteArrayFilterGroup(

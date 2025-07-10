@@ -14,7 +14,7 @@ public final class LayoutComponentsFilter extends Filter {
     public LayoutComponentsFilter() {
         addIdentifierCallbacks(
                 new StringFilterGroup(
-                        Settings.HIDE_GRAY_SEPARATOR,
+                        Settings.HIDE_VISUAL_SPACERS,
                         "cell_divider"
                 )
         );

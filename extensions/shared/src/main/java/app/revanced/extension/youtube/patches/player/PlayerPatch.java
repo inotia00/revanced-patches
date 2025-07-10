@@ -251,7 +251,7 @@ public class PlayerPatch {
     }
 
     public static boolean hideRelatedVideoOverlay() {
-        return Settings.HIDE_RELATED_VIDEO_OVERLAY.get();
+        return Settings.HIDE_RELATED_VIDEOS_OVERLAY.get();
     }
 
     public static void hideQuickActions(View view) {

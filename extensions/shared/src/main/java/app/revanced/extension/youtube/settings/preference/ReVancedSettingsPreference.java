@@ -80,7 +80,7 @@ public class ReVancedSettingsPreference extends ReVancedPreferenceFragment {
                 Settings.HIDE_COMMUNITY_POSTS_HOME_RELATED_VIDEOS,
                 Settings.HIDE_COMMUNITY_POSTS_SUBSCRIPTIONS,
                 Settings.HIDE_MIX_PLAYLISTS,
-                Settings.HIDE_RELATED_VIDEO_OVERLAY,
+                Settings.HIDE_RELATED_VIDEOS_OVERLAY,
                 Settings.SHOW_VIDEO_TITLE_SECTION
         );
     }
@@ -91,7 +91,7 @@ public class ReVancedSettingsPreference extends ReVancedPreferenceFragment {
     private static void FullScreenPanelPreferenceLinks() {
         enableDisablePreferences(
                 Settings.DISABLE_ENGAGEMENT_PANEL.get(),
-                Settings.HIDE_RELATED_VIDEO_OVERLAY,
+                Settings.HIDE_RELATED_VIDEOS_OVERLAY,
                 Settings.HIDE_QUICK_ACTIONS,
                 Settings.HIDE_QUICK_ACTIONS_COMMENT_BUTTON,
                 Settings.HIDE_QUICK_ACTIONS_DISLIKE_BUTTON,

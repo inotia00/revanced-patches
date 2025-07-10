@@ -63,8 +63,8 @@ public final class CommentsFilter extends Filter {
                 "viewer_engagement_message" // message about poll, not poll itself
         );
 
-        final StringFilterGroup liveChatSummary = new StringFilterGroup(
-                Settings.HIDE_LIVE_CHAT_SUMMARY,
+        final StringFilterGroup aiChatSummary = new StringFilterGroup(
+                Settings.HIDE_AI_CHAT_SUMMARY,
                 "live_chat_summary_banner"
         );
 
@@ -95,12 +95,12 @@ public final class CommentsFilter extends Filter {
         addIdentifierCallbacks(channelGuidelines);
 
         addPathCallbacks(
+                aiChatSummary,
                 comments,
                 commentsPreviewDots,
                 createShorts,
                 membersBanner,
                 liveChatMessages,
-                liveChatSummary,
                 previewComment,
                 previewCommentText,
                 thanks,
