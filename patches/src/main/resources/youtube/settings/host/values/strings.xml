@@ -359,8 +359,8 @@ Tap here to learn more about DeArrow."</string>
     <string name="revanced_hide_category_bar_in_history_summary_off">Shown in watch history.</string>
 
     <!-- PreferenceScreen: Feed, PreferenceCategory: Feed, PreferenceScreen: Channel page -->
-    <string name="revanced_preference_screen_channel_profile_title">Channel page</string>
-    <string name="revanced_preference_screen_channel_profile_summary">Hide or show components in channel page.</string>
+    <string name="revanced_preference_screen_channel_page_title">Channel page</string>
+    <string name="revanced_preference_screen_channel_page_summary">Hide or show components in channel page.</string>
 
     <string name="revanced_hide_channel_tab_title">Enable channel tab filter</string>
     <string name="revanced_hide_channel_tab_summary_on">Channel tab filter is enabled.</string>
