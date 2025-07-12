@@ -1496,9 +1496,9 @@ This feature works best with a very fast internet connection."</string>
     <string name="revanced_disable_resuming_shorts_player_title">Disable resuming Shorts player</string>
     <string name="revanced_disable_resuming_shorts_player_summary_on">Shorts player will not resume on app startup.</string>
     <string name="revanced_disable_resuming_shorts_player_summary_off">Shorts player will resume on app startup.</string>
-    <string name="revanced_hide_shorts_floating_button_title">Hide floating Use this sound button</string>
-    <string name="revanced_hide_shorts_floating_button_summary_on">Floating Use this sound button is hidden.</string>
-    <string name="revanced_hide_shorts_floating_button_summary_off">Floating Use this sound button is shown.</string>
+    <string name="revanced_hide_shorts_floating_button_title">Hide floating button</string>
+    <string name="revanced_hide_shorts_floating_button_summary_on">"Floating buttons like 'Use this sound' are hidden in the Shorts channel tab."</string>
+    <string name="revanced_hide_shorts_floating_button_summary_off">"Floating buttons like 'Use this sound' are shown in the Shorts channel tab."</string>
 
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts shelves -->
     <string name="revanced_preference_category_shorts_shelf">Shorts shelves</string>
