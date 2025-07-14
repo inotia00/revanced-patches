@@ -25,8 +25,8 @@ import app.revanced.patches.youtube.utils.extension.Constants.COMPONENTS_PATH
 import app.revanced.patches.youtube.utils.extension.Constants.PLAYER_CLASS_DESCRIPTOR
 import app.revanced.patches.youtube.utils.extension.Constants.SPANS_PATH
 import app.revanced.patches.youtube.utils.extension.sharedExtensionPatch
+import app.revanced.patches.youtube.utils.fix.endscreensuggestedvideo.endScreenSuggestedVideoPatch
 import app.revanced.patches.youtube.utils.fix.litho.lithoLayoutPatch
-import app.revanced.patches.youtube.utils.fix.suggestedvideoendscreen.suggestedVideoEndScreenPatch
 import app.revanced.patches.youtube.utils.patch.PatchList.PLAYER_COMPONENTS
 import app.revanced.patches.youtube.utils.playertype.playerTypeHookPatch
 import app.revanced.patches.youtube.utils.playservice.is_19_18_or_greater
@@ -340,13 +340,13 @@ val playerComponentsPatch = bytecodePatch(
     dependsOn(
         settingsPatch,
         controlsOverlayConfigPatch,
+        endScreenSuggestedVideoPatch,
         inclusiveSpanPatch,
         lithoFilterPatch,
         lithoLayoutPatch,
         playerTypeHookPatch,
         sharedResourceIdPatch,
         speedOverlayPatch,
-        suggestedVideoEndScreenPatch,
         videoInformationPatch,
         versionCheckPatch,
         engagementPanelHookPatch,
@@ -766,7 +766,7 @@ val playerComponentsPatch = bytecodePatch(
 
         // region patch for skip autoplay countdown
 
-        // This patch works fine when the [SuggestedVideoEndScreenPatch] patch is included.
+        // This patch works fine when the [EndScreenSuggestedVideoPatch] patch is included.
         touchAreaOnClickListenerFingerprint.mutableClassOrThrow().let {
             it.methods.find { method ->
                 method.parameters == listOf("Landroid/view/View${'$'}OnClickListener;")

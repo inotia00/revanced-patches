@@ -1,4 +1,4 @@
-package app.revanced.patches.youtube.utils.fix.suggestedvideoendscreen
+package app.revanced.patches.youtube.utils.fix.endscreensuggestedvideo
 
 import app.revanced.util.fingerprint.legacyFingerprint
 import app.revanced.util.getReference

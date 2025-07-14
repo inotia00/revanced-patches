@@ -1,4 +1,4 @@
-package app.revanced.patches.youtube.utils.fix.suggestedvideoendscreen
+package app.revanced.patches.youtube.utils.fix.endscreensuggestedvideo
 
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
@@ -15,18 +15,18 @@ import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 
-val suggestedVideoEndScreenPatch = bytecodePatch(
-    description = "suggestedVideoEndScreenPatch"
+val endScreenSuggestedVideoPatch = bytecodePatch(
+    description = "endScreenSuggestedVideoPatch"
 ) {
     execute {
 
         /**
          * The reasons why this patch is classified as a patch that fixes a 'bug' are as follows:
-         * 1. In YouTube v18.29.38, the suggested video end screen was only shown when the autoplay setting was turned on.
-         * 2. Starting from YouTube v18.35.36, the suggested video end screen is shown regardless of whether autoplay setting was turned on or off.
+         * 1. In YouTube v18.29.38, the end screen suggested video was only shown when the autoplay setting was turned on.
+         * 2. Starting from YouTube v18.35.36, the end screen suggested video is shown regardless of whether autoplay setting was turned on or off.
          *
-         * This patch changes the suggested video end screen to be shown only when the autoplay setting is turned on.
-         * Automatically closing the suggested video end screen is not appropriate as it will disable the autoplay behavior.
+         * This patch changes the end screen suggested video to be shown only when the autoplay setting is turned on.
+         * Automatically closing the end screen suggested video is not appropriate as it will disable the autoplay behavior.
          */
         removeOnLayoutChangeListenerFingerprint.matchOrThrow().let {
             val walkerIndex =
@@ -53,9 +53,9 @@ val suggestedVideoEndScreenPatch = bytecodePatch(
                 addInstructionsWithLabels(
                     0,
                     """
-                        invoke-static {}, $PLAYER_CLASS_DESCRIPTOR->hideSuggestedVideoEndScreen()Z
+                        invoke-static {}, $PLAYER_CLASS_DESCRIPTOR->hideEndScreenSuggestedVideo()Z
                         move-result v0
-                        if-eqz v0, :show_suggested_video_end_screen
+                        if-eqz v0, :show_end_screen_suggested_video
 
                         iget-object v0, p0, $iGetObjectReference
 
@@ -63,12 +63,12 @@ val suggestedVideoEndScreenPatch = bytecodePatch(
                         $opcodeName {v0}, $invokeReference
                         move-result v0
 
-                        # Hide suggested video end screen only when autoplay is turned off.
-                        if-nez v0, :show_suggested_video_end_screen
+                        # Hide end screen suggested video only when autoplay is turned off.
+                        if-nez v0, :show_end_screen_suggested_video
                         return-void
                         """,
                     ExternalLabel(
-                        "show_suggested_video_end_screen",
+                        "show_end_screen_suggested_video",
                         getInstruction(0)
                     )
                 )

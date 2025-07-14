@@ -947,6 +947,10 @@ public final class app/revanced/patches/youtube/utils/fix/cairo/CairoSettingsPat
 	public static final fun getCairoSettingsPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
+public final class app/revanced/patches/youtube/utils/fix/endscreensuggestedvideo/EndScreenSuggestedVideoPatchKt {
+	public static final fun getEndScreenSuggestedVideoPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
+}
+
 public final class app/revanced/patches/youtube/utils/fix/litho/LithoLayoutPatchKt {
 	public static final fun getLithoLayoutPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
@@ -973,10 +977,6 @@ public final class app/revanced/patches/youtube/utils/fix/streamingdata/Fingerpr
 
 public final class app/revanced/patches/youtube/utils/fix/streamingdata/SpoofStreamingDataPatchKt {
 	public static final fun getSpoofStreamingDataPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
-}
-
-public final class app/revanced/patches/youtube/utils/fix/suggestedvideoendscreen/SuggestedVideoEndScreenPatchKt {
-	public static final fun getSuggestedVideoEndScreenPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
 public final class app/revanced/patches/youtube/utils/flyoutmenu/FlyoutMenuHookPatchKt {
