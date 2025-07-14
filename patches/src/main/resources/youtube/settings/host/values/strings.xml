@@ -1525,6 +1525,9 @@ Side effect: Official headers in search results will be hidden."</string>
     <string name="revanced_hide_shorts_shelf_subscriptions_title">Hide in Subscriptions feed</string>
     <string name="revanced_hide_shorts_shelf_subscriptions_summary_on">Hidden in Subscriptions feed.</string>
     <string name="revanced_hide_shorts_shelf_subscriptions_summary_off">Shown in Subscriptions feed.</string>
+    <string name="revanced_hide_shorts_shelf_video_description_title">Hide in video description</string>
+    <string name="revanced_hide_shorts_shelf_video_description_summary_on">Hidden in video description.</string>
+    <string name="revanced_hide_shorts_shelf_video_description_summary_off">Shown in video description.</string>
     <string name="revanced_hide_shorts_shelf_history_title">Hide in watch history</string>
     <string name="revanced_hide_shorts_shelf_history_summary_on">Hidden in watch history.</string>
     <string name="revanced_hide_shorts_shelf_history_summary_off">Shown in watch history.</string>

@@ -9,6 +9,7 @@ import app.revanced.extension.shared.settings.BooleanSetting;
 import app.revanced.extension.shared.utils.Logger;
 import app.revanced.extension.shared.utils.StringTrieSearch;
 import app.revanced.extension.youtube.settings.Settings;
+import app.revanced.extension.youtube.shared.EngagementPanel;
 import app.revanced.extension.youtube.shared.NavigationBar.NavigationButton;
 import app.revanced.extension.youtube.shared.RootView;
 
@@ -89,6 +90,7 @@ public final class ShortsShelfFilter extends Filter {
     @Override
     public boolean isFiltered(String path, @Nullable String identifier, String allValue, byte[] protobufBufferArray,
                               StringFilterGroup matchedGroup, FilterContentType contentType, int contentIndex) {
+        final boolean description = EngagementPanel.isDescription();
         final boolean playerActive = RootView.isPlayerActive();
         final boolean searchBarActive = RootView.isSearchBarActive();
         final NavigationButton navigationButton = NavigationButton.getSelectedNavigationButton();
@@ -138,11 +140,12 @@ public final class ShortsShelfFilter extends Filter {
 
     private static boolean shouldHideShortsFeedItems(boolean playerActive, boolean searchBarActive, NavigationButton selectedNavButton, String browseId) {
         final boolean hideHomeAndRelatedVideos = Settings.HIDE_SHORTS_SHELF_HOME_RELATED_VIDEOS.get();
-        final boolean hideSubscriptions = Settings.HIDE_SHORTS_SHELF_SUBSCRIPTIONS.get();
         final boolean hideSearch = Settings.HIDE_SHORTS_SHELF_SEARCH.get();
+        final boolean hideSubscriptions = Settings.HIDE_SHORTS_SHELF_SUBSCRIPTIONS.get();
+        final boolean hideVideoDescription = Settings.HIDE_SHORTS_SHELF_VIDEO_DESCRIPTION.get();
         final boolean hideHistory = Settings.HIDE_SHORTS_SHELF_HISTORY.get();
 
-        if (hideHomeAndRelatedVideos && hideSubscriptions && hideSearch && hideHistory) {
+        if (hideHomeAndRelatedVideos && hideSearch && hideSubscriptions && hideVideoDescription && hideHistory) {
             // Shorts suggestions can load in the background if a video is opened and
             // then immediately minimized before any suggestions are loaded.
             // In this state the player type will show minimized, which makes it not possible to
@@ -163,6 +166,11 @@ public final class ShortsShelfFilter extends Filter {
         // Must check second, as search can be from any tab.
         if (searchBarActive) {
             return hideSearch;
+        }
+
+        // Must check player type first, then check if description is open.
+        if (playerActive && description) {
+            return hideVideoDescription;
         }
 
         // Avoid checking navigation button status if all other Shorts should show.
