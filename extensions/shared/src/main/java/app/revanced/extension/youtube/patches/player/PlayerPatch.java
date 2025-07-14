@@ -310,7 +310,7 @@ public class PlayerPatch {
     // region [Hide comments component] patch
 
     public static void changeEmojiPickerOpacity(ImageView imageView) {
-        if (!Settings.HIDE_COMMENT_TIMESTAMP_AND_EMOJI_BUTTONS.get())
+        if (!Settings.HIDE_COMMENTS_EMOJI_AND_TIMESTAMP_BUTTONS.get())
             return;
 
         imageView.setImageAlpha(0);
@@ -318,7 +318,7 @@ public class PlayerPatch {
 
     @Nullable
     public static Object disableEmojiPickerOnClickListener(@Nullable Object object) {
-        return Settings.HIDE_COMMENT_TIMESTAMP_AND_EMOJI_BUTTONS.get() ? null : object;
+        return Settings.HIDE_COMMENTS_EMOJI_AND_TIMESTAMP_BUTTONS.get() ? null : object;
     }
 
     // endregion

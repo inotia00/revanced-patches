@@ -17,7 +17,7 @@ public final class SearchLinksFilter extends Filter {
     public SearchLinksFilter() {
         addCallbacks(
                 new StringFilterGroup(
-                        Settings.HIDE_COMMENT_HIGHLIGHTED_SEARCH_LINKS,
+                        Settings.HIDE_COMMENTS_HIGHLIGHTED_SEARCH_LINKS,
                         "|comment."
                 )
         );
@@ -29,7 +29,7 @@ public final class SearchLinksFilter extends Filter {
     private boolean isSearchLinks(SpannableString original, int end) {
         String originalString = original.toString();
         int wordJoinerIndex = originalString.indexOf(WORD_JOINER_CHARACTER);
-        // There may be more than one highlight keyword in the comment.
+        // There may be more than one highlight keyword in the comments.
         // Check the index of all highlight keywords.
         while (wordJoinerIndex != -1) {
             if (end - wordJoinerIndex == 2) return true;

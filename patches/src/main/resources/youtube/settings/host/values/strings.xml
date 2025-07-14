@@ -1031,6 +1031,9 @@ Info:
     <string name="revanced_hide_ai_chat_summary_title">Hide AI Chat summary</string>
     <string name="revanced_hide_ai_chat_summary_summary_on">AI Chat summary is hidden.</string>
     <string name="revanced_hide_ai_chat_summary_summary_off">AI Chat summary is shown.</string>
+    <string name="revanced_hide_ai_comments_summary_title">Hide AI comments summary</string>
+    <string name="revanced_hide_ai_comments_summary_summary_on">AI comments summary is hidden.</string>
+    <string name="revanced_hide_ai_comments_summary_summary_off">AI comments summary is shown.</string>
     <string name="revanced_hide_channel_guidelines_title">Hide channel guidelines</string>
     <string name="revanced_hide_channel_guidelines_summary_on">Channel guidelines are hidden.</string>
     <string name="revanced_hide_channel_guidelines_summary_off">Channel guidelines are shown.</string>
@@ -1043,15 +1046,15 @@ Info:
     <string name="revanced_hide_comments_section_in_home_feed_title">Hide Comments section in Home feed</string>
     <string name="revanced_hide_comments_section_in_home_feed_summary_on">Comments section is hidden in Home feed.</string>
     <string name="revanced_hide_comments_section_in_home_feed_summary_off">Comments section is shown in Home feed.</string>
-    <string name="revanced_hide_comment_create_shorts_button_title">Hide Create a Short button</string>
-    <string name="revanced_hide_comment_create_shorts_button_summary_on">Create a Short button is hidden.</string>
-    <string name="revanced_hide_comment_create_shorts_button_summary_off">Create a Short button is shown.</string>
-    <string name="revanced_hide_comment_timestamp_and_emoji_buttons_title">Hide emoji and timestamp buttons</string>
-    <string name="revanced_hide_comment_timestamp_and_emoji_buttons_summary_on">Emoji and timestamp buttons are hidden.</string>
-    <string name="revanced_hide_comment_timestamp_and_emoji_buttons_summary_off">Emoji and timestamp buttons are shown.</string>
-    <string name="revanced_hide_comment_highlighted_search_links_title">Hide highlighted search links</string>
-    <string name="revanced_hide_comment_highlighted_search_links_summary_on">Highlighted search links are hidden.</string>
-    <string name="revanced_hide_comment_highlighted_search_links_summary_off">Highlighted search links are shown.</string>
+    <string name="revanced_hide_comments_create_a_short_button_title">Hide Create a Short button</string>
+    <string name="revanced_hide_comments_create_a_short_button_summary_on">Create a Short button is hidden.</string>
+    <string name="revanced_hide_comments_create_a_short_button_summary_off">Create a Short button is shown.</string>
+    <string name="revanced_hide_comments_emoji_and_timestamp_buttons_title">Hide emoji and timestamp buttons</string>
+    <string name="revanced_hide_comments_emoji_and_timestamp_buttons_summary_on">Emoji and timestamp buttons are hidden.</string>
+    <string name="revanced_hide_comments_emoji_and_timestamp_buttons_summary_off">Emoji and timestamp buttons are shown.</string>
+    <string name="revanced_hide_comments_highlighted_search_links_title">Hide highlighted search links</string>
+    <string name="revanced_hide_comments_highlighted_search_links_summary_on">Highlighted search links are hidden.</string>
+    <string name="revanced_hide_comments_highlighted_search_links_summary_off">Highlighted search links are shown.</string>
     <string name="revanced_hide_live_chat_messages_title">Hide Live Chat messages</string>
     <string name="revanced_hide_live_chat_messages_summary_on">Live Chat messages are hidden.\n\nThis setting applies to Shorts live videos too.</string>
     <string name="revanced_hide_live_chat_messages_summary_off">Live Chat messages are shown.</string>
@@ -1061,9 +1064,9 @@ Info:
     <string name="revanced_hide_preview_comment_type_title">Hide preview comment type</string>
     <string name="revanced_hide_preview_comment_type_on">Size of the comments section is unchanged, making it possible to open Live Chat replay.</string>
     <string name="revanced_hide_preview_comment_type_off">Size of the comments section is changed, making it impossible to open Live Chat replay.</string>
-    <string name="revanced_hide_comment_thanks_button_title">Hide Thanks button</string>
-    <string name="revanced_hide_comment_thanks_button_summary_on">Thanks button is hidden.</string>
-    <string name="revanced_hide_comment_thanks_button_summary_off">Thanks button is shown.</string>
+    <string name="revanced_hide_comments_thanks_button_title">Hide Thanks button</string>
+    <string name="revanced_hide_comments_thanks_button_summary_on">Thanks button is hidden.</string>
+    <string name="revanced_hide_comments_thanks_button_summary_off">Thanks button is shown.</string>
 
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Flyout menu -->
     <string name="revanced_preference_screen_player_flyout_menu_title">Flyout menu</string>

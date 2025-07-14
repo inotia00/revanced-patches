@@ -4,10 +4,12 @@ import androidx.annotation.Nullable;
 
 import java.util.regex.Pattern;
 
+import app.revanced.extension.shared.patches.components.ByteArrayFilterGroup;
 import app.revanced.extension.shared.patches.components.Filter;
 import app.revanced.extension.shared.patches.components.StringFilterGroup;
 import app.revanced.extension.shared.utils.StringTrieSearch;
 import app.revanced.extension.youtube.settings.Settings;
+import app.revanced.extension.youtube.shared.PlayerType;
 
 @SuppressWarnings("unused")
 public final class CommentsFilter extends Filter {
@@ -17,16 +19,33 @@ public final class CommentsFilter extends Filter {
     private static final String FEED_VIDEO_PATH = "video_lockup_with_attachment";
     private static final String VIDEO_METADATA_CAROUSEL_PATH = "video_metadata_carousel.eml";
 
+    private final StringFilterGroup chipBar;
+    private final ByteArrayFilterGroup aiCommentsSummary;
     private final StringFilterGroup comments;
     private final StringFilterGroup commentsPreviewDots;
-    private final StringFilterGroup createShorts;
+    private final StringFilterGroup createAShort;
+    private final StringFilterGroup emojiPickerAndTimestamp;
     private final StringFilterGroup previewCommentText;
     private final StringFilterGroup thanks;
-    private final StringFilterGroup timeStampAndEmojiPicker;
     private final StringTrieSearch exceptions = new StringTrieSearch();
 
     public CommentsFilter() {
         exceptions.addPatterns("macro_markers_list_item");
+
+        final StringFilterGroup aiChatSummary = new StringFilterGroup(
+                Settings.HIDE_AI_CHAT_SUMMARY,
+                "live_chat_summary_banner"
+        );
+
+        chipBar = new StringFilterGroup(
+                Settings.HIDE_AI_COMMENTS_SUMMARY,
+                "chip_bar.eml"
+        );
+
+        aiCommentsSummary = new ByteArrayFilterGroup(
+                null,
+                "yt_fill_spark"
+        );
 
         final StringFilterGroup channelGuidelines = new StringFilterGroup(
                 Settings.HIDE_CHANNEL_GUIDELINES,
@@ -41,31 +60,26 @@ public final class CommentsFilter extends Filter {
                 "comments_"
         );
 
-        commentsPreviewDots = new StringFilterGroup(
-                Settings.HIDE_PREVIEW_COMMENT_OLD_METHOD,
-                "|ContainerType|ContainerType|ContainerType|"
-        );
-
-        createShorts = new StringFilterGroup(
-                Settings.HIDE_COMMENT_CREATE_SHORTS_BUTTON,
-                "composer_short_creation_button"
-        );
-
-        final StringFilterGroup membersBanner = new StringFilterGroup(
+        final StringFilterGroup commentsByMembers = new StringFilterGroup(
                 Settings.HIDE_COMMENTS_BY_MEMBERS,
                 "sponsorships_comments_header.eml",
                 "sponsorships_comments_footer.eml"
+        );
+
+        createAShort = new StringFilterGroup(
+                Settings.HIDE_COMMENTS_CREATE_A_SHORT_BUTTON,
+                "composer_short_creation_button"
+        );
+
+        emojiPickerAndTimestamp = new StringFilterGroup(
+                Settings.HIDE_COMMENTS_EMOJI_AND_TIMESTAMP_BUTTONS,
+                "|CellType|ContainerType|ContainerType|ContainerType|ContainerType|ContainerType|"
         );
 
         final StringFilterGroup liveChatMessages = new StringFilterGroup(
                 Settings.HIDE_LIVE_CHAT_MESSAGES,
                 "live_chat_text_message",
                 "viewer_engagement_message" // message about poll, not poll itself
-        );
-
-        final StringFilterGroup aiChatSummary = new StringFilterGroup(
-                Settings.HIDE_AI_CHAT_SUMMARY,
-                "live_chat_summary_banner"
         );
 
         final StringFilterGroup previewComment = new StringFilterGroup(
@@ -76,19 +90,19 @@ public final class CommentsFilter extends Filter {
                 "comments_entry_point_simplebox"
         );
 
+        commentsPreviewDots = new StringFilterGroup(
+                Settings.HIDE_PREVIEW_COMMENT_OLD_METHOD,
+                "|ContainerType|ContainerType|ContainerType|"
+        );
+
         previewCommentText = new StringFilterGroup(
                 Settings.HIDE_PREVIEW_COMMENT_NEW_METHOD,
                 COMMENT_ENTRY_POINT_TEASER_PATH
         );
 
         thanks = new StringFilterGroup(
-                Settings.HIDE_COMMENT_THANKS_BUTTON,
+                Settings.HIDE_COMMENTS_THANKS_BUTTON,
                 "|super_thanks_button.eml"
-        );
-
-        timeStampAndEmojiPicker = new StringFilterGroup(
-                Settings.HIDE_COMMENT_TIMESTAMP_AND_EMOJI_BUTTONS,
-                "|CellType|ContainerType|ContainerType|ContainerType|ContainerType|ContainerType|"
         );
 
 
@@ -96,15 +110,16 @@ public final class CommentsFilter extends Filter {
 
         addPathCallbacks(
                 aiChatSummary,
+                chipBar,
                 comments,
+                commentsByMembers,
                 commentsPreviewDots,
-                createShorts,
-                membersBanner,
+                createAShort,
+                emojiPickerAndTimestamp,
                 liveChatMessages,
                 previewComment,
                 previewCommentText,
-                thanks,
-                timeStampAndEmojiPicker
+                thanks
         );
     }
 
@@ -114,11 +129,15 @@ public final class CommentsFilter extends Filter {
         if (exceptions.matches(path))
             return false;
 
-        if (matchedGroup == createShorts || matchedGroup == thanks || matchedGroup == timeStampAndEmojiPicker) {
+        if (matchedGroup == createAShort || matchedGroup == thanks || matchedGroup == emojiPickerAndTimestamp) {
             if (path.startsWith(COMMENT_COMPOSER_PATH)) {
                 return super.isFiltered(path, identifier, allValue, protobufBufferArray, matchedGroup, contentType, contentIndex);
             }
             return false;
+        } else if (matchedGroup == chipBar) {
+            // Playlist sort button uses same components and must only filter if the player is opened.
+            return PlayerType.getCurrent().isMaximizedOrFullscreen()
+                    && aiCommentsSummary.check(protobufBufferArray).isFiltered();
         } else if (matchedGroup == comments) {
             if (path.startsWith(FEED_VIDEO_PATH)) {
                 if (Settings.HIDE_COMMENTS_SECTION_IN_HOME_FEED.get()) {
