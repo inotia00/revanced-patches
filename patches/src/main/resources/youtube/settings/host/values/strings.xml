@@ -907,6 +907,9 @@ Note:
 Autoplay can be changed in YouTube settings:
 Settings → Autoplay / Playback → Autoplay next video"</string>
     <string name="revanced_hide_end_screen_suggested_video_summary_off">End screen suggested video is shown.</string>
+    <string name="revanced_skip_autoplay_countdown_title">Skip autoplay countdown</string>
+    <string name="revanced_skip_autoplay_countdown_summary_on">If autoplay is enabled, the next video will play immediately.</string>
+    <string name="revanced_skip_autoplay_countdown_summary_off">If autoplay is enabled, the next video will play after the countdown ends.</string>
     <string name="revanced_hide_filmstrip_overlay_title">Hide filmstrip overlay</string>
     <string name="revanced_hide_filmstrip_overlay_summary_on">Filmstrip overlay is hidden.</string>
     <string name="revanced_hide_filmstrip_overlay_summary_off">Filmstrip overlay is shown.</string>
@@ -928,9 +931,6 @@ Settings → Autoplay / Playback → Autoplay next video"</string>
     <string name="revanced_hide_suggested_actions_title">Hide suggested actions</string>
     <string name="revanced_hide_suggested_actions_summary_on">Suggested actions are hidden.</string>
     <string name="revanced_hide_suggested_actions_summary_off">Suggested actions are shown.</string>
-    <string name="revanced_skip_autoplay_countdown_title">Skip autoplay countdown</string>
-    <string name="revanced_skip_autoplay_countdown_summary_on">If autoplay is enabled, the next video will play immediately.</string>
-    <string name="revanced_skip_autoplay_countdown_summary_off">If autoplay is enabled, the next video will play after the countdown ends.</string>
     <string name="revanced_hide_timed_reactions_title">Hide timed reactions</string>
     <string name="revanced_hide_timed_reactions_summary_on">Timed reactions are hidden.</string>
     <string name="revanced_hide_timed_reactions_summary_off">Timed reactions are shown.</string>
@@ -1505,7 +1505,7 @@ This feature works best with a very fast internet connection."</string>
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts shelves -->
     <string name="revanced_preference_category_shorts_shelf">Shorts shelves</string>
 
-    <string name="revanced_hide_shorts_shelf_title">Enable Shorts shelves hiding</string>
+    <string name="revanced_hide_shorts_shelf_title">Enable hiding Shorts shelves</string>
     <string name="revanced_hide_shorts_shelf_summary">Enables hiding Shorts shelves.</string>
     <string name="revanced_hide_shorts_shelf_channel_title">Hide in channel page</string>
     <string name="revanced_hide_shorts_shelf_channel_summary_on">"Hidden in channel page.
