@@ -112,12 +112,12 @@ public final class FeedComponentsFilter extends Filter {
 
         channelProfileGroupList.addAll(
                 new ByteArrayFilterGroup(
-                Settings.HIDE_VISIT_COMMUNITY_BUTTON,
-                "community_button"
+                        Settings.HIDE_VISIT_COMMUNITY_BUTTON,
+                        "community_button"
                 ),
                 new ByteArrayFilterGroup(
-                Settings.HIDE_VISIT_STORE_BUTTON,
-                "header_store_button"
+                        Settings.HIDE_VISIT_STORE_BUTTON,
+                        "header_store_button"
                 )
         );
 
