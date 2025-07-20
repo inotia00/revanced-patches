@@ -540,6 +540,19 @@ public class PlayerPatch {
         }
     }
 
+    public static boolean hideEndScreenSuggestedVideo() {
+        return Settings.HIDE_END_SCREEN_SUGGESTED_VIDEO.get();
+    }
+
+    public static void skipAutoPlayCountdown(View view) {
+        if (!hideEndScreenSuggestedVideo())
+            return;
+        if (!Settings.SKIP_AUTOPLAY_COUNTDOWN.get())
+            return;
+
+        Utils.clickView(view);
+    }
+
     public static boolean hideFilmstripOverlay() {
         return Settings.HIDE_FILMSTRIP_OVERLAY.get();
     }
@@ -562,19 +575,6 @@ public class PlayerPatch {
 
     public static void hideSuggestedActions(View view) {
         hideViewUnderCondition(Settings.HIDE_SUGGESTED_ACTION.get(), view);
-    }
-
-    public static boolean hideSuggestedVideoEndScreen() {
-        return Settings.HIDE_SUGGESTED_VIDEO_END_SCREEN.get();
-    }
-
-    public static void skipAutoPlayCountdown(View view) {
-        if (!hideSuggestedVideoEndScreen())
-            return;
-        if (!Settings.SKIP_AUTOPLAY_COUNTDOWN.get())
-            return;
-
-        Utils.clickView(view);
     }
 
     public static boolean hideZoomOverlay() {

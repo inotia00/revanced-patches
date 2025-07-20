@@ -9,6 +9,7 @@ import app.revanced.extension.shared.settings.BooleanSetting;
 import app.revanced.extension.shared.utils.Logger;
 import app.revanced.extension.shared.utils.StringTrieSearch;
 import app.revanced.extension.youtube.settings.Settings;
+import app.revanced.extension.youtube.shared.EngagementPanel;
 import app.revanced.extension.youtube.shared.NavigationBar.NavigationButton;
 import app.revanced.extension.youtube.shared.RootView;
 
@@ -90,12 +91,13 @@ public final class ShortsShelfFilter extends Filter {
     public boolean isFiltered(String path, @Nullable String identifier, String allValue, byte[] protobufBufferArray,
                               StringFilterGroup matchedGroup, FilterContentType contentType, int contentIndex) {
         final boolean playerActive = RootView.isPlayerActive();
+        final boolean descriptionActive = EngagementPanel.isDescription();
         final boolean searchBarActive = RootView.isSearchBarActive();
         final NavigationButton navigationButton = NavigationButton.getSelectedNavigationButton();
         final String navigation = navigationButton == null ? "null" : navigationButton.name();
         final String browseId = RootView.getBrowseId();
-        final boolean hideShelves = shouldHideShortsFeedItems(playerActive, searchBarActive, navigationButton, browseId);
-        Logger.printDebug(() -> "hideShelves: " + hideShelves + "\nplayerActive: " + playerActive + "\nsearchBarActive: " + searchBarActive + "\nbrowseId: " + browseId + "\nnavigation: " + navigation);
+        final boolean hideShelves = shouldHideShortsFeedItems(playerActive, descriptionActive, searchBarActive, navigationButton, browseId);
+        Logger.printDebug(() -> "hideShelves: " + hideShelves + "\nplayerActive: " + playerActive + "\ndescriptionActive" + descriptionActive + "\nsearchBarActive: " + searchBarActive + "\nbrowseId: " + browseId + "\nnavigation: " + navigation);
         if (contentType == FilterContentType.PATH) {
             if (matchedGroup == compactFeedVideoPath) {
                 if (hideShelves && compactFeedVideoBuffer.check(protobufBufferArray).isFiltered()) {
@@ -136,13 +138,14 @@ public final class ShortsShelfFilter extends Filter {
         return super.isFiltered(path, identifier, allValue, protobufBufferArray, matchedGroup, contentType, contentIndex);
     }
 
-    private static boolean shouldHideShortsFeedItems(boolean playerActive, boolean searchBarActive, NavigationButton selectedNavButton, String browseId) {
+    private static boolean shouldHideShortsFeedItems(boolean playerActive, boolean descriptionActive, boolean searchBarActive, NavigationButton selectedNavButton, String browseId) {
         final boolean hideHomeAndRelatedVideos = Settings.HIDE_SHORTS_SHELF_HOME_RELATED_VIDEOS.get();
-        final boolean hideSubscriptions = Settings.HIDE_SHORTS_SHELF_SUBSCRIPTIONS.get();
         final boolean hideSearch = Settings.HIDE_SHORTS_SHELF_SEARCH.get();
+        final boolean hideSubscriptions = Settings.HIDE_SHORTS_SHELF_SUBSCRIPTIONS.get();
+        final boolean hideVideoDescription = Settings.HIDE_SHORTS_SHELF_VIDEO_DESCRIPTION.get();
         final boolean hideHistory = Settings.HIDE_SHORTS_SHELF_HISTORY.get();
 
-        if (hideHomeAndRelatedVideos && hideSubscriptions && hideSearch && hideHistory) {
+        if (hideHomeAndRelatedVideos && hideSearch && hideSubscriptions && hideVideoDescription && hideHistory) {
             // Shorts suggestions can load in the background if a video is opened and
             // then immediately minimized before any suggestions are loaded.
             // In this state the player type will show minimized, which makes it not possible to
@@ -156,8 +159,9 @@ public final class ShortsShelfFilter extends Filter {
 
         // Must check player type first, as search bar can be active behind the player.
         if (playerActive) {
-            // For now, consider the under video results the same as the home feed.
-            return hideHomeAndRelatedVideos;
+            return descriptionActive
+                    ? hideVideoDescription      // Player video description panel opened.
+                    : hideHomeAndRelatedVideos; // For now, consider the under video results the same as the home feed.
         }
 
         // Must check second, as search can be from any tab.

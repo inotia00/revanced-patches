@@ -18,6 +18,7 @@ import app.revanced.patches.shared.textcomponent.hookSpannableString
 import app.revanced.patches.shared.textcomponent.textComponentPatch
 import app.revanced.patches.youtube.utils.bottomSheetMenuItemBuilderFingerprint
 import app.revanced.patches.youtube.utils.compatibility.Constants.COMPATIBLE_PACKAGE
+import app.revanced.patches.youtube.utils.engagement.engagementPanelHookPatch
 import app.revanced.patches.youtube.utils.extension.Constants.COMPONENTS_PATH
 import app.revanced.patches.youtube.utils.extension.Constants.SHORTS_CLASS_DESCRIPTOR
 import app.revanced.patches.youtube.utils.extension.Constants.SHORTS_PATH
@@ -714,6 +715,7 @@ val shortsComponentPatch = bytecodePatch(
         shortsTimeStampPatch,
         shortsToolBarPatch,
 
+        engagementPanelHookPatch,
         lithoFilterPatch,
         lithoLayoutPatch,
         navigationBarHookPatch,

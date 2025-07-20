@@ -34,12 +34,12 @@ public final class FeedComponentsFilter extends Filter {
     private static final StringTrieSearch mixPlaylistsContextExceptions = new StringTrieSearch();
     private static final StringTrieSearch communityPostsFeedGroupSearch = new StringTrieSearch();
     private final StringFilterGroup channelProfile;
+    private final ByteArrayFilterGroupList channelProfileGroupList = new ByteArrayFilterGroupList();
     private final StringFilterGroup chipBar;
     private final StringFilterGroup communityPosts;
     private final StringFilterGroup expandableCard;
     private final StringFilterGroup horizontalShelves;
     private final ByteArrayFilterGroup ticketShelf;
-    private final ByteArrayFilterGroup visitStoreButton;
     private final StringFilterGroupList communityPostsFeedGroup = new StringFilterGroupList();
 
 
@@ -105,14 +105,20 @@ public final class FeedComponentsFilter extends Filter {
         );
 
         channelProfile = new StringFilterGroup(
-                Settings.HIDE_VISIT_STORE_BUTTON,
+                null,
                 "channel_profile.eml",
                 "page_header.eml" // new layout
         );
 
-        visitStoreButton = new ByteArrayFilterGroup(
-                null,
-                "header_store_button"
+        channelProfileGroupList.addAll(
+                new ByteArrayFilterGroup(
+                        Settings.HIDE_VISIT_COMMUNITY_BUTTON,
+                        "community_button"
+                ),
+                new ByteArrayFilterGroup(
+                        Settings.HIDE_VISIT_STORE_BUTTON,
+                        "header_store_button"
+                )
         );
 
         final StringFilterGroup membersShelf = new StringFilterGroup(
@@ -268,7 +274,7 @@ public final class FeedComponentsFilter extends Filter {
     public boolean isFiltered(String path, @Nullable String identifier, String allValue, byte[] protobufBufferArray,
                               StringFilterGroup matchedGroup, FilterContentType contentType, int contentIndex) {
         if (matchedGroup == channelProfile) {
-            if (contentIndex == 0 && visitStoreButton.check(protobufBufferArray).isFiltered()) {
+            if (contentIndex == 0 && channelProfileGroupList.check(protobufBufferArray).isFiltered()) {
                 return super.isFiltered(path, identifier, allValue, protobufBufferArray, matchedGroup, contentType, contentIndex);
             }
             return false;
