@@ -14,6 +14,7 @@ import app.revanced.patches.youtube.utils.extension.Constants.PLAYER_CLASS_DESCR
 import app.revanced.patches.youtube.utils.extension.Constants.SPANS_PATH
 import app.revanced.patches.youtube.utils.fix.litho.lithoLayoutPatch
 import app.revanced.patches.youtube.utils.patch.PatchList.HIDE_COMMENTS_COMPONENTS
+import app.revanced.patches.youtube.utils.playertype.playerTypeHookPatch
 import app.revanced.patches.youtube.utils.resourceid.sharedResourceIdPatch
 import app.revanced.patches.youtube.utils.settings.ResourceUtils.addPreference
 import app.revanced.patches.youtube.utils.settings.settingsPatch
@@ -41,6 +42,7 @@ val commentsComponentPatch = bytecodePatch(
         inclusiveSpanPatch,
         lithoFilterPatch,
         lithoLayoutPatch,
+        playerTypeHookPatch,
         sharedResourceIdPatch,
     )
 

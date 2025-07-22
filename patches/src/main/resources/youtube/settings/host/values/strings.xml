@@ -1059,7 +1059,7 @@ Info:
     <string name="revanced_hide_comments_highlighted_search_links_summary_on">Highlighted search links are hidden.</string>
     <string name="revanced_hide_comments_highlighted_search_links_summary_off">Highlighted search links are shown.</string>
     <string name="revanced_hide_live_chat_messages_title">Hide live chat messages</string>
-    <string name="revanced_hide_live_chat_messages_summary_on">Live chat messages are hidden.\n\nThis setting applies to live Shorts videos too.</string>
+    <string name="revanced_hide_live_chat_messages_summary_on">Live chat messages are hidden.\n\nThis setting applies to Shorts live streams.</string>
     <string name="revanced_hide_live_chat_messages_summary_off">Live chat messages are shown.</string>
     <string name="revanced_hide_preview_comment_title">Hide preview comment</string>
     <string name="revanced_hide_preview_comment_on">Preview comment is hidden.</string>
