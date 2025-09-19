@@ -18,6 +18,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import app.revanced.extension.shared.patches.components.Filter;
 import app.revanced.extension.shared.patches.components.StringFilterGroup;
@@ -50,6 +52,13 @@ import app.revanced.extension.youtube.shared.RootView;
  */
 @SuppressWarnings("unused")
 public final class KeywordContentFilter extends Filter {
+
+    /**
+     * Composite rule syntax pattern:
+     * "word1" & "word2"  -> hide when both words appear (exact whole-word matching)
+     * "word1" !& "word2" -> hide when first word appears and second word does NOT appear
+     */
+    private static final Pattern COMPOSITE_RULE_PATTERN = Pattern.compile("^\\s*\"([^\"]+)\"\\s*(!?&|&!)\\s*\"([^\"]+)\"\\s*$");
 
     /**
      * Strings found in the buffer for every videos.  Full strings should be specified.
@@ -309,6 +318,37 @@ public final class KeywordContentFilter extends Filter {
     }
 
     /**
+     * Find the first index of the given byte pattern in the data starting from fromIndex.
+     * Returns -1 if not found.
+     */
+    private static int indexOfBytes(byte[] data, byte[] pattern, int fromIndex) {
+        final int dl = data.length;
+        final int pl = pattern.length;
+        if (pl == 0) return -1;
+        for (int i = Math.max(0, fromIndex), end = dl - pl; i <= end; i++) {
+            if (data[i] != pattern[0]) continue;
+            int j = 1;
+            while (j < pl && data[i + j] == pattern[j]) j++;
+            if (j == pl) return i;
+        }
+        return -1;
+    }
+
+    /**
+     * Returns true if the given keyword appears at least once in the text as a whole word.
+     */
+    private static boolean containsWholeWord(byte[] text, byte[] keyword) {
+        int from = 0;
+        final int kl = keyword.length;
+        while (true) {
+            int idx = indexOfBytes(text, keyword, from);
+            if (idx < 0) return false;
+            if (keywordMatchIsWholeWord(text, idx, kl)) return true;
+            from = idx + 1;
+        }
+    }
+
+    /**
      * @return The UTF8 character point immediately before the index,
      * or null if the bytes before the index is not a valid UTF8 character.
      */
@@ -418,6 +458,57 @@ public final class KeywordContentFilter extends Filter {
                 // Remove any trailing spaces the user may have accidentally included.
                 phrase = phrase.stripTrailing();
                 if (phrase.isBlank()) continue;
+
+                // Support composite rules: "word1" & "word2" and "word1" !& "word2"
+                // These rules always use exact matching (whole-word, case-sensitive) for both words.
+                Matcher composite = COMPOSITE_RULE_PATTERN.matcher(phrase);
+                if (composite.matches()) {
+                    final String left = composite.group(1);
+                    final String operator = composite.group(2); // "&", "!&" or "&!"
+                    final String right = composite.group(3);
+
+                    final byte[] leftBytes = left.getBytes(StandardCharsets.UTF_8);
+                    final byte[] rightBytes = right.getBytes(StandardCharsets.UTF_8);
+                    final String compositeName = '"' + left + '"' + " " + operator + " " + '"' + right + '"';
+
+                    if (operator.indexOf('!') < 0) { // AND
+                        TrieSearch.TriePatternMatchedCallback<byte[]> callback =
+                                (textSearched, startIndex, matchLength, callbackParameter) -> {
+                                    // Ensure the left match is a whole word.
+                                    if (!keywordMatchIsWholeWord(textSearched, startIndex, matchLength)) {
+                                        return false;
+                                    }
+                                    // Check that the right word also appears as a whole word anywhere in the buffer.
+                                    if (!containsWholeWord(textSearched, rightBytes)) {
+                                        return false;
+                                    }
+                                    Logger.printDebug(() -> "Matched AND keywords: " + compositeName);
+                                    //noinspection unchecked
+                                    ((MutableReference<String>) callbackParameter).value = compositeName;
+                                    return true;
+                                };
+                        search.addPattern(leftBytes, callback);
+                        continue;
+                    } else { // NOT-AND: accept both "!&" and "&!"
+                        TrieSearch.TriePatternMatchedCallback<byte[]> callback =
+                                (textSearched, startIndex, matchLength, callbackParameter) -> {
+                                    // Ensure the left match is a whole word.
+                                    if (!keywordMatchIsWholeWord(textSearched, startIndex, matchLength)) {
+                                        return false;
+                                    }
+                                    // Hide only when right IS NOT present as a whole word anywhere in the buffer.
+                                    if (containsWholeWord(textSearched, rightBytes)) {
+                                        return false;
+                                    }
+                                    Logger.printDebug(() -> "Matched NOT-AND keywords: " + compositeName);
+                                    //noinspection unchecked
+                                    ((MutableReference<String>) callbackParameter).value = compositeName;
+                                    return true;
+                                };
+                        search.addPattern(leftBytes, callback);
+                        continue;
+                    }
+                }
 
                 final boolean wholeWordMatching;
                 if (phraseUsesWholeWordSyntax(phrase)) {
