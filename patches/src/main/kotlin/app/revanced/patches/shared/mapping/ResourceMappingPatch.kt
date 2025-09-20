@@ -24,7 +24,7 @@ val resourceMappingPatch = resourcePatch(
     description = "resourceMappingPatch"
 ) {
     execute {
-        document("res/values/public.xml").use { document ->
+        document(get("res/values/public.xml").inputStream()).use { document ->
             val resources = document.documentElement.childNodes
             val resourcesLength = resources.length
             resourceMappings = HashMap<String, ResourceElement>(2 * resourcesLength)
