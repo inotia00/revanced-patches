@@ -17,6 +17,7 @@ import androidx.annotation.Nullable;
 import java.nio.charset.StandardCharsets;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -50,7 +51,8 @@ import app.revanced.extension.youtube.shared.RootView;
  *   will always be hidden.  This patch checks for some words of these words.
  * - When using whole word syntax, some keywords may need additional pluralized variations.
  */
-@SuppressWarnings("unused")
+@SuppressWarnings({"ConstantValue", "ExtractMethodRecommender", "FieldCanBeLocal",
+        "RedundantIfStatement", "StringEquality", "unchecked", "unused"})
 public final class KeywordContentFilter extends Filter {
 
     /**
@@ -58,7 +60,8 @@ public final class KeywordContentFilter extends Filter {
      * "word1" & "word2"  -> hide when both words appear (exact whole-word matching)
      * "word1" !& "word2" -> hide when first word appears and second word does NOT appear
      */
-    private static final Pattern COMPOSITE_RULE_PATTERN = Pattern.compile("^\\s*\"([^\"]+)\"\\s*(!?&|&!)\\s*\"([^\"]+)\"\\s*$");
+    private final Pattern COMPOSITE_RULE_PATTERN =
+            Pattern.compile("^\\s*\"([^\"]+)\"\\s*(!?&|&!)\\s*\"([^\"]+)\"\\s*$");
 
     /**
      * Strings found in the buffer for every videos.  Full strings should be specified.
@@ -66,7 +69,7 @@ public final class KeywordContentFilter extends Filter {
      * This list does not include every common buffer string, and this can be added/changed as needed.
      * Words must be entered with the exact casing as found in the buffer.
      */
-    private static final String[] STRINGS_IN_EVERY_BUFFER = {
+    private final String[] STRINGS_IN_EVERY_BUFFER = {
             // Video playback data.
             "googlevideo.com/initplayback?source=youtube", // Video url.
             "ANDROID", // Video url parameter.
@@ -121,7 +124,6 @@ public final class KeywordContentFilter extends Filter {
     /**
      * Substrings that are never at the start of the path.
      */
-    @SuppressWarnings("FieldCanBeLocal")
     private final StringFilterGroup containsFilter = new StringFilterGroup(
             null,
             "modern_type_shelf_header_content.eml",
@@ -147,20 +149,20 @@ public final class KeywordContentFilter extends Filter {
      * Minimum keyword/phrase length to prevent excessively broad content filtering.
      * Only applies when not using whole word syntax.
      */
-    private static final int MINIMUM_KEYWORD_LENGTH = 3;
+    private final int MINIMUM_KEYWORD_LENGTH = 3;
 
     /**
      * Threshold for {@link #filteredVideosPercentage}
      * that indicates all or nearly all videos have been filtered.
      * This should be close to 100% to reduce false positives.
      */
-    private static final float ALL_VIDEOS_FILTERED_THRESHOLD = 0.95f;
+    private final float ALL_VIDEOS_FILTERED_THRESHOLD = 0.95f;
 
-    private static final float ALL_VIDEOS_FILTERED_SAMPLE_SIZE = 50;
+    private final float ALL_VIDEOS_FILTERED_SAMPLE_SIZE = 50;
 
-    private static final long ALL_VIDEOS_FILTERED_BACKOFF_MILLISECONDS = 60 * 1000; // 60 seconds
+    private final long ALL_VIDEOS_FILTERED_BACKOFF_MILLISECONDS = 60 * 1000; // 60 seconds
 
-    private static final int UTF8_MAX_BYTE_COUNT = 4;
+    private final int UTF8_MAX_BYTE_COUNT = 4;
 
     /**
      * Rolling average of how many videos were filtered by a keyword.
@@ -196,10 +198,9 @@ public final class KeywordContentFilter extends Filter {
 
     private volatile ByteTrieSearch bufferSearch;
 
-    private static void logNavigationState(String state) {
+    private void logNavigationState(String state) {
         // Enable locally to debug filtering. Default off to reduce log spam.
         final boolean LOG_NAVIGATION_STATE = false;
-        // noinspection ConstantValue
         if (LOG_NAVIGATION_STATE) {
             Logger.printDebug(() -> "Navigation state: " + state);
         }
@@ -208,7 +209,7 @@ public final class KeywordContentFilter extends Filter {
     /**
      * Change first letter of the first word to use title case.
      */
-    private static String titleCaseFirstWordOnly(String sentence) {
+    private String titleCaseFirstWordOnly(String sentence) {
         if (sentence.isEmpty()) {
             return sentence;
         }
@@ -223,7 +224,7 @@ public final class KeywordContentFilter extends Filter {
     /**
      * Uppercase the first letter of each word.
      */
-    private static String capitalizeAllFirstLetters(String sentence) {
+    private String capitalizeAllFirstLetters(String sentence) {
         if (sentence.isEmpty()) {
             return sentence;
         }
@@ -247,7 +248,7 @@ public final class KeywordContentFilter extends Filter {
     /**
      * @return If the string contains any characters from languages that do not use spaces between words.
      */
-    private static boolean isLanguageWithNoSpaces(String text) {
+    private boolean isLanguageWithNoSpaces(String text) {
         for (int i = 0, length = text.length(); i < length; ) {
             final int codePoint = text.codePointAt(i);
 
@@ -273,7 +274,7 @@ public final class KeywordContentFilter extends Filter {
     /**
      * @return If the phrase will hide all videos. Not an exhaustive check.
      */
-    private static boolean phrasesWillHideAllVideos(@NonNull String[] phrases, boolean matchWholeWords) {
+    private boolean phrasesWillHideAllVideos(@NonNull String[] phrases, boolean matchWholeWords) {
         for (String phrase : phrases) {
             for (String commonString : STRINGS_IN_EVERY_BUFFER) {
                 if (matchWholeWords) {
@@ -302,14 +303,13 @@ public final class KeywordContentFilter extends Filter {
      * @return If the start and end indexes are not surrounded by other letters.
      * If the indexes are surrounded by numbers/symbols/punctuation it is considered a whole word.
      */
-    private static boolean keywordMatchIsWholeWord(byte[] text, int keywordStartIndex, int keywordLength) {
+    private boolean keywordMatchIsWholeWord(byte[] text, int keywordStartIndex, int keywordLength) {
         final Integer codePointBefore = getUtf8CodePointBefore(text, keywordStartIndex);
         if (codePointBefore != null && Character.isLetter(codePointBefore)) {
             return false;
         }
 
         final Integer codePointAfter = getUtf8CodePointAt(text, keywordStartIndex + keywordLength);
-        //noinspection RedundantIfStatement
         if (codePointAfter != null && Character.isLetter(codePointAfter)) {
             return false;
         }
@@ -321,7 +321,7 @@ public final class KeywordContentFilter extends Filter {
      * Find the first index of the given byte pattern in the data starting from fromIndex.
      * Returns -1 if not found.
      */
-    private static int indexOfBytes(byte[] data, byte[] pattern, int fromIndex) {
+    private int indexOfBytes(byte[] data, byte[] pattern, int fromIndex) {
         final int dl = data.length;
         final int pl = pattern.length;
         if (pl == 0) return -1;
@@ -337,7 +337,7 @@ public final class KeywordContentFilter extends Filter {
     /**
      * Returns true if the given keyword appears at least once in the text as a whole word.
      */
-    private static boolean containsWholeWord(byte[] text, byte[] keyword) {
+    private boolean containsWholeWord(byte[] text, byte[] keyword) {
         int from = 0;
         final int kl = keyword.length;
         while (true) {
@@ -353,7 +353,7 @@ public final class KeywordContentFilter extends Filter {
      * or null if the bytes before the index is not a valid UTF8 character.
      */
     @Nullable
-    private static Integer getUtf8CodePointBefore(byte[] data, int index) {
+    private Integer getUtf8CodePointBefore(byte[] data, int index) {
         int characterByteCount = 0;
         while (--index >= 0 && ++characterByteCount <= UTF8_MAX_BYTE_COUNT) {
             if (isValidUtf8(data, index, characterByteCount)) {
@@ -369,7 +369,7 @@ public final class KeywordContentFilter extends Filter {
      * or null if the index holds no valid UTF8 character.
      */
     @Nullable
-    private static Integer getUtf8CodePointAt(byte[] data, int index) {
+    private Integer getUtf8CodePointAt(byte[] data, int index) {
         int characterByteCount = 0;
         final int dataLength = data.length;
         while (index + characterByteCount < dataLength && ++characterByteCount <= UTF8_MAX_BYTE_COUNT) {
@@ -381,7 +381,7 @@ public final class KeywordContentFilter extends Filter {
         return null;
     }
 
-    public static boolean isValidUtf8(byte[] data, int startIndex, int numberOfBytes) {
+    public boolean isValidUtf8(byte[] data, int startIndex, int numberOfBytes) {
         switch (numberOfBytes) {
             case 1 -> { // 0xxxxxxx (ASCII)
                 return (data[startIndex] & 0x80) == 0;
@@ -406,7 +406,7 @@ public final class KeywordContentFilter extends Filter {
         throw new IllegalArgumentException("numberOfBytes: " + numberOfBytes);
     }
 
-    public static int decodeUtf8ToCodePoint(byte[] data, int startIndex, int numberOfBytes) {
+    public int decodeUtf8ToCodePoint(byte[] data, int startIndex, int numberOfBytes) {
         switch (numberOfBytes) {
             case 1 -> {
                 return data[startIndex];
@@ -430,18 +430,72 @@ public final class KeywordContentFilter extends Filter {
         throw new IllegalArgumentException("numberOfBytes: " + numberOfBytes);
     }
 
-    private static boolean phraseUsesWholeWordSyntax(String phrase) {
+    private boolean phraseUsesAndOperator(ByteTrieSearch search, String phrase) {
+        if (!Settings.HIDE_KEYWORD_CONTENT_USE_AND_OPERATOR.get()) {
+            return false;
+        }
+        // Support composite rules: "word1" & "word2" and "word1" !& "word2"
+        // These rules always use exact matching (whole-word, case-sensitive) for both words.
+        Matcher composite = COMPOSITE_RULE_PATTERN.matcher(phrase);
+        if (!composite.matches()) {
+            return false;
+        }
+        final String left = Objects.requireNonNull(composite.group(1));
+        final String operator = Objects.requireNonNull(composite.group(2)); // "&", "!&" or "&!"
+        final String right = Objects.requireNonNull(composite.group(3));
+
+        final byte[] leftBytes = left.getBytes(StandardCharsets.UTF_8);
+        final byte[] rightBytes = right.getBytes(StandardCharsets.UTF_8);
+        final String compositeName = '"' + left + '"' + " " + operator + " " + '"' + right + '"';
+
+        if (operator.indexOf('!') < 0) { // AND
+            TrieSearch.TriePatternMatchedCallback<byte[]> callback =
+                    (textSearched, startIndex, matchLength, callbackParameter) -> {
+                        // Ensure the left match is a whole word.
+                        if (!keywordMatchIsWholeWord(textSearched, startIndex, matchLength)) {
+                            return false;
+                        }
+                        // Check that the right word also appears as a whole word anywhere in the buffer.
+                        if (!containsWholeWord(textSearched, rightBytes)) {
+                            return false;
+                        }
+                        Logger.printDebug(() -> "Matched AND keywords: " + compositeName);
+                        ((MutableReference<String>) callbackParameter).value = compositeName;
+                        return true;
+                    };
+            search.addPattern(leftBytes, callback);
+            return true;
+        } else { // NOT-AND: accept both "!&" and "&!"
+            TrieSearch.TriePatternMatchedCallback<byte[]> callback =
+                    (textSearched, startIndex, matchLength, callbackParameter) -> {
+                        // Ensure the left match is a whole word.
+                        if (!keywordMatchIsWholeWord(textSearched, startIndex, matchLength)) {
+                            return false;
+                        }
+                        // Hide only when right IS NOT present as a whole word anywhere in the buffer.
+                        if (containsWholeWord(textSearched, rightBytes)) {
+                            return false;
+                        }
+                        Logger.printDebug(() -> "Matched NOT-AND keywords: " + compositeName);
+                        ((MutableReference<String>) callbackParameter).value = compositeName;
+                        return true;
+                    };
+            search.addPattern(leftBytes, callback);
+            return true;
+        }
+    }
+
+    private boolean phraseUsesWholeWordSyntax(String phrase) {
         return phrase.startsWith("\"") && phrase.endsWith("\"");
     }
 
-    private static String stripWholeWordSyntax(String phrase) {
+    private String stripWholeWordSyntax(String phrase) {
         return phrase.substring(1, phrase.length() - 1);
     }
 
     private synchronized void parseKeywords() { // Must be synchronized since Litho is multi-threaded.
         String rawKeywords = Settings.HIDE_KEYWORD_CONTENT_PHRASES.get();
 
-        //noinspection StringEquality
         if (rawKeywords == lastKeywordPhrasesParsed) {
             Logger.printDebug(() -> "Using previously initialized search");
             return; // Another thread won the race, and search is already initialized.
@@ -459,56 +513,7 @@ public final class KeywordContentFilter extends Filter {
                 phrase = phrase.stripTrailing();
                 if (phrase.isBlank()) continue;
 
-                // Support composite rules: "word1" & "word2" and "word1" !& "word2"
-                // These rules always use exact matching (whole-word, case-sensitive) for both words.
-                Matcher composite = COMPOSITE_RULE_PATTERN.matcher(phrase);
-                if (composite.matches()) {
-                    final String left = composite.group(1);
-                    final String operator = composite.group(2); // "&", "!&" or "&!"
-                    final String right = composite.group(3);
-
-                    final byte[] leftBytes = left.getBytes(StandardCharsets.UTF_8);
-                    final byte[] rightBytes = right.getBytes(StandardCharsets.UTF_8);
-                    final String compositeName = '"' + left + '"' + " " + operator + " " + '"' + right + '"';
-
-                    if (operator.indexOf('!') < 0) { // AND
-                        TrieSearch.TriePatternMatchedCallback<byte[]> callback =
-                                (textSearched, startIndex, matchLength, callbackParameter) -> {
-                                    // Ensure the left match is a whole word.
-                                    if (!keywordMatchIsWholeWord(textSearched, startIndex, matchLength)) {
-                                        return false;
-                                    }
-                                    // Check that the right word also appears as a whole word anywhere in the buffer.
-                                    if (!containsWholeWord(textSearched, rightBytes)) {
-                                        return false;
-                                    }
-                                    Logger.printDebug(() -> "Matched AND keywords: " + compositeName);
-                                    //noinspection unchecked
-                                    ((MutableReference<String>) callbackParameter).value = compositeName;
-                                    return true;
-                                };
-                        search.addPattern(leftBytes, callback);
-                        continue;
-                    } else { // NOT-AND: accept both "!&" and "&!"
-                        TrieSearch.TriePatternMatchedCallback<byte[]> callback =
-                                (textSearched, startIndex, matchLength, callbackParameter) -> {
-                                    // Ensure the left match is a whole word.
-                                    if (!keywordMatchIsWholeWord(textSearched, startIndex, matchLength)) {
-                                        return false;
-                                    }
-                                    // Hide only when right IS NOT present as a whole word anywhere in the buffer.
-                                    if (containsWholeWord(textSearched, rightBytes)) {
-                                        return false;
-                                    }
-                                    Logger.printDebug(() -> "Matched NOT-AND keywords: " + compositeName);
-                                    //noinspection unchecked
-                                    ((MutableReference<String>) callbackParameter).value = compositeName;
-                                    return true;
-                                };
-                        search.addPattern(leftBytes, callback);
-                        continue;
-                    }
-                }
+                if (phraseUsesAndOperator(search, phrase)) continue;
 
                 final boolean wholeWordMatching;
                 if (phraseUsesWholeWordSyntax(phrase)) {
@@ -572,7 +577,6 @@ public final class KeywordContentFilter extends Filter {
 
             for (Map.Entry<String, Boolean> entry : keywords.entrySet()) {
                 String keyword = entry.getKey();
-                //noinspection ExtractMethodRecommender
                 final boolean isWholeWord = entry.getValue();
                 TrieSearch.TriePatternMatchedCallback<byte[]> callback =
                         (textSearched, startIndex, matchLength, callbackParameter) -> {
@@ -582,7 +586,6 @@ public final class KeywordContentFilter extends Filter {
 
                             Logger.printDebug(() -> (isWholeWord ? "Matched whole keyword: '"
                                     : "Matched keyword: '") + keyword + "'");
-                            // noinspection unchecked
                             ((MutableReference<String>) callbackParameter).value = keyword;
                             return true;
                         };
@@ -689,7 +692,6 @@ public final class KeywordContentFilter extends Filter {
         }
 
         // Field is intentionally compared using reference equality.
-        //noinspection StringEquality
         if (Settings.HIDE_KEYWORD_CONTENT_PHRASES.get() != lastKeywordPhrasesParsed) {
             // User changed the keywords or whole word setting.
             parseKeywords();

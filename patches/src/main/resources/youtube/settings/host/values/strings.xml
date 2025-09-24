@@ -491,6 +491,9 @@ Store"</string>
 Keywords can be channel names or any text shown in video titles.
 
 Words with uppercase letters in the middle must be entered with the casing (ie: iPhone, TikTok, LeBlanc)."</string>
+    <string name="revanced_hide_keyword_content_use_and_operator_title">Use \'AND\' operator (\'&amp;\')</string>
+    <string name="revanced_hide_keyword_content_use_and_operator_summary_on">\'AND\' operator (\'&amp;\') is enabled.&lt;br>&lt;br>When &lt;strong>\"Blue\" &amp; \"Red\"&lt;/strong> is used as a keyword, keywords containing both &lt;strong>Blue&lt;/strong> and &lt;strong>Red&lt;/strong> will be filtered.</string>
+    <string name="revanced_hide_keyword_content_use_and_operator_summary_off">\'AND\' operator (\'&amp;\') is disabled.&lt;br>&lt;br>When &lt;strong>\"Blue\" &amp; \"Red\"&lt;/strong> is used as a keyword, keywords containing &lt;strong>\"Blue\" &amp; \"Red\"&lt;/strong> will be filtered.</string>
     <string name="revanced_hide_keyword_content_about_title">About keyword filtering</string>
     <string name="revanced_hide_keyword_content_about_summary">"Home / Subscriptions / Search results are filtered to hide content that matches keyword phrases.
 
@@ -499,7 +502,7 @@ Limitations:
 • Some UI components may not be hidden.
 • Searching for a keyword may show no results."</string>
     <string name="revanced_hide_keyword_content_about_whole_words_title">Match whole words</string>
-    <string name="revanced_hide_keyword_content_about_whole_words_summary">Surrounding a keyword/phrase with double-quotes will prevent partial matches of video titles and channel names.&lt;br>&lt;br>For example,&lt;br>&lt;b>\"ai\"&lt;/b> will hide the video: &lt;b>How does AI work?&lt;/b>&lt;br>but will not hide: &lt;b>What does fair use mean?&lt;/b></string>
+    <string name="revanced_hide_keyword_content_about_whole_words_summary">Surrounding a keyword / phrase with double-quotes will prevent partial matches of video titles and channel names.&lt;br>&lt;br>For example,&lt;br>&lt;b>\"ai\"&lt;/b> will hide the video: &lt;b>How does AI work?&lt;/b>&lt;br>but will not hide: &lt;b>What does fair use mean?&lt;/b></string>
     <string name="revanced_hide_keyword_toast_invalid_common">Cannot use keyword: %s.</string>
     <string name="revanced_hide_keyword_toast_invalid_common_whole_word_required">Add quotes to use keyword: %s.</string>
     <string name="revanced_hide_keyword_toast_invalid_conflicting">Keyword has conflicting declarations: %s.</string>
