@@ -38,7 +38,11 @@
           },
           {
             "path": "patches.json"
+<<<<<<< HEAD
           },
+=======
+          }
+>>>>>>> 42b25fedf9895eb15475b1f0345ebe42c4a56b70
         ],
         successComment: false
       }

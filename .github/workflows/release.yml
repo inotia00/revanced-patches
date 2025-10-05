@@ -7,6 +7,13 @@ on:
       # To use Github Actions, change the branch name from `revanced-extended` to `main`
       - main
       - dev
+<<<<<<< HEAD
+=======
+  pull_request:
+    branches:
+      - main
+      - dev
+>>>>>>> 42b25fedf9895eb15475b1f0345ebe42c4a56b70
 
 jobs:
   release:
@@ -22,6 +29,7 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v5
         with:
+<<<<<<< HEAD
           distribution: "zulu"
           java-version: "17"
 
@@ -53,4 +61,36 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+=======
+          # Make sure the release step uses its own credentials:
+          # https://github.com/cycjimmy/semantic-release-action#private-packages
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Setup JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'zulu'
+          cache: gradle
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      - name: Setup Android SDK
+        uses: amyu/setup-android@v2
+        with:
+          cache-disabled: false
+          sdk-version: '33'
+          build-tools-version: '33.0.1'
+      - name: Build with Gradle
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: ./gradlew generateMeta clean --no-daemon
+      - name: Setup semantic-release
+        run: npm install
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPOSITORY_PUSH_ACCESS }}
+>>>>>>> 42b25fedf9895eb15475b1f0345ebe42c4a56b70
         run: npm exec semantic-release

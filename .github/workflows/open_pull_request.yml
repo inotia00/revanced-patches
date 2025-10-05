@@ -7,7 +7,11 @@ on:
   workflow_dispatch:
 
 env:
+<<<<<<< HEAD:.github/workflows/open_pull_request.yml
   MESSAGE: Merge branch `${{ github.head_ref || github.ref_name }}` to `main`
+=======
+  MESSAGE: merge branch `${{ github.head_ref || github.ref_name }}` to `main`
+>>>>>>> 42b25fedf9895eb15475b1f0345ebe42c4a56b70:.github/workflows/pull_request.yml
 
 jobs:
   pull-request:
@@ -24,5 +28,12 @@ jobs:
           pr_title: 'chore: ${{ env.MESSAGE }}'
           pr_body: |
             This pull request will ${{ env.MESSAGE }}.
+<<<<<<< HEAD:.github/workflows/open_pull_request.yml
 
+=======
+          
+            ## Dependencies before merge
+
+            - [ ] https://github.com/revanced/revanced-integrations
+>>>>>>> 42b25fedf9895eb15475b1f0345ebe42c4a56b70:.github/workflows/pull_request.yml
           pr_draft: true

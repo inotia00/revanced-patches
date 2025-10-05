@@ -3,9 +3,16 @@
     xmlns:yt="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
+<<<<<<< HEAD:patches/src/main/resources/youtube/sponsorblock/default/layout/revanced_sb_new_segment.xml
         android:id="@+id/revanced_sb_new_segment_container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+=======
+        android:id="@+id/sb_new_segment_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#66000000"
+>>>>>>> 42b25fedf9895eb15475b1f0345ebe42c4a56b70:src/main/resources/sponsorblock/layout/new_segment.xml
         android:gravity="start|center"
         android:orientation="vertical">
 
@@ -14,7 +21,11 @@
             android:layout_height="36.0dip">
 
             <ImageButton
+<<<<<<< HEAD:patches/src/main/resources/youtube/sponsorblock/default/layout/revanced_sb_new_segment.xml
                 android:id="@+id/revanced_sb_new_segment_rewind"
+=======
+                android:id="@+id/sb_new_segment_rewind"
+>>>>>>> 42b25fedf9895eb15475b1f0345ebe42c4a56b70:src/main/resources/sponsorblock/layout/new_segment.xml
                 android:layout_width="45.0dip"
                 android:layout_height="36.0dip"
                 android:layout_gravity="start|center"
@@ -28,7 +39,11 @@
                 android:src="@drawable/player_fast_rewind" />
 
             <ImageButton
+<<<<<<< HEAD:patches/src/main/resources/youtube/sponsorblock/default/layout/revanced_sb_new_segment.xml
                 android:id="@+id/revanced_sb_new_segment_forward"
+=======
+                android:id="@+id/sb_new_segment_forward"
+>>>>>>> 42b25fedf9895eb15475b1f0345ebe42c4a56b70:src/main/resources/sponsorblock/layout/new_segment.xml
                 android:layout_width="45.0dip"
                 android:layout_height="36.0dip"
                 android:layout_gravity="start|center"
@@ -42,7 +57,11 @@
                 android:src="@drawable/player_fast_forward" />
 
             <ImageButton
+<<<<<<< HEAD:patches/src/main/resources/youtube/sponsorblock/default/layout/revanced_sb_new_segment.xml
                 android:id="@+id/revanced_sb_new_segment_adjust"
+=======
+                android:id="@+id/sb_new_segment_adjust"
+>>>>>>> 42b25fedf9895eb15475b1f0345ebe42c4a56b70:src/main/resources/sponsorblock/layout/new_segment.xml
                 android:layout_width="45.0dip"
                 android:layout_height="36.0dip"
                 android:layout_gravity="start|center"
@@ -53,7 +72,11 @@
                 android:paddingTop="3.0dip"
                 android:paddingEnd="10.0dip"
                 android:paddingBottom="3.0dip"
+<<<<<<< HEAD:patches/src/main/resources/youtube/sponsorblock/default/layout/revanced_sb_new_segment.xml
                 android:src="@drawable/revanced_sb_adjust" />
+=======
+                android:src="@drawable/ic_sb_adjust" />
+>>>>>>> 42b25fedf9895eb15475b1f0345ebe42c4a56b70:src/main/resources/sponsorblock/layout/new_segment.xml
         </LinearLayout>
 
         <LinearLayout
@@ -61,7 +84,11 @@
             android:layout_height="36.0dip">
 
             <ImageButton
+<<<<<<< HEAD:patches/src/main/resources/youtube/sponsorblock/default/layout/revanced_sb_new_segment.xml
                 android:id="@+id/revanced_sb_new_segment_compare"
+=======
+                android:id="@+id/sb_new_segment_compare"
+>>>>>>> 42b25fedf9895eb15475b1f0345ebe42c4a56b70:src/main/resources/sponsorblock/layout/new_segment.xml
                 android:layout_width="45.0dip"
                 android:layout_height="36.0dip"
                 android:layout_gravity="start|center"
@@ -72,10 +99,17 @@
                 android:paddingTop="3.0dip"
                 android:paddingEnd="5.0dip"
                 android:paddingBottom="3.0dip"
+<<<<<<< HEAD:patches/src/main/resources/youtube/sponsorblock/default/layout/revanced_sb_new_segment.xml
                 android:src="@drawable/revanced_sb_compare" />
 
             <ImageButton
                 android:id="@+id/revanced_sb_new_segment_edit"
+=======
+                android:src="@drawable/ic_sb_compare" />
+
+            <ImageButton
+                android:id="@+id/sb_new_segment_edit"
+>>>>>>> 42b25fedf9895eb15475b1f0345ebe42c4a56b70:src/main/resources/sponsorblock/layout/new_segment.xml
                 android:layout_width="45.0dip"
                 android:layout_height="36.0dip"
                 android:layout_gravity="start|center"
@@ -86,10 +120,17 @@
                 android:paddingTop="3.0dip"
                 android:paddingEnd="5.0dip"
                 android:paddingBottom="3.0dip"
+<<<<<<< HEAD:patches/src/main/resources/youtube/sponsorblock/default/layout/revanced_sb_new_segment.xml
                 android:src="@drawable/revanced_sb_edit" />
 
             <ImageButton
                 android:id="@+id/revanced_sb_new_segment_publish"
+=======
+                android:src="@drawable/ic_sb_edit" />
+
+            <ImageButton
+                android:id="@+id/sb_new_segment_publish"
+>>>>>>> 42b25fedf9895eb15475b1f0345ebe42c4a56b70:src/main/resources/sponsorblock/layout/new_segment.xml
                 android:layout_width="45.0dip"
                 android:layout_height="36.0dip"
                 android:layout_gravity="start|center"
@@ -100,7 +141,11 @@
                 android:paddingTop="3.0dip"
                 android:paddingEnd="10.0dip"
                 android:paddingBottom="3.0dip"
+<<<<<<< HEAD:patches/src/main/resources/youtube/sponsorblock/default/layout/revanced_sb_new_segment.xml
                 android:src="@drawable/revanced_sb_publish" />
+=======
+                android:src="@drawable/ic_sb_publish" />
+>>>>>>> 42b25fedf9895eb15475b1f0345ebe42c4a56b70:src/main/resources/sponsorblock/layout/new_segment.xml
         </LinearLayout>
     </LinearLayout>
 </merge>
