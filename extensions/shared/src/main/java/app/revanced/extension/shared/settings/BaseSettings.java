@@ -58,7 +58,7 @@ public class BaseSettings {
     public static final EnumSetting<ClientType> SPOOF_STREAMING_DATA_DEFAULT_CLIENT = new EnumSetting<>("revanced_spoof_streaming_data_default_client",
             ClientType.ANDROID_VR, true, parent(SPOOF_STREAMING_DATA));
 
-    public static final BooleanSetting DISABLE_AUTO_AUDIO_TRACKS = new BooleanSetting("revanced_disable_auto_audio_tracks", FALSE);
+    public static final BooleanSetting DISABLE_AUTO_AUDIO_TRACKS = new BooleanSetting("revanced_disable_auto_audio_tracks", TRUE);
 
     /**
      * These settings are used by YouTube and YouTube Music.
