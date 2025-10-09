@@ -6,7 +6,7 @@ See the [documentation](https://github.com/inotia00/revanced-documentation#readm
 
 ## 📋 List of patches in this repository
 
-### [📦 `com.google.android.youtube`](https://play.google.com/store/apps/details?id=com.google.android.youtube)
+### [📦 `Youtube`](https://play.google.com/store/apps/details?id=com.google.android.youtube)
 <details>
 
 | 💊 Patch | 📜 Description | 🏹 Target Version |
@@ -80,7 +80,7 @@ See the [documentation](https://github.com/inotia00/revanced-documentation#readm
 | `Watch history` | Adds an option to change the domain of the watch history or check its status. | 19.05.36 ~ 20.05.46 |
 </details>
 
-### [📦 `com.google.android.apps.youtube.music`](https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.music)
+### [📦`Youtube Music`](https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.music)
 <details>
 
 | 💊 Patch | 📜 Description | 🏹 Target Version |
@@ -127,7 +127,7 @@ See the [documentation](https://github.com/inotia00/revanced-documentation#readm
 | `Watch history` | Adds an option to change the domain of the watch history or check its status. | 6.20.51 ~ 8.30.54 |
 </details>
 
-### [📦 `com.reddit.frontpage`](https://play.google.com/store/apps/details?id=com.reddit.frontpage)
+### [📦 `Reddit`](https://play.google.com/store/apps/details?id=com.reddit.frontpage)
 <details>
 
 | 💊 Patch | 📜 Description | 🏹 Target Version |
