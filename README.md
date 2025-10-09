@@ -208,7 +208,15 @@ Example:
   }
 ]
 ```
+
+
 ```name``` = Name of the patch
+
+
 ```description``` = Description of the patch
+
+
 ```use``` = enable or disable the patch
+
+
 ```compatiblePackages``` = tell what version of the app support this patch
