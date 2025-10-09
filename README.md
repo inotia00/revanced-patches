@@ -1,4 +1,4 @@
-## 🧩 ReVanced Patches
+## 🧩 ReVanced Extended Patches
 
 ReVanced Extended Patches. 
 
