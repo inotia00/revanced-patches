@@ -1,8 +1,8 @@
 <div align="center">
     <img src=".github/images/rvx-logo.png" width="100" height="100" align="center"/>
-    <img src=".github/images/rvx-yt-logo.png" width="100" height="100" align="center"/>
+    <img src=".github/images/rvx-yt-logo.png" width="93" height="93" align="center"/>
 </div>
-<p align="center">
+<div align="center">
     <h1>ReVanced Extended Patches</h1>
     <a href="https://github.com/inotia00/revanced-documentation#readme">
         <picture>
@@ -52,8 +52,9 @@
             <img height="32px" src=".github/images/crowdin-logo-dark.png" />
         </picture>
     </a>&nbsp;&nbsp;&nbsp;
-</p>
-
+</div>&nbsp; &nbsp; &nbsp;
+<br>
+<br>
 
 See the [documentation](https://github.com/inotia00/revanced-documentation#readme) to learn how to apply patches and build ReVanced Extended apps.
 
