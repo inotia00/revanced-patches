@@ -1,5 +1,6 @@
-Our social media
 <p align="center">
+    <img src=".github/images/rvx-logo.png" />
+    <p>ReVanced Extended Patches</p>
     <a href="https://github.com/inotia00/revanced-documentation#readme">
         <picture>
             <source height="24px" media="(prefers-color-scheme: dark)" srcset=".github/images/github-mark-white.png" />
@@ -50,11 +51,6 @@ Our social media
     </a>&nbsp;&nbsp;&nbsp;
 </p>
 
-
-
-## 🧩 ReVanced Extended Patches
-
-ReVanced Extended Patches.
 
 See the [documentation](https://github.com/inotia00/revanced-documentation#readme) to learn how to apply patches and build ReVanced Extended apps.
 
