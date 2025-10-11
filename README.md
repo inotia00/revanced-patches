@@ -1,3 +1,57 @@
+Our social media
+<p align="center">
+    <a href="https://github.com/inotia00/revanced-documentation#readme">
+        <picture>
+            <source height="24px" media="(prefers-color-scheme: dark)" srcset=".github/images/github-mark-white.png" />
+            <img height="24px" src=".github/images/github-mark.png" />
+        </picture>
+    </a>&nbsp;&nbsp;&nbsp;
+    <a href="https://reddit.com/r/revancedextended">
+         <picture>
+            <source height="24px" media="(prefers-color-scheme: dark)" srcset=".github/images/reddit.png" />
+            <img height="24px" src=".github/images/reddit-logo-flat-circle.png" />
+        </picture>
+    </a>&nbsp;&nbsp;&nbsp;
+    <a href="https://t.me/revanced_extended">
+        <picture>
+            <source height="24px" media="(prefers-color-scheme: dark)" srcset=".github/images/telegram-logo.png" />
+            <img height="24px" src=".github/images/telegram-logo.png" />
+        </picture>
+    </a>&nbsp;&nbsp;&nbsp;
+    <a href="https://t.me/revanced_extended_chat">
+        <picture>
+            <source height="24px" media="(prefers-color-scheme: dark)" srcset=".github/images/telegram-logo.png" />
+            <img height="24px" src=".github/images/telegram-logo.png" />
+        </picture>
+    </a>&nbsp;&nbsp;&nbsp;
+    <a href="https://t.me/revanced_extended_repo">
+        <picture>
+            <source height="24px" media="(prefers-color-scheme: dark)" srcset=".github/images/telegram-logo.png" />
+            <img height="24px" src=".github/images/telegram-logo.png" />
+        </picture>
+    </a>&nbsp;&nbsp;&nbsp;
+    <a href="https://discord.gg/yMnc3EywRZ">
+        <picture>
+            <source height="24px" media="(prefers-color-scheme: dark)" srcset=".github/images/discord-mark-blue.png" />
+            <img height="24px" src=".github/images/discord-mark-blue.png" />
+        </picture>
+    </a>&nbsp;&nbsp;&nbsp;
+    <a href="https://crowdin.com/project/revancedextended">
+        <picture>
+            <source height="24px" media="(prefers-color-scheme: dark)" srcset=".github/images/crowdin-logo-white.png" />
+            <img height="24px" src=".github/images/crowdin-logo-dark.png" />
+        </picture>
+    </a>&nbsp;&nbsp;&nbsp;
+    <a href="https://crowdin.com/project/revancedmusicextended">
+        <picture>
+            <source height="24px" media="(prefers-color-scheme: dark)" srcset=".github/images/crowdin-logo-white.png" />
+            <img height="24px" src=".github/images/crowdin-logo-dark.png" />
+        </picture>
+    </a>&nbsp;&nbsp;&nbsp;
+</p>
+
+
+
 ## 🧩 ReVanced Extended Patches
 
 ReVanced Extended Patches.
@@ -223,54 +277,3 @@ Example:
 
 
 ___
-Our social media
-<p align="left">
-    <a href="https://github.com/inotia00/revanced-documentation#readme">
-        <picture>
-            <source height="24px" media="(prefers-color-scheme: dark)" srcset=".github/images/github-mark-white.png" />
-            <img height="24px" src=".github/images/github-mark.png" />
-        </picture>
-    </a>&nbsp;&nbsp;&nbsp;
-    <a href="https://reddit.com/r/revancedextended">
-         <picture>
-            <source height="24px" media="(prefers-color-scheme: dark)" srcset=".github/images/reddit.png" />
-            <img height="24px" src=".github/images/reddit-logo-flat-circle.png" />
-        </picture>
-    </a>&nbsp;&nbsp;&nbsp;
-    <a href="https://t.me/revanced_extended">
-        <picture>
-            <source height="24px" media="(prefers-color-scheme: dark)" srcset=".github/images/telegram-logo.png" />
-            <img height="24px" src=".github/images/telegram-logo.png" />
-        </picture>
-    </a>&nbsp;&nbsp;&nbsp;
-    <a href="https://t.me/revanced_extended_chat">
-        <picture>
-            <source height="24px" media="(prefers-color-scheme: dark)" srcset=".github/images/telegram-logo.png" />
-            <img height="24px" src=".github/images/telegram-logo.png" />
-        </picture>
-    </a>&nbsp;&nbsp;&nbsp;
-    <a href="https://t.me/revanced_extended_repo">
-        <picture>
-            <source height="24px" media="(prefers-color-scheme: dark)" srcset=".github/images/telegram-logo.png" />
-            <img height="24px" src=".github/images/telegram-logo.png" />
-        </picture>
-    </a>&nbsp;&nbsp;&nbsp;
-    <a href="https://discord.gg/yMnc3EywRZ">
-        <picture>
-            <source height="24px" media="(prefers-color-scheme: dark)" srcset=".github/images/discord-mark-blue.png" />
-            <img height="24px" src=".github/images/discord-mark-blue.png" />
-        </picture>
-    </a>&nbsp;&nbsp;&nbsp;
-    <a href="https://crowdin.com/project/revancedextended">
-        <picture>
-            <source height="24px" media="(prefers-color-scheme: dark)" srcset=".github/images/crowdin-logo-white.png" />
-            <img height="24px" src=".github/images/crowdin-logo-dark.png" />
-        </picture>
-    </a>&nbsp;&nbsp;&nbsp;
-    <a href="https://crowdin.com/project/revancedmusicextended">
-        <picture>
-            <source height="24px" media="(prefers-color-scheme: dark)" srcset=".github/images/crowdin-logo-white.png" />
-            <img height="24px" src=".github/images/crowdin-logo-dark.png" />
-        </picture>
-    </a>&nbsp;&nbsp;&nbsp;
-</p>
