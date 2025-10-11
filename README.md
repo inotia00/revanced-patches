@@ -1,4 +1,4 @@
-<div>
+<div class="center">
     <img src=".github/images/rvx-logo.png" width="100" height="100" class="center"/>
     <img src=".github/images/rvx-yt-logo.png" width="100" height="100" class="center"/>
 </div>
