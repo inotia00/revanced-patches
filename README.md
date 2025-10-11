@@ -1,7 +1,7 @@
 <p align="center">
     <div class="row">
-        <img src=".github/images/rvx-logo.png" width="500" height="500"/>
-        <img src=".github/images/rvx-yt-logo.png" width="500" height="600"/>
+        <img src=".github/images/rvx-logo.png" width="100" height="100"/>
+        <img src=".github/images/rvx-yt-logo.png" width="100" height="100"/>
     </div>
     <p>ReVanced Extended Patches</p>
     <a href="https://github.com/inotia00/revanced-documentation#readme">
