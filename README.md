@@ -1,12 +1,12 @@
-## 🧩 ReVanced Patches
+## 🧩 ReVanced Extended Patches
 
-ReVanced Extended Patches. 
+ReVanced Extended Patches.
 
 See the [documentation](https://github.com/inotia00/revanced-documentation#readme) to learn how to apply patches and build ReVanced Extended apps.
 
 ## 📋 List of patches in this repository
 
-### [📦 `com.google.android.youtube`](https://play.google.com/store/apps/details?id=com.google.android.youtube)
+### 📦[`Youtube`](https://play.google.com/store/apps/details?id=com.google.android.youtube)
 <details>
 
 | 💊 Patch | 📜 Description | 🏹 Target Version |
@@ -80,7 +80,7 @@ See the [documentation](https://github.com/inotia00/revanced-documentation#readm
 | `Watch history` | Adds an option to change the domain of the watch history or check its status. | 19.05.36 ~ 20.05.46 |
 </details>
 
-### [📦 `com.google.android.apps.youtube.music`](https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.music)
+### 📦[`Youtube Music`](https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.music)
 <details>
 
 | 💊 Patch | 📜 Description | 🏹 Target Version |
@@ -127,7 +127,7 @@ See the [documentation](https://github.com/inotia00/revanced-documentation#readm
 | `Watch history` | Adds an option to change the domain of the watch history or check its status. | 6.20.51 ~ 8.30.54 |
 </details>
 
-### [📦 `com.reddit.frontpage`](https://play.google.com/store/apps/details?id=com.reddit.frontpage)
+### 📦[`Reddit`](https://play.google.com/store/apps/details?id=com.reddit.frontpage)
 <details>
 
 | 💊 Patch | 📜 Description | 🏹 Target Version |
@@ -208,3 +208,69 @@ Example:
   }
 ]
 ```
+
+
+```name``` = Name of the patch
+
+
+```description``` = Description of the patch
+
+
+```use``` = enable or disable the patch
+
+
+```compatiblePackages``` = tell what version of the app support this patch
+
+
+___
+Our social media
+<p align="left">
+    <a href="https://github.com/inotia00/revanced-documentation#readme">
+        <picture>
+            <source height="24px" media="(prefers-color-scheme: dark)" srcset=".github/images/github-mark-white.png" />
+            <img height="24px" src=".github/images/github-mark.png" />
+        </picture>
+    </a>&nbsp;&nbsp;&nbsp;
+    <a href="https://reddit.com/r/revancedextended">
+         <picture>
+            <source height="24px" media="(prefers-color-scheme: dark)" srcset=".github/images/reddit.png" />
+            <img height="24px" src=".github/images/reddit-logo-flat-circle.png" />
+        </picture>
+    </a>&nbsp;&nbsp;&nbsp;
+    <a href="https://t.me/revanced_extended">
+        <picture>
+            <source height="24px" media="(prefers-color-scheme: dark)" srcset=".github/images/telegram-logo.png" />
+            <img height="24px" src=".github/images/telegram-logo.png" />
+        </picture>
+    </a>&nbsp;&nbsp;&nbsp;
+    <a href="https://t.me/revanced_extended_chat">
+        <picture>
+            <source height="24px" media="(prefers-color-scheme: dark)" srcset=".github/images/telegram-logo.png" />
+            <img height="24px" src=".github/images/telegram-logo.png" />
+        </picture>
+    </a>&nbsp;&nbsp;&nbsp;
+    <a href="https://t.me/revanced_extended_repo">
+        <picture>
+            <source height="24px" media="(prefers-color-scheme: dark)" srcset=".github/images/telegram-logo.png" />
+            <img height="24px" src=".github/images/telegram-logo.png" />
+        </picture>
+    </a>&nbsp;&nbsp;&nbsp;
+    <a href="https://discord.gg/yMnc3EywRZ">
+        <picture>
+            <source height="24px" media="(prefers-color-scheme: dark)" srcset=".github/images/discord-mark-blue.png" />
+            <img height="24px" src=".github/images/discord-mark-blue.png" />
+        </picture>
+    </a>&nbsp;&nbsp;&nbsp;
+    <a href="https://crowdin.com/project/revancedextended">
+        <picture>
+            <source height="24px" media="(prefers-color-scheme: dark)" srcset=".github/images/crowdin-logo-white.png" />
+            <img height="24px" src=".github/images/crowdin-logo-dark.png" />
+        </picture>
+    </a>&nbsp;&nbsp;&nbsp;
+    <a href="https://crowdin.com/project/revancedmusicextended">
+        <picture>
+            <source height="24px" media="(prefers-color-scheme: dark)" srcset=".github/images/crowdin-logo-white.png" />
+            <img height="24px" src=".github/images/crowdin-logo-dark.png" />
+        </picture>
+    </a>&nbsp;&nbsp;&nbsp;
+</p>
