@@ -1,6 +1,6 @@
-<div class="center">
-    <img src=".github/images/rvx-logo.png" width="100" height="100" class="center"/>
-    <img src=".github/images/rvx-yt-logo.png" width="100" height="100" class="center"/>
+<div align="center">
+    <img src=".github/images/rvx-logo.png" width="100" height="100" align="center"/>
+    <img src=".github/images/rvx-yt-logo.png" width="100" height="100" align="center"/>
 </div>
 <p align="center">
 <h1>ReVanced Extended Patches</p>
