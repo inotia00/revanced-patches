@@ -12,6 +12,7 @@ import app.revanced.extension.youtube.shared.RootView;
 public final class DescriptionsFilter extends Filter {
     private final ByteArrayFilterGroupList macroMarkerShelfGroupList = new ByteArrayFilterGroupList();
 
+    private final StringFilterGroup featuredSection;
     private final StringFilterGroup howThisWasMadeSection;
     private final StringFilterGroup horizontalShelf;
     private final StringFilterGroup infoCardsSection;
@@ -42,7 +43,13 @@ public final class DescriptionsFilter extends Filter {
                 "cell_expandable_metadata."
         );
 
+        final StringFilterGroup askSection = new StringFilterGroup(
+                Settings.HIDE_ASK_SECTION,
+                "youchat_entrypoint."
+        );
+
         addIdentifierCallbacks(
+                askSection,
                 attributesSection,
                 podcastSection,
                 transcriptSection,
@@ -50,7 +57,7 @@ public final class DescriptionsFilter extends Filter {
         );
 
         howThisWasMadeSection = new StringFilterGroup(
-                Settings.HIDE_CONTENTS_SECTION,
+                Settings.HIDE_HOW_THIS_CONTENT_SECTION,
                 "how_this_was_made_section."
         );
 
@@ -66,12 +73,19 @@ public final class DescriptionsFilter extends Filter {
                 "infocards_section."
         );
 
+        featuredSection = new StringFilterGroup(
+                Settings.HIDE_FEATURED_SECTION,
+                "structured_description_video_lockup.",
+                "media_lockup."
+        );
+
         macroMarkerShelf = new StringFilterGroup(
                 null,
                 "macro_markers_carousel."
         );
 
         addPathCallbacks(
+                featuredSection,
                 howThisWasMadeSection,
                 horizontalShelf,
                 infoCardsSection,
@@ -94,7 +108,7 @@ public final class DescriptionsFilter extends Filter {
     public boolean isFiltered(String path, String identifier, String allValue, byte[] buffer,
                               StringFilterGroup matchedGroup, FilterContentType contentType, int contentIndex) {
         // Check for the index because of likelihood of false positives.
-        if (matchedGroup == howThisWasMadeSection || matchedGroup == infoCardsSection) {
+        if (matchedGroup == howThisWasMadeSection || matchedGroup == infoCardsSection || matchedGroup == featuredSection) {
             return contentIndex == 0;
         } else if (matchedGroup == macroMarkerShelf) {
             if (contentIndex != 0) {
