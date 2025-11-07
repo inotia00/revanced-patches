@@ -2353,6 +2353,8 @@ Shorts
     <string name="revanced_spoof_streaming_data_default_client_title">Клиент по умолчанию</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_creator">"Android Studio
 <small>(Требуется вход)</small>"</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_no_sdk">"Android
+<small>(без SDK)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr">"Android VR"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr_auth">"Android VR
 <small>(Необходима авторизация)</small>"</string>
@@ -2373,6 +2375,7 @@ Shorts
 • Стабильная громкость не доступна.
 • Детские видео могут не проигрываться без логина или в режиме инкогнито.
 • 1080p+, AV1, HDR не поддерживаются."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_no_sdk">• Видео может останавливаться в 1:00, или быть недоступным в некоторых регионах.</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Аудио меню пропадет.
 • Стабильная громкость не доступна.
 • Детские видео могут не проигрываться без логина или в режиме инкогнито."</string>
@@ -2497,20 +2500,6 @@ VP9 более продвинутый кодек, чем AVC, но некото�
 • Автозапуск в ленте
 • Клипы
 • Shorts"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">Использовать yt-dlp ejs (В разработке)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_on">"Используется внешний JavaScript для yt-dlp (yt-dlp-ejs).
-
-• JavaScript для деобфускации сохраняется в актуальном состоянии.
-• Для запуска видео может потребоваться от 5 до 15 секунд."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_off">"Используется экстрактор SmartTube.
-
-• JavaScript для деобфускации не актуальный.
-• Это, через время, устареет на сервере."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_user_dialog_message">"Новые меры YouTube не позволяют расшифровать URL-адреса потокового воспроизведения, общими методами в JavaScript.
-
-Внешний JavaScript для yt-dlp (yt-dlp-ejs) используется для расшифровки URL-адресов трансляций в последних JavaScript.
-
-Компонент в разработке и будет использовать больше ресурсов оборудования."</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_title">Обход поддельной буферизации</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_summary_on">"Обход поддельной буферизации включен.
 

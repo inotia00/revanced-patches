@@ -512,13 +512,9 @@
     <string name="revanced_spoof_streaming_data_client_entry_android_vr_auth">Android VR авторизация (требуется действие)</string>
     <string name="revanced_spoof_streaming_data_client_entry_mweb">Мобильный веб</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">ТВ</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">Предыдущий ТВ</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">Встроенный ТВ</string>
     <string name="revanced_spoof_streaming_data_client_entry_visionos">visionOS</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">Использовать yt-dlp ejs (В разработке)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary">"При включении 'Внешний JavaScript для yt-dlp (yt-dlp-ejs)' будет использоваться для деобфускации URL-адреса потоковой передачи на 'ТВ' и 'Мобильном просмотре'.
-
-• JavaScript-код проигрывателя для деобфускации постоянно обновляется.
-• Запуск видео может занять от 5 до 15 секунд."</string>
     <string name="revanced_spoof_streaming_data_vr_auth_token_about_title">О Android VR авторизации</string>
     <string name="revanced_spoof_streaming_data_vr_auth_token_about_summary">Нажмите, чтобы узнать, как получить токен аутентификации.</string>
     <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_title">Получить Токен Авторизации</string>

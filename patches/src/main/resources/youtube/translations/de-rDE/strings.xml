@@ -2488,20 +2488,6 @@ Among JavaScript clients, the recommended client is TV."</string>
 • Autoplay in feed
 • Clips
 • Shorts"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">Use yt-dlp ejs (WIP)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_on">"External JavaScript for yt-dlp (yt-dlp-ejs) is used.
-
-• Player JavaScript for deobfuscation is kept up to date.
-• It may take 5 to 15 seconds for the video to start."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_off">"SmartTube extractor is used.
-
-• Player JavaScript for deobfuscation is not up to date.
-• This will be deprecated by servers in the near future."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_user_dialog_message">"Due to YouTube's new measures, it is no longer possible to decrypt streaming urls using general methods in the latest player JavaScript.
-
-External JavaScript for yt-dlp (yt-dlp-ejs) is used to decrypt streaming urls in the latest player JavaScript.
-
-It is currently under development and will use more hardware resources."</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_title">Bypass fake buffering</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_summary_on">"Bypass fake buffering is enabled.
 

@@ -2479,20 +2479,6 @@
 • 信息流中的自动播放
 • 剪辑
 • Shorts"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">使用 yt-dlp ejs（开发中）</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_on">"使用 yt-dlp 的外部 JavaScript（yt-dlp-ejs）。
-
-• 用于去混淆的播放器 JavaScript 保持最新。
-• 视频启动可能需要 5 到 15 秒。"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_off">"使用 SmartTube 提取器。
-
-• 用于去混淆的播放器 JavaScript 不是最新的。
-• 服务器将在不久的将来弃用此方式。"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_user_dialog_message">"由于YouTube的新措施，无法再通过常规方法在最新播放器JavaScript中解密流URL。
-
-yt-dlp的外部JavaScript（yt-dlp-ejs）用于解密最新播放器JavaScript中的流URL。
-
-目前仍在开发中，将使用更多硬件资源。"</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_title">绕过假缓冲</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_summary_on">"已启用绕过假缓冲。
 

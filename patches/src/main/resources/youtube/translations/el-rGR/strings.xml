@@ -555,8 +555,7 @@ Playlists
 
 Αυτή η ρύθμιση μπορεί να μη λειτουργεί για ορισμένους χρήστες, αν δε λειτουργεί για εσάς:
 1. Στις ρυθμίσεις RVX - Διάφορα - Παραποίηση δεδομένων ροής, ενεργοποιήστε τη ρύθμιση «Χρήση προγράμματος πελάτη JavaScript».
-2. Στις ρυθμίσεις RVX - Διάφορα - Παραποίηση δεδομένων ροής, αλλάξτε το «Προεπιλεγμένο πρόγραμμα πελάτη» σε «TV».
-3. Στις ρυθμίσεις RVX - Διάφορα - Παραποίηση δεδομένων ροής, ενεργοποιήστε την ρύθμιση «Χρήση του yt-dlp ejs (λειτουργία σε εξέλιξη)»."</string>
+2. Στις ρυθμίσεις RVX - Διάφορα - Παραποίηση δεδομένων ροής, αλλάξτε το «Προεπιλεγμένο πρόγραμμα πελάτη» σε «TV»."</string>
     <string name="revanced_disable_auto_audio_tracks_summary_off">"Τα υποχρεωτικά κομμάτια ήχου είναι ενεργοποιημένα."</string>
     <string name="revanced_disable_auto_captions_title">Απενεργοποίηση υποχρεωτικών αυτόματων υπότιτλων</string>
     <string name="revanced_disable_auto_captions_summary_on">Οι υποχρεωτικοί αυτόματοι υπότιτλοι είναι απενεργοποιημένοι.</string>
@@ -1190,8 +1189,7 @@ Playlists
 
 Για να εμφανίζεται το μενού «Κομμάτι ήχου»:
 1. Στις ρυθμίσεις RVX - Διάφορα - Παραποίηση δεδομένων ροής, ενεργοποιήστε τη ρύθμιση «Χρήση προγράμματος πελάτη JavaScript».
-2. Στις ρυθμίσεις RVX - Διάφορα - Παραποίηση δεδομένων ροής, αλλάξτε το «Προεπιλεγμένο πρόγραμμα πελάτη» σε «TV».
-3. Στις ρυθμίσεις RVX - Διάφορα - Παραποίηση δεδομένων ροής, ενεργοποιήστε την ρύθμιση «Χρήση του yt-dlp ejs (λειτουργία σε εξέλιξη)»."</string>
+2. Στις ρυθμίσεις RVX - Διάφορα - Παραποίηση δεδομένων ροής, αλλάξτε το «Προεπιλεγμένο πρόγραμμα πελάτη» σε «TV»."</string>
     <string name="revanced_hide_player_flyout_menu_captions_title">Μενού «Υπότιτλοι»</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_on">Κρυμμένο.</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_off">Εμφανίζεται.</string>
@@ -1569,6 +1567,9 @@ Playlists
     <string name="revanced_hide_contents_section_summary_off">Εμφανίζεται.
 
 Αφορά την ενότητα «Πως δημιουργήθηκε αυτό το περιεχόμενο».</string>
+    <string name="revanced_hide_hype_points_section_title">Πόντοι Hype</string>
+    <string name="revanced_hide_hype_points_section_summary_on">Κρυμμένοι.</string>
+    <string name="revanced_hide_hype_points_section_summary_off">Εμφανίζονται.</string>
     <string name="revanced_hide_podcast_section_title">Ενότητα «Εξερευνήστε του podcast»</string>
     <string name="revanced_hide_podcast_section_summary_on">Κρυμμένη.</string>
     <string name="revanced_hide_podcast_section_summary_off">Εμφανίζεται.</string>
@@ -2374,6 +2375,8 @@ Playlists
     <string name="revanced_spoof_streaming_data_client_entry_mweb">"Web Κινητού
 <small>(λειτουργία σε εξέλιξη)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">"TV
+<small>(Παλιό)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_simply_no_potoken">"TV Simply
 <small>(Χωρίς PoToken)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">TV Embedded</string>
@@ -2516,20 +2519,6 @@ Playlists
 • Αυτόματη αναπαραγωγή των βίντεο στη ροή
 • Κλιπ
 • Shorts"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">Χρήση του yt-dlp ejs (λειτουργία σε εξέλιξη)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_on">"Χρησιμοποιείται η εξωτερική JavaScript για το yt-dlp (yt-dlp-ejs).
-
-• Η Player JavaScript για την αποσυσκότιση διατηρείται ενημερωμένη.
-• Μπορεί να χρειαστούν από 5 έως 15 δευτερόλεπτα για να ξεκινήσει η αναπαραγωγή του βίντεο."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_off">"Χρησιμοποιείται ο SmartTube extractor.
-
-• Η Player JavaScript για την αποσυσκότιση δεν είναι ενημερωμένη.
-• Αυτό θα παρεμποδιστεί από τους διακομιστές στο κοντινό μέλλον."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_user_dialog_message">"Λόγω των νέων μέτρων του YouTube, δεν είναι πλέον δυνατή η αποκρυπτογράφηση των urls ροής χρησιμοποιώντας γενικές μεθόδους στην τελευταία Player JavaScript.
-
-Χρησιμοποιείται η εξωτερική JavaScript για το yt-dlp (yt-dlp-ejs) για την αποκρυπτογράφηση των urls ροής στην τελευταία Player JavaScript.
-
-Είναι ακόμη υπό ανάπτυξη και θα χρησιμοποιήσει περισσότερους πόρους συστήματος."</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_title">Παράκαμψη ψεύτικου κολλήματος</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_summary_on">"Η παράκαμψη ψεύτικου κολλήματος είναι ενεργοποιημένη.
 

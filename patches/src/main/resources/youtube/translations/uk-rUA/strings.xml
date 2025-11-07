@@ -1565,6 +1565,9 @@
     <string name="revanced_hide_contents_section_title">Приховати секцію Як створювався цей контент</string>
     <string name="revanced_hide_contents_section_summary_on">Секцію Як створювався цей контент приховано.</string>
     <string name="revanced_hide_contents_section_summary_off">Секцію Як створювався цей контент показується.</string>
+    <string name="revanced_hide_hype_points_section_title">Приховати секцію з мітками Розголос</string>
+    <string name="revanced_hide_hype_points_section_summary_on">Секцію з мітками Розголос приховано.</string>
+    <string name="revanced_hide_hype_points_section_summary_off">Секцію з мітками Розголос показується.</string>
     <string name="revanced_hide_podcast_section_title">Приховати секції подкастів</string>
     <string name="revanced_hide_podcast_section_summary_on">Секції подкастів приховано.</string>
     <string name="revanced_hide_podcast_section_summary_off">Секції подкастів показується.</string>
@@ -2352,31 +2355,36 @@
     <string name="revanced_spoof_streaming_data_default_client_title">Основний клієнт</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_creator">"Android Studio
 <small>(Потрібна авторизація)</small>"</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_no_sdk">"Android
+<small>(Без SDK)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr">"Android VR
 <small>(Без авторизації)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr_auth">"Android VR
 <small>(Авторизація, Необхідна дія)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_ipados">"iPadOS
-<small>(Застарілий, Без авторизації)</small>"</string>
+<small>(Застарілий)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_mweb">"Web мобільний
-<small>(ще в розробці, Без авторизації)</small>"</string>
+<small>(ще в розробці)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">"TV
+<small>(Застарілий)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_simply_no_potoken">"Простий TV
 <small>(Без PoToken)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">Вбудований TV</string>
     <string name="revanced_spoof_streaming_data_client_entry_visionos">"visionOS
-<small>(Невипущений, Без авторизації)</small>"</string>
+<small>(Невипущений)</small>"</string>
     <string name="revanced_spoof_streaming_data_side_effects_title">Побічні ефекти імітування</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_creator">"• Меню звукової доріжки відсутнє.
-• Вимкнути примусові автоматичні звукові доріжки недоступне.
+• Вимкнення примусових авто звукових доріжок може бути недоступне.
 • Стабілізація гучності недоступна.
 • Відео для дітей можуть не відтворюватися коли вийшли з облікового запису або в анонімному режимі.
 • 1080p+, AV1 та HDR не підтримуються."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_no_sdk">• Відео може зупинитися на 1:00 або бути недоступним у деяких регіонах.</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Меню звукової доріжки відсутнє.
 • Стабілізація гучності недоступна.
 • Відео для дітей можуть не відтворюватися коли вийшли з облікового запису або в анонімному режимі."</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_vr_auth">"• Меню звукової доріжки відсутнє.
-• Вимкнення примусових авто звукових доріжок недоступне.
+• Вимкнення примусових авто звукових доріжок може бути недоступне.
 • Стабілізація гучності недоступна.
 • Відео для дітей можуть не відтворюватися коли вийшли з облікового запису або в анонімному режимі."</string>
     <string name="revanced_spoof_streaming_data_side_effects_ipados">"• AV1 не підтримується.
@@ -2503,20 +2511,6 @@
 • Автовідтворення у стрічці
 • Кліпи
 • YouTube Shorts"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">Використовувати ejs yt-dlp (Ще в розробці)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_on">"Використовується зовнішній JavaScript для yt-dlp (yt-dlp-ejs).
-
-• JavaScript відтворювача для деобфускації підтримується в актуальному стані.
-• Запуск відео може зайняти від 5 до 15 секунд."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_off">"Використовується екстрактор SmartTube.
-
-• JavaScript відтворювача для деобфускації не в актуальному стані.
-• Найближчим часом це буде застаріле на серверах."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_user_dialog_message">"У зв'язку з новими заходами YouTube більше неможливо розшифрувати посилання трансляції загальними методами в останніх JavaScript відтворювача.
-
-Використовується зовнішній JavaScript для yt-dlp (yt-dlp-ejs) для розшифрування посилань трансляції в останніх JavaScript відтворювача.
-
-Наразі це перебуває на стадії розробки і використовуватиме більше апаратних ресурсів."</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_title">Обходити фальшиву буферизацію</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_summary_on">"Обхід фальшивої буферизації увімкнено.
 

@@ -509,11 +509,6 @@ Problemas conocidos:
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">TV integrado</string>
     <string name="revanced_spoof_streaming_data_client_entry_visionos">visionOS</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">Usar yt-dlp ejs (todavía en desarrollo)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary">"Cuando esté activado, el Script Externo de JavaScript para yt-dlp (yt-dlp-ejs) será utilizado para deofuscar la URL de streaming en 'TV' y 'Web Móvil'
-
-• El reproductor de JavaScript para deofuscar se mantiene actualizado.
-• El vídeo puede tardar entre 5 y 15 segundos en empezar."</string>
     <string name="revanced_spoof_streaming_data_vr_auth_token_about_title">Acerca de la autenticación de Android VR</string>
     <string name="revanced_spoof_streaming_data_vr_auth_token_about_summary">Pulsa para ver cómo obtener un token de autenticación.</string>
     <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_title">Obtener token de autorización</string>

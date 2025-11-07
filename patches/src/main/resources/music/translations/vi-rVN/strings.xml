@@ -509,18 +509,14 @@ Nếu bạn đã đăng ký YouTube Premium, thì có thể không cần thiết
     <string name="revanced_spoof_streaming_data_default_client_title">Client mặc định</string>
     <string name="revanced_spoof_streaming_data_default_client_summary">Chọn client mặc định để giả mạo.</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_creator">Android Studio</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_no_sdk">Android Không SDK</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr">Android VR</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr_auth">Android VR Auth (Cần thao tác)</string>
     <string name="revanced_spoof_streaming_data_client_entry_mweb">Mobile Web</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">TV Legacy</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">TV Embedded</string>
     <string name="revanced_spoof_streaming_data_client_entry_visionos">visionOS</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">Dùng yt-dlp ejs (Thử nghiệm)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary">"Khi bật, JavaScript bên ngoài từ yt-dlp (yt-dlp-ejs) sẽ được sử dụng để gỡ rối URL phát trên TV và Mobile Web.
-
-Chi tiết:
-• Player JS luôn được cập nhật.
-• Video sẽ phải mất khoảng 5 tới 15 giây trước khi bắt đầu phát."</string>
     <string name="revanced_spoof_streaming_data_vr_auth_token_about_title">Giới thiệu về Android VR Auth</string>
     <string name="revanced_spoof_streaming_data_vr_auth_token_about_summary">Nhấn để biết cách lấy mã xác thực.</string>
     <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_title">Lấy mã xác thực</string>

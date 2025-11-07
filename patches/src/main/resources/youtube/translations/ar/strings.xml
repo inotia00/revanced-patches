@@ -543,8 +543,7 @@
 
 قد لا ينجح هذا الأمر مع بعض المستخدمين، إذا لم ينجح معك:
 1. انتقل إلى الإعدادات - RVX - خيارات متنوعة - Spoof Streaming Data، ثم فعّل 'استخدام عميل JavaScript'.
-2. انتقل إلى الإعدادات - RVX - خيارات متنوعة - Spoof Streaming Data، ثم غيّر 'العميل الافتراضي' إلى 'TV'.
-3. انتقل إلى الإعدادات - RVX - خيارات متنوعة - Spoof Streaming Data، ثم فعّل 'استخدام yt-dlp ejs (WIP)'."</string>
+2. انتقل إلى الإعدادات - RVX - خيارات متنوعة - Spoof Streaming Data، ثم غيّر 'العميل الافتراضي' إلى 'TV'."</string>
     <string name="revanced_disable_auto_audio_tracks_summary_off">"تم تمكين المقطع الصوتي التلقائي المفروض."</string>
     <string name="revanced_disable_auto_captions_title">تعطيل الترجمة التلقائية المفروضة</string>
     <string name="revanced_disable_auto_captions_summary_on">تم تعطيل الترجمة التلقائية المفروضة.</string>
@@ -1179,8 +1178,7 @@
 
 لعرض قائمة المقطع الصوتي:
 1. انتقل إلى الإعدادات - RVX - خيارات متنوعة - Spoof Streaming Data، ثم فعّل 'استخدام عميل JavaScript'.
-2. انتقل إلى الإعدادات - RVX - خيارات متنوعة - Spoof Streaming Data، ثم غيّر 'العميل الافتراضي' إلى 'TV'.
-3. انتقل إلى الإعدادات - RVX - خيارات متنوعة - Spoof Streaming Data، ثم فعّل 'استخدام yt-dlp ejs (WIP)'."</string>
+2. انتقل إلى الإعدادات - RVX - خيارات متنوعة - Spoof Streaming Data، ثم غيّر 'العميل الافتراضي' إلى 'TV'."</string>
     <string name="revanced_hide_player_flyout_menu_captions_title">إخفاء قائمة الترجمة</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_on">تم إخفاء قائمة الترجمة.</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_off">يتم عرض قائمة الترجمة.</string>
@@ -1549,6 +1547,9 @@
     <string name="revanced_hide_contents_section_title">إخفاء قسم كيف تم إنشاء هذا المحتوى</string>
     <string name="revanced_hide_contents_section_summary_on">تم إخفاء قسم كيفية إنشاء هذا المحتوى.</string>
     <string name="revanced_hide_contents_section_summary_off">يتم عرض قسم كيفية إنشاء هذا المحتوى.</string>
+    <string name="revanced_hide_hype_points_section_title">إخفاء قسم نقاط التشجيع</string>
+    <string name="revanced_hide_hype_points_section_summary_on">تم إخفاء قسم نقاط التشجيع.</string>
+    <string name="revanced_hide_hype_points_section_summary_off">يتم عرض قسم نقاط التشجيع.</string>
     <string name="revanced_hide_podcast_section_title">إخفاء استكشاف قسم البودكاست</string>
     <string name="revanced_hide_podcast_section_summary_on">تم إخفاء استكشاف قسم بودكاست.</string>
     <string name="revanced_hide_podcast_section_summary_off">يتم عرض استكشاف قسم بودكاست.</string>
@@ -2350,6 +2351,7 @@
     <string name="revanced_spoof_streaming_data_client_entry_mweb">"Mobile Web
 <small>(WIP)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">"TV <small>(Legacy)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_simply_no_potoken">"TV Simply
 <small>(بدون رمز PoToken)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">TV Embedded</string>
@@ -2492,21 +2494,6 @@
 • التشغيل التلقائي في الموجز
 • المقاطع
 • فيديوهات Shorts"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">استخدام yt-dlp ejs (WIP)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_on">"يُستخدم JavaScript خارجي لـ yt-dlp (yt-dlp-ejs).
-
-• يتم تحديث مشغل JavaScript لإزالة التشويش باستمرار.
-• قد يستغرق بدء الفيديو من 5 إلى 15 ثانية."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_off">"تم استخدام مُستخرج SmartTube.
-
-• مُشغِّل JavaScript لإزالة التشويش غير مُحدَّث.
-
-• سيتم إيقاف هذا من قِبل الخوادم قريبًا."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_user_dialog_message">"بسبب إجراءات YouTube الجديدة، لم يعد من الممكن فك تشفير روابط البث باستخدام الطرق العامة في أحدث إصدار من مشغل JavaScript.
-
-يُستخدم JavaScript خارجي لـ yt-dlp (yt-dlp-ejs) لفك تشفير روابط البث في أحدث إصدار من مشغل JavaScript.
-
-لا يزال هذا البرنامج قيد التطوير وسيستخدم موارد أجهزة إضافية."</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_title">تجاوز التخزين المؤقت الزائف</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_summary_on">"تم تمكين تجاوز التخزين المؤقت الزائف.
 

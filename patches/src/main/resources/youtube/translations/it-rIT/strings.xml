@@ -562,7 +562,7 @@ Nota: il pulsante Indietro della barra degli strumenti potrebbe non funzionare."
     <string name="revanced_disable_auto_audio_tracks_summary_on">La traccia audio automatica forzata è disattivata.</string>
     <string name="revanced_disable_auto_audio_tracks_summary_on_disclaimer">"La traccia audio automatica forzata è disattivata.
 
-Nota: questa impostazione potrebbe non funzionare per alcuni utenti. Se non funziona, vai alle impostazioni → RVX → Varie → Camuffa i dati in streaming → Mostra i client JavaScript tra i client disponibili, cambia il client predefinito in TV e attiva \"Usa yt-dlp ejs (In fase di sviluppo)\"."</string>
+Nota: questa impostazione potrebbe non funzionare per alcuni utenti. Se non funziona, vai alle impostazioni → RVX → Varie → Camuffa i dati in streaming → Mostra i client JavaScript tra i client disponibili e cambia il client predefinito in TV."</string>
     <string name="revanced_disable_auto_audio_tracks_summary_off">"La traccia audio automatica forzata è attivata."</string>
     <string name="revanced_disable_auto_captions_title">Disattiva i sottotitoli automatici forzati</string>
     <string name="revanced_disable_auto_captions_summary_on">I sottotitoli automatici forzati sono disattivati.</string>
@@ -1177,7 +1177,7 @@ Nota: alcuni link di ricerca evidenziati che non hanno uno stile di testo predef
     <string name="revanced_hide_player_flyout_menu_audio_track_summary_off">Il menù Traccia Audio è visibile.</string>
     <string name="revanced_hide_player_flyout_menu_audio_track_not_available">"Il menù Traccia Audio è nascosto.
 
-Nota: per mostrare il menù Traccia Audio, vai alle impostazioni → RVX → Varie → Camuffa i dati in streaming → Mostra i client JavaScript tra i client disponibili, cambia il client predefinito in TV e attiva \"Usa yt-dlp ejs (In fase di sviluppo)\"."</string>
+Nota: per mostrare il menù Traccia Audio, vai alle impostazioni → RVX → Varie → Camuffa i dati in streaming → Mostra i client JavaScript tra i client disponibili e cambia il client predefinito in TV."</string>
     <string name="revanced_hide_player_flyout_menu_captions_title">Nascondi il menù Sottotitoli</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_on">Il menù Sottotitoli è nascosto.</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_off">Il menù Sottotitoli è visibile.</string>
@@ -1547,6 +1547,9 @@ Questa impostazione funziona meglio con una connessione internet molto veloce."<
     <string name="revanced_hide_contents_section_title">Nascondi la sezione Come È Stato Creato Questo Contenuto</string>
     <string name="revanced_hide_contents_section_summary_on">La sezione Come È Stato Creato Questo Contenuto è nascosto.</string>
     <string name="revanced_hide_contents_section_summary_off">La sezione Come È Stato Creato Questo Contenuto è visibile.</string>
+    <string name="revanced_hide_hype_points_section_title">Nascondi i punti hype</string>
+    <string name="revanced_hide_hype_points_section_summary_on">I punti hype sono nascosti.</string>
+    <string name="revanced_hide_hype_points_section_summary_off">I punti hype sono visibili.</string>
     <string name="revanced_hide_podcast_section_title">Nascondi la sezione Podcast</string>
     <string name="revanced_hide_podcast_section_summary_on">La sezione Podcast è nascosta.</string>
     <string name="revanced_hide_podcast_section_summary_off">La sezione Podcast è visibile.</string>
@@ -1828,7 +1831,7 @@ Regola il volume scorrendo verticalmente sul lato destro dello schermo."</string
     <string name="revanced_swipe_threshold_title">Limite di ampiezza del trascinamento</string>
     <string name="revanced_swipe_threshold_summary">Il limite di ampiezza entro cui deve avvenire il trascinamento.</string>
     <string name="revanced_swipe_overlay_style_title">Stile della sovrapposizione durante il trascinamento</string>
-    <string name="revanced_swipe_overlay_style_entry_0">Originale</string>
+    <string name="revanced_swipe_overlay_style_entry_0">Vecchio</string>
     <string name="revanced_swipe_overlay_style_entry_1">Orizzontale</string>
     <string name="revanced_swipe_overlay_style_entry_2">Orizzontale (Minima superiore)</string>
     <string name="revanced_swipe_overlay_style_entry_3">Orizzontale (Minima centrale)</string>
@@ -1924,10 +1927,10 @@ Note:
     <string name="revanced_enable_custom_playback_speed_summary_on">La velocità di riproduzione personalizzata è attivata.</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">La velocità di riproduzione personalizzata è disattivata.</string>
     <string name="revanced_custom_playback_speed_menu_type_title">Cambia il menù della velocità di riproduzione personalizzata</string>
-    <string name="revanced_custom_playback_speed_menu_type_entry_custom_legacy">Personalizzato (Originale)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_legacy">Personalizzato (Vecchio)</string>
     <string name="revanced_custom_playback_speed_menu_type_entry_custom_modern">Personalizzato (Moderno)</string>
     <string name="revanced_custom_playback_speed_menu_type_entry_custom_no_theme">Personalizzato (Nessun tema)</string>
-    <string name="revanced_custom_playback_speed_menu_type_entry_youtube_legacy">YouTube originale</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_youtube_legacy">YouTube (Vecchio)</string>
     <string name="revanced_custom_playback_speeds_title">Modifica le velocità di riproduzione personalizzate</string>
     <string name="revanced_custom_playback_speeds_summary">Aggiungi, rimuovi o modifica le velocità di riproduzione.</string>
     <string name="revanced_custom_playback_speeds_invalid">Le velocità personalizzate devono essere inferiori a %sx</string>
@@ -2341,6 +2344,8 @@ Nota: questa impostazione potrebbe non essere necessaria se sei un utente YouTub
     <string name="revanced_spoof_streaming_data_client_entry_mweb">"Web Mobile
 <small>(In fase di sviluppo)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">"TV
+<small>(Vecchio)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_simply_no_potoken">"TV Simply
 <small>(Nessun PoToken richiesto)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">TV Embedded</string>
@@ -2468,19 +2473,6 @@ Tra i client JavaScript, il client consigliato è TV."</string>
 
 Nota: questo client non riesce ancora a riprodurre clip, riproduzione automatica nelle schede e Shorts."</string>
     <string name="revanced_spoof_streaming_data_use_js_all_summary_off">"Il client JavaScript non viene usato per clip, riproduzione automatica nelle schede e Shorts, poichè richiedono una riproduzione rapida."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">Usa yt-dlp ejs (In fase di sviluppo)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_on">"È in uso il JavaScript esterno per yt-dlp-ejs.
-
-Note:
-• Il JavaScript del riproduttore per il deoffuscamento è mantenuto aggiornato.
-• L'avvio dei video potrebbe richiedere dai 5 ai 15 secondi."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_off">"È in uso l'estrattore SmartTube.
-
-Note:
-• Il JavaScript del riproduttore per il deoffuscamento non è mantenuto aggiornato.
-• Questa impostazione verrà rimossa dai server in futuro."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_user_dialog_message">"A causa delle nuove misure di YouTube, non è più possibile decriptare gli URL di streaming usando i metodi generali nell'ultimo JavaScript del riproduttore.
-Per decriptare gli URL di streaming nell'ultimo JavaScript, viene usato un JavaScript esterno per yt-dlp-ejs, ma è attualmente in fase di sviluppo e richiede maggiori risorse hardware."</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_title">Bypassa il falso buffering</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_summary_on">"Il bypass del falso buffering è attivato.
 

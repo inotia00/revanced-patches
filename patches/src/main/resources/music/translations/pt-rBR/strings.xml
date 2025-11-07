@@ -517,13 +517,9 @@ Se você é um usuário de YouTube Premium, essa configuração pode não ser ne
     <string name="revanced_spoof_streaming_data_client_entry_android_vr_auth">Android VR Autenticação(Ação necessária)</string>
     <string name="revanced_spoof_streaming_data_client_entry_mweb">Mobile Web</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">TV Legado</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">TV Integrada</string>
     <string name="revanced_spoof_streaming_data_client_entry_visionos">visionOS</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">Usar yt-dlp ejs (WIP)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary">"Quando ativado, o \"JavaScript externo para yt-dlp (yt-dlp-ejs)\" será usado para desofuscar a URL de transmissão na \"TV\" e na \"Mobime Web\".
-
-• O JavaScript do reprodutor para desofuscação é mantido atualizado.
-• O vídeo pode levar de 5 a 15 segundos para iniciar."</string>
     <string name="revanced_spoof_streaming_data_vr_auth_token_about_title">Sobre o Android VR Autenticação</string>
     <string name="revanced_spoof_streaming_data_vr_auth_token_about_summary">Clique para ver como obter um token de autenticação.</string>
     <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_title">Obter Token de autorização</string>

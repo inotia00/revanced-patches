@@ -559,8 +559,7 @@ Korlátozás: Előfordulhat, hogy az eszköztár Vissza gombja nem működik."</
 
 Ez egyes felhasználóknál nem biztos, hogy működik, ha Önnek nem működik:
 1. Lépjen a Beállítások - RVX - Egyéb - Lejátszási adatok hamisítása menüpontra, és kapcsolja be a 'JavaScript kliens használata' beállítást.
-2. Lépjen a Beállítások - RVX - Egyéb - Lejátszási adatok hamisítása menüpontra, és módosítsa az 'Alapértelmezett kliens' beállítást 'TV' értékre.
-3. Lépjen a Beállítások - RVX - Egyéb - Lejátszási adatok hamisítása menüpontra, és kapcsolja be a 'yt-dlp ejs(fejlesztés alatt) használata' beállítást."</string>
+2. Lépjen a Beállítások - RVX - Egyéb - Lejátszási adatok hamisítása menüpontra, és módosítsa az 'Alapértelmezett kliens' beállítást 'TV' értékre."</string>
     <string name="revanced_disable_auto_audio_tracks_summary_off">"A kényszerített automatikus hangsávok engedélyezve vannak."</string>
     <string name="revanced_disable_auto_captions_title">Kényszerített automatikus feliratok letiltása</string>
     <string name="revanced_disable_auto_captions_summary_on">A kényszerített automatikus feliratok le vannak tiltva.</string>
@@ -1196,8 +1195,7 @@ Korlátozások:
 
 A hangsáv menü megjelenítéséhez:
 1. Lépjen a Beállítások - RVX - Egyéb - Lejátszási adatok hamisítása menüpontra, és kapcsolja be a 'JavaScript kliens használata' beállítást.
-2. Lépjen a Beállítások - RVX - Egyéb - Lejátszási adatok hamisítása menüpontra, és módosítsa az 'Alapértelmezett kliens' beállítást 'TV' értékre.
-3. Lépjen a Beállítások - RVX - Egyéb - Lejátszási adatok hamisítása menüpontra, és kapcsolja be a 'yt-dlp ejs(fejlesztés alatt) használata' beállítást."</string>
+2. Lépjen a Beállítások - RVX - Egyéb - Lejátszási adatok hamisítása menüpontra, és módosítsa az 'Alapértelmezett kliens' beállítást 'TV' értékre."</string>
     <string name="revanced_hide_player_flyout_menu_captions_title">Feliratok menü elrejtése</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_on">A feliratok menü el van rejtve.</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_off">A feliratok menü látható.</string>
@@ -1566,6 +1564,9 @@ Ez a funkció nagyon gyors internetkapcsolat mellett működik a legjobban."</st
     <string name="revanced_hide_contents_section_title">Tartalmak rész elrejtése</string>
     <string name="revanced_hide_contents_section_summary_on">A tartalom készítésének módja rész elrejtve.</string>
     <string name="revanced_hide_contents_section_summary_off">A tartalom készítésének módja rész látható.</string>
+    <string name="revanced_hide_hype_points_section_title">Hype pontok rész elrejtése</string>
+    <string name="revanced_hide_hype_points_section_summary_on">A Hype pontok rész rejtett.</string>
+    <string name="revanced_hide_hype_points_section_summary_off">A Hype pontok rész látható.</string>
     <string name="revanced_hide_podcast_section_title">Podcast rész elrejtése</string>
     <string name="revanced_hide_podcast_section_summary_on">A podcast rész el van rejtve.</string>
     <string name="revanced_hide_podcast_section_summary_off">A podcast rész látható.</string>
@@ -2367,6 +2368,8 @@ Ha YouTube Premium felhasználó vagy, akkor ez a beállítás nem feltétlenül
     <string name="revanced_spoof_streaming_data_client_entry_mweb">"Mobil webböngésző
 <small>(fejlesztés alatt)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">"TV
+<small>(Örökölt)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_simply_no_potoken">"TV Egyszerű
 <small>(Nincs PoToken)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">TV beágyazott</string>
@@ -2510,20 +2513,6 @@ A JavaScript kliensek közül az ajánlott kliens a TV."</string>
 • Automatikus lejátszás a hírfolyamban
 • Klipek
 • Shortok"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">Használjon yt-dlp-ejs (Folyamatban)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_on">"Külső JavaScript van használatban az yt-dlp-hez (yt-dlp-ejs).
-
-• A lejátszó JavaScriptje a deobfuszkációhoz naprakész.
-• A videó elindítása 5 - 15 másodpercet is igénybe vehet."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_off">"SmartTube kliens használatban.
-
-• A lejátszó JavaScriptje a deobfuszkációhoz nem naprakész.
-• A szerverek a közeljövőben elavulttá teszik ezt a funkciót."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_user_dialog_message">"A YouTube új intézkedései miatt a legújabb lejátszó JavaScriptben már nem lehet általános metódusokkal visszafejteni a streaming Url-eket.
-
-A legújabb lejátszó JavaScriptben az yt-dlp külső JavaScriptjét (yt-dlp-ejs) használják a streaming Url-ek visszafejtésére.
-
-Jelenleg fejlesztés alatt áll, és több hardver erőforrást fog igénybe venni."</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_title">Kerülje a hamis pufferelést</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_summary_on">"A hamis pufferelés megkerülése engedélyezett.
 

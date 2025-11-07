@@ -519,13 +519,9 @@ YouTube Premium 사용자라면 이 설정은 필요하지 않을 수 있습니�
     <string name="revanced_spoof_streaming_data_client_entry_android_vr_auth">Android VR 인증 있음 (작업이 필요함)</string>
     <string name="revanced_spoof_streaming_data_client_entry_mweb">Mobile Web</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">TV Legacy</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">TV Embedded</string>
     <string name="revanced_spoof_streaming_data_client_entry_visionos">visionOS</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">yt-dlp ejs 사용 (개발 중)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary">"이 기능을 활성화하면, ‘yt-dlp를 위한 외부 JavaScript (yt-dlp-ejs)'가 'TV’ 및 'Mobile Web'에서 스트리밍 URL의 복호화하는 데 사용됩니다.
-
-• 복호화를 위한 플레이어 JavaScript는 최신 상태로 유지됩니다.
-• 동영상 재생 시작까지 5~15초가 소요될 수 있습니다."</string>
     <string name="revanced_spoof_streaming_data_vr_auth_token_about_title">Android VR 인증 있음에 대한 정보</string>
     <string name="revanced_spoof_streaming_data_vr_auth_token_about_summary">인증 토큰을 받는 방법을 보려면 여기를 탭하세요.</string>
     <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_title">인증 토큰 받기</string>

@@ -212,13 +212,31 @@ object YouTubeClient {
      * Video not playable: None.
      * Note: Both 'Authorization' and 'Set-Cookie' are supported.
      */
-    private const val CLIENT_VERSION_TVHTML5 = "7.20251029.15.01"
+    private const val CLIENT_VERSION_TVHTML5 = "7.20251105.10.00"
     /**
-     * The only dinosaur device where 'authenticatedConfig.flags.attest_botguard_on_tvhtml5' is FALSE.
-     * Cobalt (Browser), Fire OS, PlayStation, and Tizen OS all have the value of 'attest_botguard_on_tvhtml5' as TRUE.
+     * authenticatedConfig.flags.attest_botguard_on_tvhtml5: false.
      */
     private const val USER_AGENT_TVHTML5 =
         "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0; Xbox)"
+
+
+    // TVHTML5 (Downgraded)
+    /**
+     * Same as TVHTML5, but can play SABR format-only videos.
+     * See: https://github.com/yt-dlp/yt-dlp/pull/14887.
+     *
+     * Available version
+     * ===============
+     * '5.20150304'
+     * '5.20160729'
+     * '6.20180913'
+     */
+    private const val CLIENT_VERSION_TVHTML5_LEGACY = "5.20150304"
+    /**
+     * authenticatedConfig.flags.attest_botguard_on_tvhtml5: false.
+     */
+    private const val USER_AGENT_TVHTML5_LEGACY =
+        "Mozilla/5.0 (Linux mipsel) Cobalt/9.28152-debug (unlike Gecko) Starboard/4"
 
 
     // TVHTML5 SIMPLY
@@ -243,7 +261,7 @@ object YouTubeClient {
      * Note: Audio track is not available.
      * Note: Only 'Set-Cookie' is supported.
      */
-    private const val CLIENT_VERSION_MWEB = "2.20251031.00.00"
+    private const val CLIENT_VERSION_MWEB = "2.20251105.03.00"
     private const val USER_AGENT_MWEB =
         "Mozilla/5.0 (Android 16; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0"
 
@@ -484,6 +502,17 @@ object YouTubeClient {
             clientName = "TVHTML5",
             friendlyName = "TV"
         ),
+        TV_LEGACY(
+            id = 7,
+            clientVersion = CLIENT_VERSION_TVHTML5_LEGACY,
+            clientPlatform = CLIENT_PLATFORM_DESKTOP,
+            userAgent = USER_AGENT_TVHTML5_LEGACY,
+            requireJS = true,
+            refererFormat = CLIENT_REFERER_FORMAT_TV,
+            supportsMultiAudioTracks = true,
+            clientName = "TVHTML5",
+            friendlyName = "TV Legacy"
+        ),
         TV_SIMPLY_NO_POTOKEN(
             id = 75,
             clientVersion = CLIENT_VERSION_TVHTML5_SIMPLY,
@@ -546,6 +575,7 @@ object YouTubeClient {
                 IPADOS,
                 TV,
                 TV_SIMPLY_NO_POTOKEN,
+                TV_LEGACY,
                 //MWEB,
                 ANDROID_VR_AUTH,
             )
@@ -557,6 +587,7 @@ object YouTubeClient {
                 ANDROID_NO_SDK,
                 IPADOS,
                 TV_SIMPLY_NO_POTOKEN,
+                TV_LEGACY,
                 //MWEB,
                 ANDROID_VR_AUTH,
             )

@@ -8,7 +8,7 @@ agp = "8.2.2"
 annotation = "1.9.1"
 collections4 = "4.5.0"
 desugar = "2.1.5"
-diskLruCache = "2.0.2"
+disklrucache = "2.0.2"
 kotlinx-coroutines-core = "1.9.0"
 lang3 = "3.19.0"
 nanojson = "1.10"
@@ -18,12 +18,14 @@ protoc = "3.25.2"
 preference = "1.2.1"
 regex = "1.1.11"
 retrofit = "2.11.0"
+rxjava2 = "2.2.21"
+rxjava2-android = "2.1.1"
 
 [libraries]
 annotation = { module = "androidx.annotation:annotation", version.ref = "annotation" }
 collections4 = { module = "org.apache.commons:commons-collections4", version.ref = "collections4" }
 desugar-jdk-libs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugar" }
-diskLruCache = { module = "com.jakewharton:disklrucache", version.ref = "diskLruCache" }
+disklrucache = { module = "com.jakewharton:disklrucache", version.ref = "disklrucache" }
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines-core" }
 lang3 = { module = "org.apache.commons:commons-lang3", version.ref = "lang3" }
@@ -34,6 +36,8 @@ protobuf-javalite = { module = "com.google.protobuf:protobuf-javalite", version.
 protobuf-protoc = { module = "com.google.protobuf:protoc", version.ref = "protoc" }
 regex = { module = "com.github.florianingerl.util:regex", version.ref = "regex" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+rxjava2 = { module = "io.reactivex.rxjava2:rxjava", version.ref = "rxjava2" }
+rxjava2-android = { module = "io.reactivex.rxjava2:rxandroid", version.ref = "rxjava2-android" }
 
 [plugins]
 android-library = { id = "com.android.library", version.ref = "agp" }

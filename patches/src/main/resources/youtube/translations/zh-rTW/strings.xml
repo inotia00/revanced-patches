@@ -2347,6 +2347,8 @@
     <string name="revanced_spoof_streaming_data_default_client_title">預設用戶端</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_creator">"Android Studio
 <small>(需要登入)</small>"</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_no_sdk">"Android
+<small>(無 SDK)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr">"Android VR
 <small>(無需驗證)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr_auth">"Android VR
@@ -2370,6 +2372,7 @@
 • 無法穩定音量。
 • 登出登入或隱身模式下可能無法播放兒童影片。
 • 不支援 1080p+, AV1 和 HDR。"</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_no_sdk">• 影片可能在 1:00 處停止，或在某些地區可能無法觀看。</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• 音軌選單已消失。
 • 無法穩定音量。
 • 登出登入或處於隱身模式時，兒童影片可能無法播放。"</string>
@@ -2498,20 +2501,6 @@ YouTube 伺服器上的 n-sig 模式變化頻繁，如果正規表示式無法�
 • 動態中自動播放
 • 短片
 • Shorts 短片"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">使用 yt-dlp ejs (開發中)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_on">"yt-dlp 使用外部 JavaScript (yt-dlp-ejs)。
-
-• 用於去混淆的播放器 JavaScript 保持最新。
-• 影片啟動可能需要 5 到 15 秒。"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_off">"SmartTube 提取器已使用。
-
-• 用於反混淆的播放器 JavaScript 未更新。
-• 伺服器將在不久的將來棄用此功能。"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_user_dialog_message">"由於 YouTube 的新措施，最新播放器 JavaScript 中已無法使用常規方法解密串流 URL。
-
-yt-dlp 的外部 JavaScript (yt-dlp-ejs) 用於在最新播放器 JavaScript 中解密串流媒體 URL。
-
-該 JavaScript 目前正在開發中，將佔用更多硬體資源。"</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_title">繞過虛假緩衝</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_summary_on">"繞過虛假緩衝已啟用。
 

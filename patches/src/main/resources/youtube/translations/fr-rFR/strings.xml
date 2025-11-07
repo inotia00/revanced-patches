@@ -2486,20 +2486,6 @@ Parmi les clients JavaScript, le client recommandé est TV."</string>
 • Lecture automatique dans le flux
 • Clips
 • Shorts"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">Utiliser yt-dlp ejs (en cours)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_on">"Le JavaScript externe pour yt-dlp (yt-dlp-ejs) est utilisé.
-
-• Le lecteur JavaScript pour la désobfuscation est maintenu à jour.
-• Le démarrage de la vidéo peut prendre entre 5 et 15 secondes."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_off">"L'extracteur SmartTube est utilisé.
-
-• Le lecteur JavaScript pour la désobfuscation n'est pas à jour.
-• Il sera bientôt abandonné par les serveurs."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_user_dialog_message">"En raison des nouvelles mesures prises par YouTube, il n'est plus possible de décrypter les Url de streaming à l'aide des méthodes générales dans le dernier lecteur JavaScript.
-
-Le JavaScript externe pour yt-dlp (yt-dlp-ejs) est utilisé pour décrypter les Url de streaming dans le dernier lecteur JavaScript.
-
-Il est actuellement en cours de développement et utilisera davantage de ressources matérielles."</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_title">Contourner la falsification de mise en mémoire tampon</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_summary_on">"Le contournement de la falsification de mise en mémoire tampon est activé.
 

@@ -562,7 +562,9 @@ Hạn chế: Nút Quay lại trên thanh công cụ có thể không hoạt đ�
 Tính năng này có thể không hoạt động với một số người dùng, nếu bạn trong số đó:
 1. Đi tới Cài đặt - RVX - Khác - Giả mạo dữ liệu phát video, và bật \"Giả mạo JavaScript\".
 2. Đi tới Cài đặt - RVX - Khác - Giả mạo dữ liệu phát video, và chuyển \"Ứng dụng khách mặc định\" sang TV."</string>
-    <string name="revanced_disable_auto_audio_tracks_summary_off">"Tự động phát bản âm thanh khi phát video có bản âm thanh đã bật."</string>
+    <string name="revanced_disable_auto_audio_tracks_summary_off">"Tự động phát bản âm thanh khi phát video có bản âm thanh đã bật.
+
+Chi tiết: Với một số tài khoản, bản âm thanh gốc sẽ được sử dụng."</string>
     <string name="revanced_disable_auto_captions_title">Tắt tự động hiển thị phụ đề</string>
     <string name="revanced_disable_auto_captions_summary_on">Tự động hiển thị phụ đề khi phát video có phụ đề đã tắt.</string>
     <string name="revanced_disable_auto_captions_summary_off">Tự động hiển thị phụ đề khi phát video có phụ đề đã bật.</string>
@@ -1557,6 +1559,9 @@ Vì vậy, bạn nên bật tính năng này khi có kết nối mạng ổn đ�
     <string name="revanced_hide_contents_section_title">Ẩn phần Cách nội dung này được tạo ra</string>
     <string name="revanced_hide_contents_section_summary_on">Phần Cách nội dung này được tạo ra đã ẩn.</string>
     <string name="revanced_hide_contents_section_summary_off">Phần Cách nội dung này được tạo ra được hiển thị.</string>
+    <string name="revanced_hide_hype_points_section_title">Ẩn phần Điểm khuấy động</string>
+    <string name="revanced_hide_hype_points_section_summary_on">Phần Điểm khuấy động đã ẩn.</string>
+    <string name="revanced_hide_hype_points_section_summary_off">Phần Điểm khuấy động được hiển thị.</string>
     <string name="revanced_hide_podcast_section_title">Ẩn phần Khám phá podcast</string>
     <string name="revanced_hide_podcast_section_summary_on">Phần Khám phá podcast đã ẩn.</string>
     <string name="revanced_hide_podcast_section_summary_off">Phần Khám phá podcast được hiển thị.</string>
@@ -2347,31 +2352,36 @@ Nếu bạn đã đăng ký YouTube Premium, thì có thể không cần thiết
     <string name="revanced_spoof_streaming_data_default_client_title">Ứng dụng khách mặc định</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_creator">"Android Studio
 <small>(Yêu cầu Đăng nhập)</small>"</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_no_sdk">"Android
+<small>(Không SDK)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr">"Android VR
 <small>(Không xác thực)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr_auth">"Android VR
 <small>(Xác thực, Cần thao tác)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_ipados">"iPadOS
-<small>(Lỗi thời, Không xác thực)</small>"</string>
+<small>(Lỗi thời)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_mweb">"Mobile Web
-<small>(Thử nghiệm, Không xác thực)</small>"</string>
+<small>(Thử nghiệm)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">"TV
+<small>(Cũ)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_simply_no_potoken">"TV Simply
 <small>(Không PoToken)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">TV Embedded</string>
     <string name="revanced_spoof_streaming_data_client_entry_visionos">"visionOS
-<small>(Chưa phát hành, Không xác thực)</small>"</string>
+<small>(Chưa phát hành)</small>"</string>
     <string name="revanced_spoof_streaming_data_side_effects_title">Hạn chế</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_creator">"• Thiếu mục bản âm thanh.
-• Tắt tự động phát bản âm thanh không khả dụng.
+• Tắt tự động phát bản âm thanh có thể không khả dụng.
 • Âm lượng ổn định không khả dụng.
 • Video dành cho trẻ em có thể không phát được khi bạn đã đăng xuất hoặc bật chế độ ẩn danh.
 • Không hỗ trợ chất lượng cao hơn 1080p, codec AV1 và video HDR có thể không khả dụng."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_no_sdk">• Video có thể bị dừng ở phút thứ 1, hoặc có thể không khả dụng ở một số khu vực.</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Thiếu mục bản âm thanh.
 • Âm lượng ổn định không khả dụng.
 • Video dành cho trẻ em có thể không phát được khi bạn đã đăng xuất hoặc bật chế độ ẩn danh."</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_vr_auth">"• Thiếu trình đơn Bản âm thanh.
-• Tắt tự động phát bản âm thanh không khả dụng.
+• Tắt tự động phát bản âm thanh có thể không khả dụng.
 • Âm lượng ổn định không khả dụng.
 • Video dành cho trẻ em có thể không phát được khi bạn đã đăng xuất hoặc bật chế độ ẩn danh."</string>
     <string name="revanced_spoof_streaming_data_side_effects_ipados">"• Không hỗ trợ codec AV1.
@@ -2491,22 +2501,6 @@ Hạn chế: JavaScript vẫn không thể phát một số video."</string>
 • Tự động phát trên trang video
 • Các đoạn video
 • Video Shorts"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">Dùng yt-dlp ejs (Thử nghiệm)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_on">"JavaScript bên ngoài từ yt-dlp (yt-dlp-ejs) được sử dụng.
-
-Chi tiết:
-• Player JS luôn được cập nhật để hỗ trợ gỡ rối mã.
-• Quá trình này có thể mất khoảng 5 đến 15 giây trước khi video bắt đầu."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_off">"Trình trích xuất SmartTube được sử dụng.
-
-Chi tiết:
-• Player JS luôn cập nhật để hỗ trợ gỡ rối mã.
-• Máy chủ sẽ ngừng hỗ trợ tính năng này trong thời gian tới."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_user_dialog_message">"Vì YouTube áp dụng biện pháp mới, các cách thông thường không còn giải mã được URL phát trong Player JS mới nhất.
-
-Thay vào đó, ứng dụng sẽ dùng JavaScript bên ngoài từ yt-dlp (yt-dlp-ejs) để giải mã.
-
-Hiện tại tính năng này vẫn đang trong quá trình phát triển và sẽ dùng nhiều tài nguyên phần cứng hơn."</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_title">Bỏ qua bộ đệm giả</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_summary_on">"Bỏ qua bộ đệm giả đã bật.
 

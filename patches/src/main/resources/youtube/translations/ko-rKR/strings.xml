@@ -559,8 +559,7 @@ DeArrow에 대해 자세히 알아보려면 여기를 탭하세요."</string>
 
 일부 사용자에게는 작동하지 않을 수 있습니다. 작동하지 않는 경우에는:
 1. 설정 - RVX - 기타 - '스트리밍 데이터 변경하기'로 이동하여 'JavaScript 클라이언트 사용하기'를 활성화합니다.
-2. 설정 - RVX - 기타 - '스트리밍 데이터 변경하기'로 이동하여 ‘기본 클라이언트'를 'TV’로 변경합니다.
-3. 설정 - RVX - 기타 - '스트리밍 데이터 변경하기'로 이동하여 'yt-dlp ejs 사용하기 (개발 중)'을 활성화합니다."</string>
+2. 설정 - RVX - 기타 - '스트리밍 데이터 변경하기'로 이동하여 ‘기본 클라이언트'를 'TV’로 변경합니다."</string>
     <string name="revanced_disable_auto_audio_tracks_summary_off">"강제 사용이 설정된 자동 오디오 트랙을 활성화합니다."</string>
     <string name="revanced_disable_auto_captions_title">강제된 자동 자막 비활성화하기</string>
     <string name="revanced_disable_auto_captions_summary_on">강제 사용이 설정된 자동 자막을 비활성화합니다.</string>
@@ -1194,8 +1193,7 @@ Cookies를 사용한다고 해서 문제가 해결되는 것은 아닙니다.
 
 오디오 트랙 메뉴를 표시하려면:
 1. 설정 - RVX - 기타 - '스트리밍 데이터 변경하기'로 이동하여 'JavaScript 클라이언트 사용하기'를 활성화합니다.
-2. 설정 - RVX - 기타 - '스트리밍 데이터 변경하기'로 이동하여 ‘기본 클라이언트'를 'TV’로 변경합니다.
-3. 설정 - RVX - 기타 - '스트리밍 데이터 변경하기'로 이동하여 'yt-dlp ejs 사용하기 (개발 중)'을 활성화합니다."</string>
+2. 설정 - RVX - 기타 - '스트리밍 데이터 변경하기'로 이동하여 ‘기본 클라이언트'를 'TV’로 변경합니다."</string>
     <string name="revanced_hide_player_flyout_menu_captions_title">자막 메뉴 숨기기</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_on">자막 메뉴가 숨겨집니다.</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_off">자막 메뉴가 표시됩니다.</string>
@@ -1566,6 +1564,9 @@ Cookies를 사용한다고 해서 문제가 해결되는 것은 아닙니다.
     <string name="revanced_hide_contents_section_title">이 콘텐츠가 제작된 방식 섹션 숨기기</string>
     <string name="revanced_hide_contents_section_summary_on">이 콘텐츠가 제작된 방식 섹션이 숨겨집니다.</string>
     <string name="revanced_hide_contents_section_summary_off">이 콘텐츠가 제작된 방식 섹션이 표시됩니다.</string>
+    <string name="revanced_hide_hype_points_section_title">Hype 점수 섹션 숨기기</string>
+    <string name="revanced_hide_hype_points_section_summary_on">Hype 점수 섹션이 숨겨집니다.</string>
+    <string name="revanced_hide_hype_points_section_summary_off">Hype 점수 섹션이 표시됩니다.</string>
     <string name="revanced_hide_podcast_section_title">팟캐스트 살펴보기 섹션 숨기기</string>
     <string name="revanced_hide_podcast_section_summary_on">팟캐스트 살펴보기 섹션이 숨겨집니다.</string>
     <string name="revanced_hide_podcast_section_summary_off">팟캐스트 살펴보기 섹션이 표시됩니다.</string>
@@ -2366,6 +2367,8 @@ YouTube Premium 사용자라면 이 설정이 필요하지 않을 수 있습니�
     <string name="revanced_spoof_streaming_data_client_entry_mweb">"Mobile Web
 <small>(개발 중)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">"TV
+<small>(구형)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_simply_no_potoken">"TV Simply
 <small>(PoToken 없음)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">TV Embedded</string>
@@ -2509,20 +2512,6 @@ JavaScript 클라이언트 중에서 권장되는 클라이언트는 TV입니다
 • 피드에서 자동재생
 • 클립
 • Shorts"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">yt-dlp ejs 사용하기 (개발 중)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_on">"yt-dlp를 위한 외부 JavaScript (yt-dlp-ejs)를 사용합니다.
-
-• 복호화를 위한 플레이어 JavaScript가 최신 상태로 유지됩니다.
-• 동영상 재생 시작까지 5~15초가 소요될 수 있습니다."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_off">"SmartTube 추출기를 사용합니다.
-
-• 복호화를 위한 플레이어 JavaScript가 최신 상태로 유지되지 않습니다.
-• 가까운 시일 내에 서버에서 이 기능이 지원 중단될 예정입니다."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_user_dialog_message">"YouTube의 새로운 조치로 인하여 최신 플레이어 JavaScript에서 일반적인 방법으로 스트리밍 URL을 복호화하는 것이 더 이상 불가능합니다.
-
-최신 플레이어 JavaScript에서 스트리밍 URL을 복호화하기 위하여 yt-dlp를 위한 외부 JavaScript (yt-dlp-ejs)가 사용됩니다.
-
-현재 개발 중이며, 더 많은 하드웨어 리소스를 사용할 예정입니다."</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_title">페이크 버퍼링 우회하기</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_summary_on">"페이크 버퍼링를 우회합니다.
 

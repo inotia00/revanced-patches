@@ -1541,6 +1541,9 @@ Esta función funciona mejor con una conexión a Internet muy rápida."</string>
     <string name="revanced_hide_contents_section_title">Ocultar sección de contenido</string>
     <string name="revanced_hide_contents_section_summary_on">La sección de cómo se hizo este contenido está oculta.</string>
     <string name="revanced_hide_contents_section_summary_off">La sección de cómo se hizo este contenido está visible.</string>
+    <string name="revanced_hide_hype_points_section_title">Ocultar sección de puntos de Hype</string>
+    <string name="revanced_hide_hype_points_section_summary_on">La sección de puntos de Hype está oculta.</string>
+    <string name="revanced_hide_hype_points_section_summary_off">La sección de puntos de Hype está visible.</string>
     <string name="revanced_hide_podcast_section_title">Ocultar secciones de podcast</string>
     <string name="revanced_hide_podcast_section_summary_on">Las secciones de podcast están ocultas.</string>
     <string name="revanced_hide_podcast_section_summary_off">Las secciones de podcast están visibles.</string>
@@ -2336,6 +2339,8 @@ Esto se puede utilizar al probar algo en el MainThread."</string>
 <small>(todavía en desarrollo)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV
 <small>(todavía en desarrollo)</small></string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">"TV
+<small>(Antiguo)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_simply_no_potoken">"TV simple
 <small>(Sin PoToken)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">TV integrado
@@ -2477,20 +2482,6 @@ Esta función todavía está en desarrollo, así que úsala solo para fines de d
 • Reproducción automática en el feed
 • Clips
 • Shorts"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">Usar yt-dlp ejs (todavía en desarrollo)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_on">"Se utiliza JavaScript externo para yt-dlp (yt-dlp-ejs).
-
-• El reproductor JavaScript para la desofuscación se mantiene actualizado.
-• El vídeo puede tardar entre 5 y 15 segundos en iniciarse."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_off">"Se utiliza el extractor de SmartTube.
-
-• El reproductor JavaScript para la desofuscación no está actualizado.
-• Esto será obsoleto para los servidores en un futuro próximo."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_user_dialog_message">"Debido a las nuevas medidas de YouTube, ya no es posible descifrar las URL de transmisión utilizando métodos generales en el último reproductor JavaScript.
-
-El JavaScript externo para yt-dlp (yt-dlp-ejs) se utiliza para desencriptar las URL de transmisión en el último reproductor JavaScript.
-
-Actualmente está en desarrollo y utilizará más recursos de hardware."</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_title">Omitir búfer falso</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_summary_on">"Omitir búfer falso está activado.
 

@@ -559,8 +559,7 @@ DeArrow について詳しく知るには、ここをタップしてください
 
 一部の環境下では機能しない可能性があります。機能しない場合は、以下の手順に従ってください:
 1. [設定] → [RVX] → [その他] → [ストリーミングデータを偽装] に移動し、[JavaScript クライアントを使用] をオンにします。
-2. [設定] → [RVX] → [その他] → [ストリーミングデータを偽装] に移動し、[偽装するクライアントを選択] で「TV」を選択します。
-3. [設定] → [RVX] → [その他] → [ストリーミングデータを偽装] に移動し、[yt-dlp ejs を使用 (開発途中)] をオンにします。"</string>
+2. [設定] → [RVX] → [その他] → [ストリーミングデータを偽装] に移動し、[偽装するクライアントを選択] で「TV」を選択します。"</string>
     <string name="revanced_disable_auto_audio_tracks_summary_off">"音声トラックが自動で吹き替えに切り替わるのを無効にします。"</string>
     <string name="revanced_disable_auto_captions_title">字幕の強制を無効化</string>
     <string name="revanced_disable_auto_captions_summary_on">投稿者が設定している字幕の強制を無効にします。</string>
@@ -1199,8 +1198,7 @@ Cookie の使用は万能薬ではありません。
 
 [音声トラック] メニューを表示するには:
 1. [設定] → [RVX] → [その他] → [ストリーミングデータを偽装] に移動し、[JavaScript クライアントを使用] をオンにします。
-2. [設定] → [RVX] → [その他] → [ストリーミングデータを偽装] に移動し、[偽装するクライアントを選択] で「TV」を選択します。
-3. [設定] → [RVX] → [その他] → [ストリーミングデータを偽装] に移動し、[yt-dlp ejs を使用 (開発途中)] をオンにします。"</string>
+2. [設定] → [RVX] → [その他] → [ストリーミングデータを偽装] に移動し、[偽装するクライアントを選択] で「TV」を選択します。"</string>
     <string name="revanced_hide_player_flyout_menu_captions_title">[字幕] メニューを非表示</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_on">[字幕] メニューを非表示にします。</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_off">[字幕] メニューを非表示にします。</string>
@@ -1567,6 +1565,9 @@ Cookie の使用は万能薬ではありません。
     <string name="revanced_hide_contents_section_title">コンテンツ欄を非表示</string>
     <string name="revanced_hide_contents_section_summary_on">概要欄下部にある「このコンテンツの作成手段」を非表示にします。</string>
     <string name="revanced_hide_contents_section_summary_off">概要欄下部にある「このコンテンツの作成手段」を非表示にします。</string>
+    <string name="revanced_hide_hype_points_section_title">[ハイプ] ポイントセクションを非表示</string>
+    <string name="revanced_hide_hype_points_section_summary_on">[ハイプ] ポイントセクションを非表示にします。</string>
+    <string name="revanced_hide_hype_points_section_summary_off">[ハイプ] ポイントセクションを非表示にします。</string>
     <string name="revanced_hide_podcast_section_title">ポッドキャストセクションを非表示</string>
     <string name="revanced_hide_podcast_section_summary_on">概要欄のポッドキャストセクションを非表示にします。</string>
     <string name="revanced_hide_podcast_section_summary_off">概要欄のポッドキャストセクションを非表示にします。</string>
@@ -2363,6 +2364,8 @@ YouTube Premium に加入している場合は、この設定は必要ない可�
     <string name="revanced_spoof_streaming_data_client_entry_mweb">"Mobile Web
 <small>(開発途中)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">"TV
+<small>(従来)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_simply_no_potoken">"TV Simply
 <small>(PoToken なし)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">TV Embedded</string>
@@ -2499,22 +2502,6 @@ JavaScript クライアントの中では、「TV」が推奨されます。"</s
 
 注意: JavaScript クライアントでは、まだ一部の動画を再生できません。"</string>
     <string name="revanced_spoof_streaming_data_use_js_all_summary_off">"現在の設定: 高速再生が必要な一部の動画 (フィードの動画の自動再生、クリップ、ショート) では JavaScript クライアントを使用しません。"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">yt-dlp ejs を使用 (開発途中)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_on">"現在の設定: yt-dlp 用の外部 JavaScript (yt-dlp-ejs) を使用します。
-
-注意:
-・難読化解除用のプレーヤー JavaScript を最新の状態に保ちます。
-・動画が再生開始されるまでに 5 ~ 15 秒かかる可能性があります。"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_off">"現在の設定: SmartTube エクストラクターを使用します。
-
-注意:
-・難読化解除用のプレーヤー JavaScript は最新ではありません。
-・これは近い将来サーバーによって廃止される予定です。"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_user_dialog_message">"YouTube の新しい対策により、最新のプレーヤー JavaScript では、一般的な方法を使用してストリーミング URL を復号化することができなくなりました。
-
-最新のプレーヤー JavaScript でストリーミング URL を復号化するために、yt-dlp 用の外部 JavaScript (yt-dlp-ejs) を使用します。
-
-現在開発中であり、より多くのハードウェアリソースを使用する予定です。"</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_title">偽バッファリングを回避</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_summary_on">"偽バッファリングを回避します。
 

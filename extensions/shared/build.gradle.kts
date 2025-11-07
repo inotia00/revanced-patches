@@ -38,7 +38,7 @@ dependencies {
     compileOnly(libs.preference)
 
     implementation(libs.collections4)
-    implementation(libs.diskLruCache)
+    implementation(libs.disklrucache)
     implementation(libs.gson)
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.lang3)
@@ -48,6 +48,8 @@ dependencies {
 
     implementation(libs.regex)
     implementation(libs.retrofit)
+    implementation(libs.rxjava2)
+    implementation(libs.rxjava2.android)
     implementation(project(":extensions:shared:j2v8"))
 
     coreLibraryDesugaring(libs.desugar.jdk.libs)

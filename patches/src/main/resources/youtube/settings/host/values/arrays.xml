@@ -490,6 +490,7 @@
         <item>@string/revanced_spoof_streaming_data_client_entry_android_vr_auth</item>
         <item>@string/revanced_spoof_streaming_data_client_entry_ipados</item>
         <item>@string/revanced_spoof_streaming_data_client_entry_tv</item>
+        <item>@string/revanced_spoof_streaming_data_client_entry_tv_legacy</item>
         <item>@string/revanced_spoof_streaming_data_client_entry_tv_simply_no_potoken</item>
         <item>@string/revanced_spoof_streaming_data_client_entry_visionos</item>
     </string-array>
@@ -500,6 +501,7 @@
         <item>ANDROID_VR_AUTH</item>
         <item>IPADOS</item>
         <item>TV</item>
+        <item>TV_LEGACY</item>
         <item>TV_SIMPLY_NO_POTOKEN</item>
         <item>VISIONOS</item>
     </string-array>

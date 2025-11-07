@@ -2339,6 +2339,8 @@ Isso pode ser usado ao testar algo no MainThread."</string>
     <string name="revanced_spoof_streaming_data_client_entry_mweb">"Mobile Web
 <small>(WIP, Sem Autenticação)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">"TV
+<small>(Legado)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_simply_no_potoken">"TV Simples
 <small>(Sem PoToken)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">TV Integrada</string>
@@ -2481,20 +2483,6 @@ Entre os clientes JavaScript, o cliente recomendado é TV."</string>
 • Reprodução automática no feed
 • Clips
 • Shorts"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">Usar yt-dlp ejs (WIP)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_on">"JavaScript externo é usado para yt-dlp (yt-dlp-ejs).
-
-• O player de JavaScript para desofuscar é mantido em dia.
-• Pode levar de 5 até 15 segundos para o vídeo iniciar."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_off">"O extrator SmartTube é usado.
-
-• O player de JavaScript para a desofuscação não está atualizado.
-• Esta opção será descontinuada pelos servidores num futuro próximo."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_user_dialog_message">"Devido às novas medidas do YouTube, não é mais possível descriptografar urls de streaming usando métodos gerais no mais recente software de JavaScript.
-
-JavaScript externo para yt-dlp (yt-dlp-ejs) é usado para descriptografar urls de streaming no mais recente player JavaScript.
-
-Está atualmente em desenvolvimento e usará mais recursos de hardware."</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_title">Ignorar buffers falsos</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_summary_on">"Ignorar buffers falsos está ativado.
 

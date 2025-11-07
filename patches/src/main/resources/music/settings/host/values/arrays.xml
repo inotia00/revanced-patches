@@ -74,6 +74,7 @@
         <item>@string/revanced_spoof_streaming_data_client_entry_android_vr</item>
         <item>@string/revanced_spoof_streaming_data_client_entry_android_vr_auth</item>
         <item>@string/revanced_spoof_streaming_data_client_entry_tv</item>
+        <item>@string/revanced_spoof_streaming_data_client_entry_tv_legacy</item>
         <item>@string/revanced_spoof_streaming_data_client_entry_visionos</item>
     </string-array>
     <string-array name="revanced_spoof_streaming_data_default_client_entry_values">
@@ -81,6 +82,7 @@
         <item>ANDROID_VR</item>
         <item>ANDROID_VR_AUTH</item>
         <item>TV</item>
+        <item>TV_LEGACY</item>
         <item>VISIONOS</item>
     </string-array>
     <string-array name="revanced_watch_history_type_entries">

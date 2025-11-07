@@ -559,8 +559,7 @@ Ograniczenie: Przycisk wstecz na pasku narzędzi może nie działać."</string>
 
 Może to nie działać u niektórych użytkowników, więc jeśli nie działa u ciebie, to:
 1. Idź do ustawień - RVX - Pozostałe - Oszukuj strumień danych, i użyj opcji 'Włącz klienta JavaScript'
-2. Idź do ustawień - RVX - Pozostałe - Oszukuj strumień danych, i zmień domyślnego klienta na 'TV'
-3. Idź do ustawień - RVX - Pozostałe - Oszukuj strumień danych, i użyj opcji 'Typ JavaScript odtwarzacza', klikając w nią, by pojawił się 'yt-dlp-ejs (w fazie rozwoju)'"</string>
+2. Idź do ustawień - RVX - Pozostałe - Oszukuj strumień danych, i zmień domyślnego klienta na 'TV'"</string>
     <string name="revanced_disable_auto_audio_tracks_summary_off">"Włączone"</string>
     <string name="revanced_disable_auto_captions_title">Automatyczne wymuszanie napisów</string>
     <string name="revanced_disable_auto_captions_summary_on">Wyłączone</string>
@@ -1198,8 +1197,7 @@ Ograniczenie: niektóre najciekawsze wyniki wyszukiwania w postaci linków, któ
 
 By wyświetlić menu od ścieżki dźwiękowej:
 1. Idź do ustawień → RVX → Pozostałe → Oszukuj strumień danych, i użyj opcji 'Włącz klienta JavaScript'
-2. Idź do ustawień → RVX → Pozostałe → Oszukuj strumień danych, i zmień domyślnego klienta na 'TV'
-3. Idź do ustawień - RVX - Pozostałe - Oszukuj strumień danych, i użyj opcji 'Typ JavaScript odtwarzacza', klikając w nią, by pojawił się 'yt-dlp-ejs (w fazie rozwoju)'"</string>
+2. Idź do ustawień → RVX → Pozostałe → Oszukuj strumień danych, i zmień domyślnego klienta na 'TV'"</string>
     <string name="revanced_hide_player_flyout_menu_captions_title">Menu od napisów</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_on">Ukryte</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_off">Widoczne</string>
@@ -1568,6 +1566,9 @@ Funkcja działa najlepiej przy bardzo szybkim połączeniu internetowym."</strin
     <string name="revanced_hide_contents_section_title">Sekcja \'Jak powstały te treści\'</string>
     <string name="revanced_hide_contents_section_summary_on">Ukryta</string>
     <string name="revanced_hide_contents_section_summary_off">Widoczna</string>
+    <string name="revanced_hide_hype_points_section_title">Sekcja punktów za podbijanie</string>
+    <string name="revanced_hide_hype_points_section_summary_on">Ukryta</string>
+    <string name="revanced_hide_hype_points_section_summary_off">Widoczna</string>
     <string name="revanced_hide_podcast_section_title">Sekcje eksplorowania podcastów</string>
     <string name="revanced_hide_podcast_section_summary_on">Ukryte</string>
     <string name="revanced_hide_podcast_section_summary_off">Widoczne</string>
@@ -2366,6 +2367,8 @@ Jeśli jesteś użytkownikiem YouTube Premium, to ustawienie te nie jest koniecz
     <string name="revanced_spoof_streaming_data_client_entry_mweb">"Mobilny przeglądarkowy
 <small>(W fazie rozwoju)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">"TV
+<small>(Stare)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_simply_no_potoken">"Uproszczony TV <small>(Bez PoToken)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">Wbudowany TV</string>
     <string name="revanced_spoof_streaming_data_client_entry_visionos">"visionOS
@@ -2508,20 +2511,6 @@ Spośród klientów JavaScript, rekomendowanym klientem jest TV."</string>
 • autoodtwarzanie na stronie głównej
 • klipy
 • shortsy"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">Typ JavaScript odtwarzacza</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_on">"yt-dlp-ejs (w fazie rozwoju)
-
-• JavaScript odtwarzacza do odszyfrowywania jest aktualizowany na bieżąco
-• film może się wczytywać od 5 do 15 sekund"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_off">"Ekstraktor SmartTube
-
-• JavaScript odtwarzacza do odszyfrowywania nie jest aktualny
-• może być porzucony przez serwery w najbliższej przyszłości"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_user_dialog_message">"W związku z nowymi środkami YouTube, nie jest już dłużej możliwe odszyfrowywać URL strumieni przy użyciu ogólnych metód w JavaScript odtwarzacza.
-
-Zewnętrzny JavaScript dla yt-dlp (yt-dlp-ejs) jest używany do odszyfrowywania URL strumieni w najnowszym JavaScript odtwarzacza.
-
-Obecnie jest w fazie rozwoju i może używać większej ilości zasobów sprzętowych."</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_title">Obejście fałszywego buforowania</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_summary_on">"Włączone
 
