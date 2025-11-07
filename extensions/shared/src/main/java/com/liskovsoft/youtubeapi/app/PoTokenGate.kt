@@ -3,41 +3,55 @@ package com.liskovsoft.youtubeapi.app
 import com.liskovsoft.youtubeapi.app.potokennp2.PoTokenProviderImpl
 import com.liskovsoft.youtubeapi.app.potokennp2.misc.PoTokenResult
 
+private enum class PoTokenType {
+    /**
+     * A poToken generated from videoId.
+     *
+     * Used in player requests.
+     */
+    CONTENT,
+
+    /**
+     * A generic poToken.
+     *
+     * Used in SABR requests.
+     */
+    SESSION
+}
+
 internal object PoTokenGate {
-    private var mNpPoToken: PoTokenResult? = null
+    private var mWebPoToken: PoTokenResult? = null
     private var mCacheResetTimeMs: Long = -1
 
     @JvmStatic
-    fun getContentPoToken(videoId: String): String? {
-        if (!PoTokenProviderImpl.isPotSupported) return null
+    fun getWebContentPoToken(videoId: String): String? {
+        if (!PoTokenProviderImpl.isWebPotSupported) return null
 
-        if (mNpPoToken?.videoId == videoId && !PoTokenProviderImpl.isExpired) {
-            return mNpPoToken?.playerRequestPoToken
+        if (mWebPoToken?.videoId == videoId && !PoTokenProviderImpl.isWebPotExpired) {
+            return mWebPoToken?.playerRequestPoToken
         }
 
-        mNpPoToken = PoTokenProviderImpl.getWebClientPoToken(videoId)
+        mWebPoToken = PoTokenProviderImpl.getWebClientPoToken(videoId)
 
-        return mNpPoToken?.playerRequestPoToken
+        return mWebPoToken?.playerRequestPoToken
     }
 
     @JvmStatic
-    fun getSessionPoToken(videoId: String): String? {
-        if (!PoTokenProviderImpl.isPotSupported) return null
+    fun getWebSessionPoToken(videoId: String): String? {
+        if (!PoTokenProviderImpl.isWebPotSupported) return null
 
-        if (mNpPoToken?.videoId == videoId) {
-            val streamingDataPoToken = mNpPoToken!!.streamingDataPoToken
+        if (mWebPoToken?.videoId == videoId) {
+            val streamingDataPoToken = mWebPoToken!!.streamingDataPoToken
             if (streamingDataPoToken != null) {
-                mNpPoToken = null
                 return streamingDataPoToken
             }
         }
 
-        mNpPoToken = PoTokenProviderImpl.getWebClientPoToken(videoId)
+        mWebPoToken = PoTokenProviderImpl.getWebClientPoToken(videoId)
 
-        if (mNpPoToken != null) {
-            val streamingDataPoToken = mNpPoToken!!.streamingDataPoToken
+        if (mWebPoToken != null) {
+            val streamingDataPoToken = mWebPoToken!!.streamingDataPoToken
             if (streamingDataPoToken != null) {
-                mNpPoToken = null
                 return streamingDataPoToken
             }
         }
@@ -47,23 +61,23 @@ internal object PoTokenGate {
 
     @JvmStatic
     fun updatePoToken() {
-        if (PoTokenProviderImpl.isPotSupported) {
+        if (PoTokenProviderImpl.isWebPotSupported) {
             //mNpPoToken = null // only refresh
-            mNpPoToken = PoTokenProviderImpl.getWebClientPoToken("") // refresh and preload
+            mWebPoToken = PoTokenProviderImpl.getWebClientPoToken("") // refresh and preload
         }
     }
 
     @JvmStatic
     fun getVisitorData(videoId: String): String? {
-        if (!PoTokenProviderImpl.isPotSupported) return null
+        if (!PoTokenProviderImpl.isWebPotSupported) return null
 
-        if (mNpPoToken?.videoId == videoId && !PoTokenProviderImpl.isExpired) {
-            return mNpPoToken?.visitorData
+        if (mWebPoToken?.videoId == videoId && !PoTokenProviderImpl.isWebPotExpired) {
+            return mWebPoToken?.visitorData
         }
 
-        mNpPoToken = PoTokenProviderImpl.getWebClientPoToken(videoId)
+        mWebPoToken = PoTokenProviderImpl.getWebClientPoToken(videoId)
 
-        return mNpPoToken?.visitorData
+        return mWebPoToken?.visitorData
     }
 
     @JvmStatic
@@ -72,8 +86,9 @@ internal object PoTokenGate {
             return false
         }
 
-        if (PoTokenProviderImpl.isPotSupported) {
-            mNpPoToken = null
+        if (PoTokenProviderImpl.isWebPotSupported) {
+            mWebPoToken = null
+            PoTokenProviderImpl.resetCache()
         }
 
         mCacheResetTimeMs = System.currentTimeMillis() + 60_000

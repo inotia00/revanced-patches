@@ -512,23 +512,20 @@ Jeśli jesteś użytkownikiem YouTube Premium, to ustawienie te nie jest koniecz
     <string name="revanced_spoof_streaming_data_default_client_title">Domyślny klient</string>
     <string name="revanced_spoof_streaming_data_default_client_summary">Definiuje domyślnego klienta do oszukiwania.</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_creator">Android Studio</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_no_sdk">Android (bez SDK)</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr">Android VR</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr_auth">Android VR z autoryzacją (wymaga akcji)</string>
     <string name="revanced_spoof_streaming_data_client_entry_mweb">Mobilny przeglądarkowy</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">TV (Stare)</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">Wbudowany TV</string>
     <string name="revanced_spoof_streaming_data_client_entry_visionos">visionOS</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">Użyj yt-dlp ejs (W fazie rozwoju)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary">"Gdy opcja jest włączona, \"Zewnętrzny JavaScript dla yt-dlp (yt-dlp-ejs)' będzie używany do odszyfrowywania URL strumieni na klientach TV i 'Mobilny przeglądarkowy'
-
-• JavaScript odtwarzacza do odszyfrowywania jest aktualizowany na bieżąco
-• film może się wczytywać od 5 do 15 sekund"</string>
     <string name="revanced_spoof_streaming_data_vr_auth_token_about_title">O Android VR z autoryzacją</string>
     <string name="revanced_spoof_streaming_data_vr_auth_token_about_summary">Kliknij, by zobaczyć jak uzyskać token uwierzytelniający.</string>
     <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_title">Uzyskaj token uwierzytelniający</string>
     <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_message">"By uzyskać token uwierzytelniający dla Android VR, należy zalogować się do YouTube VR za pomocą kodu aktywacyjnego:
 
-1. Kliknij `Uzyskaj token uwierzytelniający', by wygenerować kod aktywacyjny
+1. Kliknij 'Uzyskaj token uwierzytelniający', by wygenerować kod aktywacyjny
 2. Kliknij 'Otwórz stronę', aby przejść do 'https://yt.be/activate'
 3. Wprowadź kod aktywacyjny
 4. Zaloguj się, gdy pojawi się monit. Jeśli masz wiele kont Google, użyj tego, którego używasz w YouTube. Jeśli jesteś już zalogowany, przejdź do następnego kroku

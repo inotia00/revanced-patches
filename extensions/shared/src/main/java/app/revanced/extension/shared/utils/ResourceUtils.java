@@ -10,9 +10,12 @@ import android.view.animation.AnimationUtils;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import java.io.BufferedReader;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 
 import app.revanced.extension.shared.settings.Setting;
+import kotlin.io.TextStreamsKt;
 
 @SuppressWarnings({"unused", "deprecation", "DiscouragedApi"})
 public class ResourceUtils extends Utils {
@@ -190,7 +193,23 @@ public class ResourceUtils extends Utils {
         return getStringArray(setting, "_entry_values");
     }
 
-    public static InputStream openRawResource(@NonNull String str) {
+    public static String getRawResource(@NonNull String str) {
+        final InputStream is = openRawResource(str);
+        if (is != null) {
+            try {
+                InputStreamReader inputStream = new InputStreamReader(is);
+                BufferedReader reader = new BufferedReader(inputStream, 8192);
+                String readText = TextStreamsKt.readText(reader);
+                reader.close();
+                return readText;
+            } catch (Exception ignored) {
+                handleException(str, ResourceType.RAW);
+            }
+        }
+        return null;
+    }
+
+    private static InputStream openRawResource(@NonNull String str) {
         final int identifier = getRawIdentifier(str);
         if (identifier == 0) {
             handleException(str, ResourceType.RAW);

@@ -2,9 +2,6 @@ package app.revanced.extension.shared.innertube.utils;
 
 import static app.revanced.extension.shared.innertube.utils.DeviceHardwareSupport.hasAV1Decoder;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import com.google.protobuf.MessageLite;
 import com.google.protos.youtube.api.innertube.StreamingDataOuterClass;
 
@@ -12,9 +9,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
 import app.revanced.extension.shared.utils.Logger;
 
@@ -49,8 +44,7 @@ public class StreamingDataOuterClassUtils {
      * @param streamingData StreamingData (GeneratedMessage) parsed by ProtoParser.
      * @param arrayList     An ArrayList where formats are added, this is what is actually used for playback.
      *                      Since formats that are not in this ArrayList will not be used for playback, you can filter by not adding unwanted formats.
-     *                      See {@link #removeAV1Codecs(ArrayList)},
-     *                      and {@link #removeNonOriginalAudioTracks(ArrayList)} for examples.
+     *                      See {@link #removeAV1Codecs(ArrayList)} for examples.
      * @param isVideo       This method only distinguishes between video and audio formats.
      */
     public static void setAdaptiveFormats(StreamingDataOuterClass.StreamingData streamingData, ArrayList<Object> arrayList, boolean isVideo) {
@@ -199,97 +193,6 @@ public class StreamingDataOuterClassUtils {
         }
     }
 
-    /**
-     * Parse the original streaming data to get the AudioTracks.
-     */
-    @Nullable
-    public static Map<String, String> getAudioTrackMap(@NonNull StreamingDataOuterClass.StreamingData streamingData) {
-        try {
-            // Failed to cast.
-            if (!(streamingData instanceof MessageLite messageLite)) return null;
-            var parsedStreamingData = PlayerResponseOuterClass.StreamingData.parseFrom(messageLite.toByteArray());
-            // Failed to parse streamingData.
-            if (parsedStreamingData == null) return null;
-            int adaptiveFormatsCount = parsedStreamingData.getAdaptiveFormatsCount();
-
-            // AdaptiveFormats contains both video and audio codecs.
-            // If there are multiple audio tracks, the size of adaptiveFormats is usually large.
-            if (adaptiveFormatsCount < 5) return null;
-
-            // Check if the video contains audio tracks.
-            boolean hasAudioTrack = false;
-
-            // The first half of the index contains video formats, and the remaining half contains audio formats.
-            // For faster navigation, the search is performed in reverse order.
-            for (int i = adaptiveFormatsCount - 1; i > (adaptiveFormatsCount / 2); i--) {
-                var audioTrack = parsedStreamingData.getAdaptiveFormats(i).getAudioTrack();
-                // If an audio track is found, stop searching the list.
-                if (audioTrack != null) {
-                    hasAudioTrack = true;
-                    break;
-                }
-            }
-
-            // No audio track found.
-            if (!hasAudioTrack) return null;
-
-            Map<String, String> audioTrackMap = new LinkedHashMap<>(1);
-
-            // For faster navigation, the search is performed in reverse order.
-            for (int i = adaptiveFormatsCount - 1; i > 0; i--) {
-                var audioTrack = parsedStreamingData.getAdaptiveFormats(i).getAudioTrack();
-                if (audioTrack != null) {
-                    String id = audioTrack.getId();
-                    if (id == null || !id.contains(".")) continue;
-                    String displayName = audioTrack.getDisplayName();
-                    if (StringUtils.isEmpty(displayName)) continue;
-                    audioTrackMap.putIfAbsent(displayName, id);
-                }
-            }
-            return audioTrackMap;
-        } catch (Exception ex) {
-            Logger.printException(() -> "getAudioTrackMap failed", ex);
-        }
-
-        return null;
-    }
-
-    /**
-     * Remove non-original audioTracks from the arrayList.
-     *
-     * @param arrayList An ArrayList where formats are added.
-     */
-    public static void removeNonOriginalAudioTracks(ArrayList<Object> arrayList) {
-        try {
-            for (Object adaptiveFormat : arrayList) {
-                // 'audio/webm; codecs="opus"', 'audio/mp4; codecs="mp4a.40.2"', ...
-                // 'video/webm; codecs="vp9"', 'video/mp4; codecs="av01.0.00M.08.0.110.05.01.06.0"', ...
-                String mimeType = getMimeType(adaptiveFormat);
-
-                // mimeType starts with 'audio', which means it is a audio format.
-                boolean isAudioType = StringUtils.startsWith(mimeType, "audio");
-
-                if (isAudioType) {
-                    Field audioTrackField = adaptiveFormat.getClass().getField(FormatFields.audioTrack);
-                    audioTrackField.setAccessible(true);
-                    Object audioTrack = audioTrackField.get(adaptiveFormat);
-                    if (audioTrack != null) { // AudioTrack field exists.
-                        Field audioIsDefaultField = audioTrack.getClass().getField(AudioTrackFields.audioIsDefault);
-                        audioIsDefaultField.setAccessible(true);
-                        if (audioIsDefaultField.get(audioTrack) instanceof Boolean audioIsDefault) {
-                            if (!audioIsDefault) { // This is not the original audio track.
-                                // Remove formats.
-                                arrayList.remove(adaptiveFormat);
-                            }
-                        }
-                    }
-                }
-            }
-        } catch (Exception ex) {
-            Logger.printException(() -> "removeNonOriginalAudioTracks failed", ex);
-        }
-    }
-
     public static void setServerAbrStreamingUrl(StreamingDataOuterClass.StreamingData streamingData, String url) {
         try {
             if (streamingData != null) {
@@ -375,7 +278,6 @@ public class StreamingDataOuterClassUtils {
 
     /**
      * Field access via reflection will be replaced by Protobuf.MessageParser in the future.
-     * See {@link #getAudioTrackMap(StreamingDataOuterClass.StreamingData)}.
      */
     @Deprecated
     private interface StreamingDataFields {

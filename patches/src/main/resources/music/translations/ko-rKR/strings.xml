@@ -170,7 +170,7 @@
     <string name="revanced_disable_auto_audio_tracks_title">강제된 자동 오디오 트랙 비활성화</string>
     <string name="revanced_disable_auto_audio_tracks_summary">"팟캐스트를 위한 강제 사용이 설정된 자동 오디오 트랙을 비활성화합니다.
 
-제한 사항: '스트리밍 데이터 변경'이 활성화되어 있고 기본 클라이언트가 'Android VR 인증'인 경우에는 작동하지 않을 수 있습니다."</string>
+제한 사항: '스트리밍 데이터 변경'이 활성화되어 있고 기본 클라이언트가 'Android VR 인증 있음'인 경우에는 작동하지 않을 수 있습니다."</string>
     <string name="revanced_disable_auto_captions_title">강제된 자동 자막 비활성화</string>
     <string name="revanced_disable_auto_captions_summary">자동 자막이 강제로 활성화되지 않도록 설정합니다.</string>
     <string name="revanced_enable_landscape_mode_title">가로 모드 활성화</string>
@@ -486,7 +486,7 @@ API Key를 발급받는 방법을 보려면 여기를 탭하세요."</string>
     <string name="revanced_change_share_sheet_title">공유 시트 변경</string>
     <string name="revanced_change_share_sheet_summary">기본 공유 시트에서 시스템 공유 시트로 변경합니다.</string>
     <string name="revanced_disable_music_video_in_album_title">앨범에서 뮤직 비디오 비활성화</string>
-    <string name="revanced_disable_music_video_in_album_summary">"프리미엄이 아닌 사용자가 앨범에 포함된 노래를 재생할 때, 간혹 정식 음원 대신 뮤직 비디오가 재생되는 경우가 있습니다.
+    <string name="revanced_disable_music_video_in_album_summary">"Premium이 아닌 사용자가 앨범에 포함된 노래를 재생할 때, 간혹 정식 음원 대신 뮤직 비디오가 재생되는 경우가 있습니다.
 
 앨범에서 뮤직 비디오가 재생되는 것이 감지되면 정식 음원을 찾아줍니다.
 
@@ -514,18 +514,15 @@ YouTube Premium 사용자라면 이 설정은 필요하지 않을 수 있습니�
     <string name="revanced_spoof_streaming_data_default_client_title">기본 클라이언트</string>
     <string name="revanced_spoof_streaming_data_default_client_summary">클라이언트를 변경하기 위한 기본 클라이언트를 정의할 수 있습니다.</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_creator">Android Studio</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_no_sdk">Android SDK 없음</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr">Android VR</string>
-    <string name="revanced_spoof_streaming_data_client_entry_android_vr_auth">Android VR 인증 (작업이 필요함)</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_vr_auth">Android VR 인증 있음 (작업이 필요함)</string>
     <string name="revanced_spoof_streaming_data_client_entry_mweb">Mobile Web</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">TV Legacy</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">TV Embedded</string>
     <string name="revanced_spoof_streaming_data_client_entry_visionos">visionOS</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">yt-dlp ejs 사용 (개발 중)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary">"이 기능을 활성화하면, ‘yt-dlp를 위한 외부 JavaScript (yt-dlp-ejs)'가 'TV’ 및 'Mobile Web'에서 스트리밍 URL의 복호화하는 데 사용됩니다.
-
-• 복호화를 위한 플레이어 JavaScript는 최신 상태로 유지됩니다.
-• 동영상 재생 시작까지 5~15초가 소요될 수 있습니다."</string>
-    <string name="revanced_spoof_streaming_data_vr_auth_token_about_title">Android VR 인증에 대한 정보</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_about_title">Android VR 인증 있음에 대한 정보</string>
     <string name="revanced_spoof_streaming_data_vr_auth_token_about_summary">인증 토큰을 받는 방법을 보려면 여기를 탭하세요.</string>
     <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_title">인증 토큰 받기</string>
     <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_message">"Android VR을 위한 인증 토큰을 받으려면 활성화 코드를 사용하여 YouTube VR에 로그인해야 합니다:
@@ -534,7 +531,7 @@ YouTube Premium 사용자라면 이 설정은 필요하지 않을 수 있습니�
 2. '웹사이트 열기'를 탭하여 'https://yt.be/activate'로 이동합니다.
 3. 활성화 코드를 입력합니다.
 4. 로그인을 요청하면 로그인합니다. 여러 Google 계정이 있는 경우에는 YouTube에서 사용하는 계정을 선택합니다. 이미 로그인된 상태라면 다음 단계로 건너뜁니다.
-5. 로그인 후에 RVX로 돌아가서 'Android VR 인증에 대한 정보'를 다시 탭합니다.
+5. 로그인 후에 RVX로 돌아가서 'Android VR 인증 있음에 대한 정보'를 다시 탭합니다.
 6. '인증 토큰 받기'를 탭하여 인증 토큰을 받습니다.
 
 ※ 인증 토큰 또는 활성화 코드를 삭제하려면 '초기화'를 탭하세요."</string>
@@ -550,7 +547,7 @@ YouTube Premium 사용자라면 이 설정은 필요하지 않을 수 있습니�
 1. '웹사이트 열기'를 탭하여 'https://yt.be/activate'로 이동합니다.
 2. 활성화 코드를 입력합니다.
 3. 로그인을 요청하면 로그인합니다. 여러 Google 계정이 있는 경우에는 YouTube에서 사용하는 계정을 선택합니다. 이미 로그인된 상태라면 다음 단계로 건너뜁니다.
-4. 로그인 후에 RVX로 돌아가서 'Android VR 인증에 대한 정보'를 다시 탭합니다.
+4. 로그인 후에 RVX로 돌아가서 'Android VR 인증 있음에 대한 정보'를 다시 탭합니다.
 5. '인증 토큰 받기'를 탭하여 인증 토큰을 받습니다."</string>
     <string name="revanced_spoof_streaming_data_vr_activation_code_dialog_open_website_text">웹사이트 열기</string>
     <string name="revanced_spoof_streaming_data_vr_activation_code_toast_copy">활성화 코드를 클립보드에 복사하였습니다: %s.</string>

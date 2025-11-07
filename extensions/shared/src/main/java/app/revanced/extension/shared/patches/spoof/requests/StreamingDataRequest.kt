@@ -123,9 +123,6 @@ class StreamingDataRequest private constructor(
             )
         private var lastSpoofedClient: ClientType? = null
 
-        // When this value is not empty, it is used as the preferred language when creating the RequestBody.
-        private var overrideLanguage: String = ""
-
         @GuardedBy("itself")
         val cache: MutableMap<String, StreamingDataRequest> = Collections.synchronizedMap(
             object : LinkedHashMap<String, StreamingDataRequest>(100) {
@@ -139,17 +136,6 @@ class StreamingDataRequest private constructor(
         @JvmStatic
         val lastSpoofedClientName: String
             get() = lastSpoofedClient?.friendlyName ?: "Unknown"
-
-        @JvmStatic
-        val lastSpoofedClientHasSingleAudioTrack: Boolean
-            get() = lastSpoofedClient?.let {
-                !it.supportsCookies && !it.supportsMultiAudioTracks
-            } ?: false
-
-        @JvmStatic
-        fun overrideLanguage(language: String) {
-            overrideLanguage = language
-        }
 
         @JvmStatic
         fun fetchRequest(
@@ -276,7 +262,7 @@ class StreamingDataRequest private constructor(
                     val deobfuscatedAdaptiveFormatsArrayList: ArrayList<String> =
                         ArrayList(adaptiveFormatsCount)
                     val sessionPoToken = if (clientType.requirePoToken)
-                        PoTokenGate.getSessionPoToken(videoId)
+                        PoTokenGate.getWebSessionPoToken(videoId)
                     else
                         null
 
@@ -391,7 +377,6 @@ class StreamingDataRequest private constructor(
                         clientType = clientType,
                         videoId = videoId,
                         cpn = cpn,
-                        language = overrideLanguage,
                         isGVS = true,
                         isInlinePlayback = SPOOF_STREAMING_DATA_USE_JS_BYPASS_FAKE_BUFFERING,
                     )
@@ -399,7 +384,6 @@ class StreamingDataRequest private constructor(
                     createApplicationRequestBody(
                         clientType = clientType,
                         videoId = videoId,
-                        language = overrideLanguage
                     )
                 }
 
@@ -460,18 +444,6 @@ class StreamingDataRequest private constructor(
                 if (clientType.requireJS && reasonSkipped.isNotEmpty()) {
                     Logger.printDebug { "Skipped javascript required client (reasonSkipped: $reasonSkipped, clientType: $clientType, videoId: $videoId)" }
                     continue
-                }
-                if (!clientType.supportsCookies
-                    && !clientType.supportsMultiAudioTracks
-                    && BaseSettings.DISABLE_AUTO_AUDIO_TRACKS.get()
-                    && overrideLanguage.isEmpty()
-                ) {
-                    // If client spoofing does not use authentication and lacks multi-audio streams,
-                    // then can use any language code for the request and if that requested language is
-                    // not available YT uses the original audio language. Authenticated requests ignore
-                    // the language code and always use the account language. Use a language that is
-                    // not auto-dubbed by YouTube: https://support.google.com/youtube/answer/15569972
-                    overrideLanguage = "nb" // Norwegian Bokmal.
                 }
 
                 val connection = send(
@@ -559,12 +531,10 @@ class StreamingDataRequest private constructor(
                                                         }
 
                                                         lastSpoofedClient = clientType
-                                                        overrideLanguage = ""
                                                         return streamingData
                                                     }
                                                 } else {
                                                     lastSpoofedClient = clientType
-                                                    overrideLanguage = ""
                                                     return streamingData
                                                 }
                                             } else {
@@ -585,8 +555,6 @@ class StreamingDataRequest private constructor(
                     }
                 }
             }
-
-            overrideLanguage = ""
 
             handleConnectionError(
                 str("revanced_spoof_streaming_data_failed_forbidden"),

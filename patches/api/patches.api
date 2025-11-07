@@ -653,8 +653,6 @@ public final class app/revanced/patches/shared/spoof/streamingdata/FingerprintsK
 }
 
 public final class app/revanced/patches/shared/spoof/streamingdata/SpoofStreamingDataPatchKt {
-	public static final field EXTENSION_AUTO_TRACK_BUTTON_CLASS_DESCRIPTOR Ljava/lang/String;
-	public static final field EXTENSION_AUTO_TRACK_CLASS_DESCRIPTOR Ljava/lang/String;
 	public static final field EXTENSION_CLASS_DESCRIPTOR Ljava/lang/String;
 	public static final field EXTENSION_RELOAD_VIDEO_BUTTON_CLASS_DESCRIPTOR Ljava/lang/String;
 	public static final field EXTENSION_RELOAD_VIDEO_CLASS_DESCRIPTOR Ljava/lang/String;

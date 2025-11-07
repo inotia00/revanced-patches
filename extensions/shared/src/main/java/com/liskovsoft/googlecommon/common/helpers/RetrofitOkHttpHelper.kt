@@ -83,7 +83,7 @@ internal object RetrofitOkHttpHelper {
                 val doSkipAuth = authSkipList.remove(request)
 
                 // Empty Home fix (anonymous user) and improve Recommendations for everyone
-                headers["X-Goog-Visitor-Id"] ?: ThrottlingParameterUtils.getVisitorId(false)
+                headers["X-Goog-Visitor-Id"] ?: ThrottlingParameterUtils.getVisitorId()
                     ?.let { requestBuilder.header("X-Goog-Visitor-Id", it) }
 
                 if (doSkipAuth) // visitor generation fix

@@ -560,7 +560,7 @@
 此功能可能對某些使用者無效，如果您無法使用此功能：
 1. 前往設定  - RVX - 雜項 - 偽裝串流資料，然後開啟 '使用 JavaScript 用戶端'。
 2. 前往設定 - RVX - 雜項 - 偽裝串流資料，並將 '預設客戶端' 變更為 'TV' 或 'TV Simply'。"</string>
-    <string name="revanced_disable_auto_audio_tracks_summary_off">強制自動音軌已啟用</string>
+    <string name="revanced_disable_auto_audio_tracks_summary_off">"強制自動音軌已啟用"</string>
     <string name="revanced_disable_auto_captions_title">停用強制顯示字幕</string>
     <string name="revanced_disable_auto_captions_summary_on">強制顯示字幕已停用</string>
     <string name="revanced_disable_auto_captions_summary_off">強制顯示字幕已啟用</string>
@@ -583,7 +583,9 @@
     <string name="revanced_remove_viewer_discretion_dialog_summary">"移除觀眾酌情觀看對話方塊。
 這項選項不會繞過年齡限制，它只會自動接受。"</string>
     <string name="revanced_change_live_ring_click_action_title">變更點擊直播狀態頻道圖示的動作</string>
-    <string name="revanced_change_live_ring_click_action_summary_on">"點擊直播按鈕 頻道將會開啟。"</string>
+    <string name="revanced_change_live_ring_click_action_summary_on">"點擊直播環即可開啟頻道。
+
+限制：由於「在一般播放器中開啟短影音」設定，在一般播放器中開啟短影音直播時，頻道無法開啟。"</string>
     <string name="revanced_change_live_ring_click_action_summary_off">點擊直播按鈕 直播將會開啟。</string>
     <string name="revanced_change_form_factor_title">版面配置形式</string>
     <string name="revanced_change_form_factor_entry_1">預設</string>
@@ -957,7 +959,7 @@
     <string name="revanced_disable_auto_switch_mix_playlists_summary_off">"自動播放開啟時會啟用自動切換混合播放清單。
 
 可以在 YouTube 設定中變更自動播放：
-設定 → 自動播放 → 自動播放下一個影片"</string>
+設定 → 自動播放 / 播放 → 自動播放下一個影片"</string>
     <string name="revanced_disable_auto_switch_mix_playlists_user_dialog_message">啟用此功能將禁止在自動播放開啟時播放音樂時自動切換到 YouTube Mix。</string>
     <string name="revanced_disable_chapter_skip_double_tap_title">停用雙擊跳轉章節</string>
     <string name="revanced_disable_chapter_skip_double_tap_summary_on">雙擊將永遠不會觸發跳轉至下一章或上一章。</string>
@@ -1007,12 +1009,20 @@
     <string name="revanced_hide_medical_panel_title">隱藏醫療資訊</string>
     <string name="revanced_hide_medical_panel_summary_on">醫療面板已隱藏</string>
     <string name="revanced_hide_medical_panel_summary_off">醫療面板已顯示</string>
-    <string name="revanced_hide_seek_message_title">隱藏進度條訊息</string>
-    <string name="revanced_hide_seek_message_summary_on">"進度條訊息已隱藏"</string>
-    <string name="revanced_hide_seek_message_summary_off">"進度條訊息已顯示"</string>
+    <string name="revanced_hide_seek_message_title">隱藏搜尋訊息 (已棄用)</string>
+    <string name="revanced_hide_seek_message_summary_on">"進度條訊息已隱藏。
+
+資訊:
+• 此設定在伺服器上似乎已棄用。
+• 請改用「隱藏投影片疊加層」或「隱藏搜尋撤銷訊息」。"</string>
+    <string name="revanced_hide_seek_message_summary_off">"尋找訊息已顯示。
+
+資訊:
+• 此設定在伺服器上似乎已棄用。
+• 請改用「隱藏投影片疊加層」或「隱藏搜尋撤銷訊息」。"</string>
     <string name="revanced_hide_seek_undo_message_title">隱藏進度條跳轉撤銷訊息</string>
-    <string name="revanced_hide_seek_undo_message_summary_on">進度條撤銷訊息已隱藏</string>
-    <string name="revanced_hide_seek_undo_message_summary_off">進度條跳轉撤銷訊息已顯示</string>
+    <string name="revanced_hide_seek_undo_message_summary_on">尋找復原訊息已隱藏。</string>
+    <string name="revanced_hide_seek_undo_message_summary_off">尋找復原訊息已顯示。</string>
     <string name="revanced_hide_suggested_actions_title">隱藏操作建議</string>
     <string name="revanced_hide_suggested_actions_summary_on">操作建議已隱藏</string>
     <string name="revanced_hide_suggested_actions_summary_off">操作建議已顯示</string>
@@ -1328,11 +1338,11 @@
     <string name="revanced_disable_haptic_feedback_scrubbing_summary_on">觸覺反饋已停用。</string>
     <string name="revanced_disable_haptic_feedback_scrubbing_summary_off">觸覺反饋已啟用。</string>
     <string name="revanced_disable_haptic_feedback_seek_title">停用進度觸感反饋</string>
-    <string name="revanced_disable_haptic_feedback_seek_summary_on">進度觸覺反饋已停用</string>
-    <string name="revanced_disable_haptic_feedback_seek_summary_off">進度觸覺反饋已啟用</string>
+    <string name="revanced_disable_haptic_feedback_seek_summary_on">進度觸覺反饋已停用。</string>
+    <string name="revanced_disable_haptic_feedback_seek_summary_off">進度觸覺反饋已啟用。</string>
     <string name="revanced_disable_haptic_feedback_seek_undo_title">停用進度條跳轉撤銷的震動反饋</string>
-    <string name="revanced_disable_haptic_feedback_seek_undo_summary_on">進度條跳轉撤銷的震動反饋已停用</string>
-    <string name="revanced_disable_haptic_feedback_seek_undo_summary_off">進度條跳轉撤銷的震動反饋已啟用</string>
+    <string name="revanced_disable_haptic_feedback_seek_undo_summary_on">進度條跳轉撤銷的震動反饋已停用。</string>
+    <string name="revanced_disable_haptic_feedback_seek_undo_summary_off">進度條跳轉撤銷的震動反饋已啟用。</string>
     <string name="revanced_disable_haptic_feedback_zoom_title">停用縮放觸覺反饋</string>
     <string name="revanced_disable_haptic_feedback_zoom_summary_on">縮放觸覺反饋已停用</string>
     <string name="revanced_disable_haptic_feedback_zoom_summary_off">縮放觸覺反饋已啟用</string>
@@ -1512,11 +1522,11 @@
     <string name="revanced_hide_seekbar_chapter_label_summary_on">時間戳旁邊的章節標籤已隱藏。</string>
     <string name="revanced_hide_seekbar_chapter_label_summary_off">時間戳旁邊的章節標籤已隱藏。</string>
     <string name="revanced_hide_seekbar_title">隱藏影片播放器進度條</string>
-    <string name="revanced_hide_seekbar_summary_on">影片播放器進度條已隱藏</string>
-    <string name="revanced_hide_seekbar_summary_off">影片播放器進度條已顯示</string>
+    <string name="revanced_hide_seekbar_summary_on">影片播放器進度條已隱藏。</string>
+    <string name="revanced_hide_seekbar_summary_off">影片播放器進度條已顯示。</string>
     <string name="revanced_hide_seekbar_thumbnail_title">隱藏進度條縮略圖預覽</string>
-    <string name="revanced_hide_seekbar_thumbnail_summary_on">進度條縮略圖預覽已隱藏</string>
-    <string name="revanced_hide_seekbar_thumbnail_summary_off">進度條縮略圖預覽已顯示</string>
+    <string name="revanced_hide_seekbar_thumbnail_summary_on">進度條縮略圖預覽已隱藏。</string>
+    <string name="revanced_hide_seekbar_thumbnail_summary_off">進度條縮略圖預覽已顯示。</string>
     <string name="revanced_hide_time_stamp_title">隱藏時間戳</string>
     <string name="revanced_hide_time_stamp_summary_on">時間戳已隱藏</string>
     <string name="revanced_hide_time_stamp_summary_off">時間戳已顯示</string>
@@ -1876,6 +1886,11 @@
     <string name="revanced_enable_swipe_to_switch_video_title">啟用滑動切換影片</string>
     <string name="revanced_enable_swipe_to_switch_video_summary_on">在全螢幕模式下向上 / 向下滑動將切換到下一個 / 上一個影片。</string>
     <string name="revanced_enable_swipe_to_switch_video_summary_off">在全螢幕模式下向上 / 向下滑動不會切換到下一個 / 上一個影片。</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_title">調整滑動操作中點擊及長按的速度</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_summary_on">"點擊並長按的速度僅在用戶點擊並長按時啟動。
+
+已知問題：有時在切換到全螢幕模式之前會出現滑動疊加層。"</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_summary_off">有時在用戶並未點擊長按時，點擊長按的速度功能也可能會被觸發。</string>
     <string name="revanced_swipe_lowest_value_auto_brightness_overlay_text">自動</string>
     <!-- PreferenceScreen: Video -->
     <string name="revanced_preference_screen_video_title">影片</string>
@@ -2332,8 +2347,12 @@
     <string name="revanced_spoof_streaming_data_default_client_title">預設用戶端</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_creator">"Android Studio
 <small>(需要登入)</small>"</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_no_sdk">"Android
+<small>(無 SDK)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr">"Android VR
 <small>(無需驗證)</small>"</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_vr_auth">"Android VR
+<small>(驗證, 需要操作)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_ipados">"iPadOS
 <small>(已過期, 無需驗證)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_mweb">"行動網路
@@ -2348,16 +2367,22 @@
 <small>(未發布, 無需驗證)</small>"</string>
     <string name="revanced_spoof_streaming_data_side_effects_title">從觀看紀錄中隱藏。
 可能影響：你分頁中的觀看紀錄可能會一併被隱藏。</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_creator">"• 缺少音軌選單。
+    <string name="revanced_spoof_streaming_data_side_effects_android_creator">"• 音軌選單已消失。
+• 無法停用強制自動音軌。
 • 無法穩定音量。
 • 登出登入或隱身模式下可能無法播放兒童影片。
 • 不支援 1080p+, AV1 和 HDR。"</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• 缺少音軌選單。
+    <string name="revanced_spoof_streaming_data_side_effects_android_no_sdk">• 影片可能在 1:00 處停止，或在某些地區可能無法觀看。</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• 音軌選單已消失。
 • 無法穩定音量。
 • 登出登入或處於隱身模式時，兒童影片可能無法播放。"</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_vr_auth">"• 音軌選單已消失。
+• 無法停用強制自動音軌。
+• 無法穩定音量。
+• 登出登入或隱身模式下可能無法播放兒童影片。"</string>
     <string name="revanced_spoof_streaming_data_side_effects_ipados">"• AV1 不支援。
 • 影片可能會在 1:00 處停止，或在某些地區可能無法觀看。 "</string>
-    <string name="revanced_spoof_streaming_data_side_effects_mweb">"• 缺少音軌選單。
+    <string name="revanced_spoof_streaming_data_side_effects_mweb">"• 音軌選單已消失。
 • 無法停用強制自動音軌。
 • 如果解碼去混淆失敗，播放可能會失敗。
 • 有時影片即使播放 10 秒後也無法播放，在這種情況下，您需要點擊重新載入影片按鈕。
@@ -2369,7 +2394,7 @@
 • 某些帳號可能需要 PoToken，在這種情況下播放將會失敗。
 • 有時影片即使播放 10 秒後也無法播放，在這種情況下，您需要點擊重新載入影片按鈕。
 • 影片可能會延遲開始。"</string>
-    <string name="revanced_spoof_streaming_data_side_effects_visionos">"• 缺少音軌選單。
+    <string name="revanced_spoof_streaming_data_side_effects_visionos">"• 音軌選單已消失。
 • 在登出或隱身模式下，兒童影片可能無法播放。
 • 由於這是尚未發布的客戶端, 它可能隨時停止運作。"</string>
     <string name="revanced_spoof_streaming_data_side_effects_unknown">• 未知</string>
@@ -2420,23 +2445,43 @@
     <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">您可能尚未登入。</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: Android VR -->
     <string name="revanced_preference_category_android_vr">Android VR</string>
-    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: No Auth -->
-    <string name="revanced_preference_category_no_auth">無需驗證</string>
-    <string name="revanced_spoof_streaming_data_no_auth_language_title">預設音訊串流語言</string>
-    <string name="revanced_spoof_streaming_data_no_auth_language_not_available">若要選擇特定的音訊串流語言，請關閉 \'停用強制自動音軌\'。</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_title">顯示音軌按鈕</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_summary_on">"當用於取得串流資料的用戶端是 'Android VR', '行動網路' 或 'visionOS' 時，會顯示音軌按鈕。"</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_summary_off">未顯示音軌按鈕。</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_user_dialog_message">"使用前提：
-• 用來取得串流資料的用戶端是 'Android VR', '行動網路' 或 'visionOS'。
-• 正在播放包含多個音軌的影片。
+    <string name="revanced_spoof_streaming_data_vr_enable_av1_title">啟用 VR AV1</string>
+    <string name="revanced_spoof_streaming_data_vr_enable_av1_summary_on">"影片編解碼器為 AVC (H.264) 或 VP9 或 AV1。
 
-已知問題：
-• 如果在 YouTube 設定中變更了應用程式語言, 且未重新啟動應用, 則音軌對話方塊中使用的語言可能不會變更。
-• 有時在音軌對話框中選擇的語言是錯誤的。
-• 某些音軌, 例如 '英語描述' 支援。
+播放可能會出現卡頓或丟幀的情況。"</string>
+    <string name="revanced_spoof_streaming_data_vr_enable_av1_summary_off">影片編解碼器為 AVC (H.264) 或 VP9。</string>
+    <string name="revanced_spoof_streaming_data_vr_enable_av1_user_dialog_message">"啟用此設定可能會使用軟體 AV1 解碼。
 
-此功能仍在開發中, 因此可能隨時因伺服器端變更而中斷。"</string>
+播放可能會出現卡頓或丟幀。"</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_about_title">關於 Android VR 驗證</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_about_summary">點擊查看如何取得身份驗證令牌。</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_title">取得授權令牌</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_message">"若要取得 Android VR 的授權令牌，您需要使用啟動碼登入 YouTube VR：
+
+1. 點選「取得啟動碼」產生啟動碼。
+2. 點選「開啟網站」前往「https://yt.be/activate」。
+3. 輸入啟動碼。
+4. 出現提示時登入。如果您有多個 Google 帳戶，請選擇您用於 YouTube 的帳戶。如果您已登錄，請跳至下一步。
+5. 登入後，返回 RVX 並再次點擊「關於 Android VR 授權」。
+6. 點選「取得授權令牌」以取得授權令牌。
+
+※ 點選「重置」可移除身份驗證令牌或啟動碼。"</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_get_activation_code_text">取得啟動碼</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_get_authorization_token_text">取得授權令牌</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_reset_text">重置</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_toast_reset">身份驗證令牌和啟動碼重置。</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_toast_success">身份驗證令牌已儲存。</string>
+    <string name="revanced_spoof_streaming_data_vr_activation_code_dialog_title">啟動碼</string>
+    <string name="revanced_spoof_streaming_data_vr_activation_code_dialog_message">"啟動碼：
+%s
+
+1. 點選「開啟網站」前往「https://yt.be/activate」。
+2. 輸入啟動碼。
+3. 出現提示時登入。如果您有多個 Google 帳戶，請選擇您用於 YouTube 的帳戶。如果您已登錄，請跳至下一步。
+4. 登入後，返回 RVX 並再次點擊「關於 Android VR 驗證」。
+5. 點選「取得授權令牌」以取得授權令牌。"</string>
+    <string name="revanced_spoof_streaming_data_vr_activation_code_dialog_open_website_text">打開網站</string>
+    <string name="revanced_spoof_streaming_data_vr_activation_code_toast_copy">啟動碼已複製到剪貼簿: %s。</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: JavaScript -->
     <string name="revanced_preference_category_js">JavaScript(開發中)</string>
     <string name="revanced_spoof_streaming_data_use_js_title">使用 JavaScript 用戶端</string>
@@ -2456,20 +2501,6 @@ YouTube 伺服器上的 n-sig 模式變化頻繁，如果正規表示式無法�
 • 動態中自動播放
 • 短片
 • Shorts 短片"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">使用 yt-dlp ejs (開發中)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_on">"yt-dlp 使用外部 JavaScript (yt-dlp-ejs)。
-
-• 用於去混淆的播放器 JavaScript 保持最新。
-• 影片啟動可能需要 5 到 15 秒。"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_off">"SmartTube 提取器已使用。
-
-• 用於反混淆的播放器 JavaScript 未更新。
-• 伺服器將在不久的將來棄用此功能。"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_user_dialog_message">"由於 YouTube 的新措施，最新播放器 JavaScript 中已無法使用常規方法解密串流 URL。
-
-yt-dlp 的外部 JavaScript (yt-dlp-ejs) 用於在最新播放器 JavaScript 中解密串流媒體 URL。
-
-該 JavaScript 目前正在開發中，將佔用更多硬體資源。"</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_title">繞過虛假緩衝</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_summary_on">"繞過虛假緩衝已啟用。
 

@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Shared -->
+    <string name="revanced_settings_title">RVX</string>
+    <string name="revanced_settings_search_title">搜索 %s</string>
+    <string name="revanced_reset_to_default_toast">重置为默认值。</string>
     <!-- Shared Category -->
+    <string name="revanced_restart_first_run">重启即可正常加载布局</string>
+    <string name="revanced_restart_message">刷新并重启</string>
+    <string name="revanced_settings_search_hint">搜索设置</string>
+    <string name="revanced_settings_search_no_results_title">未找到“%s”的结果。</string>
+    <string name="revanced_settings_search_no_results_summary">请尝试其他关键字。</string>
+    <string name="revanced_settings_search_recent_searches">近期搜索</string>
+    <string name="revanced_settings_search_remove_message">从搜索历史记录中移除？</string>
+    <string name="revanced_settings_search_clear_history">清空搜索历史记录</string>
+    <string name="revanced_settings_search_clear_history_message">你确定要清空所有搜索历史记录吗？</string>
+    <string name="revanced_settings_search_tips_title">搜索提示</string>
+    <string name="revanced_settings_search_tips_summary">"• 点击路径即可导航至该路径。
+• 长按某设置即可导航至该设置。
+• 按 Enter 键可将搜索查询保存到历史记录。
+• 搜索会忽略大小写和标点符号。
+• 父级设置显示在已禁用的子级设置上方。"</string>
+    <string name="revanced_settings_search_empty_history_title">搜索历史记录为空</string>
+    <string name="revanced_settings_search_empty_history_summary">要保存搜索历史记录，请键入搜索查询并按 Enter 键。</string>
+    <string name="revanced_settings_search_history_title">显示设置搜索历史记录</string>
+    <string name="revanced_settings_search_history_summary_on">显示设置搜索历史记录。</string>
+    <string name="revanced_settings_search_history_summary_off">不显示设置搜索历史记录。</string>
     <!-- PreferenceScreen: Account -->
     <string name="revanced_preference_screen_account_title">账号</string>
     <string name="revanced_hide_account_menu_title">隐藏账户菜单</string>
@@ -160,6 +183,7 @@
     <string name="revanced_hide_playlist_card_shelf_summary">隐藏订阅中的播放列表卡片</string>
     <string name="revanced_hide_samples_shelf_title">隐藏样品栏</string>
     <string name="revanced_hide_samples_shelf_summary">隐藏订阅中的样品栏</string>
+    <string name="revanced_hide_search_button_title">隐藏搜索按钮</string>
     <string name="revanced_hide_sound_search_button_title">隐藏音频搜索按钮</string>
     <string name="revanced_hide_sound_search_button_summary">隐藏搜索栏中的音频搜索按钮</string>
     <string name="revanced_hide_tap_to_update_button_title">隐藏点击以更新按钮</string>

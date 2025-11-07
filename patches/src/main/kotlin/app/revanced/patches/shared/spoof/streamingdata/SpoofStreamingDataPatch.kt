@@ -76,10 +76,6 @@ const val EXTENSION_STREAMING_DATA_INTERFACE =
 
 const val EXTENSION_YOUTUBE_SPOOF_PATH =
     app.revanced.patches.youtube.utils.extension.Constants.SPOOF_PATH
-const val EXTENSION_AUTO_TRACK_CLASS_DESCRIPTOR =
-    "$EXTENSION_YOUTUBE_SPOOF_PATH/AudioTrackPatch;"
-const val EXTENSION_AUTO_TRACK_BUTTON_CLASS_DESCRIPTOR =
-    "$EXTENSION_YOUTUBE_SPOOF_PATH/ui/AudioTrackButton;"
 const val EXTENSION_RELOAD_VIDEO_CLASS_DESCRIPTOR =
     "$EXTENSION_YOUTUBE_SPOOF_PATH/ReloadVideoPatch;"
 const val EXTENSION_RELOAD_VIDEO_BUTTON_CLASS_DESCRIPTOR =
@@ -196,14 +192,6 @@ fun spoofStreamingDataPatch(
                         getInstruction(getVideoDetailsFallbackIndex).getReference<FieldReference>()!!
                     val freeRegister = implementation!!.registerCount - parameters.size - 2
 
-                    val audioTrackSmaliInstruction = if (isYouTube()) {
-                        """
-                            invoke-static { v$freeRegister, v$setStreamingDataRegister }, $EXTENSION_AUTO_TRACK_CLASS_DESCRIPTOR->newVideoStarted(Ljava/lang/String;${STREAMING_DATA_OUTER_CLASS})V
-                        """
-                    } else {
-                        ""
-                    }
-
                     addInstructionsAtControlFlowLabel(
                         setStreamingDataIndex, """
                             iget-object v$freeRegister, p1, $getVideoDetailsField
@@ -211,7 +199,6 @@ fun spoofStreamingDataPatch(
                             sget-object v$freeRegister, $getVideoDetailsFallbackField
                             :ignore
                             iget-object v$freeRegister, v$freeRegister, ${getVideoDetailsField.type}->c:Ljava/lang/String;
-                            """ + audioTrackSmaliInstruction + """
                             invoke-direct { p0, v$setStreamingDataRegister, v$freeRegister }, $resultMethodType->$setStreamDataMethodName(${STREAMING_DATA_OUTER_CLASS}Ljava/lang/String;)$STREAMING_DATA_OUTER_CLASS
                             move-result-object v$setStreamingDataRegister
                             """
@@ -512,8 +499,8 @@ fun spoofStreamingDataPatch(
                     "raw",
                     "po_token.html",
                     // External JavaScript for yt-dlp: https://github.com/yt-dlp/ejs
-                    "astring.bundle.min.js",
-                    "meriyah.bundle.min.js",
+                    "astring-1.9.0.min.js",
+                    "meriyah-6.1.4.min.js",
                     "polyfill.js",
                     "yt.solver.core.js",
                 )
@@ -550,7 +537,6 @@ fun spoofStreamingDataPatch(
             arrayOf(
                 ResourceGroup(
                     "drawable",
-                    "revanced_audio_track.xml",
                     "revanced_reload_video.xml",
                 )
             ).forEach { resourceGroup ->

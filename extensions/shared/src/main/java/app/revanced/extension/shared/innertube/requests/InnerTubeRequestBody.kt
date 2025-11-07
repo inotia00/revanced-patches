@@ -37,10 +37,15 @@ object InnerTubeRequestBody {
      */
     private const val CONNECTION_TIMEOUT_MILLISECONDS = 10 * 1000 // 10 Seconds.
 
-    private val LOCALE: Locale = Utils.getContext().resources
-        .configuration.locale
-    private val LOCALE_COUNTRY: String = LOCALE.country
-    private val LOCALE_LANGUAGE: String = LOCALE.language
+    private val LOCALE: Locale by lazy {
+        Utils.getContext().resources.configuration.locale
+    }
+    private val LOCALE_COUNTRY: String by lazy {
+        LOCALE.country
+    }
+    private val LOCALE_LANGUAGE: String by lazy {
+        LOCALE.language
+    }
     private val TIME_ZONE: TimeZone = TimeZone.getDefault()
     private val TIME_ZONE_ID: String = TIME_ZONE.id
     private val UTC_OFFSET_MINUTES: Int = TIME_ZONE.getOffset(Date().time) / 60000
@@ -50,8 +55,7 @@ object InnerTubeRequestBody {
         clientType: YouTubeClient.ClientType,
         videoId: String,
         playlistId: String? = null,
-        setLocale: Boolean = !clientType.supportsCookies,
-        language: String = "",
+        language: String = LOCALE_LANGUAGE,
     ): ByteArray {
         val innerTubeBody = JSONObject()
 
@@ -66,14 +70,7 @@ object InnerTubeRequestBody {
             if (clientType.androidSdkVersion != null) {
                 client.put("androidSdkVersion", clientType.androidSdkVersion)
             }
-            client.put(
-                "hl",
-                if (setLocale && language.isNotEmpty()) {
-                    language
-                } else {
-                    LOCALE_LANGUAGE
-                }
-            )
+            client.put("hl", language)
             client.put("gl", LOCALE_COUNTRY)
             client.put("timeZone", TIME_ZONE_ID)
             client.put("utcOffsetMinutes", "$UTC_OFFSET_MINUTES")
@@ -101,8 +98,6 @@ object InnerTubeRequestBody {
         clientType: YouTubeClient.ClientType,
         videoId: String,
         cpn: String = "",
-        setLocale: Boolean = !clientType.supportsCookies,
-        language: String = "",
         isGVS: Boolean = false,
         isInlinePlayback: Boolean = false,
     ): ByteArray {
@@ -114,14 +109,7 @@ object InnerTubeRequestBody {
             client.put("clientVersion", ThrottlingParameterUtils.getClientVersion(clientType))
             client.put("platform", clientType.clientPlatform)
             client.put("clientScreen", clientType.clientScreen)
-            client.put(
-                "hl",
-                if (setLocale && language.isNotEmpty()) {
-                    language
-                } else {
-                    LOCALE_LANGUAGE
-                }
-            )
+            client.put("hl", LOCALE_LANGUAGE)
             client.put("gl", LOCALE_COUNTRY)
             client.put("timeZone", TIME_ZONE_ID)
             client.put("utcOffsetMinutes", UTC_OFFSET_MINUTES.toString())
@@ -171,7 +159,7 @@ object InnerTubeRequestBody {
                 innerTubeBody.put("playbackContext", playbackContext)
 
                 if (requirePoToken) {
-                    val playerRequestPoToken = PoTokenGate.getContentPoToken(videoId)
+                    val playerRequestPoToken = PoTokenGate.getWebContentPoToken(videoId)
                     if (playerRequestPoToken != null) {
                         val serviceIntegrityDimensions = JSONObject()
                         serviceIntegrityDimensions.put("poToken", playerRequestPoToken)

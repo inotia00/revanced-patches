@@ -61,6 +61,11 @@ public final class DescriptionsFilter extends Filter {
                 "horizontal_shelf."
         );
 
+        final StringFilterGroup hypePointsSection = new StringFilterGroup(
+                Settings.HIDE_HYPE_POINTS_SECTION,
+                "hype_points_factoid."
+        );
+
         infoCardsSection = new StringFilterGroup(
                 Settings.HIDE_INFO_CARDS_SECTION,
                 "infocards_section."
@@ -74,6 +79,7 @@ public final class DescriptionsFilter extends Filter {
         addPathCallbacks(
                 howThisWasMadeSection,
                 horizontalShelf,
+                hypePointsSection,
                 infoCardsSection,
                 macroMarkerShelf
         );

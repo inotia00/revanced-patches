@@ -560,7 +560,7 @@
 Це може не працювати для деяких користувачів, якщо не працює то:
 1. Перейдіть до Налаштування - RVX - Різне - Підробка даних трансляції та увімкніть 'Використовувати клієнт JavaScript'.
 2. Перейдіть до Налаштування - RVX - Різне - Підробка даних трансляції і змініть 'Основний клієнт' на 'TV'."</string>
-    <string name="revanced_disable_auto_audio_tracks_summary_off">Примусові автоматичні звукові доріжки увімкнено.</string>
+    <string name="revanced_disable_auto_audio_tracks_summary_off">"Примусові автоматичні звукові доріжки увімкнено."</string>
     <string name="revanced_disable_auto_captions_title">Вимкнути примусові авто субтитри</string>
     <string name="revanced_disable_auto_captions_summary_on">Примусові авто субтитри вимкнено.</string>
     <string name="revanced_disable_auto_captions_summary_off">Примусові авто субтитри увімкнено.</string>
@@ -1565,6 +1565,9 @@
     <string name="revanced_hide_contents_section_title">Приховати секцію Як створювався цей контент</string>
     <string name="revanced_hide_contents_section_summary_on">Секцію Як створювався цей контент приховано.</string>
     <string name="revanced_hide_contents_section_summary_off">Секцію Як створювався цей контент показується.</string>
+    <string name="revanced_hide_hype_points_section_title">Приховати секцію з мітками Розголос</string>
+    <string name="revanced_hide_hype_points_section_summary_on">Секцію з мітками Розголос приховано.</string>
+    <string name="revanced_hide_hype_points_section_summary_off">Секцію з мітками Розголос показується.</string>
     <string name="revanced_hide_podcast_section_title">Приховати секції подкастів</string>
     <string name="revanced_hide_podcast_section_summary_on">Секції подкастів приховано.</string>
     <string name="revanced_hide_podcast_section_summary_off">Секції подкастів показується.</string>
@@ -1895,6 +1898,11 @@
     <string name="revanced_enable_swipe_to_switch_video_title">Увімкнути зміну відео проведенням</string>
     <string name="revanced_enable_swipe_to_switch_video_summary_on">Проведення вгору / вниз у повноекранному режимі змінюватиме на наступне / попереднє відео.</string>
     <string name="revanced_enable_swipe_to_switch_video_summary_off">Проведення вгору / вниз у повноекранному режимі не змінюватиме на наступне / попереднє відео.</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_title">Виправити жест керування швидкістю натисканням і утриманням</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_summary_on">"Натискання і утримання для швидкості активовується тільки коли користувач натискає і утримує.
+
+Відома проблема: Іноді жест з'являється перед переходом в повноекранний режим."</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_summary_off">Натискання і утримання для швидкості може іноді активовуватись, навіть якщо користувач не натискав і утримував.</string>
     <string name="revanced_swipe_lowest_value_auto_brightness_overlay_text">Авто</string>
     <!-- PreferenceScreen: Video -->
     <string name="revanced_preference_screen_video_title">Відео</string>
@@ -2347,31 +2355,36 @@
     <string name="revanced_spoof_streaming_data_default_client_title">Основний клієнт</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_creator">"Android Studio
 <small>(Потрібна авторизація)</small>"</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_no_sdk">"Android
+<small>(Без SDK)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr">"Android VR
 <small>(Без авторизації)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr_auth">"Android VR
 <small>(Авторизація, Необхідна дія)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_ipados">"iPadOS
-<small>(Застарілий, Без авторизації)</small>"</string>
+<small>(Застарілий)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_mweb">"Web мобільний
-<small>(ще в розробці, Без авторизації)</small>"</string>
+<small>(ще в розробці)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">"TV
+<small>(Застарілий)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_simply_no_potoken">"Простий TV
 <small>(Без PoToken)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">Вбудований TV</string>
     <string name="revanced_spoof_streaming_data_client_entry_visionos">"visionOS
-<small>(Невипущений, Без авторизації)</small>"</string>
+<small>(Невипущений)</small>"</string>
     <string name="revanced_spoof_streaming_data_side_effects_title">Побічні ефекти імітування</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_creator">"• Меню звукової доріжки відсутнє.
-• Вимкнути примусові автоматичні звукові доріжки недоступне.
+• Вимкнення примусових авто звукових доріжок може бути недоступне.
 • Стабілізація гучності недоступна.
 • Відео для дітей можуть не відтворюватися коли вийшли з облікового запису або в анонімному режимі.
 • 1080p+, AV1 та HDR не підтримуються."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_no_sdk">• Відео може зупинитися на 1:00 або бути недоступним у деяких регіонах.</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Меню звукової доріжки відсутнє.
 • Стабілізація гучності недоступна.
 • Відео для дітей можуть не відтворюватися коли вийшли з облікового запису або в анонімному режимі."</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_vr_auth">"• Меню звукової доріжки відсутнє.
-• Вимкнення примусових авто звукових доріжок недоступне.
+• Вимкнення примусових авто звукових доріжок може бути недоступне.
 • Стабілізація гучності недоступна.
 • Відео для дітей можуть не відтворюватися коли вийшли з облікового запису або в анонімному режимі."</string>
     <string name="revanced_spoof_streaming_data_side_effects_ipados">"• AV1 не підтримується.
@@ -2449,7 +2462,7 @@
     <string name="revanced_spoof_streaming_data_vr_auth_token_about_title">Про авторизацію Android VR</string>
     <string name="revanced_spoof_streaming_data_vr_auth_token_about_summary">Натисніть, щоб побачити, як отримати токен автентифікації.</string>
     <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_title">Отримати токен авторизації</string>
-    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_message">"Щоб отримати токен авторизації дляAndroid VR, необхідно увійти в YouTube VR за допомогою коду активації:
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_message">"Щоб отримати токен авторизації для Android VR, необхідно увійти в YouTube VR за допомогою коду активації:
 
 1. Натисніть 'Отримати код активації', щоб згенерувати код активації.
 2. Натисніть 'Відкрити сайт', щоб перейти до 'https://yt.be/activate'.
@@ -2475,24 +2488,6 @@
 5. Натисніть 'Отримати токен авторизації', щоб отримати токен авторизації."</string>
     <string name="revanced_spoof_streaming_data_vr_activation_code_dialog_open_website_text">Відкрити сайт</string>
     <string name="revanced_spoof_streaming_data_vr_activation_code_toast_copy">Код активації скопійовано в буфер обміну: %s.</string>
-    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: No Auth -->
-    <string name="revanced_preference_category_no_auth">Без авторизації</string>
-    <string name="revanced_spoof_streaming_data_no_auth_language_title">Основна мова трансляції звуку</string>
-    <string name="revanced_spoof_streaming_data_no_auth_language_not_available">Щоб вибрати конкретну мову трансляції звуку, вимкніть \'Вимкнути примусові автоматичні звукові доріжки\'.</string>
-    <string name="revanced_spoof_streaming_data_no_auth_language_not_available_by_client">Вибір основної мови трансляції звуку недоступний з %s.</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_title">Показувати кнопку звукової доріжки</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_summary_on">"Кнопку звукової доріжки показується, якщо клієнтом для отримання даних трансляції є 'Android VR', 'Web мобільний', чи 'visionOS'."</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_summary_off">Кнопку звукової доріжки не показується.</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_user_dialog_message">"Необхідні умови:
-• Клієнтом, який використовується для отримання даних трансляції, є 'Android VR', 'Web мобільний', чи 'visionOS'.
-• Відтворюється відео з кількома звуковими доріжками.
-
-Відомі проблеми:
-• Якщо змінено мову програми в налаштуваннях YouTube і не перезапущено програму, мова, що використовується в діалоговому вікні звукової доріжки, може не змінитися.
-• Іноді в діалоговому вікні звукової доріжки вибирається хибна мова.
-• Деякі звукові доріжки, на кшталт 'Англійська дескриптивна', не підтримуються.
-
-Ця функція на стадії розробки, тому вона може зламатися у будь-який момент через серверні зміни."</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: JavaScript -->
     <string name="revanced_preference_category_js">JavaScript</string>
     <string name="revanced_spoof_streaming_data_use_js_title">Використовувати клієнт JavaScript</string>
@@ -2516,20 +2511,6 @@
 • Автовідтворення у стрічці
 • Кліпи
 • YouTube Shorts"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">Використовувати ejs yt-dlp (Ще в розробці)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_on">"Використовується зовнішній JavaScript для yt-dlp (yt-dlp-ejs).
-
-• JavaScript відтворювача для деобфускації підтримується в актуальному стані.
-• Запуск відео може зайняти від 5 до 15 секунд."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_off">"Використовується екстрактор SmartTube.
-
-• JavaScript відтворювача для деобфускації не в актуальному стані.
-• Найближчим часом це буде застаріле на серверах."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_user_dialog_message">"У зв'язку з новими заходами YouTube більше неможливо розшифрувати посилання трансляції загальними методами в останніх JavaScript відтворювача.
-
-Використовується зовнішній JavaScript для yt-dlp (yt-dlp-ejs) для розшифрування посилань трансляції в останніх JavaScript відтворювача.
-
-Наразі це перебуває на стадії розробки і використовуватиме більше апаратних ресурсів."</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_title">Обходити фальшиву буферизацію</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_summary_on">"Обхід фальшивої буферизації увімкнено.
 

@@ -10,11 +10,13 @@ import com.liskovsoft.youtubeapi.app.playerdata.PlayerDataExtractor;
 
 import org.apache.commons.lang3.StringUtils;
 import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.net.SocketTimeoutException;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.ExecutionException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -50,34 +52,25 @@ public class ThrottlingParameterUtils {
      */
     private static final Pattern THROTTLING_PARAM_URL_PATTERN = Pattern.compile("&url=([^&]+)");
     /**
-     * JavaScript url format (TV).
-     */
-    private static final String PLAYER_JS_URL_FORMAT =
-            "https://www.youtube.com/s/player/%s/tv-player-ias.vflset/tv-player-ias.js";
-    /**
-     * Hardcoded javascript url path.
-     */
-    private static final String PLAYER_JS_HARDCODED_URL_PATH = "0004de42";
-    /**
      * Regular expression pattern to find variables used in JavaScript url.
      */
     private static final Pattern PLAYER_JS_IDENTIFIER_PATTERN =
-            Pattern.compile("player\\\\/([a-z0-9]{8})\\\\/");
+            Pattern.compile("player/([a-z0-9]{8})/");
+    /**
+     * Base YouTube Url.
+     */
+    private static final String BASE_YOUTUBE_URL =
+            "https://www.youtube.com";
+    /**
+     * Client Config url (TV).
+     */
+    private static final String CLIENT_CONFIG_URL =
+            BASE_YOUTUBE_URL + "/tv_config?action_get_config=true";
     /**
      * Service worker url (Mobile Web).
      */
-    private static final String SERVICE_WORKER_URL_MOBILE_WEB =
+    private static final String SERVICE_WORKER_URL =
             "https://m.youtube.com/sw.js_data";
-    /**
-     * Service worker url (TV).
-     */
-    private static final String SERVICE_WORKER_URL_TV =
-            "https://www.youtube.com/tv/sw.js_data";
-    /**
-     * Url used to find variables used in JavaScript url.
-     */
-    private static final String IFRAME_API_URL =
-            "https://www.youtube.com/iframe_api";
     /**
      * User-agent (Mobile Web).
      */
@@ -89,12 +82,17 @@ public class ThrottlingParameterUtils {
     private static final String USER_AGENT_TV =
             "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0; Xbox)";
     /**
+     * Client config Json Object (TV).
+     */
+    @Nullable
+    private volatile static JSONObject clientConfigJsonObject = null;
+    /**
      * Client version from service worker (Mobile Web).
      */
     @Nullable
     private volatile static String clientVersionMobileWeb = null;
     /**
-     * Client version from service worker (TV).
+     * Client version from client config (TV).
      */
     @Nullable
     private volatile static String clientVersionTV = null;
@@ -109,6 +107,11 @@ public class ThrottlingParameterUtils {
     @Nullable
     private volatile static String playerJs = null;
     /**
+     * Javascript url identifier.
+     */
+    @Nullable
+    private volatile static String playerJsIdentifier = null;
+    /**
      * Javascript url.
      */
     @Nullable
@@ -117,12 +120,7 @@ public class ThrottlingParameterUtils {
      * Service worker Json Array (Mobile Web).
      */
     @Nullable
-    private volatile static JSONArray serviceWorkerJsonArrayMobileWeb = null;
-    /**
-     * Service worker Json Array (TV).
-     */
-    @Nullable
-    private volatile static JSONArray serviceWorkerJsonArrayTV = null;
+    private volatile static JSONArray serviceWorkerJsonArray = null;
     /**
      * Field value included when sending a request.
      */
@@ -132,15 +130,9 @@ public class ThrottlingParameterUtils {
      * Visitor data from service worker (Mobile Web).
      */
     @Nullable
-    private volatile static String visitorIdMobileWeb = null;
-    /**
-     * Visitor data from service worker (TV).
-     */
-    @Nullable
-    private volatile static String visitorIdTV = null;
+    private volatile static String visitorId = null;
 
     private volatile static boolean isInitialized = false;
-    private volatile static boolean useEJS = false;
 
     /**
      * Typically, there are 10 to 30 available formats for a video.
@@ -157,7 +149,7 @@ public class ThrottlingParameterUtils {
         }
     };
 
-    public static void initializeJavascript(boolean useEJS, boolean useMobileWeb) {
+    public static void initializeJavascript(boolean useMobileWeb) {
         if (isInitialized) {
             return;
         }
@@ -165,28 +157,19 @@ public class ThrottlingParameterUtils {
             return;
         }
         isInitialized = true;
-        ThrottlingParameterUtils.useEJS = useEJS;
-
-        if (!useEJS) {
-            playerJsUrl = String.format(PLAYER_JS_URL_FORMAT, PLAYER_JS_HARDCODED_URL_PATH);
-        }
 
         extractor = getExtractor();
         playerJs = getPlayerJs();
         playerJsUrl = getPlayerJsUrl();
         signatureTimestamp = getSignatureTimestamp();
 
-        if (useEJS) {
-            clientVersionTV = getClientVersion(true);
-            serviceWorkerJsonArrayTV = getServiceWorkerJsonArray(true);
-        }
+        clientVersionTV = getClientVersion(true);
+        clientConfigJsonObject = getClientConfigJsonObject();
 
         if (useMobileWeb) {
-            visitorIdMobileWeb = getVisitorId(false);
-            serviceWorkerJsonArrayMobileWeb = getServiceWorkerJsonArray(false);
-            if (useEJS) {
-                clientVersionMobileWeb = getClientVersion(false);
-            }
+            visitorId = getVisitorId();
+            serviceWorkerJsonArray = getServiceWorkerJsonArray();
+            clientVersionMobileWeb = getClientVersion(false);
         }
     }
 
@@ -198,11 +181,35 @@ public class ThrottlingParameterUtils {
         extractor = null;
         playerJs = null;
         playerJsUrl = null;
-        serviceWorkerJsonArrayMobileWeb = null;
-        serviceWorkerJsonArrayTV = null;
+        serviceWorkerJsonArray = null;
         signatureTimestamp = null;
-        visitorIdMobileWeb = null;
-        visitorIdTV = null;
+        visitorId = null;
+    }
+
+    private static JSONObject setClientConfigJsonObject() {
+        String jsonString = fetch(CLIENT_CONFIG_URL, true);
+        if (jsonString != null) {
+            if (jsonString.startsWith(")]}'"))
+                jsonString = jsonString.substring(4);
+
+            try {
+                JSONObject jsonObject = new JSONObject(jsonString);
+
+                return jsonObject
+                        .getJSONObject("webPlayerContextConfig")
+                        .getJSONObject("WEB_PLAYER_CONTEXT_CONFIG_ID_LIVING_ROOM_WATCH");
+            } catch (Exception ex) {
+                Logger.printException(() -> "setClientConfigJsonObject failed", ex);
+            }
+        }
+        return null;
+    }
+
+    private static JSONObject getClientConfigJsonObject() {
+        if (clientConfigJsonObject == null) {
+            clientConfigJsonObject = setClientConfigJsonObject();
+        }
+        return clientConfigJsonObject;
     }
 
     @Nullable
@@ -234,12 +241,8 @@ public class ThrottlingParameterUtils {
         return signatureTimestamp;
     }
 
-    private static JSONArray setServiceWorkerJsonArray(boolean isTV) {
-        String jsonString = fetch(isTV
-                        ? SERVICE_WORKER_URL_TV
-                        : SERVICE_WORKER_URL_MOBILE_WEB,
-                isTV
-        );
+    private static JSONArray setServiceWorkerJsonArray() {
+        String jsonString = fetch(SERVICE_WORKER_URL, false);
         if (jsonString != null) {
             if (jsonString.startsWith(")]}'"))
                 jsonString = jsonString.substring(4);
@@ -260,35 +263,43 @@ public class ThrottlingParameterUtils {
         return null;
     }
 
-    private static JSONArray getServiceWorkerJsonArray(boolean isTV) {
-        JSONArray serviceWorkerJsonArray = isTV
-                ? serviceWorkerJsonArrayTV
-                : serviceWorkerJsonArrayMobileWeb;
+    private static JSONArray getServiceWorkerJsonArray() {
         if (serviceWorkerJsonArray == null) {
-            serviceWorkerJsonArray = setServiceWorkerJsonArray(isTV);
-            if (isTV) {
-                serviceWorkerJsonArrayTV = serviceWorkerJsonArray;
-            } else {
-                serviceWorkerJsonArrayMobileWeb = serviceWorkerJsonArray;
-            }
+            serviceWorkerJsonArray = setServiceWorkerJsonArray();
         }
         return serviceWorkerJsonArray;
     }
 
     private static String setClientVersion(boolean isTV) {
-        JSONArray serviceWorkerJsonArray = getServiceWorkerJsonArray(isTV);
+        String clientVersion = null;
+        if (isTV) {
+            JSONObject clientConfigJsonObject = getClientConfigJsonObject();
 
-        if (serviceWorkerJsonArray != null) {
-            try {
-                String clientVersion = serviceWorkerJsonArray
-                        .getString(16);
-                if (StringUtils.isNotEmpty(clientVersion)) {
-                    Logger.printDebug(() -> "clientVersion: " + clientVersion + ", isTV: " + isTV);
+            if (clientConfigJsonObject != null) {
+                try {
+                    clientVersion = clientConfigJsonObject
+                            .getString("innertubeContextClientVersion");
+                } catch (Exception ex) {
+                    Logger.printException(() -> "setClientVersion failed", ex);
                 }
-                return clientVersion;
-            } catch (Exception ex) {
-                Logger.printException(() -> "setClientVersion failed", ex);
             }
+        } else {
+            JSONArray serviceWorkerJsonArray = getServiceWorkerJsonArray();
+
+            if (serviceWorkerJsonArray != null) {
+                try {
+                    clientVersion = serviceWorkerJsonArray
+                            .getString(16);
+                } catch (Exception ex) {
+                    Logger.printException(() -> "setClientVersion failed", ex);
+                }
+            }
+        }
+
+        if (StringUtils.isNotEmpty(clientVersion)) {
+            String finalClientVersion = clientVersion;
+            Logger.printDebug(() -> "clientVersion: " + finalClientVersion + ", isTV: " + false);
+            return clientVersion;
         }
 
         return null;
@@ -312,28 +323,26 @@ public class ThrottlingParameterUtils {
 
     public static String getClientVersion(YouTubeClient.ClientType clientType) {
         String hardCodedClientVersion = clientType.getClientVersion();
-        if (useEJS) {
-            if (clientType == YouTubeClient.ClientType.TV || clientType == YouTubeClient.ClientType.MWEB) {
-                boolean isTV = clientType == YouTubeClient.ClientType.TV;
-                String clientVersion = getClientVersion(isTV);
-                if (clientVersion != null) {
-                    return clientVersion;
-                }
+        if (clientType == YouTubeClient.ClientType.TV || clientType == YouTubeClient.ClientType.MWEB) {
+            boolean isTV = clientType == YouTubeClient.ClientType.TV;
+            String clientVersion = getClientVersion(isTV);
+            if (clientVersion != null) {
+                return clientVersion;
             }
         }
 
         return hardCodedClientVersion;
     }
 
-    private static String setVisitorId(boolean isTV) {
-        JSONArray serviceWorkerJsonArray = getServiceWorkerJsonArray(isTV);
+    private static String setVisitorId() {
+        JSONArray serviceWorkerJsonArray = getServiceWorkerJsonArray();
 
         if (serviceWorkerJsonArray != null) {
             try {
                 String visitorId = serviceWorkerJsonArray
                         .getString(13);
                 if (StringUtils.isNotEmpty(visitorId)) {
-                    Logger.printDebug(() -> "visitorId: " + visitorId + ", isTV: " + isTV);
+                    Logger.printDebug(() -> "visitorId: " + visitorId);
                 }
                 return visitorId;
             } catch (Exception ex) {
@@ -344,17 +353,9 @@ public class ThrottlingParameterUtils {
         return null;
     }
 
-    public static String getVisitorId(boolean isTV) {
-        String visitorId = isTV
-                ? visitorIdTV
-                : visitorIdMobileWeb;
+    public static String getVisitorId() {
         if (visitorId == null) {
-            visitorId = setVisitorId(isTV);
-            if (isTV) {
-                visitorIdTV = visitorId;
-            } else {
-                visitorIdMobileWeb = visitorId;
-            }
+            visitorId = setVisitorId();
         }
 
         return visitorId;
@@ -363,22 +364,26 @@ public class ThrottlingParameterUtils {
 
     @Nullable
     private static String setPlayerJsUrl() {
-        String iframeContent = fetch(IFRAME_API_URL, true);
-        if (iframeContent != null) {
-            Matcher matcher = PLAYER_JS_IDENTIFIER_PATTERN.matcher(iframeContent);
-            if (matcher.find()) {
-                try {
-                    return String.format(
-                            PLAYER_JS_URL_FORMAT,
-                            matcher.group(1)
-                    );
-                } catch (Exception ex) {
-                    Logger.printException(() -> "setPlayerJsUrl failed", ex);
-                    resetAll();
+        JSONObject clientConfigJsonObject = getClientConfigJsonObject();
+
+        if (clientConfigJsonObject != null) {
+            try {
+                String jsUrl = clientConfigJsonObject
+                        .getString("jsUrl");
+                Logger.printDebug(() -> "jsUrl: " + jsUrl);
+                if (StringUtils.isNotEmpty(jsUrl)) {
+                    Matcher matcher = PLAYER_JS_IDENTIFIER_PATTERN.matcher(jsUrl);
+                    if (matcher.find()) {
+                        playerJsIdentifier = matcher.group(1);
+                        return BASE_YOUTUBE_URL + jsUrl;
+                    }
                 }
+            } catch (Exception ex) {
+                Logger.printException(() -> "setPlayerJsUrl failed", ex);
             }
         }
-        Logger.printDebug(() -> "iframeContent not found");
+
+        Logger.printDebug(() -> "clientConfigJsonObject is null");
         return null;
     }
 
@@ -411,7 +416,7 @@ public class ThrottlingParameterUtils {
     private static PlayerDataExtractor setExtractor() {
         String playerJs = getPlayerJs();
         if (playerJs != null) {
-            return new PlayerDataExtractor(playerJs, useEJS);
+            return new PlayerDataExtractor(playerJs, Objects.requireNonNull(playerJsIdentifier));
         }
         return null;
     }

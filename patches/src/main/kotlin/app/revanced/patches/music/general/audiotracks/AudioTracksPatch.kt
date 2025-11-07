@@ -28,7 +28,7 @@ val audioTracksPatch = bytecodePatch(
         addSwitchPreference(
             CategoryType.GENERAL,
             "revanced_disable_auto_audio_tracks",
-            "false"
+            "true"
         )
 
         updatePatchStatus(DISABLE_FORCED_AUTO_AUDIO_TRACKS)

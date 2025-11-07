@@ -19,8 +19,9 @@ import java.util.Collections
 
 internal abstract class JsRuntimeChalBaseJCP : JsChallengeProvider() {
     private val tag = JsRuntimeChalBaseJCP::class.simpleName
-    private val cacheSection = "challenge-solver"
+    val cacheSection = "challenge-solver"
     private var playerJS = ""
+    private var playerJSIdentifier = ""
 
     private val jcpGuideUrl = "https://github.com/yt-dlp/yt-dlp/wiki/YouTube-JS-Challenges"
     private val repository = "yt-dlp/ejs"
@@ -40,13 +41,27 @@ internal abstract class JsRuntimeChalBaseJCP : JsChallengeProvider() {
 
     protected abstract fun runJsRuntime(stdin: String): String
 
-    fun setPlayerJS(jsCode: String) {
+    fun setPlayerJS(
+        jsCode: String,
+        jsIdentifier: String,
+    ) {
         playerJS = jsCode
+        playerJSIdentifier = jsIdentifier
     }
 
     override fun realBulkSolve(requests: List<JsChallengeRequest>): Sequence<JsChallengeProviderResponse> =
         sequence {
-            val stdin = constructStdin(playerJS = playerJS, requests = requests)
+            val data = ie.cache.load(cacheSection, "player:$playerJSIdentifier")
+            var player = data?.code
+
+            val cached = if (player != null) {
+                true
+            } else {
+                player = playerJS
+                false
+            }
+
+            val stdin = constructStdin(player, cached, requests)
             val stdout = runJsRuntime(stdin)
 
             val gson = Gson()
@@ -58,6 +73,10 @@ internal abstract class JsRuntimeChalBaseJCP : JsChallengeProvider() {
 
             if (output.type == "error")
                 throw JsChallengeProviderError(output.error ?: "Unknown solver output error")
+
+            val preprocessed = output.preprocessed_player
+            if (preprocessed != null)
+                ie.cache.store(cacheSection, "player:$playerJSIdentifier", CachedData(preprocessed))
 
             for ((request, responseData) in requests.zip(output.responses)) {
                 if (responseData.type == "error") {
@@ -83,7 +102,7 @@ internal abstract class JsRuntimeChalBaseJCP : JsChallengeProvider() {
 
     private fun constructStdin(
         playerJS: String,
-        preprocessed: Boolean = false,
+        preprocessed: Boolean,
         requests: List<JsChallengeRequest>
     ): String {
         val jsonRequests = requests.map { request ->
@@ -135,9 +154,7 @@ internal abstract class JsRuntimeChalBaseJCP : JsChallengeProvider() {
 
     private fun getScript(scriptType: ScriptType): Script {
         for ((_, fromSource) in iterScriptSources()) {
-            val script = fromSource(scriptType)
-            if (script == null)
-                continue
+            val script = fromSource(scriptType) ?: continue
             if (script.version != scriptVersion)
                 Logger.printWarn {
                     "Challenge solver ${scriptType.value} script version ${script.version} " +
@@ -168,9 +185,9 @@ internal abstract class JsRuntimeChalBaseJCP : JsChallengeProvider() {
         val data = ie.cache.load(cacheSection, scriptType.value) ?: return null
         return Script(
             scriptType,
-            ScriptVariant.valueOf(data.variant),
+            ScriptVariant.valueOf(data.variant ?: "unknown"),
             ScriptSource.CACHE,
-            data.version,
+            data.version ?: "unknown",
             data.code
         )
     }

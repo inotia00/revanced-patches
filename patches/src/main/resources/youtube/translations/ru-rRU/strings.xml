@@ -572,7 +572,7 @@ Shorts
 Вероятность исправить проблему:
 1. Включить в \"Настройки\" → RVX → Разное → Подмена потоковых данных → \"Использовать клиент JavaScript\".
 2. Изменить в \"Настройки\" → RVX → Разное → Подмена потоковых данных → \"Клиент по умолчанию\" на \"TV\" или \"TV простой\"."</string>
-    <string name="revanced_disable_auto_audio_tracks_summary_off">Принудительные автоматические звуковые дорожки включены.</string>
+    <string name="revanced_disable_auto_audio_tracks_summary_off">"Принудительные автоматические звуковые дорожки включены."</string>
     <string name="revanced_disable_auto_captions_title">Принудительные автоматические субтитры</string>
     <string name="revanced_disable_auto_captions_summary_on">Принудительные автоматические субтитры отключены.</string>
     <string name="revanced_disable_auto_captions_summary_off">Принудительные автоматические субтитры включены.</string>
@@ -700,7 +700,7 @@ Shorts
 ═══════════════
 1. Нажмите \"Авторизация\"\", чтобы открыть страницу входа в WebView.
 2. Войдите в свою учётную запись Google.
-3. Воспроизведите любое видео с поддержкой авто-перевода субтитров.
+3. Проиграйте любое видео с поддержкой авто-перевода субтитров.
 4. Включите автоматический перевод субтитров и проверьте, работает ли он.
 4-1. Если авто-перевод субтитров не работает, переключитесь на другое видео с поддержкой авто-перевода субтитров и повторите шаг 4.
 5. Нажмите три точки на панели инструментов, чтобы открыть контекстное меню.
@@ -711,14 +711,14 @@ Shorts
 Без авторизации
 ═══════════════
 1. Нажмите \"Без авторизации\", чтобы открыть видео в WebView.
-2. Воспроизведите видео не менее 3 секунд.
+2. Проиграйте видео не менее 3 секунд.
 3. Нажмите три точки на панели инструментов, чтобы открыть контекстное меню.
 4. Нажмите \"Получить файлы куки\".
 5. Нажмите \"Копировать\", чтобы скопировать файлы куки.
 6. Закройте WebView и вставьте скопированные файлы куки в настройки \"Файлы куки для расшифровки\".
 
 Отказ от ответственности:
-Файлы куки, созданные без входа в систему, могут быть недействительными или могут потребовать времени для того, чтобы стать доступными для API Transcript."</string>
+Файлы куки, созданные без авторизации, могут не работать или потребуется время, чтобы стать доступными для API Transcript."</string>
     <string name="revanced_transcript_cookies_dialog_auth_text">Авторизация</string>
     <string name="revanced_transcript_cookies_dialog_no_auth_text">Без авторизации</string>
     <!-- PreferenceScreen: General, PreferenceCategory: General, PreferenceScreen: Account menu -->
@@ -1895,6 +1895,11 @@ Shorts
     <string name="revanced_enable_swipe_to_switch_video_title">Переключение видео жестами</string>
     <string name="revanced_enable_swipe_to_switch_video_summary_on">Включено. В полном экране, жест вверх / вниз - следующее / предыдущее видео.</string>
     <string name="revanced_enable_swipe_to_switch_video_summary_off">Отключено. В полном экране, жест вверх / вниз.</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_title">Исправление скорости жеста касания и зажатия</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_summary_on">"Включено. Скорость жеста касания и зажатия активируется только при действиях пользователя.
+
+Проблема: Иногда появляется наложение жеста до переключения в полноэкранный режим."</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_summary_off">Отключено. Скорость жеста касания и зажатия активируется независимо от действий пользователя.</string>
     <string name="revanced_swipe_lowest_value_auto_brightness_overlay_text">Авто</string>
     <!-- PreferenceScreen: Video -->
     <string name="revanced_preference_screen_video_title">Видео</string>
@@ -2348,6 +2353,8 @@ Shorts
     <string name="revanced_spoof_streaming_data_default_client_title">Клиент по умолчанию</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_creator">"Android Studio
 <small>(Требуется вход)</small>"</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_no_sdk">"Android
+<small>(без SDK)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr">"Android VR"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr_auth">"Android VR
 <small>(Необходима авторизация)</small>"</string>
@@ -2368,6 +2375,7 @@ Shorts
 • Стабильная громкость не доступна.
 • Детские видео могут не проигрываться без логина или в режиме инкогнито.
 • 1080p+, AV1, HDR не поддерживаются."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_no_sdk">• Видео может останавливаться в 1:00, или быть недоступным в некоторых регионах.</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Аудио меню пропадет.
 • Стабильная громкость не доступна.
 • Детские видео могут не проигрываться без логина или в режиме инкогнито."</string>
@@ -2473,24 +2481,6 @@ VP9 более продвинутый кодек, чем AVC, но некото�
 5. Нажмите 'Получить токен авторизации', чтобы получить токен авторизации."</string>
     <string name="revanced_spoof_streaming_data_vr_activation_code_dialog_open_website_text">Открыть сайт</string>
     <string name="revanced_spoof_streaming_data_vr_activation_code_toast_copy">Код активации скопирован в буфер обмена: %s.</string>
-    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: No Auth -->
-    <string name="revanced_preference_category_no_auth">Не авторизован</string>
-    <string name="revanced_spoof_streaming_data_no_auth_language_title">Язык аудио потока по умолчанию</string>
-    <string name="revanced_spoof_streaming_data_no_auth_language_not_available">Чтобы выбрать язык звукового потока, отключите \'Принудительные звуковые авто дорожки\'.</string>
-    <string name="revanced_spoof_streaming_data_no_auth_language_not_available_by_client">Язык аудио потока по умолчанию не доступен для %s.</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_title">Кнопка звуковой дорожки</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_summary_on">"Отображена, при использовании подмены потоковых данных, как 'Android VR', 'Mobile Web' или 'visionOS'."</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_summary_off">Кнопка звуковой дорожки скрыта.</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_user_dialog_message">"Предварительные условия:
-• Клиент, используемый для получения потоковых данных - Android VR', 'Mobile Web', or 'visionOS'.
-• Начинают проигрываться видео с несколькими звуковыми дорожками.
-
-Известные проблемы:
-• Если язык изменен в настройках YouTube и приложение не перезапущено, язык может не измениться.
-• Иногда звуковая дорожка выбирается неправильно.
-• Некоторые звуковые дорожки, такие как \"Английский описательный\", не поддерживаются.
-
-Функция находится в разработке, и может перестать работать из-за изменений на стороне сервера."</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: JavaScript -->
     <string name="revanced_preference_category_js">JavaScript (В разработке)</string>
     <string name="revanced_spoof_streaming_data_use_js_title">Использовать клиент JavaScript</string>
@@ -2510,20 +2500,6 @@ VP9 более продвинутый кодек, чем AVC, но некото�
 • Автозапуск в ленте
 • Клипы
 • Shorts"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">Использовать yt-dlp ejs (В разработке)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_on">"Используется внешний JavaScript для yt-dlp (yt-dlp-ejs).
-
-• JavaScript для деобфускации сохраняется в актуальном состоянии.
-• Для запуска видео может потребоваться от 5 до 15 секунд."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_off">"Используется экстрактор SmartTube.
-
-• JavaScript для деобфускации не актуальный.
-• Это, через время, устареет на сервере."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_user_dialog_message">"Новые меры YouTube не позволяют расшифровать URL-адреса потокового воспроизведения, общими методами в JavaScript.
-
-Внешний JavaScript для yt-dlp (yt-dlp-ejs) используется для расшифровки URL-адресов трансляций в последних JavaScript.
-
-Компонент в разработке и будет использовать больше ресурсов оборудования."</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_title">Обход поддельной буферизации</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_summary_on">"Обход поддельной буферизации включен.
 

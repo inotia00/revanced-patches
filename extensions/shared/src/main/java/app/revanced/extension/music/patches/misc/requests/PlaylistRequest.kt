@@ -157,7 +157,6 @@ class PlaylistRequest private constructor(
                         clientType = clientType,
                         videoId = videoId,
                         playlistId = playlistId,
-                        setLocale = true,
                         language = AppLanguage.EN.language,
                     )
 

@@ -34,7 +34,8 @@ val trendingTodayShelfPatch = bytecodePatch(
         trendingTodayTitleFingerprint.matchOrThrow().let {
             it.method.apply {
                 val stringIndex = it.stringMatches!!.first().index
-                val relativeIndex = indexOfFirstInstructionReversedOrThrow(Opcode.AND_INT_LIT8)
+                val relativeIndex =
+                    indexOfFirstInstructionReversedOrThrow(stringIndex, Opcode.AND_INT_LIT8)
                 val insertIndex = indexOfFirstInstructionReversedOrThrow(
                     relativeIndex + 1,
                     Opcode.MOVE_OBJECT_FROM16

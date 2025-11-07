@@ -55,7 +55,7 @@ Verifique se o nome do pacote está correto e se o aplicativo está instalado."<
     <string name="revanced_queue_manager_external_downloader">Download externo</string>
     <string name="revanced_queue_manager_open_queue">Abrir fila</string>
     <string name="revanced_queue_manager_queue">Fila</string>
-    <string name="revanced_queue_manager_remove_from_queue">Remover da lista</string>
+    <string name="revanced_queue_manager_remove_from_queue">Remover da fila</string>
     <string name="revanced_queue_manager_remove_from_queue_and_open_queue">Remover da fila e abrir a fila</string>
     <string name="revanced_queue_manager_remove_from_queue_and_reload_video">Remover da fila e recarregar vídeo</string>
     <string name="revanced_queue_manager_remove_queue">Remover fila</string>
@@ -77,11 +77,11 @@ Use-o apenas para fins de depuração."</string>
 Título
 ══════════════
 %2$s"</string>
-    <string name="revanced_queue_manager_video_information_user_dialog_message">"Canalização
+    <string name="revanced_queue_manager_video_information_user_dialog_message">"Canal
 ══════════════
 %1$s
 
-Títulos
+Título
 ══════════════
 %2$s
 
@@ -121,10 +121,10 @@ Descrição
     <string name="revanced_webview_toast_copy_success">%s copiado para a área de transferência.</string>
     <string name="revanced_webview_toast_empty">%s está vazio.</string>
     <string name="revanced_webview_toast_no_network">Por favor, verifique sua conexão com a internet.</string>
-    <string name="revanced_webview_toast_unavailable">O WebeView não está disponível.</string>
+    <string name="revanced_webview_toast_unavailable">O WebView não está disponível.</string>
     <string name="revanced_language_title">Idioma do RVX</string>
     <string name="revanced_language_DEFAULT">Idioma do app</string>
-    <string name="revanced_language_AM">"Amárico
+    <string name="revanced_language_AM">"Aramaico
 <small>አማርኛ</small>"</string>
     <string name="revanced_language_AR">"Árabe
 <small>العربية</small>"</string>
@@ -281,7 +281,7 @@ Descrição
     <!-- PreferenceScreen: Alternative thumbnails -->
     <string name="revanced_preference_screen_alt_thumbnails_title">Miniaturas alternativas</string>
     <string name="revanced_alt_thumbnail_home_title">Aba Início</string>
-    <string name="revanced_alt_thumbnail_player_title">Playlists do reprodutor, recomendações</string>
+    <string name="revanced_alt_thumbnail_player_title">Playlists do reprodutor &amp; recomendações</string>
     <string name="revanced_alt_thumbnail_search_title">Resultados de pesquisas</string>
     <string name="revanced_alt_thumbnail_subscriptions_title">Aba de inscrições</string>
     <string name="revanced_alt_thumbnail_library_title">Aba Você</string>
@@ -297,7 +297,7 @@ Se ativado, os URLs dos vídeos serão enviados ao servidor API e nenhum outro d
 Toque aqui para saber mais sobre o DeArrow."</string>
     <string name="revanced_alt_thumbnail_dearrow_connection_toast_title">Mostrar notificação flutuante se a API não estiver disponível</string>
     <string name="revanced_alt_thumbnail_dearrow_connection_toast_summary_on">Notificação flutuante exibida se DeArrow não estiver disponível.</string>
-    <string name="revanced_alt_thumbnail_dearrow_connection_toast_summary_off">Notificação flutuante não exibida se Derow não estiver disponível.</string>
+    <string name="revanced_alt_thumbnail_dearrow_connection_toast_summary_off">Notificação flutuante não exibida se DeArrow não estiver disponível.</string>
     <string name="revanced_alt_thumbnail_dearrow_api_url_title">DeArrow API endpoint</string>
     <string name="revanced_alt_thumbnail_dearrow_api_url_summary">A URL do ponto final do cache de miniaturas DeArrow.</string>
     <string name="revanced_alt_thumbnail_dearrow_api_url_invalid_toast">URL da API DeArrow inválida.</string>
@@ -557,7 +557,7 @@ Limitação: O botão voltar na barra de ferramentas pode não funcionar."</stri
 Isto pode não funcionar para alguns usuários, se não funcionar para você:
 1. Vá para Configurações - RVX - Diversos - Dados de transmissão falsos e ative 'Usar cliente JavaScript'.
 2. Vá para Configurações - RVX - Diversos - Dados de transmissão falsos e altere o 'Cliente Padrão' para 'TV'."</string>
-    <string name="revanced_disable_auto_audio_tracks_summary_off">As faixas de áudio automáticas forçadas estão ativadas.</string>
+    <string name="revanced_disable_auto_audio_tracks_summary_off">"As faixas de áudio automáticas forçadas estão ativadas."</string>
     <string name="revanced_disable_auto_captions_title">Desativar legendas automáticas forçadas</string>
     <string name="revanced_disable_auto_captions_summary_on">As legendas automáticas forçadas estão desativadas.</string>
     <string name="revanced_disable_auto_captions_summary_off">As legendas automáticas forçadas estão ativadas.</string>
@@ -615,7 +615,7 @@ Alterações incluem:
     <string name="revanced_disable_translucent_status_bar_summary_on">A barra de status está opaca.</string>
     <string name="revanced_disable_translucent_status_bar_summary_off">A barra de status está opaca ou transparente.</string>
     <string name="revanced_disable_translucent_status_bar_user_dialog_message">Para as ROMs de alguns fabricantes rodando o Android 12+, ativar este recurso pode tornar a barra de navegação do sistema transparente.</string>
-    <string name="revanced_fix_hype_button_icon_title">Corrigir ícone do botão Hypar</string>
+    <string name="revanced_fix_hype_button_icon_title">Corrigir ícone do botão ‘hype’</string>
     <string name="revanced_fix_hype_button_icon_summary_on">O ícone do botão Hypar será exibido.</string>
     <string name="revanced_fix_hype_button_icon_summary_off">O ícone do botão Hypar está oculto.</string>
     <string name="revanced_fix_hype_button_icon_user_dialog_message">"No YouTube '19.25.39' ou versões anteriores, o ícone Hypar fica oculto na barra de ação do vídeo e no painel de descrição do vídeo.
@@ -1808,15 +1808,15 @@ Sem margens na parte superior e inferior do reprodutor."</string>
 
 Ajuste o brilho deslizando verticalmente no lado esquerdo da tela."</string>
     <string name="revanced_swipe_brightness_summary_off">O brilho da tela inteira está desativado</string>
-    <string name="revanced_swipe_volume_title">Habilitar gesto de volume</string>
+    <string name="revanced_swipe_volume_title">Ativar gesto de volume</string>
     <string name="revanced_swipe_volume_summary_on">"O recurso de deslizar o volume em tela cheia está ativado.
 
 Ajuste o volume deslizando verticalmente no lado direito da tela."</string>
     <string name="revanced_swipe_volume_summary_off">O recurso de deslizar o volume em tela cheia está desativado.</string>
-    <string name="revanced_swipe_press_to_engage_title">Habilitar gesto de pressionar para deslizar</string>
+    <string name="revanced_swipe_press_to_engage_title">Ativar gesto de pressionar para deslizar</string>
     <string name="revanced_swipe_press_to_engage_summary_on">Pressionar para deslizar está ativado.</string>
     <string name="revanced_swipe_press_to_engage_summary_off">Pressionar para deslizar está desativado.</string>
-    <string name="revanced_swipe_haptic_feedback_title">Habilitar feedback tátil</string>
+    <string name="revanced_swipe_haptic_feedback_title">Ativar retorno tátil</string>
     <string name="revanced_swipe_haptic_feedback_summary_on">O feedback tátil está ativado.</string>
     <string name="revanced_swipe_haptic_feedback_summary_off">O feedback tátil está desativado.</string>
     <string name="revanced_swipe_save_and_restore_brightness_title">Salvar e restaurar o brilho</string>
@@ -1848,7 +1848,7 @@ Ajuste o volume deslizando verticalmente no lado direito da tela."</string>
     <string name="revanced_swipe_overlay_rect_size_invalid_toast">O tamanho da área deslizável não pode ser maior que 50. Redefinir ao valor padrão.</string>
     <string name="revanced_swipe_text_overlay_size_title">Tamanho do texto de sobreposição de deslize</string>
     <string name="revanced_swipe_text_overlay_size_summary">O tamanho do texto para a sobreposição de deslizar deve estar entre 1–30.</string>
-    <string name="revanced_swipe_text_overlay_size_invalid_toast">O tamanho do texto para a sobreposição de deslizar deve estar entre 1-30.</string>
+    <string name="revanced_swipe_text_overlay_size_invalid_toast">O tamanho do texto para a sobreposição de deslizar deve estar entre 1–30.</string>
     <string name="revanced_swipe_overlay_timeout_title">Tempo limite da sobreposição de gestos</string>
     <string name="revanced_swipe_overlay_timeout_summary">A quantidade de milissegundos em que a sobreposição é visível.</string>
     <string name="revanced_swipe_brightness_distance_dip_title">Distância de gesto de brilho</string>
@@ -1872,6 +1872,11 @@ Ajuste o volume deslizando verticalmente no lado direito da tela."</string>
     <string name="revanced_enable_swipe_to_switch_video_title">Ativar deslizar para alterar o vídeo</string>
     <string name="revanced_enable_swipe_to_switch_video_summary_on">Deslizar para cima / para baixo em modo de tela cheia alterará para o vídeo seguinte / anterior.</string>
     <string name="revanced_enable_swipe_to_switch_video_summary_off">Deslizar para cima / para baixo em modo de tela cheia não alterará para o vídeo seguinte / anterior.</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_title">Corrigir a velocidade dos controles de deslizar e de toque prolongado</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_summary_on">"A função de toque e segurar só ativa a velocidade quando o usuário toca e segura a tela.
+
+Problema conhecido: Às vezes, a sobreposição de deslizar aparece antes de alternar para o modo de tela cheia."</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_summary_off">A função de toque e segurar pode, por vezes, ser ativada mesmo que o usuário não toque e segure.</string>
     <string name="revanced_swipe_lowest_value_auto_brightness_overlay_text">Automático</string>
     <!-- PreferenceScreen: Video -->
     <string name="revanced_preference_screen_video_title">Vídeo</string>
@@ -1974,7 +1979,7 @@ Informação:
     <string name="revanced_ryd_enable_summary_on">Os dislikes serão exibidos.</string>
     <string name="revanced_ryd_enable_summary_off">Os dislikes não serão exibidos.</string>
     <string name="revanced_ryd_shorts_title">Exibir dislikes no Shorts</string>
-    <string name="revanced_ryd_shorts_summary_on">Dislikes exibidos no Shorts. %s</string>
+    <string name="revanced_ryd_shorts_summary_on">Dislikes exibidos no Shorts.</string>
     <string name="revanced_ryd_shorts_summary_on_disclaimer">"Exibindo dislikes em Shorts.
 
 Limitação: Dislikes pode não aparecer no modo incógnito."</string>
@@ -2039,6 +2044,13 @@ Clique para ver como emitir uma chave de API."</string>
     <string name="revanced_sb_enable_auto_hide_skip_segment_button">Ocultar automaticamente o botão pular</string>
     <string name="revanced_sb_enable_auto_hide_skip_segment_button_sum_on">O botão pular se oculta após alguns segundos.</string>
     <string name="revanced_sb_enable_auto_hide_skip_segment_button_sum_off">O botão pular é exibido para todo o segmento.</string>
+    <string name="revanced_sb_auto_hide_skip_button_duration">Pular duração do botão</string>
+    <string name="revanced_sb_auto_hide_skip_button_duration_sum">Quanto tempo para mostrar os botões de pular e pular para destaque antes de sair automaticamente.</string>
+    <string name="revanced_sb_general_skiptoast">Mostrar botão de desfazer</string>
+    <string name="revanced_sb_general_skiptoast_sum_on">Notificação flutuante é mostrada quando um segmento é pulado automaticamente. Toque na notificação flutuante para desfazer o pulo.</string>
+    <string name="revanced_sb_general_skiptoast_sum_off">Uma notificação flutuante não será exibida.</string>
+    <string name="revanced_sb_toast_on_skip_duration">Pular duração da notificação flutuante</string>
+    <string name="revanced_sb_toast_on_skip_duration_sum">Mostrar a notificação flutuante de desfazer por quanto tempo.</string>
     <string name="revanced_sb_general_time_without">Exibir duração do vídeo sem segmentos</string>
     <string name="revanced_sb_general_time_without_sum_on">Duração do vídeo sem os segmentos, exibido entre parênteses ao lado da duração total do vídeo.</string>
     <string name="revanced_sb_general_time_without_sum_off">Exibindo duração total do vídeo.</string>
@@ -2317,13 +2329,18 @@ Isso pode ser usado ao testar algo no MainThread."</string>
     <string name="revanced_spoof_streaming_data_default_client_title">Cliente padrão</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_creator">"Android Studio
 <small>(Login necessário)</small>"</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_no_sdk">"&lt;small&gt;(Sem SDK)&lt;/pequeno&gt;"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr">"Android VR
 <small>(Sem Autenticação)</small>"</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_vr_auth">"Android VR
+<small>(Autenticação, Ação necessária)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_ipados">"iPadOS
 <small>(Desatualizado, Sem Autenticação)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_mweb">"Mobile Web
 <small>(WIP, Sem Autenticação)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">"TV
+<small>(Legado)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_simply_no_potoken">"TV Simples
 <small>(Sem PoToken)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">TV Integrada</string>
@@ -2334,7 +2351,12 @@ Isso pode ser usado ao testar algo no MainThread."</string>
 • O volume estável não está disponível.
 • Os vídeos para crianças podem não reproduzir quando desconectado ou em modo anônimo.
 • 1080p+, AV1 e HDR não são suportados."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_no_sdk">O vídeo pode parar em 1:00 ou pode não estar disponível em algumas regiões.</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• O menu de faixa de áudio não está disponível.
+• O volume estável não está disponível.
+• Os vídeos para crianças podem não reproduzir quando desconectado ou em modo anônimo."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_vr_auth">"• O menu de faixa de áudio não está disponível.
+• Desativar faixas de áudio automáticas forçadas não estão disponíveis.
 • O volume estável não está disponível.
 • Os vídeos para crianças podem não reproduzir quando desconectado ou em modo anônimo."</string>
     <string name="revanced_spoof_streaming_data_side_effects_ipados">"• AV1 não é suportado.
@@ -2344,6 +2366,10 @@ Isso pode ser usado ao testar algo no MainThread."</string>
 • Às vezes, o vídeo não será reproduzido mesmo após 10 segundos, caso em que você precisará clicar no botão recarregar vídeo.
 • O vídeo pode começar tarde."</string>
     <string name="revanced_spoof_streaming_data_side_effects_tv">"• Se a desofuscação falhar, a reprodução poderá falhar.
+• Às vezes, o vídeo não será reproduzido mesmo após 10 segundos, caso em que você precisará clicar no botão recarregar vídeo.
+• O vídeo pode começar tarde."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_tv_simply_no_potoken">"• Se a desofuscação falhar, a reprodução poderá falhar.
+• Algumas contas podem exigir um PoToken, caso em que a reprodução falhará.
 • Às vezes, o vídeo não será reproduzido mesmo após 10 segundos, caso em que você precisará clicar no botão recarregar vídeo.
 • O vídeo pode começar tarde."</string>
     <string name="revanced_spoof_streaming_data_side_effects_visionos">"• O menu de faixa de áudio não está disponível.
@@ -2397,22 +2423,43 @@ Exemplo 2:
     <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Tente alterar o cliente padrão para TV.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: Android VR -->
     <string name="revanced_preference_category_android_vr">Android VR</string>
-    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: No Auth -->
-    <string name="revanced_preference_category_no_auth">Sem Autenticação</string>
-    <string name="revanced_spoof_streaming_data_no_auth_language_title">Idioma padrão de áudio</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_title">Exibir botão de faixa de áudio</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_summary_on">"O botão de faixa de áudio é exibido quando o cliente usado para buscar dados de transmissão é 'Android VR', 'Mobile Web' ou 'visionOS'."</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_summary_off">O botão de faixa de áudio não é exibido.</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_user_dialog_message">"Pré-requisitos:
-• O cliente usado para buscar os dados de transmissão é 'Android VR', 'Mobile Web', 'iPadOS' ou 'visionOS'.
-• Um vídeo com multiplas faixas de áudio está sendo reproduzido.
+    <string name="revanced_spoof_streaming_data_vr_enable_av1_title">Ativar VR AV1</string>
+    <string name="revanced_spoof_streaming_data_vr_enable_av1_summary_on">"A codificação do vídeo é AVC (H.264), VP9 ou AV1.
 
-Problemas conhecidos:
-• Se o idioma do aplicativo for alterado nas configurações do YouTube e o aplicativo não for reiniciado, o idioma usado na caixa de diálogo da faixa de áudio poderá não mudar.
-• Às vezes, o idioma errado é selecionado na caixa de diálogo da faixa de áudio.
-• Algumas faixas de áudio, como 'Inglês descritivo', não são suportadas.
+A reprodução pode travar ou perder quadros."</string>
+    <string name="revanced_spoof_streaming_data_vr_enable_av1_summary_off">O codec de vídeo é AVC (H.264) ou VP9.</string>
+    <string name="revanced_spoof_streaming_data_vr_enable_av1_user_dialog_message">"Habilitar essa configuração pode usar o software de decodificação AV1.
 
-Esse recurso ainda está em desenvolvimento, portanto pode quebrar a qualquer momento devido a alterações no lado do servidor."</string>
+A reprodução pode travar ou perder quadros."</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_about_title">Sobre o Android VR Autenticação</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_about_summary">Clique para ver como obter um token de autenticação.</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_title">Obter Token de autorização</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_message">"Para obter um token de autorização para Android VR, você deve entrar no YouTube VR usando um código de ativação:
+
+1. Clique em 'Obter código de ativação' para gerar um código de ativação.
+2. Clique em 'Abrir site' para ir para 'https://yt.be/activate'.
+3. Insira o código de ativação.
+4. Faça o login quando solicitado. Se você tem várias Contas do Google, selecione a conta que você usa com o YouTube. Se você já está logado, pule para o próximo passo.
+5. Depois de entrar, volte ao RVX e clique 'Sobre o Android VR Autenticação' novamente.
+6. Clique em 'Obter token de autorização' para obter um token de autorização.
+
+※ Clique em 'Redefinir' para remover um token de autenticação ou código de ativação."</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_get_activation_code_text">Obter código de ativação</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_get_authorization_token_text">Obter token de autorização</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_reset_text">Redefinir</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_toast_reset">Token de autenticação e código de ativação redefinido.</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_toast_success">Token de autenticação salvo.</string>
+    <string name="revanced_spoof_streaming_data_vr_activation_code_dialog_title">Código de ativação</string>
+    <string name="revanced_spoof_streaming_data_vr_activation_code_dialog_message">"Código de ativação:
+%s
+
+1. Clique em 'Abrir site' para ir em 'https://yt.be/activate'.
+2. Digite o código de ativação.
+3. Faça o login quando solicitado. Se você tiver várias contas do Google, selecione a conta que você usa com o YouTube. Se você já está logado, pule para o próximo passo.
+4. Uma vez logado, retorne ao RVX e clique em 'Sobre o Android VR Autenticação' novamente.
+5. Clique em 'Obter token de autorização' para obter um token de autorização."</string>
+    <string name="revanced_spoof_streaming_data_vr_activation_code_dialog_open_website_text">Abrir site</string>
+    <string name="revanced_spoof_streaming_data_vr_activation_code_toast_copy">Código de ativação copiado para a área de transferência: %s.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: JavaScript -->
     <string name="revanced_preference_category_js">JavaScript</string>
     <string name="revanced_spoof_streaming_data_use_js_title">Usar cliente JavaScript</string>
@@ -2436,7 +2483,6 @@ Entre os clientes JavaScript, o cliente recomendado é TV."</string>
 • Reprodução automática no feed
 • Clips
 • Shorts"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">Usar yt-dlp ejs (WIP)</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_title">Ignorar buffers falsos</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_summary_on">"Ignorar buffers falsos está ativado.
 

@@ -559,9 +559,8 @@ Korlátozás: Előfordulhat, hogy az eszköztár Vissza gombja nem működik."</
 
 Ez egyes felhasználóknál nem biztos, hogy működik, ha Önnek nem működik:
 1. Lépjen a Beállítások - RVX - Egyéb - Lejátszási adatok hamisítása menüpontra, és kapcsolja be a 'JavaScript kliens használata' beállítást.
-
 2. Lépjen a Beállítások - RVX - Egyéb - Lejátszási adatok hamisítása menüpontra, és módosítsa az 'Alapértelmezett kliens' beállítást 'TV' értékre."</string>
-    <string name="revanced_disable_auto_audio_tracks_summary_off">A kényszerített automatikus hangsávok engedélyezve vannak.</string>
+    <string name="revanced_disable_auto_audio_tracks_summary_off">"A kényszerített automatikus hangsávok engedélyezve vannak."</string>
     <string name="revanced_disable_auto_captions_title">Kényszerített automatikus feliratok letiltása</string>
     <string name="revanced_disable_auto_captions_summary_on">A kényszerített automatikus feliratok le vannak tiltva.</string>
     <string name="revanced_disable_auto_captions_summary_off">A kényszerített automatikus feliratok engedélyezve vannak.</string>
@@ -1196,7 +1195,6 @@ Korlátozások:
 
 A hangsáv menü megjelenítéséhez:
 1. Lépjen a Beállítások - RVX - Egyéb - Lejátszási adatok hamisítása menüpontra, és kapcsolja be a 'JavaScript kliens használata' beállítást.
-
 2. Lépjen a Beállítások - RVX - Egyéb - Lejátszási adatok hamisítása menüpontra, és módosítsa az 'Alapértelmezett kliens' beállítást 'TV' értékre."</string>
     <string name="revanced_hide_player_flyout_menu_captions_title">Feliratok menü elrejtése</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_on">A feliratok menü el van rejtve.</string>
@@ -1566,6 +1564,9 @@ Ez a funkció nagyon gyors internetkapcsolat mellett működik a legjobban."</st
     <string name="revanced_hide_contents_section_title">Tartalmak rész elrejtése</string>
     <string name="revanced_hide_contents_section_summary_on">A tartalom készítésének módja rész elrejtve.</string>
     <string name="revanced_hide_contents_section_summary_off">A tartalom készítésének módja rész látható.</string>
+    <string name="revanced_hide_hype_points_section_title">Hype pontok rész elrejtése</string>
+    <string name="revanced_hide_hype_points_section_summary_on">A Hype pontok rész rejtett.</string>
+    <string name="revanced_hide_hype_points_section_summary_off">A Hype pontok rész látható.</string>
     <string name="revanced_hide_podcast_section_title">Podcast rész elrejtése</string>
     <string name="revanced_hide_podcast_section_summary_on">A podcast rész el van rejtve.</string>
     <string name="revanced_hide_podcast_section_summary_off">A podcast rész látható.</string>
@@ -1896,6 +1897,11 @@ Megjegyzés: Ezzel a képernyőterület méretét is megváltoztatja, ahol érz�
     <string name="revanced_enable_swipe_to_switch_video_title">Videóváltás lapozással engedélyezése</string>
     <string name="revanced_enable_swipe_to_switch_video_summary_on">A felfelé / lefelé lapozás teljes képernyőn lejátssza a következő / előző videót.</string>
     <string name="revanced_enable_swipe_to_switch_video_summary_off">A felfelé / lefelé lapozás teljes képernyőn nem játssza le a következő / előző videót.</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_title">A húzással vezérlés működésének javítása</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_summary_on">"Az érintés és nyomva tartás csak akkor aktiválódik, ha a felhasználó kezdeményezi.
+
+Ismert probléma: Előfordul, hogy a húzás átfedése megjelenik a teljes képernyős módra váltás előtt."</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_summary_off">Az érintés és nyomva tartás néha akkor is aktiválódhat, ha a felhasználó nem kezdeményezi.</string>
     <string name="revanced_swipe_lowest_value_auto_brightness_overlay_text">Automatikus</string>
     <!-- PreferenceScreen: Video -->
     <string name="revanced_preference_screen_video_title">Videó</string>
@@ -2351,26 +2357,37 @@ Ha YouTube Premium felhasználó vagy, akkor ez a beállítás nem feltétlenül
     <string name="revanced_spoof_streaming_data_default_client_title">Alapértelmezett kliens</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_creator">"Android Studio
 <small>(Belépés szükséges)</small>"</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_no_sdk">"Android
+<small>(Nincs SDK)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr">"Android VR
 <small>(Nincs hitelesítés)</small>"</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_vr_auth">"Android VR
+<small>(Hitelesítés, művelet szükséges)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_ipados">"iPadOS
-<small>(Elavult, nincs hitelesítés)</small>"</string>
+<small>(Elavult)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_mweb">"Mobil webböngésző
-<small>(fejlesztés alatt, nincs hitelesítés)</small>"</string>
+<small>(fejlesztés alatt)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">"TV
+<small>(Örökölt)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_simply_no_potoken">"TV Egyszerű
 <small>(Nincs PoToken)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">TV beágyazott</string>
     <string name="revanced_spoof_streaming_data_client_entry_visionos">"visionOS
-<small>(Kiadatlan, nincs hitelesítés)</small>"</string>
+<small>(Kiadatlan)</small>"</string>
     <string name="revanced_spoof_streaming_data_side_effects_title">Hamisítás mellékhatásai</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_creator">"• Hiányzik a hangsáv menü.
-• A kényszerített automatikus hangsávok letiltása nem érhető el.
+• A kényszerített automatikus hangsávok letiltása nem mindig érhető el.
 • A stabil hangerő nem érhető el.
 • Előfordulhat, hogy a gyermekvideók nem játszhatók le kijelentkezéskor vagy inkognitómódban.
 • Az 1080p+, AV1 és HDR felbontás nem támogatott."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_no_sdk">• A videó 1:00-nál megállhat, vagy bizonyos régiókban nem érhető el.</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Hiányzik a hangsáv menüje.
 • Nem érhető el stabil hangerő.
+• Előfordulhat, hogy a gyerekeknek szóló videók nem játszhatók le kijelentkezéskor vagy inkognitómódban."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_vr_auth">"• Hiányzik a hangsáv menü.
+• A kényszerített automatikus hangsávok letiltása nem mindig érhető el.
+• A stabil hangerő nem érhető el.
 • Előfordulhat, hogy a gyerekeknek szóló videók nem játszhatók le kijelentkezéskor vagy inkognitómódban."</string>
     <string name="revanced_spoof_streaming_data_side_effects_ipados">"• Az AV1 nem támogatott.
 • A videó 1:00-nál leállhat, vagy bizonyos régiókban nem érhető el."</string>
@@ -2436,23 +2453,43 @@ Ha ez a beállítás engedélyezve van, a szerver válaszából származó legma
     <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Próbálja meg az alapértelmezett klienst TV-re módosítani.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: Android VR -->
     <string name="revanced_preference_category_android_vr">Android VR</string>
-    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: No Auth -->
-    <string name="revanced_preference_category_no_auth">Nincs hitelesítés</string>
-    <string name="revanced_spoof_streaming_data_no_auth_language_title">Alapértelmezett hangfolyam nyelve</string>
-    <string name="revanced_spoof_streaming_data_no_auth_language_not_available">Egy adott hangfolyam nyelvének kiválasztásához kapcsold ki a \'Kényszerített automatikus hangsávok letiltása\' beállítást.</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_title">Hangsáv megjelenítése gomb</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_summary_on">"A hangsáv gomb akkor jelenik meg, ha a streamelt adatok lekéréséhez használt kliens az 'Android VR', a 'Mobile Web' vagy a 'visionOS'."</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_summary_off">A hangsáv gombja nem látható.</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_user_dialog_message">"Előfeltételek:
-• A streamelési adatok lekéréséhez használt kliens az 'Android VR', a 'Mobile Web' vagy a 'visionOS'.
-• Több hangsávval rendelkező videó lejátszása folyamatban van.
+    <string name="revanced_spoof_streaming_data_vr_enable_av1_title">VR AV1 engedélyezése</string>
+    <string name="revanced_spoof_streaming_data_vr_enable_av1_summary_on">"A videó kodek AVC (H.264), VP9 vagy AV1.
 
-Ismert problémák:
-• Ha az alkalmazás nyelvét a YouTube beállításaiban módosítják, és az alkalmazást nem indítják újra, előfordulhat, hogy a hangsáv párbeszédpanelén használt nyelv nem változik.
-• Előfordulhat, hogy a hangsáv párbeszédpanelén rossz nyelv van kiválasztva.
-• Egyes hangsávok, például az 'angol leíró', nem támogatottak.
+A lejátszás akadozhat vagy kimaradhatnak képkockák."</string>
+    <string name="revanced_spoof_streaming_data_vr_enable_av1_summary_off">A videó kodek AVC (H.264) vagy VP9.</string>
+    <string name="revanced_spoof_streaming_data_vr_enable_av1_user_dialog_message">"Ennek a beállításnak az engedélyezése szoftveres AV1 dekódolást eredményezhet.
 
-Ez a funkció még fejlesztés alatt áll, így a szerveroldali változások miatt bármikor meghibásodhat."</string>
+A lejátszás akadozhat vagy kimaradhatnak képkockák."</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_about_title">Android VR hitelesítésről</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_about_summary">Kattintson ide, ha szeretné megtudni, hogyan szerezhet be hitelesítési tokent.</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_title">Hitelesítési token beszerzése</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_message">"Android VR hitelesítési token beszerzéséhez be kell jelentkezned a YouTube VR-ba egy aktiváló kóddal:
+
+1. Kattints az 'Aktiválási kód beszerzése' gombra az aktiváló kód létrehozásához.
+2. Kattints a 'Weboldal megnyitása' gombra a 'https://yt.be/activate' oldal eléréséhez.
+3. Add meg az aktiváló kódot.
+4. Jelentkezz be, amikor a rendszer kéri. Ha több Google-fiókod van, válaszd ki a YouTube-bal használt fiókot. Ha már be vagy jelentkezve, ugorj a következő lépésre.
+5. Miután bejelentkeztél, térj vissza az RVX-be, és kattints ismét az 'Android VR hitelesítésről' lehetőségre.
+6. Kattints az 'Engedélyezési token beszerzése' gombra az engedélyezési token beszerzéséhez.
+
+※ Kattintson a 'Visszaállítás' gombra a hitelesítési token vagy aktiválási kód eltávolításához."</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_get_activation_code_text">Aktiváló kód beszerzése</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_get_authorization_token_text">Hitelesítési token beszerzése</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_reset_text">Visszaállítás</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_toast_reset">Hitelesítési token és aktiválási kód visszaállítása.</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_toast_success">Hitelesítési token mentve.</string>
+    <string name="revanced_spoof_streaming_data_vr_activation_code_dialog_title">Aktivációs kód</string>
+    <string name="revanced_spoof_streaming_data_vr_activation_code_dialog_message">"Aktiváló kód:
+%s
+
+1. Kattints a 'Weboldal megnyitása' gombra a 'https://yt.be/activate' oldal eléréséhez.
+2. Add meg az aktiváló kódot.
+3. Jelentkezz be, amikor a rendszer kéri. Ha több Google-fiókod van, válaszd ki azt a fiókot, amelyet a YouTube-bal használsz. Ha már be vagy jelentkezve, ugorj a következő lépésre.
+4. Miután bejelentkeztél, térj vissza az RVX-be, és kattints ismét az 'Android VR hitelesítésről' lehetőségre.
+5. Kattints az 'Engedélyezési token beszerzése' gombra az engedélyezési tokenek beszerzéséhez."</string>
+    <string name="revanced_spoof_streaming_data_vr_activation_code_dialog_open_website_text">Weboldal megnyitása</string>
+    <string name="revanced_spoof_streaming_data_vr_activation_code_toast_copy">Aktiváló kód a vágólapra másolva: %s.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: JavaScript -->
     <string name="revanced_preference_category_js">JavaScript</string>
     <string name="revanced_spoof_streaming_data_use_js_title">JavaScript kliens használata</string>
@@ -2476,20 +2513,6 @@ A JavaScript kliensek közül az ajánlott kliens a TV."</string>
 • Automatikus lejátszás a hírfolyamban
 • Klipek
 • Shortok"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">Használjon yt-dlp-ejs (Folyamatban)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_on">"Külső JavaScript van használatban az yt-dlp-hez (yt-dlp-ejs).
-
-• A lejátszó JavaScriptje a deobfuszkációhoz naprakész.
-• A videó elindítása 5 - 15 másodpercet is igénybe vehet."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_off">"SmartTube kliens használatban.
-
-• A lejátszó JavaScriptje a deobfuszkációhoz nem naprakész.
-• A szerverek a közeljövőben elavulttá teszik ezt a funkciót."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_user_dialog_message">"A YouTube új intézkedései miatt a legújabb lejátszó JavaScriptben már nem lehet általános metódusokkal visszafejteni a streaming Url-eket.
-
-A legújabb lejátszó JavaScriptben az yt-dlp külső JavaScriptjét (yt-dlp-ejs) használják a streaming Url-ek visszafejtésére.
-
-Jelenleg fejlesztés alatt áll, és több hardver erőforrást fog igénybe venni."</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_title">Kerülje a hamis pufferelést</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_summary_on">"A hamis pufferelés megkerülése engedélyezett.
 

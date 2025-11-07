@@ -1,14 +1,10 @@
 package app.revanced.patches.youtube.utils.fix.streamingdata
 
-import app.revanced.patches.shared.audiotracks.hookAudioTrackId
-import app.revanced.patches.shared.spoof.streamingdata.EXTENSION_AUTO_TRACK_BUTTON_CLASS_DESCRIPTOR
-import app.revanced.patches.shared.spoof.streamingdata.EXTENSION_AUTO_TRACK_CLASS_DESCRIPTOR
 import app.revanced.patches.shared.spoof.streamingdata.EXTENSION_CLASS_DESCRIPTOR
 import app.revanced.patches.shared.spoof.streamingdata.EXTENSION_RELOAD_VIDEO_BUTTON_CLASS_DESCRIPTOR
 import app.revanced.patches.shared.spoof.streamingdata.spoofStreamingDataPatch
 import app.revanced.patches.shared.spoof.useragent.baseSpoofUserAgentPatch
 import app.revanced.patches.youtube.player.overlaybuttons.overlayButtonsPatch
-import app.revanced.patches.youtube.utils.audiotracks.audioTracksHookPatch
 import app.revanced.patches.youtube.utils.compatibility.Constants.YOUTUBE_PACKAGE_NAME
 import app.revanced.patches.youtube.utils.dismiss.dismissPlayerHookPatch
 import app.revanced.patches.youtube.utils.playercontrols.addTopControl
@@ -24,7 +20,6 @@ import app.revanced.patches.youtube.utils.request.hookBuildRequest
 import app.revanced.patches.youtube.utils.request.hookBuildRequestUrl
 import app.revanced.patches.youtube.utils.settings.ResourceUtils.addPreference
 import app.revanced.patches.youtube.utils.settings.settingsPatch
-import app.revanced.patches.youtube.video.information.hookBackgroundPlayVideoInformation
 import app.revanced.patches.youtube.video.information.videoInformationPatch
 import app.revanced.patches.youtube.video.playerresponse.Hook
 import app.revanced.patches.youtube.video.playerresponse.addPlayerResponseMethodHook
@@ -42,7 +37,6 @@ val spoofStreamingDataPatch = spoofStreamingDataPatch(
             playerControlsPatch,
             videoIdPatch,
             videoInformationPatch,
-            audioTracksHookPatch,
             dismissPlayerHookPatch,
         )
     },
@@ -82,9 +76,6 @@ val spoofStreamingDataPatch = spoofStreamingDataPatch(
 
         // region Player buttons
 
-        hookAudioTrackId("$EXTENSION_AUTO_TRACK_CLASS_DESCRIPTOR->setAudioTrackId(Ljava/lang/String;)V")
-        hookBackgroundPlayVideoInformation("$EXTENSION_AUTO_TRACK_CLASS_DESCRIPTOR->newVideoStarted(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JZ)V")
-        injectControl(EXTENSION_AUTO_TRACK_BUTTON_CLASS_DESCRIPTOR)
         injectControl(EXTENSION_RELOAD_VIDEO_BUTTON_CLASS_DESCRIPTOR)
 
         // endregion
@@ -98,7 +89,7 @@ val spoofStreamingDataPatch = spoofStreamingDataPatch(
     finalizeBlock = {
         addTopControl(
             "youtube/spoof/shared",
-            "@+id/revanced_audio_track_button",
+            "@+id/revanced_reload_video_button",
             "@+id/revanced_reload_video_button"
         )
     }

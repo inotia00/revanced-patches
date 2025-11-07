@@ -9,7 +9,7 @@ import android.webkit.WebChromeClient
 import android.webkit.WebView
 import androidx.annotation.MainThread
 import app.revanced.extension.shared.utils.Logger
-import app.revanced.extension.shared.utils.ResourceUtils.openRawResource
+import app.revanced.extension.shared.utils.ResourceUtils.getRawResource
 import app.revanced.extension.shared.utils.Utils
 import com.liskovsoft.sharedutils.okhttp.OkHttpManager
 import java.util.concurrent.CountDownLatch
@@ -73,8 +73,7 @@ internal class PoTokenWebView private constructor(
     private fun loadHtmlAndObtainBotguard() {
         Logger.printDebug { "loadHtmlAndObtainBotguard() called" }
 
-        val html = openRawResource("po_token").bufferedReader()
-            .use { it.readText() }
+        val html = getRawResource("po_token")
 
         webView.loadDataWithBaseURL(
             "https://www.youtube.com",

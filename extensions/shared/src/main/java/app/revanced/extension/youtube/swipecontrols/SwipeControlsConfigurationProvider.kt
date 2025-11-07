@@ -6,7 +6,6 @@ import app.revanced.extension.shared.utils.Utils.validateValue
 import app.revanced.extension.youtube.settings.Settings
 import app.revanced.extension.youtube.shared.LockModeState
 import app.revanced.extension.youtube.shared.PlayerType
-import app.revanced.extension.youtube.utils.ExtendedUtils.IS_19_20_OR_GREATER
 
 /**
  * Provides configuration settings for volume and brightness swipe controls in the YouTube player.
@@ -34,13 +33,18 @@ class SwipeControlsConfigurationProvider {
     val enableBrightnessControl = Settings.SWIPE_BRIGHTNESS.get()
 
     /**
+     * Fix https://github.com/inotia00/ReVanced_Extended/issues/3052.
+     */
+    val fixTapAndHoldSpeed = Settings.FIX_SWIPE_TAP_AND_HOLD_SPEED.get()
+
+    /**
      * Checks if the video player is currently in fullscreen mode.
      */
     private val isFullscreenVideo: Boolean
-        get() = if (IS_19_20_OR_GREATER)
-            PlayerType.current == PlayerType.WATCH_WHILE_FULLSCREEN
-        else
+        get() = if (fixTapAndHoldSpeed)
             PlayerType.current.isFullScreenOrSlidingFullScreen()
+        else
+            PlayerType.current == PlayerType.WATCH_WHILE_FULLSCREEN
 
     /**
      * is the video player currently in lock mode?

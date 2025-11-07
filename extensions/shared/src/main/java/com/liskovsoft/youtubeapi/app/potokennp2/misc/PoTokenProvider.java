@@ -118,7 +118,7 @@ public interface PoTokenProvider {
     @Nullable
     PoTokenResult getIosClientPoToken(String videoId);
 
-    boolean isExpired();
+    boolean isWebPotExpired();
 
-    boolean isPotSupported();
+    boolean isWebPotSupported();
 }

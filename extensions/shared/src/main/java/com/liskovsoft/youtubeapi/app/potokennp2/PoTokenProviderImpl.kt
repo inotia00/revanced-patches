@@ -24,7 +24,7 @@ internal object PoTokenProviderImpl : PoTokenProvider {
     private var webPoTokenGenerator: PoTokenGenerator? = null
 
     override fun getWebClientPoToken(videoId: String): PoTokenResult? {
-        if (!isPotSupported) {
+        if (!isWebPotSupported) {
             return null
         }
 
@@ -135,11 +135,12 @@ internal object PoTokenProviderImpl : PoTokenProvider {
 
     override fun getIosClientPoToken(videoId: String): PoTokenResult? = null
 
-    override fun isExpired() = isPotSupported && webPoTokenGenerator?.isExpired() ?: true
+    override fun isWebPotExpired() = isWebPotSupported && webPoTokenGenerator?.isExpired() ?: true
 
-    override fun isPotSupported() = webViewSupported && !webViewBadImpl
+    override fun isWebPotSupported() = webViewSupported && !webViewBadImpl
 
     fun resetCache() {
-        webPoTokenGenerator = null
+        webPoTokenVisitorData = null
+        webPoTokenStreamingPot = null
     }
 }

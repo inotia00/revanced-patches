@@ -563,7 +563,7 @@ Nota: il pulsante Indietro della barra degli strumenti potrebbe non funzionare."
     <string name="revanced_disable_auto_audio_tracks_summary_on_disclaimer">"La traccia audio automatica forzata è disattivata.
 
 Nota: questa impostazione potrebbe non funzionare per alcuni utenti. Se non funziona, vai alle impostazioni → RVX → Varie → Camuffa i dati in streaming → Mostra i client JavaScript tra i client disponibili e cambia il client predefinito in TV."</string>
-    <string name="revanced_disable_auto_audio_tracks_summary_off">La traccia audio automatica forzata è attivata.</string>
+    <string name="revanced_disable_auto_audio_tracks_summary_off">"La traccia audio automatica forzata è attivata."</string>
     <string name="revanced_disable_auto_captions_title">Disattiva i sottotitoli automatici forzati</string>
     <string name="revanced_disable_auto_captions_summary_on">I sottotitoli automatici forzati sono disattivati.</string>
     <string name="revanced_disable_auto_captions_summary_off">I sottotitoli automatici forzati sono attivati.</string>
@@ -1535,9 +1535,9 @@ Questa impostazione funziona meglio con una connessione internet molto veloce."<
     <string name="revanced_disable_rolling_number_animations_title">Disattiva le animazioni dei contatori numerici</string>
     <string name="revanced_disable_rolling_number_animations_summary_on">Le animazioni dei contatori numerici sono disattivate.</string>
     <string name="revanced_disable_rolling_number_animations_summary_off">Le animazioni dei contatori numerici sono attivate.</string>
-    <string name="revanced_hide_ai_generated_video_summary_section_title">Nascondi la sezione Riepilogo Video Generato dall\'IA</string>
-    <string name="revanced_hide_ai_generated_video_summary_section_summary_on">La sezione Riepilogo Video Generato dall\'IA è nascosta.</string>
-    <string name="revanced_hide_ai_generated_video_summary_section_summary_off">La sezione Riepilogo Video Generato dall\'IA è visibile.</string>
+    <string name="revanced_hide_ai_generated_video_summary_section_title">Nascondi la sezione Riepilogo del Video Creato con l\'IA</string>
+    <string name="revanced_hide_ai_generated_video_summary_section_summary_on">La sezione Riepilogo del Video Creato con l\'IA è nascosta.</string>
+    <string name="revanced_hide_ai_generated_video_summary_section_summary_off">La sezione Riepilogo del Video Creato con l\'IA è visibile.</string>
     <string name="revanced_hide_attributes_section_title">Nascondi le sezioni Musica, Giochi, Persone Menzionate e Luoghi in Primo Piano</string>
     <string name="revanced_hide_attributes_section_summary_on">Le sezioni Musica, Giochi, Persone Menzionate e Luoghi in Primo Piano sono nascoste.</string>
     <string name="revanced_hide_attributes_section_summary_off">Le sezioni Musica, Giochi, Persone Menzionate e Luoghi in Primo Piano sono visibili.</string>
@@ -1547,6 +1547,9 @@ Questa impostazione funziona meglio con una connessione internet molto veloce."<
     <string name="revanced_hide_contents_section_title">Nascondi la sezione Come È Stato Creato Questo Contenuto</string>
     <string name="revanced_hide_contents_section_summary_on">La sezione Come È Stato Creato Questo Contenuto è nascosto.</string>
     <string name="revanced_hide_contents_section_summary_off">La sezione Come È Stato Creato Questo Contenuto è visibile.</string>
+    <string name="revanced_hide_hype_points_section_title">Nascondi i punti hype</string>
+    <string name="revanced_hide_hype_points_section_summary_on">I punti hype sono nascosti.</string>
+    <string name="revanced_hide_hype_points_section_summary_off">I punti hype sono visibili.</string>
     <string name="revanced_hide_podcast_section_title">Nascondi la sezione Podcast</string>
     <string name="revanced_hide_podcast_section_summary_on">La sezione Podcast è nascosta.</string>
     <string name="revanced_hide_podcast_section_summary_off">La sezione Podcast è visibile.</string>
@@ -1828,7 +1831,7 @@ Regola il volume scorrendo verticalmente sul lato destro dello schermo."</string
     <string name="revanced_swipe_threshold_title">Limite di ampiezza del trascinamento</string>
     <string name="revanced_swipe_threshold_summary">Il limite di ampiezza entro cui deve avvenire il trascinamento.</string>
     <string name="revanced_swipe_overlay_style_title">Stile della sovrapposizione durante il trascinamento</string>
-    <string name="revanced_swipe_overlay_style_entry_0">Originale</string>
+    <string name="revanced_swipe_overlay_style_entry_0">Vecchio</string>
     <string name="revanced_swipe_overlay_style_entry_1">Orizzontale</string>
     <string name="revanced_swipe_overlay_style_entry_2">Orizzontale (Minima superiore)</string>
     <string name="revanced_swipe_overlay_style_entry_3">Orizzontale (Minima centrale)</string>
@@ -1872,6 +1875,11 @@ Regola il volume scorrendo verticalmente sul lato destro dello schermo."</string
     <string name="revanced_enable_swipe_to_switch_video_title">Attiva il gesto per cambiare video</string>
     <string name="revanced_enable_swipe_to_switch_video_summary_on">Trascinando verso l\'alto o il basso a schermo intero verrà riprodotto il video successivo o precedente.</string>
     <string name="revanced_enable_swipe_to_switch_video_summary_off">Trascinando verso l\'alto o il basso a schermo intero non verrà riprodotto il video successivo o precedente.</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_title">Correggi il gesto Tocca e Tieni Premuto della velocità</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_summary_on">"Il gesto Tocca e Tieni Premuto della velocità si attiva solo quando l'utente tocca e tiene premuto.
+
+Nota: a volte la sovrapposizione di scorrimento appare prima di passare alla modalità a schermo intero."</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_summary_off">Il gesto Tocca e Tieni Premuto della velocità potrebbe attivarsi anche se l\'utente non tocca e non tiene premuto.</string>
     <string name="revanced_swipe_lowest_value_auto_brightness_overlay_text">Automatico</string>
     <!-- PreferenceScreen: Video -->
     <string name="revanced_preference_screen_video_title">Video</string>
@@ -1919,10 +1927,10 @@ Note:
     <string name="revanced_enable_custom_playback_speed_summary_on">La velocità di riproduzione personalizzata è attivata.</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">La velocità di riproduzione personalizzata è disattivata.</string>
     <string name="revanced_custom_playback_speed_menu_type_title">Cambia il menù della velocità di riproduzione personalizzata</string>
-    <string name="revanced_custom_playback_speed_menu_type_entry_custom_legacy">Personalizzato (Originale)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_legacy">Personalizzato (Vecchio)</string>
     <string name="revanced_custom_playback_speed_menu_type_entry_custom_modern">Personalizzato (Moderno)</string>
     <string name="revanced_custom_playback_speed_menu_type_entry_custom_no_theme">Personalizzato (Nessun tema)</string>
-    <string name="revanced_custom_playback_speed_menu_type_entry_youtube_legacy">YouTube originale</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_youtube_legacy">YouTube (Vecchio)</string>
     <string name="revanced_custom_playback_speeds_title">Modifica le velocità di riproduzione personalizzate</string>
     <string name="revanced_custom_playback_speeds_summary">Aggiungi, rimuovi o modifica le velocità di riproduzione.</string>
     <string name="revanced_custom_playback_speeds_invalid">Le velocità personalizzate devono essere inferiori a %sx</string>
@@ -2325,32 +2333,37 @@ Nota: questa impostazione potrebbe non essere necessaria se sei un utente YouTub
     <string name="revanced_spoof_streaming_data_default_client_title">Client predefinito</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_creator">"Android Studio
 <small>(Accesso richiesto)</small>"</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_no_sdk">"Android
+<small>(Nessun SDK richiesto)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr">"Android VR
 <small>(Nessun accesso richiesto)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr_auth">"Android VR
 <small>(Accesso richiesto e azione necessaria)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_ipados">"iPadOS
-<small>(Obsoleto e nessun accesso richiesto)</small>"</string>
+<small>(Obsoleto)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_mweb">"Web Mobile
-<small>(In fase di sviluppo e nessun accesso richiesto)</small>"</string>
+<small>(In fase di sviluppo)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">"TV
+<small>(Vecchio)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_simply_no_potoken">"TV Simply
 <small>(Nessun PoToken richiesto)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">TV Embedded</string>
     <string name="revanced_spoof_streaming_data_client_entry_visionos">"visionOS
-<small>(Non rilasciato e nessun accesso richiesto)</small>"</string>
+<small>(Non rilasciato)</small>"</string>
     <string name="revanced_spoof_streaming_data_side_effects_title">Effetti collaterali del camuffamento</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_creator">"• Il menù Traccia Audio è nascosto.
 • Il menù Volume Stabile è nascosto.
-• La disattivazione della traccia audio automatica forzata non funziona.
+• La disattivazione della traccia audio automatica forzata potrebbe non funzionare.
 • I video per bambini potrebbero non essere riprodotti se si è disconnessi o in incognito.
 • 1080p+, AV1 e HDR non funzionano."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_no_sdk">• I video potrebbero interrompersi a 1:00 o non essere disponibili in alcune regioni.</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Il menù Traccia Audio è nascosto.
 • Il menù Volume Stabile è nascosto.
 • I video per bambini potrebbero non essere riprodotti se si è disconnessi o in incognito."</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_vr_auth">"• Il menù Traccia Audio è nascosto.
 • Il menù Volume Stabile è nascosto.
-• La disattivazione della traccia audio automatica forzata non funziona.
+• La disattivazione della traccia audio automatica forzata potrebbe non funzionare.
 • I video per bambini potrebbero non essere riprodotti se si è disconnessi o in incognito."</string>
     <string name="revanced_spoof_streaming_data_side_effects_ipados">"• AV1 non funziona.
 • I video potrebbero interrompersi a 1:00 o non essere disponibili in alcune regioni."</string>
@@ -2443,24 +2456,6 @@ Nota: tocca \"Ripristina\" per rimuovere un token di accesso o un codice di atti
 5. Tocca \"Ottieni un token di accesso\" per ottenere un token."</string>
     <string name="revanced_spoof_streaming_data_vr_activation_code_dialog_open_website_text">Apri sito</string>
     <string name="revanced_spoof_streaming_data_vr_activation_code_toast_copy">Codice di attivazione copiato negli appunti (%s)</string>
-    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: No Auth -->
-    <string name="revanced_preference_category_no_auth">Nessun accesso richiesto</string>
-    <string name="revanced_spoof_streaming_data_no_auth_language_title">Lingua predefinita dell\'audio</string>
-    <string name="revanced_spoof_streaming_data_no_auth_language_not_available">Disattivare \"Disattiva la traccia audio automatica forzata\" per selezionare una lingua specifica per l\'audio</string>
-    <string name="revanced_spoof_streaming_data_no_auth_language_not_available_by_client">La selezione della lingua predefinita per l\'audio non è disponibile con il client %s</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_title">Mostra il pulsante Traccia Audio</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_summary_on">"Il pulsante Traccia Audio è visibile quando il client usato per recuperare i dati in streaming è Android VR, Mobile Web o visionOS."</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_summary_off">Il pulsante Traccia Audio è nascosto.</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_user_dialog_message">"Prerequisiti:
-• Il client usato per recuperare i dati in streaming è Android VR, Mobile Web o visionOS.
-• È in riproduzione un video con più tracce audio.
-
-Note:
-• Se si modifica la lingua dell'app nelle impostazioni di YouTube e l'app non viene riavviata, la lingua usata nella finestra della traccia audio potrebbe non cambiare.
-• A volte viene selezionata la lingua sbagliata nella finestra della traccia audio.
-• Alcune tracce audio, come \"English descriptive\", non sono supportate.
-
-Questa funzionalità è ancora in fase di sviluppo, quindi potrebbe non funzionare in qualsiasi momento a causa di modifiche lato server."</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: JavaScript -->
     <string name="revanced_preference_category_js">JavaScript</string>
     <string name="revanced_spoof_streaming_data_use_js_title">Mostra i client JavaScript tra i client disponibili</string>
@@ -2478,19 +2473,6 @@ Tra i client JavaScript, il client consigliato è TV."</string>
 
 Nota: questo client non riesce ancora a riprodurre clip, riproduzione automatica nelle schede e Shorts."</string>
     <string name="revanced_spoof_streaming_data_use_js_all_summary_off">"Il client JavaScript non viene usato per clip, riproduzione automatica nelle schede e Shorts, poichè richiedono una riproduzione rapida."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">Usa yt-dlp ejs (In fase di sviluppo)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_on">"È in uso il JavaScript esterno per yt-dlp-ejs.
-
-Note:
-• Il JavaScript del riproduttore per il deoffuscamento è mantenuto aggiornato.
-• L'avvio dei video potrebbe richiedere dai 5 ai 15 secondi."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_off">"È in uso l'estrattore SmartTube.
-
-Note:
-• Il JavaScript del riproduttore per il deoffuscamento non è mantenuto aggiornato.
-• Questa impostazione verrà rimossa dai server in futuro."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_user_dialog_message">"A causa delle nuove misure di YouTube, non è più possibile decriptare gli URL di streaming usando i metodi generali nell'ultimo JavaScript del riproduttore.
-Per decriptare gli URL di streaming nell'ultimo JavaScript, viene usato un JavaScript esterno per yt-dlp-ejs, ma è attualmente in fase di sviluppo e richiede maggiori risorse hardware."</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_title">Bypassa il falso buffering</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_summary_on">"Il bypass del falso buffering è attivato.
 

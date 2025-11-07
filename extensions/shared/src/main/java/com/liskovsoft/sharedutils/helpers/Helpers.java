@@ -114,6 +114,9 @@ public final class Helpers {
 
     /**
      * Simple wildcard matching routine. Implemented without regex. So you may expect huge performance boost.
+     * @param host
+     * @param mask
+     * @return
      */
     public static boolean matchSubstr(String host, String mask) {
         String[] sections = mask.split("\\*");
@@ -238,6 +241,10 @@ public final class Helpers {
 
         float val = Float.parseFloat(String.valueOf(floatOrIntString));
         return String.valueOf((int) val);
+    }
+
+    public static InputStream toStream(String content) {
+        return FileHelpers.toStream(content);
     }
 
     public static void postOnUiThread(Runnable runnable) {
@@ -1154,30 +1161,36 @@ public final class Helpers {
     }
 
     public static int parseInt(String numString) {
+        return parseInt(numString, -1);
+    }
+
+    public static int parseInt(String numString, int defaultValue) {
         if (!isInteger(numString)) {
-            return -1;
+            return defaultValue;
         }
 
-        try {
-            return Integer.parseInt(numString);
-        } catch (NumberFormatException e) {
-            e.printStackTrace();
-        }
-
-        return -1;
+        return Integer.parseInt(numString);
     }
 
     public static long parseLong(String numString) {
+        return parseLong(numString, -1);
+    }
+
+    public static long parseLong(String numString, long defaultValue) {
         if (!isInteger(numString)) {
-            return -1;
+            return defaultValue;
         }
 
         return Long.parseLong(numString);
     }
 
     public static float parseFloat(String numString) {
+        return parseFloat(numString, -1);
+    }
+
+    public static float parseFloat(String numString, float defaultValue) {
         if (!isNumeric(numString)) {
-            return -1;
+            return defaultValue;
         }
 
         return Float.parseFloat(numString);
@@ -1204,8 +1217,7 @@ public final class Helpers {
             return defaultValue;
         }
 
-        int result = parseInt(arr[index]);
-        return result != -1 ? result : defaultValue;
+        return parseInt(arr[index], defaultValue);
     }
 
     public static long parseLong(String[] arr, int index) {
@@ -1217,8 +1229,7 @@ public final class Helpers {
             return defaultValue;
         }
 
-        long result = parseLong(arr[index]);
-        return result != -1 ? result : defaultValue;
+        return parseLong(arr[index], defaultValue);
     }
 
     @Nullable
@@ -1256,8 +1267,7 @@ public final class Helpers {
             return defaultValue;
         }
 
-        float result = parseFloat(arr[index]);
-        return !floatEquals(result, -1) ? result : defaultValue;
+        return parseFloat(arr[index], defaultValue);
     }
 
     public static List<Integer> parseIntList(String[] arr, int index) {
@@ -1284,7 +1294,7 @@ public final class Helpers {
         List<T> result = new ArrayList<>();
 
         if (data != null) {
-            String[] listArr = split(delim, data);
+            String[] listArr = split(data, delim);
 
             for (String item : listArr) {
                 T parsed = itemParser.parse(item);
@@ -1313,7 +1323,7 @@ public final class Helpers {
 
             for (String item : listArr) {
                 //String[] keyValPair = item.split("\\|");
-                String[] keyValPair = split(PAIR_DELIM, item);
+                String[] keyValPair = split(item, PAIR_DELIM);
 
                 if (keyValPair.length != 2) {
                     continue;
@@ -1344,7 +1354,7 @@ public final class Helpers {
     }
 
     public static String[] splitArray(String arr) {
-        return split(ARRAY_DELIM, arr);
+        return split(arr, ARRAY_DELIM);
     }
 
     public static String mergeArray(Object... items) {
@@ -1370,38 +1380,22 @@ public final class Helpers {
     }
 
     public static String[] splitData(String data) {
-        return split(DATA_DELIM, data);
+        return split(data, DATA_DELIM);
     }
 
     public static String mergeData(Object... items) {
         return merge(DATA_DELIM, items);
     }
 
-    public static String[] splitArrayLegacy(String arr) {
-        if (arr != null && (arr.contains(ARRAY_DELIM) || arr.contains(DATA_DELIM))) {
-            return split(ARRAY_DELIM, arr);
-        }
-
-        return split(LEGACY_ARRAY_DELIM, arr);
-    }
-
-    public static String[] splitDataLegacy(String data) {
-        if (data != null && (data.contains(DATA_DELIM) || data.contains(ARRAY_DELIM))) {
-            return split(DATA_DELIM, data);
-        }
-
-        return split(LEGACY_DATA_DELIM, data);
-    }
-
     public static String[] splitObj(String obj) {
-        return split(OBJ_DELIM, obj);
+        return split(obj, OBJ_DELIM);
     }
 
     public static String mergeObj(Object... items) {
         return merge(OBJ_DELIM, items);
     }
 
-    public static String[] split(String delim, String data) {
+    public static String[] split(String data, String delim) {
         if (data == null) {
             return null;
         }
@@ -2248,5 +2242,24 @@ public final class Helpers {
         ActivityManager.RunningAppProcessInfo appProcessInfo = new ActivityManager.RunningAppProcessInfo();
         ActivityManager.getMyMemoryState(appProcessInfo);
         return appProcessInfo.importance == ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND;
+    }
+
+    public static List<String> findAll(String data, Pattern pattern) {
+        if (data == null) {
+            return null;
+        }
+
+        List<String> result = null;
+        Matcher matcher = pattern.matcher(data);
+
+        while (matcher.find()) {
+            if (result == null) {
+                result = new ArrayList<>();
+            }
+
+            result.add(matcher.group());
+        }
+
+        return result;
     }
 }

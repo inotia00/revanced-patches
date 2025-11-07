@@ -439,6 +439,7 @@ private val emptyTitles = setOf(
     "revanced_disable_swipe_to_enter_fullscreen_mode_in_the_player",
     "revanced_disable_swipe_to_exit_fullscreen_mode",
     "revanced_enable_narrow_navigation_buttons",
+    "revanced_fix_swipe_tap_and_hold_speed",
     "revanced_hide_player_flyout_menu_captions_footer",
     "revanced_hide_player_flyout_menu_quality_footer",
     "revanced_hide_stop_ads_button",

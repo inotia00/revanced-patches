@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Shared -->
+    <string name="revanced_settings_title">RVX</string>
     <string name="revanced_settings_search_title">Buscar %s</string>
     <string name="revanced_reset_to_default_toast">Restaurar valores predeterminados.</string>
     <!-- Shared Category -->
+    <string name="revanced_restart_first_run">Reiniciar para cargar el diseño normalmente</string>
+    <string name="revanced_restart_message">Actualizar y reiniciar</string>
+    <string name="revanced_settings_search_hint">Ajustes de búsqueda</string>
+    <string name="revanced_settings_search_no_results_title">No se encontraron resultados para %s.</string>
+    <string name="revanced_settings_search_no_results_summary">Intenta otra palabra clave.</string>
+    <string name="revanced_settings_search_recent_searches">Búsquedas recientes</string>
+    <string name="revanced_settings_search_remove_message">¿Eliminar del historial?</string>
+    <string name="revanced_settings_search_clear_history">Eliminar el historial de búsqueda</string>
+    <string name="revanced_settings_search_clear_history_message">¿Deseas borrar el historial de búsqueda?</string>
+    <string name="revanced_settings_search_tips_title">Consejos de búsqueda</string>
+    <string name="revanced_settings_search_tips_summary">"• Toque una ruta para navegar hasta ella.
+• Mantenga pulsado un ajuste para navegar hasta el.
+• Pulse Enter para guardar una consulta de búsqueda en el historial.
+• La búsqueda ignora las mayúsculas y minúsculas y la puntuación.
+• Los ajustes principales aparecen por encima de los ajustes secundarios desactivados."</string>
+    <string name="revanced_settings_search_empty_history_title">El historial de búsqueda está vacío</string>
+    <string name="revanced_settings_search_empty_history_summary">Para guardar el historial de búsqueda, escriba una consulta de búsqueda y pulse Intro.</string>
+    <string name="revanced_settings_search_history_title">Mostrar historial de búsqueda de ajustes</string>
+    <string name="revanced_settings_search_history_summary_on">El historial de búsqueda de los ajustes está visible.</string>
+    <string name="revanced_settings_search_history_summary_off">El historial de búsqueda de los ajustes está oculto.</string>
     <!-- PreferenceScreen: Account -->
     <string name="revanced_preference_screen_account_title">Cuenta</string>
     <string name="revanced_hide_account_menu_title">Ocultar menú de cuenta</string>
@@ -25,7 +46,7 @@
     <string name="revanced_hide_action_button_comment_title">Ocultar botón de comentarios</string>
     <string name="revanced_hide_action_button_comment_summary">Oculta el botón de comentarios.</string>
     <string name="revanced_hide_action_button_add_to_playlist_title">Ocultar botón Guardar</string>
-    <string name="revanced_hide_action_button_add_to_playlist_summary">Oculta botón Guardar.</string>
+    <string name="revanced_hide_action_button_add_to_playlist_summary">Oculta el botón Guardar.</string>
     <string name="revanced_hide_action_button_download_title">Ocultar botón Descargar</string>
     <string name="revanced_hide_action_button_download_summary">Oculta el botón Descargar.</string>
     <string name="revanced_hide_action_button_radio_title">Ocultar botón de emisoras de radio</string>
@@ -144,6 +165,10 @@ Problemas conocidos:
     <string name="revanced_disable_cairo_splash_animation_summary">Deshabilita la animación de bienvenida \"Cairo\" cuando se inicia la aplicación.</string>
     <string name="revanced_disable_dislike_redirection_title">Desactivar redirección de No me Gusta</string>
     <string name="revanced_disable_dislike_redirection_summary">Deshabilita la redirección a la siguiente pista al hacer clic en el botón No me Gusta.</string>
+    <string name="revanced_disable_auto_audio_tracks_title">Desactivar pistas de audio automáticas forzadas</string>
+    <string name="revanced_disable_auto_audio_tracks_summary">"Deshabilita las pistas de audio automatizadas para podcasts.
+
+Limitación: Si 'Datos de streaming espóa' está habilitado y el cliente por defecto es 'Android VR Auth', esto puede no funcionar."</string>
     <string name="revanced_disable_auto_captions_title">Desactivar subtítulos automáticos</string>
     <string name="revanced_disable_auto_captions_summary">Desactiva la activación automática de los subtítulos forzados en el reproductor de vídeo.</string>
     <string name="revanced_enable_landscape_mode_title">Activar modo horizontal</string>
@@ -429,6 +454,19 @@ Toca para ver cómo crear una clave de API."</string>
     <string name="revanced_sb_about_api">sponsor.ajay.app</string>
     <!-- PreferenceScreen: Miscellaneous -->
     <string name="revanced_preference_screen_misc_title">Otros</string>
+    <string name="revanced_settings_import_export_title">Importar / Exportar configuración</string>
+    <string name="revanced_settings_import_export_summary">Importar / Exportar la configuración de RVX Music.</string>
+    <string name="revanced_settings_export_as_file">Exportar configuración como un archivo</string>
+    <string name="revanced_settings_import_as_file">Importar configuración desde el archivo</string>
+    <string name="revanced_settings_import_export_as_text">Importar / Exportar configuración como texto</string>
+    <string name="revanced_settings_export_failed">Fallo al exportar configuración.</string>
+    <string name="revanced_settings_export_success">La configuración fue exportada exitosamente.</string>
+    <string name="revanced_settings_import">Importar</string>
+    <string name="revanced_settings_import_copy">Copiar</string>
+    <string name="revanced_settings_import_failed">Error de importación: %s</string>
+    <string name="revanced_settings_import_reset">Configuración restablecida por defecto.</string>
+    <string name="revanced_settings_import_success">Configuración importada de %d.</string>
+    <string name="revanced_settings_reset">Restablecer</string>
     <string name="revanced_share_copy_settings_success">Ajustes copiados en el portapapeles.</string>
     <string name="revanced_bypass_image_region_restrictions_title">Eludir las restricciones regionales de imágenes</string>
     <string name="revanced_bypass_image_region_restrictions_summary">Reemplaza el dominio que está bloqueado en algunas regiones para que las miniaturas de la lista de reproducción, avatares de canales, etc. puedan ser recibidas.</string>
@@ -466,10 +504,42 @@ Problemas conocidos:
 • El audio se puede trabar durante la reproducción.</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_creator">Creador de android</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr">Android RV</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_vr_auth">Autentificación de Android VR (Acción necesaria)</string>
     <string name="revanced_spoof_streaming_data_client_entry_mweb">Web Móvil</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">TV integrado</string>
     <string name="revanced_spoof_streaming_data_client_entry_visionos">visionOS</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_about_title">Acerca de la autenticación de Android VR</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_about_summary">Pulsa para ver cómo obtener un token de autenticación.</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_title">Obtener token de autorización</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_message">"Para obtener un token de autorización para Android VR, debes iniciar sesión en YouTube VR utilizando un código de activación:
+
+1. Pulsa en «Obtener código de activación» para generar un código de activación.
+2. Pulsa en «Abrir sitio web» para ir a «https://yt.be/activate».
+3. Introduce el código de activación.
+4. Inicia sesión cuando se te solicite. Si tienes varias cuentas de Google, selecciona la cuenta que utilizas con YouTube. Si ya has iniciado sesión, salta al siguiente paso.
+5. Una vez iniciada la sesión, vuelve a RVX y pulsa de nuevo en «Acerca de la autenticación de Android VR».
+6. Pulsa en «Obtener token de autorización» para obtener un token de autorización.
+
+※ Pulsa «Restablecer» para eliminar un token de autenticación o un código de activación."</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_get_activation_code_text">Obtener código de activación</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_get_authorization_token_text">Obtener token de autorización</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_reset_text">Restablecer</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_toast_reset">Token de autenticación y código de activación restablecidos.</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_toast_success">Token de autentificación guardado.</string>
+    <string name="revanced_spoof_streaming_data_vr_activation_code_dialog_title">Código de activación</string>
+    <string name="revanced_spoof_streaming_data_vr_activation_code_dialog_message">"Código de activación:
+%s
+
+1. Pulsa en «Abrir sitio web» para ir a «https://yt.be/activate».
+2. Introduce el código de activación.
+3. Inicia sesión cuando se te solicite. Si tienes varias cuentas de Google, selecciona la cuenta que utilizas con YouTube. Si ya has iniciado sesión, pasa al siguiente paso.
+4. Una vez que hayas iniciado sesión, vuelve a RVX y pulsa de nuevo en «Acerca de la autenticación de Android VR».
+5. Pulsa en «Obtener token de autorización» para obtener un token de autorización."</string>
+    <string name="revanced_spoof_streaming_data_vr_activation_code_dialog_open_website_text">Abrir sitio web</string>
+    <string name="revanced_spoof_streaming_data_vr_activation_code_toast_copy">Código de activación copiado al portapapeles: %s.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden">No se han podido obtener las transmisiones de ningún cliente.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Intente cambiar el cliente predeterminado a TV.</string>
     <string name="revanced_watch_history_type_title">Tipo de vista del historial</string>
     <string name="revanced_watch_history_type_summary">"• Original: Sigue la configuración del registro del historial de su cuenta de Google, pero la opción del registro del historial pueda no funcionar al tener un DNS o VPN.
 • Reemplazar dominio: Sigue la configuración del registro del historial de su cuenta de Google.

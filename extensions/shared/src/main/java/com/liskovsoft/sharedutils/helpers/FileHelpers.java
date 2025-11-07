@@ -26,8 +26,6 @@ import java.util.Set;
 import app.revanced.extension.shared.utils.Logger;
 
 public class FileHelpers {
-    private static final String TAG = FileHelpers.class.getSimpleName();
-
     public static File getDownloadDir(Context context) {
         return Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
     }

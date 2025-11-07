@@ -2,10 +2,29 @@
 <resources>
     <!-- Shared -->
     <string name="revanced_settings_title">RVX</string>
+    <string name="revanced_settings_search_title">Пошук %s</string>
     <string name="revanced_reset_to_default_toast">Скинуто до значень за замовчуванням.</string>
     <!-- Shared Category -->
     <string name="revanced_restart_first_run">Перезапустіть, щоб нормально завантажився макет</string>
     <string name="revanced_restart_message">Оновити та перезавантажити?</string>
+    <string name="revanced_settings_search_hint">Налаштування пошуку</string>
+    <string name="revanced_settings_search_no_results_title">\'%s\' Не знайдено.</string>
+    <string name="revanced_settings_search_no_results_summary">Спробуйте інше ключове слово.</string>
+    <string name="revanced_settings_search_recent_searches">Недавні пошуки</string>
+    <string name="revanced_settings_search_remove_message">Видалити з історії пошуку?</string>
+    <string name="revanced_settings_search_clear_history">Очистити історію пошуку</string>
+    <string name="revanced_settings_search_clear_history_message">Очистити всю історію пошуку?</string>
+    <string name="revanced_settings_search_tips_title">Поради щодо пошуку</string>
+    <string name="revanced_settings_search_tips_summary">"• Натисніть на шлях, щоб перейти до нього.
+• Тривале натискання, щоб перейти до налаштувань.
+• Натисніть \"Ввести\", щоб зберегти запити пошуку.
+• Пошук ігнорує регістр та пунктуацію.
+• Батьківські налаштування пріоритетніші за налаштування дитини."</string>
+    <string name="revanced_settings_search_empty_history_title">Історія пошуку порожня</string>
+    <string name="revanced_settings_search_empty_history_summary">Для збереження історії пошуку, введіть пошуковий запит і натисніть Ввести.</string>
+    <string name="revanced_settings_search_history_title">Показати історію пошуку налаштувань</string>
+    <string name="revanced_settings_search_history_summary_on">Історію пошуку налаштувань показується.</string>
+    <string name="revanced_settings_search_history_summary_off">Історію пошуку налаштувань не показується.</string>
     <!-- PreferenceScreen: Account -->
     <string name="revanced_preference_screen_account_title">Обліковий запис</string>
     <string name="revanced_hide_account_menu_title">Приховати меню облікового запису</string>
@@ -148,6 +167,10 @@
     <string name="revanced_disable_cairo_splash_animation_summary">Вимикає сплеш анімацію Каїр під час запуску застосунку.</string>
     <string name="revanced_disable_dislike_redirection_title">Вимкнути перенаправлення при \"Не подобається\"</string>
     <string name="revanced_disable_dislike_redirection_summary">Вимикає перенаправлення на наступний трек при натисканні на кнопку \"Не подобається\".</string>
+    <string name="revanced_disable_auto_audio_tracks_title">Вимкнути примусові автоматичні звукові доріжки</string>
+    <string name="revanced_disable_auto_audio_tracks_summary">"Вимикає примусові автоматичні звукові доріжки для подкастів.
+
+Лімітація: якщо увімкнено 'Підробка потокових даних' а типовий клієнт є 'Android VR автентифікація', це може не працювати."</string>
     <string name="revanced_disable_auto_captions_title">Вимкнути примусові авто субтитри</string>
     <string name="revanced_disable_auto_captions_summary">Вимикає примусове ввімкнення автоматичних субтитрів.</string>
     <string name="revanced_enable_landscape_mode_title">Увімкнути ландшафтний режим</string>
@@ -485,11 +508,45 @@
     <string name="revanced_spoof_streaming_data_default_client_title">Клієнт за замовчуванням</string>
     <string name="revanced_spoof_streaming_data_default_client_summary">Визначає клієнт за замовчуванням для підробки.</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_creator">Android Studio</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_no_sdk">Android без SDK</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr">Android VR</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_vr_auth">Android VR автентифікації (потрібна дія)</string>
     <string name="revanced_spoof_streaming_data_client_entry_mweb">Мобільний веб</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">ТБ</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">Попереднє ТБ</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">Вбудоване ТБ</string>
     <string name="revanced_spoof_streaming_data_client_entry_visionos">visionOS</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_about_title">Про авторизацію Android VR</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_about_summary">Натисніть, щоб побачити, як отримати токен автентифікації.</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_title">Отримати Токен авторизації</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_message">"Щоб отримати токен авторизації для Android VR, необхідно увійти в YouTube VR за допомогою коду активації:
+
+1. Натисніть 'Отримати код активації', щоб згенерувати код активації.
+2. Натисніть 'Відкрити сайт', щоб перейти до 'https://yt.be/activate'.
+3. Введіть код активації.
+4. Увійдіть, коли з'явиться запит. Якщо у вас кілька облікових записів Google, виберіть обліковий запис, який використовуєте для YouTube. Якщо вже увійшли, перейдіть до наступного кроку.
+5. Після входу поверніться до RVX і знову натисніть 'Про авторизацію Android VR'.
+6. Натисніть 'Отримати токен авторизації', щоб отримати токен авторизації.
+
+※ Натисніть 'Скинути', щоб вилучити токен автентифікації або код активації."</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_get_activation_code_text">Отримати код активації</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_get_authorization_token_text">Отримати токен авторизації</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_reset_text">Скинути</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_toast_reset">Токен автентифікації та код активації скинуто.</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_toast_success">Токен автентифікації збережено.</string>
+    <string name="revanced_spoof_streaming_data_vr_activation_code_dialog_title">Код активації</string>
+    <string name="revanced_spoof_streaming_data_vr_activation_code_dialog_message">"Код активації:
+%s
+
+1. Натисніть 'Відкрити сайт', щоб перейти до 'https://yt.be/activate'.
+2. Введіть код активації.
+3. Увійдіть, коли з'явиться запит. Якщо у вас кілька облікових записів Google, виберіть обліковий запис, який використовуєте для YouTube. Якщо вже увійшли, перейдіть до наступного кроку.
+4. Після входу поверніться до RVX і знову натисніть 'Про авторизацію Android VR'.
+5. Натисніть 'Отримати токен авторизації', щоб отримати токен авторизації."</string>
+    <string name="revanced_spoof_streaming_data_vr_activation_code_dialog_open_website_text">Відкрити сайт</string>
+    <string name="revanced_spoof_streaming_data_vr_activation_code_toast_copy">Код активації скопійовано в буфер обміну: %s.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden">Не вдалося отримати клієнтські відеопотоки.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Спробуйте змінити клієнт за замовчуванням на ТБ.</string>
     <string name="revanced_watch_history_type_title">Тип історії перегляду</string>
     <string name="revanced_watch_history_type_summary">"• Оригінальний: Відповідає налаштуванням історії переглядів облікового запису Google, але історія переглядів може не працювати через DNS або VPN.
 • Замінити домен: Дотримується налаштувань історії переглядів облікового запису Google.

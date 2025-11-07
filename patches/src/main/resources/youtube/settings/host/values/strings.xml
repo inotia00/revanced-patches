@@ -593,7 +593,9 @@ Limitation: Back button on the toolbar may not work."</string>
 This may not work for some users, if it doesn't work for you:
 1. Go to Settings - RVX - Miscellaneous - Spoof streaming data, and turn on 'Use JavaScript client'.
 2. Go to Settings - RVX - Miscellaneous - Spoof streaming data, and change 'Default client' to 'TV'."</string>
-    <string name="revanced_disable_auto_audio_tracks_summary_off">Forced auto audio tracks are enabled.</string>
+    <string name="revanced_disable_auto_audio_tracks_summary_off">"Forced auto audio tracks are enabled.
+
+Info: In some accounts, the original audio track is used."</string>
     <string name="revanced_disable_auto_captions_title">Disable forced auto captions</string>
     <string name="revanced_disable_auto_captions_summary_on">Forced auto captions are disabled.</string>
     <string name="revanced_disable_auto_captions_summary_off">Forced auto captions are enabled.</string>
@@ -1656,6 +1658,9 @@ This feature works best with a very fast internet connection."</string>
     <string name="revanced_hide_contents_section_title">Hide How this content was made section</string>
     <string name="revanced_hide_contents_section_summary_on">How this content was made section is hidden.</string>
     <string name="revanced_hide_contents_section_summary_off">How this content was made section is shown.</string>
+    <string name="revanced_hide_hype_points_section_title">Hide Hype points section</string>
+    <string name="revanced_hide_hype_points_section_summary_on">Hype points section is hidden.</string>
+    <string name="revanced_hide_hype_points_section_summary_off">Hype points section is shown.</string>
     <string name="revanced_hide_podcast_section_title">Hide Explore the podcast section</string>
     <string name="revanced_hide_podcast_section_summary_on">Explore the podcast section is hidden.</string>
     <string name="revanced_hide_podcast_section_summary_off">Explore the podcast section is shown.</string>
@@ -2002,6 +2007,11 @@ Adjust volume by swiping vertically on the right side of the screen."</string>
     <string name="revanced_enable_swipe_to_switch_video_title">Enable swipe to change video</string>
     <string name="revanced_enable_swipe_to_switch_video_summary_on">Swiping up / down in fullscreen mode will change to the next / previous video.</string>
     <string name="revanced_enable_swipe_to_switch_video_summary_off">Swiping up / down in fullscreen mode will not change to the next / previous video.</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_title">Fix swipe controls tap and hold speed</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_summary_on">"Tap and hold speed is only activated when the user taps and holds.
+
+Known issue: Sometimes the swipe overlay appears before switching to fullscreen mode."</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_summary_off">Tap and hold speed may sometimes be activated even if the user does not tap and hold.</string>
     <string name="revanced_swipe_lowest_value_auto_brightness_overlay_text">Auto</string>
 
 
@@ -2505,31 +2515,36 @@ If you are a YouTube Premium user, this setting may not be necessary."</string>
     <string name="revanced_spoof_streaming_data_default_client_title">Default client</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_creator">"Android Studio
 <small>(Login required)</small>"</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_no_sdk">"Android
+<small>(No SDK)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr">"Android VR
 <small>(No Auth)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr_auth">"Android VR
 <small>(Auth, Action needed)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_ipados">"iPadOS
-<small>(Outdated, No Auth)</small>"</string>
+<small>(Outdated)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_mweb">"Mobile Web
-<small>(WIP, No Auth)</small>"</string>
+<small>(WIP)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">"TV
+<small>(Legacy)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_simply_no_potoken">"TV Simply
 <small>(No PoToken)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">TV Embedded</string>
     <string name="revanced_spoof_streaming_data_client_entry_visionos">"visionOS
-<small>(Unreleased, No Auth)</small>"</string>
+<small>(Unreleased)</small>"</string>
     <string name="revanced_spoof_streaming_data_side_effects_title">Spoofing side effects</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_creator">"• Audio track menu is missing.
-• Disable forced auto audio tracks is not available.
+• Disable forced auto audio tracks may not be available.
 • Stable volume is not available.
 • Kids videos may not play when logged out or in incognito mode.
 • 1080p+, AV1, and HDR are not supported."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_no_sdk">• Video may stop at 1:00, or may not be available in some regions.</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Audio track menu is missing.
 • Stable volume is not available.
 • Kids videos may not play when logged out or in incognito mode."</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_vr_auth">"• Audio track menu is missing.
-• Disable forced auto audio tracks is not available.
+• Disable forced auto audio tracks may not be available.
 • Stable volume is not available.
 • Kids videos may not play when logged out or in incognito mode."</string>
     <string name="revanced_spoof_streaming_data_side_effects_ipados">"• AV1 is not supported.
@@ -2635,25 +2650,6 @@ Playback may stutter or drop frames."</string>
     <string name="revanced_spoof_streaming_data_vr_activation_code_dialog_open_website_text">Open website</string>
     <string name="revanced_spoof_streaming_data_vr_activation_code_toast_copy">Activation code copied to clipboard: %s.</string>
 
-    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: No Auth -->
-    <string name="revanced_preference_category_no_auth">No Auth</string>
-    <string name="revanced_spoof_streaming_data_no_auth_language_title">Default audio stream language</string>
-    <string name="revanced_spoof_streaming_data_no_auth_language_not_available">To select a specific audio stream language, turn off \'Disable forced auto audio tracks\'.</string>
-    <string name="revanced_spoof_streaming_data_no_auth_language_not_available_by_client">Default audio stream language selection is not available with %s.</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_title">Show audio track button</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_summary_on">"Audio track button is shown when the client used to fetch streaming data is 'Android VR', 'Mobile Web', or 'visionOS'."</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_summary_off">Audio track button is not shown.</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_user_dialog_message">"Prerequisites:
-• The client used to fetch the streaming data is 'Android VR', 'Mobile Web', or 'visionOS'.
-• A video with multiple audio tracks is being played.
-
-Known issues:
-• If the app language is changed in YouTube settings and the app is not restarted, the language used in audio track dialog may not change.
-• Sometimes the wrong language is selected in audio track dialog.
-• Some audio tracks, such as 'English descriptive', are not supported.
-
-This feature is still in development, so it may break at any time due to server-side changes."</string>
-
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: JavaScript -->
     <string name="revanced_preference_category_js">JavaScript</string>
     <string name="revanced_spoof_streaming_data_use_js_title">Use JavaScript client</string>
@@ -2677,20 +2673,6 @@ Among JavaScript clients, the recommended client is TV."</string>
 • Autoplay in feed
 • Clips
 • Shorts"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">Use yt-dlp ejs (WIP)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_on">"External JavaScript for yt-dlp (yt-dlp-ejs) is used.
-
-• Player JavaScript for deobfuscation is kept up to date.
-• It may take 5 to 15 seconds for the video to start."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_off">"SmartTube extractor is used.
-
-• Player JavaScript for deobfuscation is not up to date.
-• This will be deprecated by servers in the near future."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_user_dialog_message">"Due to YouTube's new measures, it is no longer possible to decrypt streaming urls using general methods in the latest player JavaScript.
-
-External JavaScript for yt-dlp (yt-dlp-ejs) is used to decrypt streaming urls in the latest player JavaScript.
-
-It is currently under development and will use more hardware resources."</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_title">Bypass fake buffering</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_summary_on">"Bypass fake buffering is enabled.
 

@@ -437,7 +437,7 @@ Keterbatasan: Tombol Kembali pada bilah alat mungkin tidak berfungsi."</string>
     <string name="revanced_change_start_page_type_summary_off">Halaman awal berubah hanya sekali.</string>
     <string name="revanced_disable_auto_audio_tracks_title">Nonaktifkan trek audio otomatis yang dipaksakan</string>
     <string name="revanced_disable_auto_audio_tracks_summary_on">Trek audio otomatis yang dipaksakan dinonaktifkan.</string>
-    <string name="revanced_disable_auto_audio_tracks_summary_off">Trek audio otomatis yang dipaksakan diaktifkan.</string>
+    <string name="revanced_disable_auto_audio_tracks_summary_off">"Trek audio otomatis yang dipaksakan diaktifkan."</string>
     <string name="revanced_disable_auto_captions_title">Matikan teks otomatis paksa</string>
     <string name="revanced_disable_auto_captions_summary_on">Teks otomatis yang dipaksakan dimatikan.</string>
     <string name="revanced_disable_auto_captions_summary_off">Teks otomatis diaktifkan.</string>
@@ -561,7 +561,6 @@ Jika tata letak layar pemutar berubah karena perubahan di sisi server, tata leta
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings, PreferenceCategory: Import / Export as text -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: Android VR -->
-    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: No Auth -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: JavaScript -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Watch history -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceCategory: Patch information -->

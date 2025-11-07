@@ -178,10 +178,11 @@ public class ReVancedPreferenceFragment extends PreferenceFragment {
                 if (settings.equals(CHANGE_START_PAGE)
                         || settings.equals(DISABLE_MUSIC_VIDEO_IN_ALBUM_REDIRECT_TYPE)
                         || settings.equals(RETURN_YOUTUBE_USERNAME_DISPLAY_FORMAT)
-                        || settings.equals(SPOOF_STREAMING_DATA_DEFAULT_CLIENT)
                         || settings.equals(WATCH_HISTORY_TYPE)
                 ) {
                     ResettableListPreference.showDialog(mActivity, enumSetting, 0);
+                } else if (settings.equals(SPOOF_STREAMING_DATA_DEFAULT_CLIENT)) {
+                    ResettableListPreference.showDialog(mActivity, enumSetting, 1);
                 }
             }
         } catch (Exception ex) {

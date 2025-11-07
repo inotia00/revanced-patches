@@ -27,4 +27,9 @@ public final class DeviceHelpers {
     public static boolean isTCL() {
         return Build.MANUFACTURER.toLowerCase().contains("tcl") || Build.BRAND.toLowerCase().contains("tcl");
     }
+
+    public static int getMaxHeapMemoryMB() {
+        long maxHeapMemoryMB = Runtime.getRuntime().maxMemory() / (1024 * 1024);
+        return Math.toIntExact(maxHeapMemoryMB);
+    }
 }

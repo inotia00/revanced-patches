@@ -461,6 +461,9 @@
 يمكن أن تكون الكلمات المفتاحية عبارة عن أسماء قنوات أو أي نص يظهر في عناوين الفيديو.
 
 يجب إدخال الكلمات التي تحتوي على أحرف كبيرة في المنتصف باستخدام الأحرف الكبيرة (على سبيل المثال: iPhone، TikTok، LeBlanc)."</string>
+    <string name="revanced_hide_keyword_content_use_and_operator_title">استخدام عامل التشغيل \'AND\' (\'&amp;\')</string>
+    <string name="revanced_hide_keyword_content_use_and_operator_summary_on">تم تمكين عامل التشغيل \'AND\' (\'&amp;\').&lt;br&gt;&lt;br&gt;عند استخدام &lt;strong&gt;\"Blue\" &amp; \"Red\"&lt;/strong&gt; ككلمة مفتاحية، سيتم تصفية الكلمات المفتاحية التي تحتوي على كل من &lt;strong&gt;Blue&lt;/strong&gt; و&lt;strong&gt;Red&lt;/strong&gt;.</string>
+    <string name="revanced_hide_keyword_content_use_and_operator_summary_off">تم تعطيل عامل التشغيل \'AND\' (\'&amp;\').&lt;br&gt;&lt;br&gt;عند استخدام &lt;strong&gt;\"Blue\" &amp; \"Red\"&lt;/strong&gt; ككلمة مفتاحية، سيتم تصفية الكلمات المفتاحية التي تحتوي على &lt;strong&gt;\"Blue\" &amp; \"Red\"&lt;/strong&gt;.</string>
     <string name="revanced_hide_keyword_content_about_title">حول تصفية الكلمات المفتاحية</string>
     <string name="revanced_hide_keyword_content_about_summary">"الصفحة الرئيسية / الاشتراكات / يتم تصفية نتائج البحث لإخفاء المحتوى الذي يطابق عبارات الكلمات المفتاحية.
 
@@ -541,7 +544,7 @@
 قد لا ينجح هذا الأمر مع بعض المستخدمين، إذا لم ينجح معك:
 1. انتقل إلى الإعدادات - RVX - خيارات متنوعة - Spoof Streaming Data، ثم فعّل 'استخدام عميل JavaScript'.
 2. انتقل إلى الإعدادات - RVX - خيارات متنوعة - Spoof Streaming Data، ثم غيّر 'العميل الافتراضي' إلى 'TV'."</string>
-    <string name="revanced_disable_auto_audio_tracks_summary_off">تم تمكين المقطع الصوتي التلقائي المفروض.</string>
+    <string name="revanced_disable_auto_audio_tracks_summary_off">"تم تمكين المقطع الصوتي التلقائي المفروض."</string>
     <string name="revanced_disable_auto_captions_title">تعطيل الترجمة التلقائية المفروضة</string>
     <string name="revanced_disable_auto_captions_summary_on">تم تعطيل الترجمة التلقائية المفروضة.</string>
     <string name="revanced_disable_auto_captions_summary_off">تم تمكين الترجمة التلقائية المفروضة.</string>
@@ -1544,6 +1547,9 @@
     <string name="revanced_hide_contents_section_title">إخفاء قسم كيف تم إنشاء هذا المحتوى</string>
     <string name="revanced_hide_contents_section_summary_on">تم إخفاء قسم كيفية إنشاء هذا المحتوى.</string>
     <string name="revanced_hide_contents_section_summary_off">يتم عرض قسم كيفية إنشاء هذا المحتوى.</string>
+    <string name="revanced_hide_hype_points_section_title">إخفاء قسم نقاط التشجيع</string>
+    <string name="revanced_hide_hype_points_section_summary_on">تم إخفاء قسم نقاط التشجيع.</string>
+    <string name="revanced_hide_hype_points_section_summary_off">يتم عرض قسم نقاط التشجيع.</string>
     <string name="revanced_hide_podcast_section_title">إخفاء استكشاف قسم البودكاست</string>
     <string name="revanced_hide_podcast_section_summary_on">تم إخفاء استكشاف قسم بودكاست.</string>
     <string name="revanced_hide_podcast_section_summary_off">يتم عرض استكشاف قسم بودكاست.</string>
@@ -1617,7 +1623,7 @@
     <string name="revanced_open_shorts_in_regular_player_summary_on">يتم فتح فيديوهات Shorts في المشغل العادي.</string>
     <string name="revanced_open_shorts_in_regular_player_summary_off">لا يتم فتح فيديوهات Shorts في المشغل العادي.</string>
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts, PreferenceScreen: Shorts player -->
-    <string name="revanced_preference_screen_shorts_player_title">مُشَغِل Shorts</string>
+    <string name="revanced_preference_screen_shorts_player_title">مشغل Shorts</string>
     <string name="revanced_preference_screen_shorts_player_summary">إخفاء أو عرض مكونات مشغل Shorts.</string>
     <string name="revanced_hide_shorts_channel_bar_title">إخفاء شريط القناة</string>
     <string name="revanced_hide_shorts_channel_bar_summary_on">تم إخفاء شريط القناة.</string>
@@ -1873,6 +1879,11 @@
     <string name="revanced_enable_swipe_to_switch_video_title">تمكين إيماءة التمرير لتغيير الفيديو</string>
     <string name="revanced_enable_swipe_to_switch_video_summary_on">سيؤدي التمرير لأعلى/لأسفل في وضع ملء الشاشة إلى الانتقال إلى الفيديو التالي/السابق.</string>
     <string name="revanced_enable_swipe_to_switch_video_summary_off">لن يؤدي التمرير لأعلى/لأسفل في وضع ملء الشاشة إلى الانتقال إلى الفيديو التالي/السابق.</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_title">إصلاح سرعة النقر مع الاستمرار على عناصر التحكم في إيماءة التمرير</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_summary_on">"يتم تنشيط سرعة النقر مع الاستمرار فقط عندما ينقر المستخدم مع الاستمرار.
+
+مشكلة معروفة: أحيانًا تظهر واجهة إيماءة التمرير قبل الانتقال إلى وضع ملء الشاشة."</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_summary_off">قد يتم تنشيط سرعة النقر مع الاستمرار أحيانًا حتى إذا لم ينقر المستخدم مع الاستمرار.</string>
     <string name="revanced_swipe_lowest_value_auto_brightness_overlay_text">تلقائي</string>
     <!-- PreferenceScreen: Video -->
     <string name="revanced_preference_screen_video_title">الفيديو</string>
@@ -2289,9 +2300,14 @@
     <string name="revanced_debug_logs_clear_buffer_summary">مسح جميع سجلات تصحيح أخطاء RVX المخزنة.</string>
     <string name="revanced_debug_logs_clear_toast">تم مسح السجلات.</string>
     <string name="revanced_debug_logs_export_success">تم تصدير السجلات بنجاح.</string>
+    <string name="revanced_enable_watch_next_processing_delay_title">تمكين تأخير معالجة Watch Next</string>
+    <string name="revanced_enable_watch_next_processing_delay_summary_on">تم تمكين تأخير معالجة Watch Next.</string>
+    <string name="revanced_enable_watch_next_processing_delay_summary_off">تم تعطيل تأخير معالجة Watch Next.</string>
     <string name="revanced_enable_watch_next_processing_delay_user_dialog_message">"يفرض هذا الإعداد تأخيرًا قبل تحميل واجهة المستخدم.
 
 يمكن استخدامه عند اختبار شيء ما على MainThread."</string>
+    <string name="revanced_watch_next_processing_delay_title">تأخير معالجة Watch Next</string>
+    <string name="revanced_watch_next_processing_delay_summary">مقدار التأخير بجزء الثانية في معالجة استجابة Watch Next.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <string name="revanced_preference_screen_import_export_title">استيراد / تصدير الإعدادات</string>
     <string name="revanced_preference_screen_import_export_summary">إستيراد \ تصدير إعدادات RVX.</string>
@@ -2325,31 +2341,34 @@
     <string name="revanced_spoof_streaming_data_default_client_title">العميل الافتراضي</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_creator">"Android Studio
 <small>(يتطلب تسجيل الدخول)</small>"</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_no_sdk">"Android <small>(No SDK)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr">"Android VR
 <small>(بدون مصادقة)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr_auth">"Android VR
 <small>(المصادقة، الإجراء مطلوب)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_ipados">"iPadOS
-<small>(قديم، بدون مصادقة)</small>"</string>
+<small>(قديم)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_mweb">"Mobile Web
-<small>(WIP, بدون مصادقة)</small>"</string>
+<small>(WIP)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">"TV <small>(Legacy)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_simply_no_potoken">"TV Simply
 <small>(بدون رمز PoToken)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">TV Embedded</string>
     <string name="revanced_spoof_streaming_data_client_entry_visionos">"visionOS
-<small>(لم يصدر ، بدون مصادقة)</small>"</string>
+<small>(لم يصدر)</small>"</string>
     <string name="revanced_spoof_streaming_data_side_effects_title">التأثيرات الجانبية للتزييف</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_creator">"• قائمة المقطع الصوتي مفقودة.
-• لا يتوفر تعطيل المقطع الصوتي التلقائي المفروض.
+• قد لا يتوفر تعطيل المقطع الصوتي التلقائي المفروض.
 • مستوى الصوت الثابت غير متاح.
 • قد لا يتم تشغيل الفيديوهات المخصصة للأطفال عند تسجيل الخروج أو في وضع التصفح المتخفي.
 • 1080p+, AV1, و HDR غير مدعومة."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_no_sdk">• قد يتوقف الفيديو عند الدقيقة 1:00، أو قد لا يكون متاحًا في بعض المناطق.</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• قائمة المقطع الصوتي مفقودة.
 • مستوى الصوت الثابت غير متاح.
 • قد لا يتم تشغيل الفيديوهات المخصصة للأطفال عند تسجيل الخروج أو في وضع التصفح المتخفي."</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_vr_auth">"• قائمة المقطع الصوتي مفقودة.
-• لا يتوفر تعطيل المقطع الصوتي التلقائي المفروض.
+• قد لا يتوفر تعطيل المقطع الصوتي التلقائي المفروض.
 • مستوى الصوت الثابت غير متاح.
 • قد لا يتم تشغيل الفيديوهات المخصصة للأطفال عند تسجيل الخروج أو في وضع التصفح المتخفي."</string>
     <string name="revanced_spoof_streaming_data_side_effects_ipados">"• AV1 غير مدعوم.
@@ -2452,24 +2471,6 @@
 5. انقر على 'الحصول على رمز المصادقة' للحصول على رمز التفويض."</string>
     <string name="revanced_spoof_streaming_data_vr_activation_code_dialog_open_website_text">فتح الموقع</string>
     <string name="revanced_spoof_streaming_data_vr_activation_code_toast_copy">تم نسخ رمز التفعيل إلى الحافظة: %s.</string>
-    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: No Auth -->
-    <string name="revanced_preference_category_no_auth">بدون المصادقة</string>
-    <string name="revanced_spoof_streaming_data_no_auth_language_title">لغة البث الصوتي الافتراضية</string>
-    <string name="revanced_spoof_streaming_data_no_auth_language_not_available">لتحديد لغة بث صوتي معينة، قم بإيقاف تشغيل \'تعطيل المقطع الصوتي التلقائي المفروض\'.</string>
-    <string name="revanced_spoof_streaming_data_no_auth_language_not_available_by_client">اختيار لغة البث الصوتي الافتراضية غير متوفر مع %s.</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_title">عرض زر المقطع الصوتي</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_summary_on">"يتم عرض زر المقطع الصوتي عندما يكون العميل المستخدم لجلب بيانات البث هو 'Android VR' أو 'Mobile Web' أو 'visionOS'."</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_summary_off">لا يتم عرض زر المقطع الصوتي.</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_user_dialog_message">"المتطلبات الأساسية:
-• العميل المُستخدم لجلب بيانات البث هو 'Android VR'، أو 'Mobile Web'، أو 'visionOS'.
-• يتم تشغيل فيديو يحتوي على مقاطع صوتية متعددة.
-
-المشاكل المعروفة:
-• في حال تغيير لغة التطبيق في إعدادات YouTube وعدم إعادة تشغيل التطبيق، فقد لا تتغير اللغة المستخدمة في مربع حوار المقاطع الصوتية.
-• أحيانًا يتم اختيار لغة خاطئة في مربع حوار المقاطع الصوتية.
-• بعض المقاطع الصوتية، مثل 'الوصفية الإنجليزية'، غير مدعومة.
-
-هذه الميزة لا تزال قيد التطوير، لذا قد تتوقف في أي وقت بسبب تغييرات من جانب الخادم."</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: JavaScript -->
     <string name="revanced_preference_category_js">JavaScript</string>
     <string name="revanced_spoof_streaming_data_use_js_title">استخدام عميل JavaScript</string>
@@ -2492,22 +2493,7 @@
 
 • التشغيل التلقائي في الموجز
 • المقاطع
-• Shorts"</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">استخدام yt-dlp ejs (WIP)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_on">"يُستخدم JavaScript خارجي لـ yt-dlp (yt-dlp-ejs).
-
-• يتم تحديث مشغل JavaScript لإزالة التشويش باستمرار.
-• قد يستغرق بدء الفيديو من 5 إلى 15 ثانية."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary_off">"تم استخدام مُستخرج SmartTube.
-
-• مُشغِّل JavaScript لإزالة التشويش غير مُحدَّث.
-
-• سيتم إيقاف هذا من قِبل الخوادم قريبًا."</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_user_dialog_message">"بسبب إجراءات YouTube الجديدة، لم يعد من الممكن فك تشفير روابط البث باستخدام الطرق العامة في أحدث إصدار من مشغل JavaScript.
-
-يُستخدم JavaScript خارجي لـ yt-dlp (yt-dlp-ejs) لفك تشفير روابط البث في أحدث إصدار من مشغل JavaScript.
-
-لا يزال هذا البرنامج قيد التطوير وسيستخدم موارد أجهزة إضافية."</string>
+• فيديوهات Shorts"</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_title">تجاوز التخزين المؤقت الزائف</string>
     <string name="revanced_spoof_streaming_data_use_js_bypass_fake_buffering_summary_on">"تم تمكين تجاوز التخزين المؤقت الزائف.
 

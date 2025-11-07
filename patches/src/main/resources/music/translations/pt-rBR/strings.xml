@@ -167,6 +167,10 @@ Limitações:
     <string name="revanced_disable_cairo_splash_animation_summary">Desabilita a animação inicial do Cairo quando o aplicativo é iniciado.</string>
     <string name="revanced_disable_dislike_redirection_title">Desativar redirecionamento de dislike</string>
     <string name="revanced_disable_dislike_redirection_summary">Desativa o redirecionamento para a próxima faixa ao clicar no botão de Dislike.</string>
+    <string name="revanced_disable_auto_audio_tracks_title">Desativar faixas de áudio automáticas forçadas</string>
+    <string name="revanced_disable_auto_audio_tracks_summary">"Desativa faixas de áudio automáticas para podcasts.
+
+Limitação: Se o 'Dados de transmissão falsos' estiver ativado e o cliente padrão for 'Android VR Autenticação', isso pode não funcionar."</string>
     <string name="revanced_disable_auto_captions_title">Desativar legendas automáticas</string>
     <string name="revanced_disable_auto_captions_summary">Desativa a ativação forçada de legendas automáticas.</string>
     <string name="revanced_enable_landscape_mode_title">Ativar modo paisagem</string>
@@ -474,7 +478,7 @@ Clique para ver como emitir uma chave de API."</string>
     <string name="revanced_settings_import_failed">A importação falhou: %s.</string>
     <string name="revanced_settings_import_reset">Configurações redefinidas para o padrão.</string>
     <string name="revanced_settings_import_success">Configurações %d importadas.</string>
-    <string name="revanced_settings_reset">Reiniciar</string>
+    <string name="revanced_settings_reset">Redefinir</string>
     <string name="revanced_share_copy_settings_success">Configurações copiadas para área de transferência.</string>
     <string name="revanced_bypass_image_region_restrictions_title">Ignorar restrições de imagem por região</string>
     <string name="revanced_bypass_image_region_restrictions_summary">Ignora o domínio que está bloqueado em algumas regiões para que miniaturas para playlists, avatares de canais, etc. possam ser recebidos.</string>
@@ -508,18 +512,41 @@ Se você é um usuário de YouTube Premium, essa configuração pode não ser ne
     <string name="revanced_spoof_streaming_data_default_client_title">Cliente padrão</string>
     <string name="revanced_spoof_streaming_data_default_client_summary">Define um cliente padrão para falsificar.</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_creator">Android Studio</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_no_sdk">Android Não SDK</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr">Android VR</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_vr_auth">Android VR Autenticação(Ação necessária)</string>
     <string name="revanced_spoof_streaming_data_client_entry_mweb">Mobile Web</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">TV Legado</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">TV Integrada</string>
     <string name="revanced_spoof_streaming_data_client_entry_visionos">visionOS</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_title">Usar yt-dlp ejs (WIP)</string>
-    <string name="revanced_spoof_streaming_data_use_yt_dlp_ejs_summary">"Quando ativado, o \"JavaScript externo para yt-dlp (yt-dlp-ejs)\" será usado para desofuscar a URL de transmissão na \"TV\" e na \"Mobime Web\".
+    <string name="revanced_spoof_streaming_data_vr_auth_token_about_title">Sobre o Android VR Autenticação</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_about_summary">Clique para ver como obter um token de autenticação.</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_title">Obter Token de autorização</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_message">"Para obter um token de autorização para Android VR, você deve entrar no YouTube VR usando um código de ativação:
 
-• O JavaScript do reprodutor para desofuscação é mantido atualizado.
-• O vídeo pode levar de 5 a 15 segundos para iniciar."</string>
+1. Clique em 'Obter código de ativação' para gerar um código de ativação.
+2. Clique em 'Abrir site' para ir para 'https://yt.be/activate'.
+3. Insira o código de ativação.
+4. Faça o login quando solicitado. Se você tem várias Contas do Google, selecione a conta que você usa com o YouTube. Se você já está logado, pule para o próximo passo.
+5. Depois de entrar, volte ao RVX e clique 'Sobre o Android VR Autenticação' novamente.
+6. Clique em 'Obter token de autorização' para obter um token de autorização.
+
+※ Clique em 'Redefinir' para remover um token de autenticação ou código de ativação."</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_get_activation_code_text">Obter código de ativação</string>
     <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_get_authorization_token_text">Obter token de autorização</string>
-    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_reset_text">Reiniciar</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_dialog_reset_text">Redefinir</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_toast_reset">Token de autenticação e código de ativação redefinido.</string>
+    <string name="revanced_spoof_streaming_data_vr_auth_token_toast_success">Token de autenticação salvo.</string>
+    <string name="revanced_spoof_streaming_data_vr_activation_code_dialog_title">Código de ativação</string>
+    <string name="revanced_spoof_streaming_data_vr_activation_code_dialog_message">"Código de ativação:
+%s
+
+1. Clique em 'Abrir site' para ir em 'https://yt.be/activate'.
+2. Digite o código de ativação.
+3. Faça o login quando solicitado. Se você tiver várias contas do Google, selecione a conta que você usa com o YouTube. Se você já está logado, pule para o próximo passo.
+4. Uma vez logado, retorne ao RVX e clique em 'Sobre o Android VR Autenticação' novamente.
+5. Clique em 'Obter token de autorização' para obter um token de autorização."</string>
     <string name="revanced_spoof_streaming_data_vr_activation_code_dialog_open_website_text">Abrir site</string>
     <string name="revanced_spoof_streaming_data_vr_activation_code_toast_copy">Código de ativação copiado para a área de transferência: %s.</string>
     <string name="revanced_spoof_streaming_data_failed_forbidden">Não foi possível obter nenhum fluxo de cliente.</string>

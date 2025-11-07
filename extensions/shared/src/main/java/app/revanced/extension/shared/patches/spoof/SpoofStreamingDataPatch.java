@@ -41,8 +41,6 @@ public class SpoofStreamingDataPatch {
             SPOOF_STREAMING_DATA && J2V8_LIBRARY_AVAILABILITY && BaseSettings.SPOOF_STREAMING_DATA_USE_JS.get();
     private static final boolean SPOOF_STREAMING_DATA_USE_JS_ALL =
             SPOOF_STREAMING_DATA_USE_JS && BaseSettings.SPOOF_STREAMING_DATA_USE_JS_ALL.get();
-    private static final boolean SPOOF_STREAMING_DATA_USE_YT_DLP_EJS =
-            SPOOF_STREAMING_DATA_USE_JS && BaseSettings.SPOOF_STREAMING_DATA_USE_YT_DLP_EJS.get();
 
     /**
      * Domain used for internet connectivity verification.
@@ -355,7 +353,6 @@ public class SpoofStreamingDataPatch {
         if (SPOOF_STREAMING_DATA_USE_JS) {
             // Download JavaScript and initialize the Cipher class
             CompletableFuture.runAsync(() -> ThrottlingParameterUtils.initializeJavascript(
-                    SPOOF_STREAMING_DATA_USE_YT_DLP_EJS,
                     BaseSettings.SPOOF_STREAMING_DATA_DEFAULT_CLIENT.get().getRequirePoToken()
             ));
         }
@@ -416,20 +413,6 @@ public class SpoofStreamingDataPatch {
                     BaseSettings.SPOOF_STREAMING_DATA,
                     BaseSettings.SPOOF_STREAMING_DATA_USE_JS
             );
-        }
-    }
-
-    public static final class ClientSingleAudioTrackAvailability implements Setting.Availability {
-        @Override
-        public boolean isAvailable() {
-            return BaseSettings.SPOOF_STREAMING_DATA.get() &&
-                    !BaseSettings.SPOOF_STREAMING_DATA_DEFAULT_CLIENT.get().getSupportsCookies() &&
-                    !BaseSettings.SPOOF_STREAMING_DATA_DEFAULT_CLIENT.get().getSupportsMultiAudioTracks();
-        }
-
-        @Override
-        public List<Setting<?>> getParentSettings() {
-            return List.of(BaseSettings.SPOOF_STREAMING_DATA);
         }
     }
 

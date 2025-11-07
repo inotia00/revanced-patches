@@ -4,12 +4,48 @@
     <string name="accessibility_settings_edu_opt_in_text">Video oynatıcı için erişilebilirlik kontrolleri açılsın mı?</string>
     <string name="accessibility_settings_edu_opt_out_text">Bir erişilebilirlik hizmeti açık olduğundan kontrolleriniz değiştirildi.</string>
     <!-- Shared -->
+    <string name="revanced_settings_title">RVX</string>
+    <string name="revanced_settings_search_title">Ara %s</string>
+    <string name="revanced_reset_to_default_toast">Varsayılan değerlere sıfırla.</string>
     <string name="revanced_preference_category_experimental_flag">Deneysel Parametreler</string>
+    <string name="revanced_confirm_user_dialog_title">Devam etmek istediğinden emin misin?</string>
+    <string name="revanced_restart_first_run">Düzenin normal şekilde yüklenmesi için yeniden başlatın</string>
+    <string name="revanced_restart_title">Yeniden başlatma gerekli</string>
+    <string name="revanced_restart_dialog_message">Değişikliklerin geçerli olması için uygulamayı yeniden başlatın.</string>
+    <string name="revanced_restart">Yeniden Başlat</string>
+    <string name="revanced_settings_color_invalid">Geçersiz renk.</string>
+    <string name="revanced_settings_color_picker">Renk seçici</string>
+    <string name="revanced_settings_reset">Sıfırla</string>
+    <string name="revanced_settings_reset_color">Rengi sıfırla</string>
+    <string name="revanced_settings_search_hint">Ayarlarda ara</string>
+    <string name="revanced_settings_search_no_results_title">\'%s\' için hiçbir sonuç bulunamadı.</string>
+    <string name="revanced_settings_search_no_results_summary">Başka bir anahtar kelime deneyin.</string>
+    <string name="revanced_settings_search_recent_searches">Önceki Aramalar</string>
+    <string name="revanced_settings_search_remove_message">Arama geçmişinden kaldırılsın mı?</string>
+    <string name="revanced_settings_search_clear_history">Arama geçmişini temizle</string>
+    <string name="revanced_settings_search_clear_history_message">Tüm arama geçmişini temizlemek istediğinizden emin misiniz?</string>
+    <string name="revanced_settings_search_tips_title">Arama Önerileri</string>
+    <string name="revanced_settings_search_tips_summary">"• Bir yola gitmek için dokunun.
+• Bir ayarın olduğu bölüme gitmek için uzun basın.
+• Bir arama sorgusunu geçmişe kaydetmek için Enter(Giriş) tuşuna basın.
+• Arama, büyük/küçük harf kullanımını ve noktalama işaretlerini dikkate almaz.
+• Üst ayarlar, devre dışı bırakılmış alt ayarların üzerinde görünür."</string>
+    <string name="revanced_settings_search_empty_history_title">Arama geçmişi boş</string>
+    <string name="revanced_settings_search_empty_history_summary">Arama geçmişini kaydetmek için bir arama sorgusu yazın ve Enter\'a(Giriş\'e) basın.</string>
+    <string name="revanced_settings_search_history_title">Ayarlar arama geçmişini göster</string>
+    <string name="revanced_settings_search_history_summary_on">Ayarlar arama geçmişi gösteriliyor.</string>
+    <string name="revanced_settings_search_history_summary_off">Ayarlar arama geçmişi gösterilmiyor.</string>
     <string name="revanced_dismiss_player_not_available_toast">Video kimliği mevcut değil. Lütfen videoyu manuel olarak yeniden açın.</string>
     <string name="revanced_playback_speed_normal">Normal</string>
     <string name="revanced_external_downloader_package_name_video_title">Video indirici paket adı</string>
     <string name="revanced_external_downloader_package_name_video_summary">Yüklü olan harici indirme uygulamanızın paket adı, örneğin NewPipe veya YTDLnis gibi.</string>
+    <string name="revanced_external_downloader_other_item">Diğer</string>
+    <string name="revanced_external_downloader_other_item_hint">Paket adını girin</string>
+    <string name="revanced_external_downloader_not_found_title">Uygulama yüklenmedi.</string>
     <string name="revanced_external_downloader_not_installed_warning">%s kurulmamış. Lütfen önce indiriniz.</string>
+    <string name="revanced_external_downloader_package_not_found_warning">"%s paket adıyla yüklü uygulama bulunamadı
+
+Paket adının doğru olduğunu ve uygulamanın yüklü olduğunu doğrulayın."</string>
     <string name="revanced_external_downloader_dialog_title">Harici indirici</string>
     <string name="revanced_queue_manager_add_to_queue">Kuyruğa ekle</string>
     <string name="revanced_queue_manager_add_to_queue_and_open_queue">Sıraya ekle ve sırayı aç</string>
@@ -152,9 +188,12 @@ Açıklama
     <string name="revanced_language_MN">"Moğolca
 <small>Монгол</small>"</string>
     <string name="revanced_language_MR">"<small>Marathi</small>"</string>
+    <string name="revanced_language_MS">"Malaya dili"</string>
     <string name="revanced_language_MY">"Burmese
 <small>Burmese</small>"</string>
     <string name="revanced_language_NL">"Hollanda Dili <small>Hollanda</small>"</string>
+    <string name="revanced_language_OR">"Odia"</string>
+    <string name="revanced_language_PA">"Pencapça"</string>
     <string name="revanced_language_PL">"Lehçe
 <small>Polski</small>"</string>
     <string name="revanced_language_PT">"Portekizce
@@ -163,12 +202,22 @@ Açıklama
 <small>Română</small>"</string>
     <string name="revanced_language_RU">"Rusça
 <small>Русский</small>"</string>
+    <string name="revanced_language_SK">"Slovakça"</string>
+    <string name="revanced_language_SQ">"Arnavutça"</string>
+    <string name="revanced_language_SL">"Slovence"</string>
     <string name="revanced_language_SR">"Sırpça
 <small>Српски</small>"</string>
     <string name="revanced_language_SV">"İsveççe
 <small>Svenska</small>"</string>
+    <string name="revanced_language_SW">"Svahili dili"</string>
+    <string name="revanced_language_TA">"Tamilce"</string>
+    <string name="revanced_language_TE">"Telugu"</string>
+    <string name="revanced_language_TH">"Tayca"</string>
     <string name="revanced_language_TR">"Türkçe
 <small>Türkçe</small>"</string>
+    <string name="revanced_language_UK">"Ukraynaca"</string>
+    <string name="revanced_language_UR">"Urdu dili"</string>
+    <string name="revanced_language_VI">"Vietnam dili"</string>
     <string name="revanced_language_ZH">"Çince
 <small>中文</small>"</string>
     <!-- PreferenceScreen: Ads -->
@@ -312,6 +361,11 @@ DeArrow hakkında daha fazla bilgi edinmek için buraya dokunun."</string>
     <!-- PreferenceScreen: Feed, PreferenceCategory: Feed, PreferenceScreen: Carousel shelf -->
     <string name="revanced_preference_screen_carousel_shelf_title">Carousel rafı</string>
     <string name="revanced_preference_screen_carousel_shelf_summary">Ana sayfada, arama sonuçlarında ve aboneliklerde carousel rafını gizle veya göster.</string>
+    <string name="revanced_hide_carousel_shelf_home_title">Ana sayfa akışında ve ilgili videolarda gizle</string>
+    <string name="revanced_hide_carousel_shelf_home_summary_on">Ana sayfa akışında ve ilgili videolarda gizli.</string>
+    <string name="revanced_hide_carousel_shelf_home_summary_off">Ana sayfa akışında ve ilgili videolarda gösterilir.</string>
+    <string name="revanced_hide_carousel_shelf_subscriptions_title">Abonelikler akışında gizle</string>
+    <string name="revanced_hide_carousel_shelf_subscriptions_summary_off">Abonelikler akışında gösterilir.</string>
     <string name="revanced_hide_carousel_shelf_about_title">Carousel rafı hakkında</string>
     <!-- PreferenceScreen: Feed, PreferenceCategory: Feed, PreferenceScreen: Category bar -->
     <string name="revanced_preference_screen_category_bar_title">Kategori çubuğu</string>
@@ -451,7 +505,7 @@ Sınırlama: Araç çubuğundaki Geri butonu çalışmayabilir."</string>
 Bu, bazı kullanıcılar için işe yaramayabilir, eğer sizin için işe yaramazsa:
 1. Ayarlar - RVX - Çeşitli - Sahte veri akışı'na gidin ve 'JavaScript istemcisini kullan' seçeneğini açın.
 2. Ayarlar - RVX - Çeşitli - Sahte akış verileri bölümüne gidin ve 'Varsayılan istemci'yi 'TV' veya 'TV Simply' olarak değiştirin."</string>
-    <string name="revanced_disable_auto_audio_tracks_summary_off">Ses parçalarının kendiliğinden açılması etkin.</string>
+    <string name="revanced_disable_auto_audio_tracks_summary_off">"Ses parçalarının kendiliğinden açılması etkin."</string>
     <string name="revanced_disable_auto_captions_title">Altyazıların kendiliğinden açılmasını kapat</string>
     <string name="revanced_disable_auto_captions_summary_on">Altyazıların kendiliğinden açılması kapalı</string>
     <string name="revanced_disable_auto_captions_summary_off">Altyazılar kendiliğinden açılabiliyor</string>
@@ -1515,7 +1569,6 @@ Devam düğmesine dokunun ve pil optimizasyonlarını devre dışı bırakın."<
     <string name="revanced_share_copy_settings_success">Ayarlar panoya kopyalandı</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: Android VR -->
-    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: No Auth -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: JavaScript -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Watch history -->
     <string name="revanced_preference_screen_watch_history_title">İzleme geçmişi</string>
