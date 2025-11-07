@@ -22,14 +22,12 @@ public final class DescriptionsFilter extends Filter {
         // game section, music section and places section now use the same identifier in the latest version.
         final StringFilterGroup attributesSection = new StringFilterGroup(
                 Settings.HIDE_ATTRIBUTES_SECTION,
-                "gaming_section.",
-                "music_section.",
-                "place_section.",
+                // "gaming_section.", "music_section.", "place_section."
                 "video_attributes_section."
         );
 
         final StringFilterGroup podcastSection = new StringFilterGroup(
-                Settings.HIDE_PODCAST_SECTION,
+                Settings.HIDE_EXPLORE_PODCAST_SECTION,
                 "playlist_section."
         );
 
@@ -80,22 +78,13 @@ public final class DescriptionsFilter extends Filter {
 
         featuredSection = new StringFilterGroup(
                 Settings.HIDE_FEATURED_SECTION,
-                "structured_description_video_lockup.",
-                "media_lockup."
+                // "media_lockup.", "structured_description_video_lockup."
+                "compact_infocard."
         );
 
         macroMarkerShelf = new StringFilterGroup(
                 null,
                 "macro_markers_carousel."
-        );
-
-        addPathCallbacks(
-                featuredSection,
-                howThisWasMadeSection,
-                horizontalShelf,
-                hypePointsSection,
-                infoCardsSection,
-                macroMarkerShelf
         );
 
         macroMarkerShelfGroupList.addAll(
@@ -107,6 +96,15 @@ public final class DescriptionsFilter extends Filter {
                         Settings.HIDE_KEY_CONCEPTS_SECTION,
                         "learning_concept_macro_markers_carousel_shelf"
                 )
+        );
+
+        addPathCallbacks(
+                featuredSection,
+                howThisWasMadeSection,
+                horizontalShelf,
+                hypePointsSection,
+                infoCardsSection,
+                macroMarkerShelf
         );
     }
 
