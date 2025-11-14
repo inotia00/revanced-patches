@@ -4,6 +4,7 @@ import app.revanced.extension.shared.patches.components.ByteArrayFilterGroup;
 import app.revanced.extension.shared.patches.components.ByteArrayFilterGroupList;
 import app.revanced.extension.shared.patches.components.Filter;
 import app.revanced.extension.shared.patches.components.StringFilterGroup;
+import app.revanced.extension.shared.patches.components.StringFilterGroupList;
 import app.revanced.extension.youtube.settings.Settings;
 import app.revanced.extension.youtube.shared.EngagementPanel;
 import app.revanced.extension.youtube.shared.RootView;
@@ -12,18 +13,26 @@ import app.revanced.extension.youtube.shared.RootView;
 public final class DescriptionsFilter extends Filter {
     private final ByteArrayFilterGroupList macroMarkerShelfGroupList = new ByteArrayFilterGroupList();
 
-    private final StringFilterGroup featuredSection;
     private final StringFilterGroup howThisWasMadeSection;
     private final StringFilterGroup horizontalShelf;
     private final StringFilterGroup infoCardsSection;
     private final StringFilterGroup macroMarkerShelf;
 
+    private final StringFilterGroupList infoCardsGroupSearch = new StringFilterGroupList();
+
     public DescriptionsFilter() {
-        // game section, music section and places section now use the same identifier in the latest version.
+        final StringFilterGroup askSection = new StringFilterGroup(
+                Settings.HIDE_ASK_SECTION,
+                "youchat_entrypoint."
+        );
+
         final StringFilterGroup attributesSection = new StringFilterGroup(
                 Settings.HIDE_ATTRIBUTES_SECTION,
-                // "gaming_section.", "music_section.", "place_section."
-                "video_attributes_section."
+                "video_attributes_section.",
+                // It appears to be deprecated, but it can still be used in YouTube 19.05.36.
+                "gaming_section.",
+                "music_section.",
+                "place_section."
         );
 
         final StringFilterGroup podcastSection = new StringFilterGroup(
@@ -41,11 +50,6 @@ public final class DescriptionsFilter extends Filter {
                 "cell_expandable_metadata."
         );
 
-        final StringFilterGroup askSection = new StringFilterGroup(
-                Settings.HIDE_ASK_SECTION,
-                "youchat_entrypoint."
-        );
-
         addIdentifierCallbacks(
                 askSection,
                 attributesSection,
@@ -55,7 +59,7 @@ public final class DescriptionsFilter extends Filter {
         );
 
         howThisWasMadeSection = new StringFilterGroup(
-                Settings.HIDE_HOW_THIS_CONTENT_SECTION,
+                Settings.HIDE_HOW_THIS_WAS_MADE_SECTION,
                 "how_this_was_made_section."
         );
 
@@ -72,14 +76,8 @@ public final class DescriptionsFilter extends Filter {
         );
 
         infoCardsSection = new StringFilterGroup(
-                Settings.HIDE_INFO_CARDS_SECTION,
+                null,
                 "infocards_section."
-        );
-
-        featuredSection = new StringFilterGroup(
-                Settings.HIDE_FEATURED_SECTION,
-                // "media_lockup.", "structured_description_video_lockup."
-                "compact_infocard."
         );
 
         macroMarkerShelf = new StringFilterGroup(
@@ -99,7 +97,6 @@ public final class DescriptionsFilter extends Filter {
         );
 
         addPathCallbacks(
-                featuredSection,
                 howThisWasMadeSection,
                 horizontalShelf,
                 hypePointsSection,
@@ -108,12 +105,38 @@ public final class DescriptionsFilter extends Filter {
         );
     }
 
+    private boolean hideInfoCards(String path, int contentIndex) {
+        if (contentIndex != 0) {
+            return false;
+        }
+
+        final boolean hideCreatorSection = Settings.HIDE_CREATOR_SECTION.get();
+        final boolean hideFeaturedSection = Settings.HIDE_FEATURED_SECTION.get();
+
+        if (hideCreatorSection && hideFeaturedSection) {
+            return true;
+        }
+
+        if (!hideCreatorSection && !hideFeaturedSection) {
+            return false;
+        }
+
+        // "media_lockup.", "structured_description_video_lockup."
+        if (path.contains("compact_infocard.")) {
+            return hideFeaturedSection;
+        }
+
+        return hideCreatorSection;
+    }
+
     @Override
     public boolean isFiltered(String path, String identifier, String allValue, byte[] buffer,
                               StringFilterGroup matchedGroup, FilterContentType contentType, int contentIndex) {
         // Check for the index because of likelihood of false positives.
-        if (matchedGroup == howThisWasMadeSection || matchedGroup == infoCardsSection || matchedGroup == featuredSection) {
+        if (matchedGroup == howThisWasMadeSection) {
             return contentIndex == 0;
+        } else if (matchedGroup == infoCardsSection) {
+            return hideInfoCards(path, contentIndex);
         } else if (matchedGroup == macroMarkerShelf) {
             if (contentIndex != 0) {
                 return false;
