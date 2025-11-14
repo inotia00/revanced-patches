@@ -35,8 +35,8 @@ public class BaseSettings {
     public static final BooleanSetting SPOOF_STREAMING_DATA = new BooleanSetting("revanced_spoof_streaming_data", TRUE, true, "revanced_spoof_streaming_data_user_dialog_message");
     public static final BooleanSetting SPOOF_STREAMING_DATA_PRIORITIZE_VIDEO_QUALITY = new BooleanSetting("revanced_spoof_streaming_data_prioritize_video_quality", FALSE, true,
             "revanced_spoof_streaming_data_prioritize_video_quality_user_dialog_message", parent(SPOOF_STREAMING_DATA));
-    public static final BooleanSetting SPOOF_STREAMING_DATA_RELOAD_VIDEO_BUTTON = new BooleanSetting("revanced_spoof_streaming_data_reload_video_button", TRUE, true, parent(SPOOF_STREAMING_DATA));
-    public static final BooleanSetting SPOOF_STREAMING_DATA_RELOAD_VIDEO_BUTTON_ALWAYS_SHOW = new BooleanSetting("revanced_spoof_streaming_data_reload_video_button_always_show", TRUE, true, new ShowReloadVideoButtonAvailability());
+    public static final BooleanSetting SPOOF_STREAMING_DATA_RELOAD_VIDEO_BUTTON = new BooleanSetting("revanced_spoof_streaming_data_reload_video_button", FALSE, true, parent(SPOOF_STREAMING_DATA));
+    public static final BooleanSetting SPOOF_STREAMING_DATA_RELOAD_VIDEO_BUTTON_ALWAYS_SHOW = new BooleanSetting("revanced_spoof_streaming_data_reload_video_button_always_show", FALSE, true, new ShowReloadVideoButtonAvailability());
     public static final BooleanSetting SPOOF_STREAMING_DATA_STATS_FOR_NERDS = new BooleanSetting("revanced_spoof_streaming_data_stats_for_nerds", TRUE, parent(SPOOF_STREAMING_DATA));
 
     public static final BooleanSetting SPOOF_STREAMING_DATA_VR_ENABLE_AV1 = new BooleanSetting("revanced_spoof_streaming_data_vr_enable_av1", FALSE, true,
