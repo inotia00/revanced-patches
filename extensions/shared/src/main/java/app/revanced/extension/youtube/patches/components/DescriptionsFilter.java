@@ -4,7 +4,6 @@ import app.revanced.extension.shared.patches.components.ByteArrayFilterGroup;
 import app.revanced.extension.shared.patches.components.ByteArrayFilterGroupList;
 import app.revanced.extension.shared.patches.components.Filter;
 import app.revanced.extension.shared.patches.components.StringFilterGroup;
-import app.revanced.extension.shared.patches.components.StringFilterGroupList;
 import app.revanced.extension.youtube.settings.Settings;
 import app.revanced.extension.youtube.shared.EngagementPanel;
 import app.revanced.extension.youtube.shared.RootView;
@@ -17,8 +16,6 @@ public final class DescriptionsFilter extends Filter {
     private final StringFilterGroup horizontalShelf;
     private final StringFilterGroup infoCardsSection;
     private final StringFilterGroup macroMarkerShelf;
-
-    private final StringFilterGroupList infoCardsGroupSearch = new StringFilterGroupList();
 
     public DescriptionsFilter() {
         final StringFilterGroup askSection = new StringFilterGroup(
