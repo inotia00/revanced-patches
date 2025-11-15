@@ -12,6 +12,7 @@ ReVanced Extended Patches.
 </div> 
 
 See the [documentation](https://github.com/inotia00/revanced-documentation#readme) to learn how to apply patches and build ReVanced Extended apps.
+
 Report issues [here](https://github.com/inotia00/ReVanced_Extended).
 
 ## 📋 List of patches in this repository
