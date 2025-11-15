@@ -245,6 +245,11 @@ object YouTubeClient {
      * Note: Only 'Authorization' is supported, PoToken required?
      */
     private const val CLIENT_VERSION_TVHTML5_SIMPLY = "1.1"
+    /**
+     * authenticatedConfig.flags.attest_botguard_on_tvhtml5: false.
+     */
+    private const val USER_AGENT_TVHTML5_SIMPLY =
+        "Mozilla/5.0 (PS4; Leanback Shell) Gecko/20100101 Firefox/65.0 LeanbackShell/01.00.01.75 Sony PS4/ (PS4, , no, CH)"
 
 
     // TVHTML5 EMBEDDED
@@ -517,7 +522,7 @@ object YouTubeClient {
             id = 75,
             clientVersion = CLIENT_VERSION_TVHTML5_SIMPLY,
             clientPlatform = CLIENT_PLATFORM_GAME_CONSOLE,
-            userAgent = USER_AGENT_TVHTML5,
+            userAgent = USER_AGENT_TVHTML5_SIMPLY,
             requireJS = true,
             supportsMultiAudioTracks = true,
             clientName = "TVHTML5_SIMPLY",

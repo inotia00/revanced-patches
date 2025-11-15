@@ -62,6 +62,44 @@ if (typeof Promise === "undefined") {
 }
 
 /**
+ * MOD: old webview support
+ */
+if (typeof window.Symbol !== "function") {
+  (function() {
+    var idCounter = 0;
+    var globalSymbolRegistry = {};
+
+    var SymbolPolyfill = function Symbol(description) {
+      description = description === undefined ? "" : String(description);
+
+      var symbol = "__@@symbol_" + description + "_" + (idCounter++) + "__";
+
+      // create a wrapper object so typeof === "symbol" can't be faked
+      return symbol;
+    };
+
+    SymbolPolyfill.for = function(key) {
+      key = String(key);
+      if (!globalSymbolRegistry[key]) {
+        globalSymbolRegistry[key] = SymbolPolyfill(key);
+      }
+      return globalSymbolRegistry[key];
+    };
+
+    SymbolPolyfill.keyFor = function(sym) {
+      for (var key in globalSymbolRegistry) {
+        if (globalSymbolRegistry[key] === sym) {
+          return key;
+        }
+      }
+      return undefined;
+    };
+
+    window.Symbol = SymbolPolyfill;
+  })();
+}
+
+/**
  * Factory method to create and load a BotGuardClient instance.
  * @param options - Configuration options for the BotGuardClient.
  * @returns A promise that resolves to a loaded BotGuardClient instance.

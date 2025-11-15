@@ -154,8 +154,15 @@ object InnerTubeRequestBody {
                 if (signatureTimestamp != null) {
                     contentPlaybackContext.put("signatureTimestamp", signatureTimestamp)
                 }
+
+                val devicePlaybackCapabilities = JSONObject()
+                devicePlaybackCapabilities.put("supportsVp9Encoding", true)
+                devicePlaybackCapabilities.put("supportXhr", false)
+
                 val playbackContext = JSONObject()
                 playbackContext.put("contentPlaybackContext", contentPlaybackContext)
+                playbackContext.put("devicePlaybackCapabilities", devicePlaybackCapabilities)
+
                 innerTubeBody.put("playbackContext", playbackContext)
 
                 if (requirePoToken) {

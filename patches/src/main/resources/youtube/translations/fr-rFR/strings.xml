@@ -1544,15 +1544,36 @@ Cette fonction fonctionne mieux avec une connexion internet très rapide."</stri
     <string name="revanced_hide_ai_generated_video_summary_section_title">Masquer la section \'Résumé vidéo générée par IA\'</string>
     <string name="revanced_hide_ai_generated_video_summary_section_summary_on">La section \'Résumé de la vidéo générée par l\'IA\' est masquée.</string>
     <string name="revanced_hide_ai_generated_video_summary_section_summary_off">La section \'Résumé de la vidéo générée par l\'IA\' est affichée.</string>
+    <string name="revanced_hide_ask_section_title">Masquer la section Poser une question</string>
+    <string name="revanced_hide_ask_section_summary_on">La section « Poser une question » est masquée.</string>
+    <string name="revanced_hide_ask_section_summary_off">La section « Poser une question » est affichée.</string>
     <string name="revanced_hide_attributes_section_title">Masquer la section \'Mentions\'</string>
     <string name="revanced_hide_attributes_section_summary_on">Les sections \'Lieux Populaires\', \'Jeux\' et \'Musique\' présent sous la description sont masquées.</string>
     <string name="revanced_hide_attributes_section_summary_off">Les sections \'Lieux Populaires\', \'Jeux\' et \'Musique\' présent sous la description sont affichés.</string>
     <string name="revanced_hide_chapters_section_title">Masquer la section des chapitres</string>
     <string name="revanced_hide_chapters_section_summary_on">La section des chapitres est masqué.</string>
     <string name="revanced_hide_chapters_section_summary_off">La section des chapitres est affiché.</string>
+    <string name="revanced_hide_creator_section_title">Masquer la section Créateur</string>
+    <string name="revanced_hide_creator_section_summary_on">La section Créateur est masquée.</string>
+    <string name="revanced_hide_creator_section_summary_off">La section Créateur est affichée.</string>
+    <string name="revanced_hide_explore_podcast_section_title">Masquer Explorer la section podcast</string>
+    <string name="revanced_hide_explore_podcast_section_summary_on">La section « Explorer les podcasts » est cachée.</string>
+    <string name="revanced_hide_explore_podcast_section_summary_off">La section « Explorer les podcasts » s\'affiche.</string>
+    <string name="revanced_hide_featured_section_title">Masquer la section Contenu en vedette</string>
+    <string name="revanced_hide_featured_section_summary_on">La section « Contenu mis en avant » de la section Créateur est masquée.</string>
+    <string name="revanced_hide_featured_section_summary_off">La section « Contenu mis en avant » de la section Créateur est affichée.</string>
+    <string name="revanced_hide_how_this_was_made_section_title">Masquer la section « Comment ce contenu a été créé »</string>
+    <string name="revanced_hide_how_this_was_made_section_summary_on">La section « Comment ce contenu a été créé » est masquée.</string>
+    <string name="revanced_hide_how_this_was_made_section_summary_off">La section « Comment ce contenu a été créé » s\'affiche.</string>
+    <string name="revanced_hide_hype_points_section_title">Masquer la section des points forts</string>
+    <string name="revanced_hide_hype_points_section_summary_on">La section des points forts est masquée.</string>
+    <string name="revanced_hide_hype_points_section_summary_off">La section des points forts est affichée.</string>
     <string name="revanced_hide_key_concepts_section_title">Masquer la section \'Concepts clés\'</string>
     <string name="revanced_hide_key_concepts_section_summary_on">La section \'Concepts clés\' est masqué.</string>
     <string name="revanced_hide_key_concepts_section_summary_off">La section \'Concepts clés\' est affiché.</string>
+    <string name="revanced_hide_subscribe_button_title">Masquer le bouton S\'abonner</string>
+    <string name="revanced_hide_subscribe_button_summary_on">Le bouton « S\'abonner » de la section Créateur est masqué.</string>
+    <string name="revanced_hide_subscribe_button_summary_off">Le bouton « S\'abonner » de la section Créateur est affiché.</string>
     <string name="revanced_hide_transcript_section_title">Masquer la section \'Transcription\'</string>
     <string name="revanced_hide_transcript_section_summary_on">La section \'Transcription\' est masqué.</string>
     <string name="revanced_hide_transcript_section_summary_off">La section \'Transcription\' est affiché.</string>
@@ -1871,6 +1892,11 @@ Ajustez le volume en balayant verticalement sur le côté droit de l'écran."</s
     <string name="revanced_enable_swipe_to_switch_video_title">Activer les gestes pour changer de vidéo</string>
     <string name="revanced_enable_swipe_to_switch_video_summary_on">Glisser vers le haut / bas en plein écran lira la vidéo suivante / précédente.</string>
     <string name="revanced_enable_swipe_to_switch_video_summary_off">Glisser vers le haut / bas en plein écran ne lira pas la vidéo suivante / précédente.</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_title">Correction de la vitesse de contrôle par glissement (appui long)</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_summary_on">"La vitesse de pression prolongée n'est activée que lorsque l'utilisateur appuie longuement.
+
+Problème connu : Il arrive que l'interface de balayage s'affiche avant le passage en mode plein écran."</string>
+    <string name="revanced_fix_swipe_tap_and_hold_speed_summary_off">La vitesse de pression prolongée peut parfois s\'activer même si l\'utilisateur ne maintient pas la pression.</string>
     <string name="revanced_swipe_lowest_value_auto_brightness_overlay_text">Auto</string>
     <!-- PreferenceScreen: Video -->
     <string name="revanced_preference_screen_video_title">Vitesses et qualités vidéo</string>
@@ -2325,6 +2351,8 @@ Cela peut être utilisé pour tester quelque chose sur le MainThread."</string>
     <string name="revanced_spoof_streaming_data_default_client_title">Client par défaut</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_creator">"Android Studio 
 <small>(Connexion requise)</small>"</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_no_sdk">"Android
+<small>(SDK non disponible)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr">"Android VR
 <small>(Sans authentification)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr_auth">"Android VR
@@ -2334,6 +2362,8 @@ Cela peut être utilisé pour tester quelque chose sur le MainThread."</string>
     <string name="revanced_spoof_streaming_data_client_entry_mweb">"Mobile Web
 <small>(En cours, Sans authentification)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">"Télévision
+<small>(Héritage)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_simply_no_potoken">"TV Simply
 <small>(Sans PoToken)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">TV intégrée</string>
@@ -2345,6 +2375,7 @@ Cela peut être utilisé pour tester quelque chose sur le MainThread."</string>
 • Le volume stable n'est pas disponible.
 • Les vidéos pour enfants peuvent ne pas se lire en mode déconnecté ou en navigation privée.
 • Les résolutions 1080p+, AV1 et HDR ne sont pas prises en charge."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_no_sdk">• La vidéo peut s\'arrêter à 1:00 ou ne pas être disponible dans certaines régions.</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Le menu des pistes audio est manquant.
 • Le volume stable n'est pas disponible.
 • Les vidéos pour enfants peuvent ne pas se lire en mode déconnecté ou en navigation privée."</string>
