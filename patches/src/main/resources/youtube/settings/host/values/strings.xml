@@ -1668,6 +1668,12 @@ This feature works best with a very fast internet connection."</string>
     <string name="revanced_hide_explore_podcast_section_title">Hide Explore the podcast section</string>
     <string name="revanced_hide_explore_podcast_section_summary_on">Explore the podcast section is hidden.</string>
     <string name="revanced_hide_explore_podcast_section_summary_off">Explore the podcast section is shown.</string>
+    <string name="revanced_hide_featured_links_section_title">Hide Featured links section</string>
+    <string name="revanced_hide_featured_links_section_summary_on">Featured links section is hidden.</string>
+    <string name="revanced_hide_featured_links_section_summary_off">Featured links section is shown.</string>
+    <string name="revanced_hide_featured_videos_section_title">Hide Featured videos section</string>
+    <string name="revanced_hide_featured_videos_section_summary_on">Featured videos section is hidden.</string>
+    <string name="revanced_hide_featured_videos_section_summary_off">Featured videos section is shown.</string>
     <string name="revanced_hide_how_this_was_made_section_title">Hide How this content was made section</string>
     <string name="revanced_hide_how_this_was_made_section_summary_on">How this content was made section is hidden.</string>
     <string name="revanced_hide_how_this_was_made_section_summary_off">How this content was made section is shown.</string>
@@ -1680,12 +1686,6 @@ This feature works best with a very fast internet connection."</string>
     <string name="revanced_hide_key_concepts_section_title">Hide Key concepts section</string>
     <string name="revanced_hide_key_concepts_section_summary_on">Key concepts section is hidden.</string>
     <string name="revanced_hide_key_concepts_section_summary_off">Key concepts section is shown.</string>
-    <string name="revanced_hide_pinned_links_section_title">Hide Pinned links section</string>
-    <string name="revanced_hide_pinned_links_section_summary_on">Pinned links section is hidden.</string>
-    <string name="revanced_hide_pinned_links_section_summary_off">Pinned links section is shown.</string>
-    <string name="revanced_hide_pinned_videos_section_title">Hide Pinned videos section</string>
-    <string name="revanced_hide_pinned_videos_section_summary_on">Pinned videos section is hidden.</string>
-    <string name="revanced_hide_pinned_videos_section_summary_off">Pinned videos section is shown.</string>
     <string name="revanced_hide_subscribe_button_title">Hide Subscribe button</string>
     <string name="revanced_hide_subscribe_button_summary_on">Subscribe button is hidden.</string>
     <string name="revanced_hide_subscribe_button_summary_off">Subscribe button is shown.</string>

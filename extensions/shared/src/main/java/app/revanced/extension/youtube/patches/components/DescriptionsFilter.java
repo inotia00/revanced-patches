@@ -108,11 +108,11 @@ public final class DescriptionsFilter extends Filter {
         }
 
         final boolean hideInfoCardsSection = Settings.HIDE_INFO_CARDS_SECTION.get();
-        final boolean hidePinnedLinksSection = Settings.HIDE_PINNED_LINKS_SECTION.get();
-        final boolean hidePinnedVideosSection = Settings.HIDE_PINNED_VIDEOS_SECTION.get();
+        final boolean hideFeaturedLinksSection = Settings.HIDE_FEATURED_LINKS_SECTION.get();
+        final boolean hideFeaturedVideosSection = Settings.HIDE_FEATURED_VIDEOS_SECTION.get();
         final boolean hideSubscribeButton = Settings.HIDE_SUBSCRIBE_BUTTON.get();
 
-        if (!hideInfoCardsSection && !hidePinnedLinksSection && !hidePinnedVideosSection && !hideSubscribeButton) {
+        if (!hideInfoCardsSection && !hideFeaturedLinksSection && !hideFeaturedVideosSection && !hideSubscribeButton) {
             return false;
         }
 
@@ -121,9 +121,9 @@ public final class DescriptionsFilter extends Filter {
         }
 
         if (path.contains("media_lockup.")) {
-            return hidePinnedLinksSection;
+            return hideFeaturedLinksSection;
         } else if (path.contains("structured_description_video_lockup.")) {
-            return hidePinnedVideosSection;
+            return hideFeaturedVideosSection;
         } else if (path.contains("subscribe_button.")) {
             return hideSubscribeButton;
         } else {
