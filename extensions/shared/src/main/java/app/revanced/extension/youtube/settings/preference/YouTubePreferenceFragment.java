@@ -207,16 +207,10 @@ public class YouTubePreferenceFragment extends ToolbarPreferenceFragment {
     }
 
     private void setPreferenceAvailability() {
-        setAmbientModePreference();
         setTabletLayoutPreference();
-        setFullScreenPanelPreference();
-        setQuickActionsPreference();
-        setNavigationPreference();
         setPatchInformationPreference();
         setRYDPreference();
-        setSeekBarPreference();
         setShortsPreference();
-        setSpeedOverlayPreference();
         setSpoofStreamingDataPreference();
         setWhitelistPreference();
     }
@@ -233,17 +227,6 @@ public class YouTubePreferenceFragment extends ToolbarPreferenceFragment {
     }
 
     /**
-     * Enable/Disable Preference related to Ambient Mode
-     */
-    private void setAmbientModePreference() {
-        disablePreferences(
-                Settings.DISABLE_AMBIENT_MODE.get(),
-                Settings.BYPASS_AMBIENT_MODE_RESTRICTIONS,
-                Settings.DISABLE_AMBIENT_MODE_IN_FULLSCREEN
-        );
-    }
-
-    /**
      * Enable/Disable Preferences not working in tablet layout
      */
     private void setTabletLayoutPreference() {
@@ -257,62 +240,6 @@ public class YouTubePreferenceFragment extends ToolbarPreferenceFragment {
                 Settings.HIDE_COMMUNITY_POSTS_SUBSCRIPTIONS,
                 Settings.HIDE_MIX_PLAYLISTS,
                 Settings.SHOW_VIDEO_TITLE_SECTION
-        );
-    }
-
-    /**
-     * Enable/Disable Preference related to Fullscreen Panel
-     */
-    private void setFullScreenPanelPreference() {
-        disablePreferences(
-                Settings.DISABLE_ENGAGEMENT_PANEL.get(),
-                Settings.HIDE_QUICK_ACTIONS,
-                Settings.HIDE_QUICK_ACTIONS_COMMENT_BUTTON,
-                Settings.HIDE_QUICK_ACTIONS_DISLIKE_BUTTON,
-                Settings.HIDE_QUICK_ACTIONS_LIKE_BUTTON,
-                Settings.HIDE_QUICK_ACTIONS_LIVE_CHAT_BUTTON,
-                Settings.HIDE_QUICK_ACTIONS_MORE_BUTTON,
-                Settings.HIDE_QUICK_ACTIONS_OPEN_MIX_PLAYLIST_BUTTON,
-                Settings.HIDE_QUICK_ACTIONS_OPEN_PLAYLIST_BUTTON,
-                Settings.HIDE_QUICK_ACTIONS_SAVE_TO_PLAYLIST_BUTTON,
-                Settings.HIDE_QUICK_ACTIONS_SHARE_BUTTON
-        );
-    }
-
-    /**
-     * Enable/Disable Preference related to Hide Quick Actions
-     */
-    private void setQuickActionsPreference() {
-        final boolean isAvailable =
-                Settings.DISABLE_ENGAGEMENT_PANEL.get() || Settings.HIDE_QUICK_ACTIONS.get();
-
-        disablePreferences(
-                isAvailable,
-                Settings.HIDE_QUICK_ACTIONS_COMMENT_BUTTON,
-                Settings.HIDE_QUICK_ACTIONS_DISLIKE_BUTTON,
-                Settings.HIDE_QUICK_ACTIONS_LIKE_BUTTON,
-                Settings.HIDE_QUICK_ACTIONS_LIVE_CHAT_BUTTON,
-                Settings.HIDE_QUICK_ACTIONS_MORE_BUTTON,
-                Settings.HIDE_QUICK_ACTIONS_OPEN_MIX_PLAYLIST_BUTTON,
-                Settings.HIDE_QUICK_ACTIONS_OPEN_PLAYLIST_BUTTON,
-                Settings.HIDE_QUICK_ACTIONS_SAVE_TO_PLAYLIST_BUTTON,
-                Settings.HIDE_QUICK_ACTIONS_SHARE_BUTTON
-        );
-    }
-
-    /**
-     * Enable/Disable Preference related to Navigation settings
-     */
-    private void setNavigationPreference() {
-        disablePreferences(
-                Settings.SWITCH_CREATE_WITH_NOTIFICATIONS_BUTTON.get(),
-                Settings.HIDE_NAVIGATION_CREATE_BUTTON
-        );
-        disablePreferences(
-                !Settings.SWITCH_CREATE_WITH_NOTIFICATIONS_BUTTON.get(),
-                Settings.HIDE_NAVIGATION_NOTIFICATIONS_BUTTON,
-                Settings.REPLACE_TOOLBAR_CREATE_BUTTON,
-                Settings.REPLACE_TOOLBAR_CREATE_BUTTON_TYPE
         );
     }
 
@@ -375,16 +302,6 @@ public class YouTubePreferenceFragment extends ToolbarPreferenceFragment {
     }
 
     /**
-     * Enable/Disable Preference related to Seek bar settings
-     */
-    private void setSeekBarPreference() {
-        disablePreferences(
-                Settings.RESTORE_OLD_SEEKBAR_THUMBNAILS.get(),
-                Settings.ENABLE_SEEKBAR_THUMBNAILS_HIGH_QUALITY
-        );
-    }
-
-    /**
      * Enable/Disable Preference related to Shorts settings
      */
     private void setShortsPreference() {
@@ -395,16 +312,6 @@ public class YouTubePreferenceFragment extends ToolbarPreferenceFragment {
             );
             Settings.SHORTS_CUSTOM_ACTIONS_SPEED_DIALOG.save(false);
         }
-    }
-
-    /**
-     * Enable/Disable Preference related to Speed overlay settings
-     */
-    private void setSpeedOverlayPreference() {
-        disablePreferences(
-                Settings.DISABLE_SPEED_OVERLAY.get(),
-                Settings.SPEED_OVERLAY_VALUE
-        );
     }
 
     private void setSpoofStreamingDataPreference() {

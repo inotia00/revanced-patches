@@ -97,6 +97,27 @@ public abstract class Setting<T> {
     }
 
     /**
+     * Availability based on any parent being disabled.
+     */
+    public static Availability parentsAnyInverted(BooleanSetting... parents) {
+        return new Availability() {
+            @Override
+            public boolean isAvailable() {
+                for (BooleanSetting parent : parents) {
+                    if (parent.get()) return false;
+                }
+                return true;
+            }
+
+            @Override
+            public List<Setting<?>> getParentSettings() {
+                return Collections.unmodifiableList(Arrays.asList(parents));
+            }
+        };
+    }
+
+
+    /**
      * Availability based on any parent being enabled.
      */
     public static Availability parentsAny(BooleanSetting... parents) {
