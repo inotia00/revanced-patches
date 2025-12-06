@@ -116,7 +116,6 @@ public abstract class Setting<T> {
         };
     }
 
-
     /**
      * Availability based on any parent being enabled.
      */
