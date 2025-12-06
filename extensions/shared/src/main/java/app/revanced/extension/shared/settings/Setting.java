@@ -60,6 +60,23 @@ public abstract class Setting<T> {
     }
 
     /**
+     * Availability based on a single parent setting being disabled.
+     */
+    public static Availability parentInverted(BooleanSetting parent) {
+        return new Availability() {
+            @Override
+            public boolean isAvailable() {
+                return !parent.get();
+            }
+
+            @Override
+            public List<Setting<?>> getParentSettings() {
+                return Collections.singletonList(parent);
+            }
+        };
+    }
+
+    /**
      * Availability based on all parents being enabled.
      */
     public static Availability parentsAll(BooleanSetting... parents) {
@@ -95,23 +112,6 @@ public abstract class Setting<T> {
             @Override
             public List<Setting<?>> getParentSettings() {
                 return Collections.unmodifiableList(Arrays.asList(parents));
-            }
-        };
-    }
-
-    /**
-     * Availability based on a parent being disabled.
-     * Child available only when parent is FALSE.
-     */
-    public static Availability parentNot(BooleanSetting parent) {
-        return new Availability() {
-            @Override
-            public boolean isAvailable() {
-                return !parent.get();
-            }
-
-            @Override
-            public List<Setting<?>> getParentSettings() {return Collections.singletonList(parent);
             }
         };
     }
