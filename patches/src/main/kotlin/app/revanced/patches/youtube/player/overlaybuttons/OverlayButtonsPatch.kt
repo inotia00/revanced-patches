@@ -289,7 +289,8 @@ val overlayButtonsPatch = resourcePatch(
                             "48.0dip"
 
                         if (isButton) {
-                            node.setAttribute("android:paddingBottom", "22.0dip")
+                            node.setAttribute("android:paddingBottom", "12.0dip")
+                            node.setAttribute("android:paddingTop", "12.0dip")
                             if (heightIsNotZero && widthIsNotZero) {
                                 node.setAttribute("android:layout_height", layoutHeightWidth)
                                 node.setAttribute("android:layout_width", layoutHeightWidth)
@@ -300,6 +301,11 @@ val overlayButtonsPatch = resourcePatch(
                             }
                         }
 
+                        if (useWiderButtonsSpace && id.endsWith("_placeholder")) {
+                            node.setAttribute("android:layout_height", "56.0dip")
+                            node.setAttribute("android:layout_width", "56.0dip")
+                        }
+                        
                         if (id.equals("@+id/revanced_overlay_buttons_bottom_margin")) {
                             node.setAttribute("android:layout_height", marginBottom)
                         } else if (id.equals("@id/time_bar_reference_view")) {
