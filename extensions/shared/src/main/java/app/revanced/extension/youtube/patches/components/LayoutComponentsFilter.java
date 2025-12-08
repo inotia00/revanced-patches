@@ -12,7 +12,7 @@ public final class LayoutComponentsFilter extends Filter {
     public LayoutComponentsFilter() {
         addIdentifierCallbacks(
                 new StringFilterGroup(
-                        Settings.HIDE_VISUAL_SPACERS,
+                        Settings.HIDE_VISUAL_SPACER,
                         "cell_divider"
                 )
         );

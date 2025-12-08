@@ -618,9 +618,9 @@ Info: In some accounts, the original audio track is used."</string>
     <string name="revanced_hide_floating_microphone_title">Hide floating microphone button</string>
     <string name="revanced_hide_floating_microphone_summary_on">Floating microphone button is hidden.</string>
     <string name="revanced_hide_floating_microphone_summary_off">Floating microphone button is shown.</string>
-    <string name="revanced_hide_visual_spacers_title">Hide visual spacers</string>
-    <string name="revanced_hide_visual_spacers_summary_on">Visual spacers are hidden.</string>
-    <string name="revanced_hide_visual_spacers_summary_off">Visual spacers are shown.</string>
+    <string name="revanced_hide_visual_spacer_title">Hide visual spacer</string>
+    <string name="revanced_hide_visual_spacer_summary_on">Visual spacer is hidden.</string>
+    <string name="revanced_hide_visual_spacer_summary_off">Visual spacer is shown.</string>
     <string name="revanced_remove_viewer_discretion_dialog_title">Remove viewer discretion dialog</string>
     <string name="revanced_remove_viewer_discretion_dialog_summary">"Removes the viewer discretion dialog.
 This does not bypass the age restriction. It just accepts it automatically."</string>
