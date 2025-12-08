@@ -19,6 +19,7 @@ public final class ShortsButtonFilter extends Filter {
 
     private static final String SHORTS_PAUSED_STATE_BUTTON_PATH = "|ScrollableContainerType|ContainerType|button.";
 
+    private final StringFilterGroup autoDubbedLabel;
     private final StringFilterGroup subscribeButton;
     private final StringFilterGroup joinButton;
     private final StringFilterGroup pausedOverlayButtons;
@@ -89,9 +90,22 @@ public final class ShortsButtonFilter extends Filter {
                 "immersive_live_header"
         );
 
+        StringFilterGroup livePreview = new StringFilterGroup(
+                Settings.HIDE_SHORTS_LIVE_PREVIEW,
+                // Can be removed in the future if a way to disable live Shorts is found.
+                "live_preview_page_vm."
+        );
+
         StringFilterGroup paidPromotionButton = new StringFilterGroup(
                 Settings.HIDE_SHORTS_PAID_PROMOTION_LABEL,
-                "reel_player_disclosure."
+                "reel_player_disclosure.",
+                "shorts_disclosures."
+        );
+
+        StringFilterGroup previewComment = new StringFilterGroup(
+                Settings.HIDE_SHORTS_PREVIEW_COMMENT,
+                // Comment box preview that appears on Shorts.
+                "participation_bar."
         );
 
         StringFilterGroup likeButton = new StringFilterGroup(
@@ -106,6 +120,11 @@ public final class ShortsButtonFilter extends Filter {
                 "shorts_dislike_button.",
                 "reel_dislike_button.",
                 "reel_dislike_toggled_button."
+        );
+
+        autoDubbedLabel = new StringFilterGroup(
+                Settings.HIDE_SHORTS_AUTO_DUBBED_LABEL,
+                "badge."
         );
 
         metaPanelButton = new StringFilterGroup(
@@ -131,14 +150,14 @@ public final class ShortsButtonFilter extends Filter {
 
         suggestedAction = new StringFilterGroup(
                 null,
-                "|suggested_action_inner."
+                "suggested_action_inner."
         );
 
         addPathCallbacks(
                 suggestedAction, actionButton, joinButton, subscribeButton, metaPanelButton,
                 paidPromotionButton, pausedOverlayButtons, channelBar, videoLinkLabel,
-                videoTitle, reelSoundMetadata, infoPanel, liveHeader, soundButton,
-                stickers, likeButton, dislikeButton
+                videoTitle, reelSoundMetadata, infoPanel, liveHeader, livePreview, soundButton,
+                stickers, likeButton, dislikeButton, autoDubbedLabel, previewComment
         );
 
         //
@@ -194,6 +213,12 @@ public final class ShortsButtonFilter extends Filter {
                         "PAproduct_listZ"
                 ),
                 new ByteArrayFilterGroup(
+                        Settings.HIDE_SHORTS_PREVIEW_COMMENT,
+                        // Preview comment that can popup while a Short is playing.
+                        // Uses no bundled icons, and instead the users profile photo is shown.
+                        "shorts-comments-panel"
+                ),
+                new ByteArrayFilterGroup(
                         Settings.HIDE_SHORTS_SHOP_BUTTON,
                         "yt_outline_bag_"
                 ),
@@ -237,7 +262,7 @@ public final class ShortsButtonFilter extends Filter {
     @Override
     public boolean isFiltered(String path, String identifier, String allValue, byte[] buffer,
                               StringFilterGroup matchedGroup, FilterContentType contentType, int contentIndex) {
-        if (matchedGroup == subscribeButton || matchedGroup == joinButton) {
+        if (matchedGroup == subscribeButton || matchedGroup == joinButton || matchedGroup == autoDubbedLabel) {
             // Selectively filter to avoid false positive filtering of other subscribe/join buttons.
             return StringUtils.startsWithAny(path, REEL_CHANNEL_BAR_PATH, REEL_LIVE_HEADER_PATH, REEL_METAPANEL_PATH);
         }
