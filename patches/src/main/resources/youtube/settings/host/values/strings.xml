@@ -1770,9 +1770,6 @@ Side effect: Watch history shelf in the You tab may be hidden."</string>
     <string name="revanced_preference_screen_shorts_player_title">Shorts player</string>
     <string name="revanced_preference_screen_shorts_player_summary">Hide or show Shorts player components.</string>
 
-    <string name="revanced_hide_shorts_auto_dubbed_label_title">Hide auto-dubbed label</string>
-    <string name="revanced_hide_shorts_auto_dubbed_label_summary_on">Auto-dubbed label is hidden.</string>
-    <string name="revanced_hide_shorts_auto_dubbed_label_summary_off">Auto-dubbed label is shown.</string>
     <string name="revanced_hide_shorts_channel_bar_title">Hide channel bar</string>
     <string name="revanced_hide_shorts_channel_bar_summary_on">Channel bar is hidden.</string>
     <string name="revanced_hide_shorts_channel_bar_summary_off">Channel bar is shown.</string>
@@ -1785,9 +1782,6 @@ Side effect: Watch history shelf in the You tab may be hidden."</string>
     <string name="revanced_hide_shorts_live_header_title">Hide live chat header</string>
     <string name="revanced_hide_shorts_live_header_summary_on">Live chat header is hidden.\n\nBack button in header will not be hidden.</string>
     <string name="revanced_hide_shorts_live_header_summary_off">Live chat header is shown.</string>
-    <string name="revanced_hide_shorts_live_preview_title">Hide live preview</string>
-    <string name="revanced_hide_shorts_live_preview_summary_on">Live preview is hidden.</string>
-    <string name="revanced_hide_shorts_live_preview_summary_off">Live preview is shown.</string>
     <string name="revanced_hide_shorts_paid_promotion_label_title">Hide paid promotion label</string>
     <string name="revanced_hide_shorts_paid_promotion_label_summary_on">Paid promotion label is hidden.</string>
     <string name="revanced_hide_shorts_paid_promotion_label_summary_off">Paid promotion label is shown.</string>
@@ -1797,9 +1791,6 @@ Side effect: Watch history shelf in the You tab may be hidden."</string>
     <string name="revanced_hide_shorts_paused_overlay_buttons_title">Hide paused overlay buttons</string>
     <string name="revanced_hide_shorts_paused_overlay_buttons_summary_on">Paused overlay buttons are hidden.</string>
     <string name="revanced_hide_shorts_paused_overlay_buttons_summary_off">Paused overlay buttons are shown.</string>
-    <string name="revanced_hide_shorts_preview_comment_title">Hide preview comment</string>
-    <string name="revanced_hide_shorts_preview_comment_summary_on">Preview comment is hidden.</string>
-    <string name="revanced_hide_shorts_preview_comment_summary_off">Preview comment is shown.</string>
     <string name="revanced_hide_shorts_shopping_button_title">Hide Shopping button</string>
     <string name="revanced_hide_shorts_shopping_button_summary_on">Shopping button is hidden.</string>
     <string name="revanced_hide_shorts_shopping_button_summary_off">Shopping button is shown.</string>
