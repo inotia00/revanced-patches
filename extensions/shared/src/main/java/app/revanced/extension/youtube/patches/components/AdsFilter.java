@@ -84,7 +84,9 @@ public final class AdsFilter extends Filter {
 
         final StringFilterGroup paidContent = new StringFilterGroup(
                 Settings.HIDE_PAID_PROMOTION_LABEL,
-                "paid_content_overlay"
+                "paid_content_overlay",
+                "reel_player_disclosure.",
+                "shorts_disclosures."
         );
 
         final StringFilterGroup selfSponsor = new StringFilterGroup(

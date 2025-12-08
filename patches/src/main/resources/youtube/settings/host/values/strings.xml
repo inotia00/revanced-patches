@@ -1782,9 +1782,6 @@ Side effect: Watch history shelf in the You tab may be hidden."</string>
     <string name="revanced_hide_shorts_live_preview_title">Hide live preview</string>
     <string name="revanced_hide_shorts_live_preview_summary_on">Live preview is hidden.</string>
     <string name="revanced_hide_shorts_live_preview_summary_off">Live preview is shown.</string>
-    <string name="revanced_hide_shorts_paid_promotion_label_title">Hide paid promotion label</string>
-    <string name="revanced_hide_shorts_paid_promotion_label_summary_on">Paid promotion label is hidden.</string>
-    <string name="revanced_hide_shorts_paid_promotion_label_summary_off">Paid promotion label is shown.</string>
     <string name="revanced_hide_shorts_paused_header_title">Hide paused header</string>
     <string name="revanced_hide_shorts_paused_header_summary_on">Paused header is hidden.</string>
     <string name="revanced_hide_shorts_paused_header_summary_off">Paused header is shown.</string>

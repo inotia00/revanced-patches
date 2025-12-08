@@ -96,12 +96,6 @@ public final class ShortsButtonFilter extends Filter {
                 "live_preview_page_vm."
         );
 
-        StringFilterGroup paidPromotionButton = new StringFilterGroup(
-                Settings.HIDE_SHORTS_PAID_PROMOTION_LABEL,
-                "reel_player_disclosure.",
-                "shorts_disclosures."
-        );
-
         StringFilterGroup previewComment = new StringFilterGroup(
                 Settings.HIDE_SHORTS_PREVIEW_COMMENT,
                 // Comment box preview that appears on Shorts.
@@ -155,9 +149,9 @@ public final class ShortsButtonFilter extends Filter {
 
         addPathCallbacks(
                 suggestedAction, actionButton, joinButton, subscribeButton, metaPanelButton,
-                paidPromotionButton, pausedOverlayButtons, channelBar, videoLinkLabel,
-                videoTitle, reelSoundMetadata, infoPanel, liveHeader, livePreview, soundButton,
-                stickers, likeButton, dislikeButton, autoDubbedLabel, previewComment
+                pausedOverlayButtons, channelBar, videoLinkLabel, autoDubbedLabel, videoTitle,
+                reelSoundMetadata, infoPanel, liveHeader, livePreview, soundButton, stickers,
+                likeButton, dislikeButton, previewComment
         );
 
         //
