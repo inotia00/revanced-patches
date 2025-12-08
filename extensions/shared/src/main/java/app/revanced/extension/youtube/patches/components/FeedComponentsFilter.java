@@ -166,20 +166,12 @@ public final class FeedComponentsFilter extends Filter {
 
         channelProfileGroupList.addAll(
                 new ByteArrayFilterGroup(
-                        Settings.HIDE_COMMUNITY_BUTTON,
+                        Settings.HIDE_VISIT_COMMUNITY_BUTTON,
                         "community_button"
                 ),
                 new ByteArrayFilterGroup(
-                        Settings.HIDE_STORE_BUTTON,
-                        "store_button"
-                ),
-                new ByteArrayFilterGroup(
-                        Settings.HIDE_JOIN_BUTTON_IN_CHANNEL_PAGE,
-                        "sponsor_button"
-                ),
-                new ByteArrayFilterGroup(
-                        Settings.HIDE_SUBSCRIBE_BUTTON_IN_CHANNEL_PAGE,
-                        "subscribe_menu"
+                        Settings.HIDE_VISIT_STORE_BUTTON,
+                        "header_store_button"
                 )
         );
 

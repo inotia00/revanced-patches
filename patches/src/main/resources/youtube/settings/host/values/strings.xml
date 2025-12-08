@@ -442,24 +442,18 @@ Tap here to learn more about DeArrow."</string>
     <string name="revanced_hide_channel_tab_filter_strings_hint">"Shorts
 Playlists
 Store"</string>
-    <string name="revanced_hide_community_button_title">Hide Community button</string>
-    <string name="revanced_hide_community_button_summary_on">Community button is hidden.</string>
-    <string name="revanced_hide_community_button_summary_off">Community button is shown.</string>
-    <string name="revanced_hide_join_button_in_channel_page_title">Hide Join button</string>
-    <string name="revanced_hide_join_button_in_channel_page_summary_on">Join button is hidden.</string>
-    <string name="revanced_hide_join_button_in_channel_page_summary_off">Join button is shown.</string>
     <string name="revanced_hide_links_preview_title">Hide links preview</string>
     <string name="revanced_hide_links_preview_summary_on">Links preview is hidden.</string>
     <string name="revanced_hide_links_preview_summary_off">Links preview is shown.</string>
     <string name="revanced_hide_members_shelf_title">Hide members shelf</string>
     <string name="revanced_hide_members_shelf_summary_on">Members shelf is hidden.</string>
     <string name="revanced_hide_members_shelf_summary_off">Members shelf is shown.</string>
-    <string name="revanced_hide_store_button_title">Hide Store button</string>
-    <string name="revanced_hide_store_button_summary_on">Store button is hidden.</string>
-    <string name="revanced_hide_store_button_summary_off">Store button is shown.</string>
-    <string name="revanced_hide_subscribe_button_in_channel_page_title">Hide Subscribe button</string>
-    <string name="revanced_hide_subscribe_button_in_channel_page_summary_on">Subscribe button is hidden.</string>
-    <string name="revanced_hide_subscribe_button_in_channel_page_summary_off">Subscribe button is shown.</string>
+    <string name="revanced_hide_visit_community_button_title">Hide Visit Community button</string>
+    <string name="revanced_hide_visit_community_button_summary_on">Visit Community button is hidden.</string>
+    <string name="revanced_hide_visit_community_button_summary_off">Visit Community button is shown.</string>
+    <string name="revanced_hide_visit_store_button_title">Hide Visit store button</string>
+    <string name="revanced_hide_visit_store_button_summary_on">Visit store button is hidden.</string>
+    <string name="revanced_hide_visit_store_button_summary_off">Visit store button is shown.</string>
 
     <!-- PreferenceScreen: Feed, PreferenceCategory: Feed, PreferenceScreen: Community posts -->
     <string name="revanced_preference_screen_community_posts_title">Community posts</string>
