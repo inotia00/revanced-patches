@@ -6,7 +6,6 @@ import static app.revanced.extension.shared.utils.Utils.validateValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
@@ -90,14 +89,6 @@ public class ShortsPatch {
 
     public static boolean hideShortsLikeButton() {
         return Settings.HIDE_SHORTS_LIKE_BUTTON.get();
-    }
-
-    public static boolean hideShortsPaidPromotionLabel() {
-        return Settings.HIDE_SHORTS_PAID_PROMOTION_LABEL.get();
-    }
-
-    public static void hideShortsPaidPromotionLabel(TextView textView) {
-        hideViewUnderCondition(Settings.HIDE_SHORTS_PAID_PROMOTION_LABEL.get(), textView);
     }
 
     public static void hideShortsRemixButton(View view) {

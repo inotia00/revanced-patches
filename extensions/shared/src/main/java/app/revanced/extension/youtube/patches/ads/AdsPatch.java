@@ -1,8 +1,10 @@
 package app.revanced.extension.youtube.patches.ads;
 
 import static app.revanced.extension.shared.utils.Utils.hideViewBy0dpUnderCondition;
+import static app.revanced.extension.shared.utils.Utils.hideViewUnderCondition;
 
 import android.view.View;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -63,6 +65,20 @@ public class AdsPatch {
      */
     public static boolean hideShortsAds(boolean original) {
         return HIDE_VIDEO_ADS || original;
+    }
+
+    /**
+     * Injection point.
+     */
+    public static boolean hideShortsPaidPromotionLabel() {
+        return Settings.HIDE_PAID_PROMOTION_LABEL.get();
+    }
+
+    /**
+     * Injection point.
+     */
+    public static void hideShortsPaidPromotionLabel(TextView textView) {
+        hideViewUnderCondition(Settings.HIDE_PAID_PROMOTION_LABEL.get(), textView);
     }
 
     /**

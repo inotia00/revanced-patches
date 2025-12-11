@@ -149,9 +149,9 @@ public final class ShortsButtonFilter extends Filter {
 
         addPathCallbacks(
                 suggestedAction, actionButton, joinButton, subscribeButton, metaPanelButton,
-                pausedOverlayButtons, channelBar, videoLinkLabel, autoDubbedLabel, videoTitle,
-                reelSoundMetadata, infoPanel, liveHeader, livePreview, soundButton, stickers,
-                likeButton, dislikeButton, previewComment
+                pausedOverlayButtons, autoDubbedLabel, channelBar, videoLinkLabel,
+                videoTitle, reelSoundMetadata, infoPanel, liveHeader, livePreview,
+                previewComment, soundButton, stickers, likeButton, dislikeButton
         );
 
         //

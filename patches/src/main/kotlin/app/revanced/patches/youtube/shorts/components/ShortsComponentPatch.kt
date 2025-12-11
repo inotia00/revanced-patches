@@ -5,7 +5,6 @@ import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
-import app.revanced.patcher.extensions.InstructionExtensions.removeInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.removeInstructions
 import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.patch.bytecodePatch
@@ -909,43 +908,6 @@ val shortsComponentPatch = bytecodePatch(
         // region patch for hide share button (non-litho)
 
         shortsButtonFingerprint.hideButton(reelDynShare, "hideShortsShareButton", true)
-
-        // endregion
-
-        // region patch for hide paid promotion label (non-litho)
-
-        shortsPaidPromotionFingerprint.methodOrThrow().apply {
-            when (returnType) {
-                "Landroid/widget/TextView;" -> {
-                    val insertIndex = implementation!!.instructions.lastIndex
-                    val insertRegister =
-                        getInstruction<OneRegisterInstruction>(insertIndex).registerA
-
-                    addInstructions(
-                        insertIndex + 1, """
-                            invoke-static {v$insertRegister}, $SHORTS_CLASS_DESCRIPTOR->hideShortsPaidPromotionLabel(Landroid/widget/TextView;)V
-                            return-object v$insertRegister
-                            """
-                    )
-                    removeInstruction(insertIndex)
-                }
-
-                "V" -> {
-                    addInstructionsWithLabels(
-                        0, """
-                            invoke-static {}, $SHORTS_CLASS_DESCRIPTOR->hideShortsPaidPromotionLabel()Z
-                            move-result v0
-                            if-eqz v0, :show
-                            return-void
-                            """, ExternalLabel("show", getInstruction(0))
-                    )
-                }
-
-                else -> {
-                    throw PatchException("Unknown returnType: $returnType")
-                }
-            }
-        }
 
         // endregion
 

@@ -3,7 +3,9 @@ package app.revanced.patches.youtube.ads.general
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
+import app.revanced.patcher.extensions.InstructionExtensions.removeInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.replaceInstruction
+import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.util.smali.ExternalLabel
 import app.revanced.patches.shared.ANDROID_AUTOMOTIVE_STRING
 import app.revanced.patches.shared.ads.adsPatch
@@ -161,6 +163,43 @@ val adsPatch = adsPatch(
             "$ADS_CLASS_DESCRIPTOR->overrideOSName()Ljava/lang/String;",
             is_20_06_or_greater
         )
+
+        // endregion
+
+        // region patch for hide paid promotion label in Shorts (non-litho)
+
+        shortsPaidPromotionFingerprint.methodOrThrow().apply {
+            when (returnType) {
+                "Landroid/widget/TextView;" -> {
+                    val insertIndex = implementation!!.instructions.lastIndex
+                    val insertRegister =
+                        getInstruction<OneRegisterInstruction>(insertIndex).registerA
+
+                    addInstructions(
+                        insertIndex + 1, """
+                            invoke-static {v$insertRegister}, $ADS_CLASS_DESCRIPTOR->hideShortsPaidPromotionLabel(Landroid/widget/TextView;)V
+                            return-object v$insertRegister
+                            """
+                    )
+                    removeInstruction(insertIndex)
+                }
+
+                "V" -> {
+                    addInstructionsWithLabels(
+                        0, """
+                            invoke-static {}, $ADS_CLASS_DESCRIPTOR->hideShortsPaidPromotionLabel()Z
+                            move-result v0
+                            if-eqz v0, :show
+                            return-void
+                            """, ExternalLabel("show", getInstruction(0))
+                    )
+                }
+
+                else -> {
+                    throw PatchException("Unknown returnType: $returnType")
+                }
+            }
+        }
 
         // endregion
 
