@@ -1,5 +1,7 @@
 <div align="center"> 
+<img src="assets/rvx-logo.png" alt="RVX logo" width="128">
 
+    
 ## 🧩 ReVanced Extended Patches
 ReVanced Extended Patches. 
     
