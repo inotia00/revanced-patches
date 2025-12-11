@@ -171,7 +171,7 @@ public final class FeedComponentsFilter extends Filter {
                 ),
                 new ByteArrayFilterGroup(
                         Settings.HIDE_STORE_BUTTON,
-                        "store_button"
+                        "header_store_button"
                 ),
                 new ByteArrayFilterGroup(
                         Settings.HIDE_JOIN_BUTTON_IN_CHANNEL_PAGE,
