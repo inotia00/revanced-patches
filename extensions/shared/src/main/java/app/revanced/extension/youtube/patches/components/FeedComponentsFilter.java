@@ -40,6 +40,7 @@ public final class FeedComponentsFilter extends Filter {
             "horizontalCollectionSwipeProtector=null";
     private final String CONVERSATION_CONTEXT_SUBSCRIPTIONS_IDENTIFIER =
             "heightConstraint=null";
+    private final String PAGE_HEADER_PATH = "page_header";
     private final String INLINE_EXPANSION_PATH = "inline_expansion";
     private final String FEED_VIDEO_PATH = "video_lockup_with_attachment";
 
@@ -50,6 +51,7 @@ public final class FeedComponentsFilter extends Filter {
     private final StringFilterGroup chipBar;
     private final StringFilterGroup communityPosts;
     private final StringFilterGroup expandableCard;
+    private final StringFilterGroup subscribeButton;
     private final ByteArrayFilterGroup playablesBuffer;
     private final ByteArrayFilterGroup ticketShelfBuffer;
     private final StringFilterGroupList communityPostsFeedGroup = new StringFilterGroupList();
@@ -161,7 +163,7 @@ public final class FeedComponentsFilter extends Filter {
         channelProfile = new StringFilterGroup(
                 null,
                 "channel_profile.",
-                "page_header." // new layout
+                PAGE_HEADER_PATH // new layout
         );
 
         channelProfileGroupList.addAll(
@@ -176,11 +178,12 @@ public final class FeedComponentsFilter extends Filter {
                 new ByteArrayFilterGroup(
                         Settings.HIDE_JOIN_BUTTON_IN_CHANNEL_PAGE,
                         "sponsor_button"
-                ),
-                new ByteArrayFilterGroup(
-                        Settings.HIDE_SUBSCRIBE_BUTTON_IN_CHANNEL_PAGE,
-                        "subscribe_menu"
                 )
+        );
+
+        subscribeButton = new StringFilterGroup(
+                Settings.HIDE_SUBSCRIBE_BUTTON_IN_CHANNEL_PAGE,
+                "subscribe_button"
         );
 
         final StringFilterGroup membersShelf = new StringFilterGroup(
@@ -302,6 +305,7 @@ public final class FeedComponentsFilter extends Filter {
                 movieShelf,
                 notifyMe,
                 playables,
+                subscribeButton,
                 subscribedChannelsBar,
                 subscriptionsCategoryBar,
                 surveys,
@@ -425,6 +429,8 @@ public final class FeedComponentsFilter extends Filter {
                               StringFilterGroup matchedGroup, FilterContentType contentType, int contentIndex) {
         if (matchedGroup == channelProfile) {
             return contentIndex == 0 && channelProfileGroupList.check(buffer).isFiltered();
+        } else if (matchedGroup == subscribeButton) {
+            return path.startsWith(PAGE_HEADER_PATH);
         } else if (matchedGroup == chipBar) {
             return hideCategoryBar(contentIndex);
         } else if (matchedGroup == communityPosts) {
