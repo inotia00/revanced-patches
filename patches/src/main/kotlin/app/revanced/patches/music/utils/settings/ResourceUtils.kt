@@ -156,10 +156,7 @@ internal object ResourceUtils {
                         this.adoptChild("intent") {
                             setAttribute("android:targetPackage", packageName)
                             setAttribute("android:data", key)
-                            setAttribute(
-                                "android:targetClass",
-                                targetClassName
-                            )
+                            setAttribute("android:targetClass", targetClassName)
                         }
                     }
                 }
@@ -258,7 +255,19 @@ internal object ResourceUtils {
                     it.adoptChild(SWITCH_PREFERENCE_TAG_NAME) {
                         setAttribute("android:title", "@string/$key" + "_title")
                         if (setSummary) {
-                            setAttribute("android:summary", "@string/$key" + "_summary")
+                            val resources = context.get("res/values/strings.xml").readText()
+                            val hasOn = resources.contains("name=\"${key}_summary_on\"")
+                            val hasOff = resources.contains("name=\"${key}_summary_off\"")
+                            when {
+                                hasOn && hasOff -> {
+                                    setAttribute("android:summaryOn", "@string/${key}_summary_on")
+                                    setAttribute("android:summaryOff", "@string/${key}_summary_off")
+                                }
+                                resources.contains("name=\"${key}_summary\"") -> {
+                                    setAttribute("android:summaryOn", "@string/${key}_summary")
+                                    setAttribute("android:summaryOff", "@string/${key}_summary")
+                                }
+                            }
                         }
                         setAttribute("android:key", key)
                         setAttribute("android:defaultValue", defaultValue)
@@ -292,10 +301,7 @@ internal object ResourceUtils {
                         this.adoptChild("intent") {
                             setAttribute("android:targetPackage", musicPackageName)
                             setAttribute("android:data", key)
-                            setAttribute(
-                                "android:targetClass",
-                                ACTIVITY_HOOK_TARGET_CLASS
-                            )
+                            setAttribute("android:targetClass", ACTIVITY_HOOK_TARGET_CLASS)
                         }
                     }
                 }

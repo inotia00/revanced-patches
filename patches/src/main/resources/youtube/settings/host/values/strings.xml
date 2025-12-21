@@ -676,8 +676,8 @@ If you turn off this setting, the Hype icon may not show in the video action bar
 ※ Even if this setting is turned off, the Hype button may not be hidden."</string>
 
     <string name="revanced_spoof_app_version_title">Spoof app version</string>
-    <string name="revanced_spoof_app_version_summary_on">Version spoofed</string>
-    <string name="revanced_spoof_app_version_summary_off">Version not spoofed</string>
+    <string name="revanced_spoof_app_version_summary_on">App version is spoofed to an older version.</string>
+    <string name="revanced_spoof_app_version_summary_off">App version is not spoofed.</string>
     <string name="revanced_spoof_app_version_user_dialog_message">"App version will be spoofed to an older version of YouTube.
 
 This will change the appearance and features of the app, but unknown side effects may occur.
@@ -2056,7 +2056,7 @@ Known issue: Sometimes the swipe overlay appears before switching to fullscreen 
     <string name="revanced_preference_category_codec">Codec</string>
     <string name="revanced_disable_drc_audio_title">Disable DRC audio</string>
     <string name="revanced_disable_drc_audio_summary_on">DRC (Dynamic Range Compression) audio is disabled.</string>
-    <string name="revanced_disable_drc_audio_summary_off">DRC (Dynamic Range Compression) audio is enabled.</string>
+    <string name="revanced_disable_drc_audio_summary_off">DRC (Dynamic Range Compression) audio is not disabled.</string>
     <string name="revanced_disable_hdr_video_title">Disable HDR video</string>
     <string name="revanced_disable_hdr_video_summary_on">HDR video is disabled.</string>
     <string name="revanced_disable_hdr_video_summary_off">HDR video is enabled.</string>
@@ -2069,8 +2069,8 @@ Info:
 • VP9 codec is still used for HDR video."</string>
     <string name="revanced_disable_vp9_codec_summary_off">VP9 codec is enabled.</string>
     <string name="revanced_enable_opus_codec_title">Enable OPUS codec</string>
-    <string name="revanced_enable_opus_codec_summary">Enables the OPUS codec if the player response includes it.</string>
-
+    <string name="revanced_enable_opus_codec_summary_on">OPUS codec is enabled if the player response includes it.</string>
+    <string name="revanced_enable_opus_codec_summary_off">OPUS codec is disabled.</string>
     <!-- PreferenceScreen: Video, PreferenceCategory: Playback speed -->
     <string name="revanced_preference_category_playback_speed">Playback speed</string>
     <string name="revanced_default_playback_speed_title">Default playback speed</string>
@@ -2173,8 +2173,8 @@ Limitation: Dislikes may not appear if the user is not logged in or in incognito
     <string name="revanced_ryd_estimated_like_summary_on">Videos with disabled likes show an estimated likes count.</string>
     <string name="revanced_ryd_estimated_like_summary_off">Estimated likes are not shown.</string>
     <string name="revanced_ryd_toast_on_connection_error_title">Show a toast if API is unavailable</string>
-    <string name="revanced_ryd_toast_on_connection_error_summary_on">Toast is shown if Return YouTube Dislike is unavailable.</string>
-    <string name="revanced_ryd_toast_on_connection_error_summary_off">Toast is not shown if Return YouTube Dislike is unavailable.</string>
+    <string name="revanced_ryd_toast_on_connection_error_summary_on">Toast is shown if the Return YouTube Dislike API is unavailable.</string>
+    <string name="revanced_ryd_toast_on_connection_error_summary_off">Toast is not shown if the Return YouTube Dislike API is unavailable.</string>
 
     <!-- PreferenceScreen: Return YouTube Dislike, PreferenceCategory: About -->
     <string name="revanced_ryd_about">About</string>
@@ -2337,8 +2337,8 @@ Click to see how to issue an API key."</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: General -->
     <string name="revanced_sb_general">General</string>
     <string name="revanced_sb_toast_on_connection_error">Show a toast if API is unavailable</string>
-    <string name="revanced_sb_toast_on_connection_error_sum_on">Toast is shown if SponsorBlock is unavailable.</string>
-    <string name="revanced_sb_toast_on_connection_error_sum_off">Toast is not shown if SponsorBlock is unavailable.</string>
+    <string name="revanced_sb_toast_on_connection_error_sum_on">Toast is shown if the SponsorBlock API is unavailable.</string>
+    <string name="revanced_sb_toast_on_connection_error_sum_off">Toast is not shown if the SponsorBlock API is unavailable.</string>
     <string name="revanced_sb_general_skipcount">Enable skip count tracking</string>
     <string name="revanced_sb_general_skipcount_sum_on">Lets the SponsorBlock leaderboard know how much time is saved. A message is sent to the leaderboard each time a segment is skipped.</string>
     <string name="revanced_sb_general_skipcount_sum_off">Skip count tracking is not enabled.</string>
@@ -2445,7 +2445,8 @@ Click to see how to issue an API key."</string>
     <string name="revanced_open_links_externally_summary_on">Opens links in external browser.</string>
     <string name="revanced_open_links_externally_summary_off">Opens links in in-app browser.</string>
     <string name="revanced_sanitize_sharing_links_title">Sanitize sharing links</string>
-    <string name="revanced_sanitize_sharing_links_summary">Sanitizes sharing links by removing tracking query parameters.</string>
+    <string name="revanced_sanitize_sharing_links_summary_on">Tracking query parameter is removed from shared links.</string>
+    <string name="revanced_sanitize_sharing_links_summary_off">Tracking query parameter is not removed from shared links.</string>
 
     <string name="revanced_default_app_settings_title">Open default app settings</string>
     <string name="revanced_default_app_settings_summary">To open YouTube links in RVX, enable Open supported links and enable all the Supported web addresses.</string>
@@ -2640,7 +2641,7 @@ Playback may stutter or drop frames."</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_about_title">Sign in to Android VR</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_about_summary">Click here to see how to sign in to Android VR.</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_title">Sign in to Android VR</string>
-    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_message">"Signing into Android VR (YouTube VR) follows the guidelines provided by Google (Google account authorization - OAuth 2.0 for TV and Limited-Input Device Applications):
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_message">"Signing in to Android VR (YouTube VR) follows the guidelines provided by Google (Google account authorization - OAuth 2.0 for TV and Limited-Input Device Applications):
 
 1. Click 'Get activation code' to generate an activation code.
 2. Click 'Open website' to go to 'https://yt.be/activate'.
