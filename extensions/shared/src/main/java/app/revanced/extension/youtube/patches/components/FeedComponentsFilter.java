@@ -40,21 +40,20 @@ public final class FeedComponentsFilter extends Filter {
             "horizontalCollectionSwipeProtector=null";
     private final String CONVERSATION_CONTEXT_SUBSCRIPTIONS_IDENTIFIER =
             "heightConstraint=null";
-    private final String PAGE_HEADER_PATH = "page_header";
     private final String INLINE_EXPANSION_PATH = "inline_expansion";
     private final String FEED_VIDEO_PATH = "video_lockup_with_attachment";
 
-    private final StringTrieSearch communityPostsFeedGroupSearch = new StringTrieSearch();
+    private final StringTrieSearch communityPostStringSearchGroup = new StringTrieSearch();
     private final StringFilterGroup channelProfile;
-    private final ByteArrayFilterGroupList channelProfileGroupList = new ByteArrayFilterGroupList();
+    private final ByteArrayFilterGroupList channelProfileBufferFilterGroup = new ByteArrayFilterGroupList();
+    private final StringFilterGroupList channelProfileStringFilterGroup = new StringFilterGroupList();
     private final StringFilterGroup carouselShelves;
     private final StringFilterGroup chipBar;
     private final StringFilterGroup communityPosts;
     private final StringFilterGroup expandableCard;
-    private final StringFilterGroup subscribeButton;
     private final ByteArrayFilterGroup playablesBuffer;
     private final ByteArrayFilterGroup ticketShelfBuffer;
-    private final StringFilterGroupList communityPostsFeedGroup = new StringFilterGroupList();
+    private final StringFilterGroupList communityPostStringFilterGroup = new StringFilterGroupList();
 
     private final Supplier<Stream<String>> knownBrowseId = () -> Stream.of(
             BROWSE_ID_HOME,
@@ -86,7 +85,7 @@ public final class FeedComponentsFilter extends Filter {
 
     public FeedComponentsFilter() {
         carouselShelfExceptions.addPattern("library_recent_shelf.");
-        communityPostsFeedGroupSearch.addPatterns(
+        communityPostStringSearchGroup.addPatterns(
                 CONVERSATION_CONTEXT_FEED_IDENTIFIER,
                 CONVERSATION_CONTEXT_SUBSCRIPTIONS_IDENTIFIER
         );
@@ -163,10 +162,10 @@ public final class FeedComponentsFilter extends Filter {
         channelProfile = new StringFilterGroup(
                 null,
                 "channel_profile.",
-                PAGE_HEADER_PATH // new layout
+                "page_header." // new layout
         );
 
-        channelProfileGroupList.addAll(
+        channelProfileBufferFilterGroup.addAll(
                 new ByteArrayFilterGroup(
                         Settings.HIDE_COMMUNITY_BUTTON,
                         "community_button"
@@ -181,9 +180,11 @@ public final class FeedComponentsFilter extends Filter {
                 )
         );
 
-        subscribeButton = new StringFilterGroup(
-                Settings.HIDE_SUBSCRIBE_BUTTON_IN_CHANNEL_PAGE,
-                "subscribe_button"
+        channelProfileStringFilterGroup.addAll(
+                new StringFilterGroup(
+                        Settings.HIDE_SUBSCRIBE_BUTTON_IN_CHANNEL_PAGE,
+                        "subscribe_button"
+                )
         );
 
         final StringFilterGroup membersShelf = new StringFilterGroup(
@@ -305,7 +306,6 @@ public final class FeedComponentsFilter extends Filter {
                 movieShelf,
                 notifyMe,
                 playables,
-                subscribeButton,
                 subscribedChannelsBar,
                 subscriptionsCategoryBar,
                 surveys,
@@ -325,7 +325,7 @@ public final class FeedComponentsFilter extends Filter {
                         CONVERSATION_CONTEXT_SUBSCRIPTIONS_IDENTIFIER
                 );
 
-        communityPostsFeedGroup.addAll(communityPostsHomeAndRelatedVideos, communityPostsSubscriptions);
+        communityPostStringFilterGroup.addAll(communityPostsHomeAndRelatedVideos, communityPostsSubscriptions);
     }
 
     /**
@@ -428,16 +428,18 @@ public final class FeedComponentsFilter extends Filter {
     public boolean isFiltered(String path, String identifier, String allValue, byte[] buffer,
                               StringFilterGroup matchedGroup, FilterContentType contentType, int contentIndex) {
         if (matchedGroup == channelProfile) {
-            return contentIndex == 0 && channelProfileGroupList.check(buffer).isFiltered();
-        } else if (matchedGroup == subscribeButton) {
-            return path.startsWith(PAGE_HEADER_PATH);
+            if (contentIndex != 0) {
+                return false;
+            }
+            return channelProfileBufferFilterGroup.check(buffer).isFiltered()
+                    || channelProfileStringFilterGroup.check(path).isFiltered();
         } else if (matchedGroup == chipBar) {
             return hideCategoryBar(contentIndex);
         } else if (matchedGroup == communityPosts) {
-            if (!communityPostsFeedGroupSearch.matches(allValue) && Settings.HIDE_COMMUNITY_POSTS_CHANNEL.get()) {
+            if (!communityPostStringSearchGroup.matches(allValue) && Settings.HIDE_COMMUNITY_POSTS_CHANNEL.get()) {
                 return true;
             }
-            return communityPostsFeedGroup.check(allValue).isFiltered();
+            return communityPostStringFilterGroup.check(allValue).isFiltered();
         } else if (matchedGroup == expandableCard) {
             return path.startsWith(FEED_VIDEO_PATH);
         } else if (matchedGroup == carouselShelves) {
