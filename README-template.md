@@ -3,6 +3,7 @@
 
     
 ## 🧩 ReVanced Extended Patches
+
 ReVanced Extended Patches. 
     
 [![Static Badge](https://img.shields.io/badge/RVX_Documentation-gray?style=flat-square&logo=github)](https://github.com/inotia00/revanced-documentation#readme)   [![Static Badge](https://img.shields.io/badge/Reddit-gray?style=flat-square&logo=reddit)](https://reddit.com/r/revancedextended)   [![Static Badge](https://img.shields.io/badge/Discord-gray?style=flat-square&logo=discord)](https://discord.gg/yMnc3EywRZ)
@@ -15,7 +16,17 @@ ReVanced Extended Patches.
 
 See the [documentation](https://github.com/inotia00/revanced-documentation#readme) to learn how to apply patches and build ReVanced Extended apps.
 
-Report issues [here](https://github.com/inotia00/ReVanced_Extended).
+~~Report issues [here](https://github.com/inotia00/ReVanced_Extended).~~
+
+## ⚠️ DEPRECATED
+
+This project is **deprecated** and no longer actively maintained.
+
+- No further features, fixes, or updates will be provided.
+- Issues and pull requests are no longer monitored.
+- The repository remains available for reference and forking.
+
+_It has been an incredible journey over the past 3.5 years. I am deeply grateful to the community for all the support and contributions that made this project possible. Thank you for being part of the ride!_
 
 ## 📋 List of patches in this repository
 
