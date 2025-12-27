@@ -94,7 +94,7 @@ public abstract class AbstractPreferenceFragment extends PreferenceFragment {
                     showSettingUserDialogConfirmation(pref, setting);
                     return;
                 } else if (setting.rebootApp) {
-                    showRestartDialog(getContext());
+                    showRestartDialog(getActivity());
                 }
             }
 
@@ -130,7 +130,7 @@ public abstract class AbstractPreferenceFragment extends PreferenceFragment {
     private void showSettingUserDialogConfirmation(Preference pref, Setting<?> setting) {
         Utils.verifyOnMainThread();
 
-        final var context = getContext();
+        final var context = getActivity();
         if (confirmDialogTitle == null) {
             confirmDialogTitle = str("revanced_confirm_user_dialog_title");
         }

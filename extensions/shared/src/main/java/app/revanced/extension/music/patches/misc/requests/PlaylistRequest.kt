@@ -98,7 +98,7 @@ class PlaylistRequest private constructor(
             Objects.requireNonNull(videoId)
             synchronized(cache) {
                 val now = System.currentTimeMillis()
-                cache.values.removeIf { request: PlaylistRequest ->
+                cache.values.removeAll { request ->
                     val expired = request.isExpired(now)
                     if (expired) Logger.printDebug { "Removing expired stream: " + request.videoId }
                     expired

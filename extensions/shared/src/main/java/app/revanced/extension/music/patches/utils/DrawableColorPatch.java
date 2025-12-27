@@ -11,6 +11,8 @@ import org.apache.commons.lang3.ArrayUtils;
 
 import app.revanced.extension.shared.utils.ResourceUtils;
 
+import static app.revanced.extension.shared.utils.Utils.isSDKAbove;
+
 @SuppressWarnings("unused")
 public class DrawableColorPatch {
     private static final int[] DARK_COLORS = {
@@ -55,7 +57,7 @@ public class DrawableColorPatch {
         // headerGradient is litho, so this view is sometimes used elsewhere, like the button of the action bar.
         // In order to prevent the gradient to be applied to the button of the action bar,
         // Add a layout listener to the ImageView.
-        if (headerGradient != null && gradientView.getForeground() == null) {
+        if (isSDKAbove(23) && headerGradient != null && gradientView.getForeground() == null) {
             gradientView.setForeground(headerGradient);
             gradientView.getViewTreeObserver().addOnGlobalLayoutListener(() -> {
                 if (gradientView.getParent() instanceof View view &&
