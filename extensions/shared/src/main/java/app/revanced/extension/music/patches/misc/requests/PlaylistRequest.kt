@@ -9,6 +9,7 @@ import app.revanced.extension.shared.requests.Requester
 import app.revanced.extension.shared.settings.AppLanguage
 import app.revanced.extension.shared.utils.Logger
 import app.revanced.extension.shared.utils.Utils
+import app.revanced.extension.shared.utils.Utils.isSDKAbove
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
@@ -98,11 +99,23 @@ class PlaylistRequest private constructor(
             Objects.requireNonNull(videoId)
             synchronized(cache) {
                 val now = System.currentTimeMillis()
-                cache.values.removeAll { request ->
-                    val expired = request.isExpired(now)
-                    if (expired) Logger.printDebug { "Removing expired stream: " + request.videoId }
-                    expired
+                if (isSDKAbove(24)) {
+                    cache.values.removeIf { request ->
+                        val expired = request.isExpired(now)
+                        if (expired) Logger.printDebug { "Removing expired stream: " + request.videoId }
+                        expired
+                    }
+                } else {
+                    val itr = cache.entries.iterator()
+                    while (itr.hasNext()) {
+                        val request = itr.next().value
+                        if (request.isExpired(now)) {
+                            Logger.printDebug { "Removing expired stream: " + request.videoId }
+                            itr.remove()
+                        }
+                    }
                 }
+
                 if (!cache.containsKey(videoId)) {
                     cache[videoId] = PlaylistRequest(
                         videoId,
