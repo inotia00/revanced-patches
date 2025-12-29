@@ -44,7 +44,7 @@ class PlaylistRequest private constructor(
         }
 
         // Only expired if the fetch failed (API null response).
-        return (fetchCompleted() && stream.isEmpty())
+        return (fetchCompleted() && songId.isEmpty())
     }
 
     /**
@@ -54,24 +54,24 @@ class PlaylistRequest private constructor(
         return future.isDone
     }
 
-    val stream: String
+    val songId: String
         get() {
             try {
                 return future[MAX_MILLISECONDS_TO_WAIT_FOR_FETCH, TimeUnit.MILLISECONDS]
             } catch (ex: TimeoutException) {
                 Logger.printInfo(
-                    { "getStream timed out" },
+                    { "getSongId timed out" },
                     ex
                 )
             } catch (ex: InterruptedException) {
                 Logger.printException(
-                    { "getStream interrupted" },
+                    { "getSongId interrupted" },
                     ex
                 )
                 Thread.currentThread().interrupt() // Restore interrupt status flag.
             } catch (ex: ExecutionException) {
                 Logger.printException(
-                    { "getStream failure" },
+                    { "getSongId failure" },
                     ex
                 )
             }
@@ -102,7 +102,7 @@ class PlaylistRequest private constructor(
                 if (isSDKAbove(24)) {
                     cache.values.removeIf { request ->
                         val expired = request.isExpired(now)
-                        if (expired) Logger.printDebug { "Removing expired stream: " + request.videoId }
+                        if (expired) Logger.printDebug { "Removing expired song id: " + request.videoId }
                         expired
                     }
                 } else {
@@ -110,7 +110,7 @@ class PlaylistRequest private constructor(
                     while (itr.hasNext()) {
                         val request = itr.next().value
                         if (request.isExpired(now)) {
-                            Logger.printDebug { "Removing expired stream: " + request.videoId }
+                            Logger.printDebug { "Removing expired song id: " + request.videoId }
                             itr.remove()
                         }
                     }
