@@ -2059,7 +2059,7 @@ Known issue: Sometimes the swipe overlay appears before switching to fullscreen 
     <string name="revanced_preference_category_codec">Codec</string>
     <string name="revanced_disable_drc_audio_title">Disable DRC audio</string>
     <string name="revanced_disable_drc_audio_summary_on">DRC (Dynamic Range Compression) audio is disabled.</string>
-    <string name="revanced_disable_drc_audio_summary_off">DRC (Dynamic Range Compression) audio is not disabled.</string>
+    <string name="revanced_disable_drc_audio_summary_off">DRC (Dynamic Range Compression) audio is enabled.</string>
     <string name="revanced_disable_hdr_video_title">Disable HDR video</string>
     <string name="revanced_disable_hdr_video_summary_on">HDR video is disabled.</string>
     <string name="revanced_disable_hdr_video_summary_off">HDR video is enabled.</string>

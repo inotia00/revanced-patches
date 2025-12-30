@@ -84,7 +84,8 @@
     <string name="revanced_hide_action_button_share_summary_on">Share button is hidden.</string>
     <string name="revanced_hide_action_button_share_summary_off">Share button is shown.</string>
     <string name="revanced_hide_action_button_song_video_title">Hide Song / Video button</string>
-    <string name="revanced_hide_action_button_song_video_summary_on">"Song / Video button is hidden. (This button is only available to some users)"</string>
+    <string name="revanced_hide_action_button_song_video_summary_on">"Song / Video button is hidden.
+(This button is only available to some users)"</string>
     <string name="revanced_hide_action_button_song_video_summary_off">Song / Video button is shown.</string>
     <string name="revanced_hide_action_button_disabled_title">Hide disabled button</string>
     <string name="revanced_hide_action_button_disabled_summary_on">Disabled buttons, such as the disabled Comments button, are hidden.</string>
@@ -104,6 +105,15 @@
     <string name="revanced_external_downloader_not_installed_dialog_title">Warning</string>
     <string name="revanced_external_downloader_not_installed_dialog_message">"%1$s is not installed. Please download %2$s from the website."</string>
     <string name="revanced_external_downloader_not_installed_warning">%s is not installed. Please install it.</string>
+    <string name="revanced_replace_action_button_like_title">Replace like button</string>
+    <string name="revanced_replace_action_button_like_summary">"Use a different icon and animation for the Like button.
+
+• This setting may no longer be needed once the issue is fixed on the server side."</string>
+    <string name="revanced_replace_action_button_like_type_title">Use smaller icon</string>
+    <string name="revanced_replace_action_button_like_type_summary">"Use a smaller like button.
+
+• Some users have a lower action bar (A/B testing).
+• This setting is for these users, but has not been tested."</string>
 
     <!-- PreferenceScreen: Ads -->
     <string name="revanced_preference_screen_ads_title">Ads</string>
@@ -232,6 +242,9 @@ Limitations:
     <string name="revanced_hide_flyout_menu_stats_for_nerds_title">Hide Stats for nerds menu</string>
     <string name="revanced_hide_flyout_menu_stats_for_nerds_summary_on">Stats for nerds menu is hidden.</string>
     <string name="revanced_hide_flyout_menu_stats_for_nerds_summary_off">Stats for nerds menu is shown.</string>
+    <string name="revanced_hide_flyout_menu_taste_match_title">Hide Taste match menu</string>
+    <string name="revanced_hide_flyout_menu_taste_match_summary_on">Taste match menu is hidden.</string>
+    <string name="revanced_hide_flyout_menu_taste_match_summary_off">Taste match menu is shown.</string>
     <string name="revanced_hide_flyout_menu_subscribe_title">Hide Subscribe / Unsubscribe menu</string>
     <string name="revanced_hide_flyout_menu_subscribe_summary_on">Subscribe / Unsubscribe menu is hidden.</string>
     <string name="revanced_hide_flyout_menu_subscribe_summary_off">Subscribe / Unsubscribe menu is shown.</string>
@@ -355,6 +368,15 @@ This does not bypass the age restriction. It just accepts it automatically."</st
     <string name="revanced_spoof_app_version_target_entry_7_16_53">7.16.53 - Restore old action bar</string>
     <string name="revanced_spoof_app_version_target_entry_7_17_52">7.17.52 - Comments section does not appear in home feed</string>
     <string name="revanced_spoof_app_version_target_invalid_toast">Invalid spoof app version: %s.</string>
+
+    <string name="revanced_spoof_app_version_for_lyrics_title">Spoof app version for lyrics</string>
+    <string name="revanced_spoof_app_version_for_lyrics_summary">Spoofs the client version used in the lyrics to an older version.</string>
+    <string name="revanced_spoof_app_version_for_lyrics_target_title">Spoof app version target for lyrics</string>
+    <string name="revanced_spoof_app_version_for_lyrics_target_summary">Select the spoof app version target for lyrics.</string>
+    <string name="revanced_spoof_app_version_for_lyrics_target_entry_6_42_55">6.42.55 - No real-time lyrics</string>
+    <string name="revanced_spoof_app_version_for_lyrics_target_entry_7_12_52">7.12.52 - Real-time lyrics</string>
+    <string name="revanced_spoof_app_version_for_lyrics_target_entry_8_06_52">8.06.52 - Real-time lyrics + Share button</string>
+    <string name="revanced_spoof_app_version_for_lyrics_target_entry_8_33_54">8.33.54 - Real-time lyrics + Share button + Translate button (Premium users only)</string>
 
     <!-- PreferenceScreen: Navigation bar -->
     <string name="revanced_preference_screen_navigation_title">Navigation bar</string>
@@ -810,7 +832,7 @@ If you are a YouTube Premium user, this setting may not be necessary."</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_dialog_open_website_text">Open website</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_toast_copy">Activation code copied to clipboard: %s.</string>
     <string name="revanced_spoof_streaming_data_failed_forbidden">Could not fetch any client streams.</string>
-    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Try changing the default client to TV.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Try changing the default client to TV Simply.</string>
 
     <string name="revanced_watch_history_type_title">Watch history type</string>
     <string name="revanced_watch_history_type_summary">"• Original: Follows the watch history settings of Google account, but watch history may not work due to DNS or VPN.
