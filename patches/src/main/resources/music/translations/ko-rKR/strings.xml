@@ -17,7 +17,7 @@
     <string name="revanced_webview_toast_no_network">네트워크 연결상태를 확인하세요.</string>
     <string name="revanced_webview_toast_unavailable">WebView를 사용할 수 없습니다.</string>
     <!-- Shared Category -->
-    <string name="revanced_restart_first_run">레이아웃을 정상적으로 불러오기 위해 다시 시작합니다.</string>
+    <string name="revanced_restart_first_run">레이아웃을 정상적으로 로드하기 위해 다시 시작합니다.</string>
     <string name="revanced_restart_message">새로고침 및 다시 시작</string>
     <string name="revanced_settings_search_hint">설정 검색</string>
     <string name="revanced_settings_search_no_results_title">\'%s\'에 대한 검색 결과가 없습니다.</string>
@@ -84,13 +84,19 @@
     <string name="revanced_external_downloader_not_installed_dialog_message">"%1$s 가 설치되어 있지 않습니다.
 웹사이트에서 %2$s 를 다운로드하세요."</string>
     <string name="revanced_external_downloader_not_installed_warning">%s 가 설치되지 않았습니다. 설치하세요.</string>
+    <string name="revanced_replace_action_button_like_title">좋아요 버튼 변경</string>
+    <string name="revanced_replace_action_button_like_summary">"좋아요 버튼에 다른 아이콘과 애니메이션을 사용합니다.
+
+• 서버 측에서 문제가 해결되면 이 설정은 더 이상 필요하지 않을 수 있습니다."</string>
+    <string name="revanced_replace_action_button_like_type_title">더 작은 아이콘 사용</string>
+    <string name="revanced_replace_action_button_like_type_summary">"더 작은 좋아요 버튼을 사용합니다.
+
+• 일부 사용자에게는 더 낮은 동작바가 표시됩니다 (A/B 테스트).
+• 이 설정은 이러한 사용자를 위한 것이지만 테스트되지 않았습니다."</string>
     <!-- PreferenceScreen: Ads -->
     <string name="revanced_preference_screen_ads_title">광고</string>
     <string name="revanced_hide_fullscreen_ads_title">전체 화면 광고 제거</string>
-    <string name="revanced_hide_fullscreen_ads_summary">"전체 화면 광고를 숨깁니다.
-
-제한 사항:
-• 간혹 홈 피드 대신 검은색 빈 화면이 표시될 수 있습니다."</string>
+    <string name="revanced_hide_fullscreen_ads_summary">"전체 화면 광고를 숨깁니다."</string>
     <string name="revanced_fullscreen_ads_closed_toast">전체 화면 광고가 닫아졌습니다.</string>
     <string name="revanced_hide_general_ads_title">일반 레이아웃 광고 제거</string>
     <string name="revanced_hide_general_ads_summary">일반 레이아웃 광고를 숨깁니다.</string>
@@ -110,7 +116,7 @@
     <string name="revanced_disable_trim_silence_title">무음 건너뛰기 스위치 비활성화</string>
     <string name="revanced_disable_trim_silence_summary">"재생 속도 메뉴 구성요소에서 '무음 건너뛰기' 스위치를 비활성화합니다.
 
-정보:
+알림:
 • 이 기능은 팟캐스트용입니다.
 • 이 기능은 아직 개발 중이므로 불안정할 수 있습니다."</string>
     <string name="revanced_enable_compact_dialog_title">소형 다이얼로그 활성화</string>
@@ -139,7 +145,7 @@
     <string name="revanced_hide_flyout_menu_remove_from_library_title">보관함에서 삭제 메뉴 제거</string>
     <string name="revanced_hide_flyout_menu_remove_from_playlist_title">재생목록에서 삭제 메뉴 제거</string>
     <string name="revanced_hide_flyout_menu_report_title">신고 메뉴 제거</string>
-    <string name="revanced_hide_flyout_menu_save_episode_for_later_save_to_library_title">나중에 볼 에피소드 저장 및 보관함에 저장 메뉴 제거</string>
+    <string name="revanced_hide_flyout_menu_save_episode_for_later_save_to_library_title">나중에 볼 에피소드 저장 \n&amp; 보관함에 저장 메뉴 제거</string>
     <string name="revanced_hide_flyout_menu_save_to_playlist_title">재생목록에 저장 메뉴 제거</string>
     <string name="revanced_hide_flyout_menu_share_title">공유 메뉴 제거</string>
     <string name="revanced_hide_flyout_menu_shuffle_play_title">셔플 재생 메뉴 제거</string>
@@ -147,6 +153,7 @@
     <string name="revanced_hide_flyout_menu_start_radio_title">뮤직 스테이션 시작 메뉴 제거</string>
     <string name="revanced_hide_flyout_menu_stats_for_nerds_title">동영상 통계 메뉴 제거</string>
     <string name="revanced_hide_flyout_menu_subscribe_title">구독 / 구독 취소 메뉴 제거</string>
+    <string name="revanced_hide_flyout_menu_taste_match_title">취향 일치 메뉴 제거</string>
     <string name="revanced_hide_flyout_menu_unpin_from_speed_dial_title">빠른 선곡에서 고정 해제 제거</string>
     <string name="revanced_hide_flyout_menu_view_song_credit_title">노래 크레딧 보기 메뉴 제거</string>
     <string name="revanced_replace_flyout_menu_dismiss_queue_continue_watch_title">이어서 음악 감상</string>
@@ -235,6 +242,14 @@
     <string name="revanced_spoof_app_version_target_entry_7_16_53">7.16.53 - 이전 동작바로 복원합니다.</string>
     <string name="revanced_spoof_app_version_target_entry_7_17_52">7.17.52 - 홈 피드에서 댓글 섹션이 표시되지 않습니다.</string>
     <string name="revanced_spoof_app_version_target_invalid_toast">변경할 앱 버전이 잘못되었습니다: %s</string>
+    <string name="revanced_spoof_app_version_for_lyrics_title">가사를 위한 앱 버전 변경</string>
+    <string name="revanced_spoof_app_version_for_lyrics_summary">가사에 사용된 클라이언트 버전을 이전 버전으로 변경합니다.</string>
+    <string name="revanced_spoof_app_version_for_lyrics_target_title">가사를 위해 변경할 앱 버전</string>
+    <string name="revanced_spoof_app_version_for_lyrics_target_summary">가사를 위해 변경할 앱 버전을 선택하세요.</string>
+    <string name="revanced_spoof_app_version_for_lyrics_target_entry_6_42_55">6.42.55 - 실시간 가사가 없습니다</string>
+    <string name="revanced_spoof_app_version_for_lyrics_target_entry_7_12_52">7.12.52 - 실시간 가사가 있습니다</string>
+    <string name="revanced_spoof_app_version_for_lyrics_target_entry_8_06_52">8.06.52 - 실시간 가사 + 공유 버튼</string>
+    <string name="revanced_spoof_app_version_for_lyrics_target_entry_8_33_54">8.33.54 - 실시간 가사 + 공유 버튼 + 번역 버튼 (Premium 사용자 전용)</string>
     <!-- PreferenceScreen: Navigation bar -->
     <string name="revanced_preference_screen_navigation_title">하단바</string>
     <string name="revanced_enable_custom_navigation_bar_color_title">사용자 정의 하단바 색상 활성화</string>
@@ -278,8 +293,8 @@ YouTube Music의 검색 및 설정과 같은 활동은 공개되지 않으므로
     <string name="revanced_change_miniplayer_color_summary">미니 플레이어 색상을 전체 화면 플레이어와 일치하도록 변경합니다.</string>
     <string name="revanced_change_player_background_color_title">플레이어 배경 색상 변경</string>
     <string name="revanced_change_player_background_color_summary">풀레이어 배경 색상을 사용자 정의 색상으로 변경합니다.</string>
-    <string name="revanced_custom_player_background_color_primary_title">플레이어 배경 메인 색상</string>
-    <string name="revanced_custom_player_background_color_primary_summary">"사용하고 싶은 플레이어 배경 메인 색상의 헥스 코드를 입력하세요.
+    <string name="revanced_custom_player_background_color_primary_title">플레이어 배경 주요 색상</string>
+    <string name="revanced_custom_player_background_color_primary_summary">"사용하고 싶은 플레이어 배경 주요 색상의 헥스 코드를 입력하세요.
 
 앱이 밝은 테마를 지원하지 않으므로 가능하면 어두운 색상을 사용하세요."</string>
     <string name="revanced_custom_player_background_color_secondary_title">플레이어 배경 보조 색상</string>
@@ -296,9 +311,7 @@ YouTube Music의 검색 및 설정과 같은 활동은 공개되지 않으므로
     <string name="revanced_enable_forced_miniplayer_title">강제된 미니 플레이어 활성화</string>
     <string name="revanced_enable_forced_miniplayer_summary">새로운 트랙으로 변경되면 강제로 미니 플레이어를 활성화합니다.</string>
     <string name="revanced_enable_smooth_transition_animation_title">부드러운 전환 애니메이션 활성화</string>
-    <string name="revanced_enable_smooth_transition_animation_summary">"미니 플레이어를 최소화 상태에서 최대화할 때, 부드러운 애니메이션을 활성화합니다.
-
-제한 사항: 일부 사용자에게는 실시간 가사 UI가 깨질 수 있습니다."</string>
+    <string name="revanced_enable_smooth_transition_animation_summary">미니 플레이어를 최소화 상태에서 최대화할 때, 부드러운 애니메이션을 활성화합니다.</string>
     <string name="revanced_enable_swipe_to_dismiss_miniplayer_title">스와이프하여 미니 플레이어 닫기 활성화</string>
     <string name="revanced_enable_swipe_to_dismiss_miniplayer_summary">미니 플레이어를 아래로 스와이프하여 닫을 수 있습니다.</string>
     <string name="revanced_enable_comments_scroll_top_title">댓글에서 맨 위로 스크롤 활성화</string>
@@ -350,7 +363,7 @@ YouTube Music의 검색 및 설정과 같은 활동은 공개되지 않으므로
     <string name="revanced_hide_settings_menu_notification_title">알림 메뉴 숨기기</string>
     <string name="revanced_hide_settings_menu_privacy_and_location_title">개인 정보 보호 및 데이터 메뉴 숨기기</string>
     <string name="revanced_hide_settings_menu_recommendations_title">맞춤 콘텐츠 메뉴 숨기기</string>
-    <string name="revanced_hide_settings_menu_paid_memberships_title">Music Premium 가입 메뉴 숨기기</string>
+    <string name="revanced_hide_settings_menu_paid_memberships_title">유료 멤버십 메뉴 숨기기</string>
     <string name="revanced_hide_settings_menu_about_title">YouTube Music 정보 메뉴 숨기기</string>
     <!-- PreferenceScreen: Video -->
     <string name="revanced_preference_screen_video_title">동영상</string>
@@ -391,7 +404,7 @@ YouTube Music의 검색 및 설정과 같은 활동은 공개되지 않으므로
     <string name="revanced_ryd_estimated_like_title">추정되는 좋아요 수 표시</string>
     <string name="revanced_ryd_estimated_like_summary">좋아요 수가 숨겨진 음악에서 추정되는 좋아요 수를 표시합니다.</string>
     <string name="revanced_ryd_toast_on_connection_error_title">API를 사용할 수 없을 때 팝업 메시지 표시</string>
-    <string name="revanced_ryd_toast_on_connection_error_summary">ReturnYouTubeDislike를 사용할 수 없을 때, 팝업 메시지를 표시합니다.</string>
+    <string name="revanced_ryd_toast_on_connection_error_summary">Return YouTube Dislike를 사용할 수 없을 때, 팝업 메시지를 표시합니다.</string>
     <string name="revanced_ryd_about">정보</string>
     <string name="revanced_ryd_attribution_title">ReturnYouTubeDislike.com</string>
     <string name="revanced_ryd_attribution_summary">싫어요 수의 데이터는 Return YouTube Dislike API에 의해 제공됩니다. 자세한 내용을 보려면 여기를 탭하세요.</string>
@@ -533,10 +546,10 @@ YouTube Premium 사용자라면 이 설정은 필요하지 않을 수 있습니�
     <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">TV 기존</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_simply">TV Simply</string>
     <string name="revanced_spoof_streaming_data_client_entry_visionos">visionOS</string>
-    <string name="revanced_spoof_streaming_data_sign_in_android_no_sdk_about_title">Android SDK 없음에 로그인하기</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_no_sdk_about_title">Android SDK 없음에 로그인</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_no_sdk_about_summary">Android SDK 없음에 로그인하는 방법을 보려면 여기를 탭하세요.</string>
-    <string name="revanced_spoof_streaming_data_sign_in_android_no_sdk_dialog_title">Android SDK 없음에 로그인하기</string>
-    <string name="revanced_spoof_streaming_data_sign_in_android_no_sdk_dialog_message">"Android SDK 없음 (YouTube)에 로그인하기는 Google에서 제공하는 가이드라인 (Google 계정 승인 - Android 애플리케이션을 위한 OAuth 2.0)을 따릅니다.
+    <string name="revanced_spoof_streaming_data_sign_in_android_no_sdk_dialog_title">Android SDK 없음에 로그인</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_no_sdk_dialog_message">"Android SDK 없음 (YouTube)에 로그인은 Google에서 제공하는 가이드라인 (Google 계정 승인 - Android 애플리케이션을 위한 OAuth 2.0)을 따릅니다.
 
 1. '승인 토큰 가져오기'를 탭하여 WebView에서 로그인 페이지를 엽니다.
 2. Google 계정에 로그인합니다.
@@ -550,18 +563,18 @@ YouTube Premium 사용자라면 이 설정은 필요하지 않을 수 있습니�
     <string name="revanced_spoof_streaming_data_sign_in_android_no_sdk_success_dialog_message">"인증 토큰을 저장하였습니다.
 
 • 이 과정을 통해 발급된 인증 토큰은 YouTube에서만 사용할 수 있습니다 (RVX에서는 YouTube에서 스트리밍 데이터를 가져오는 데 사용됩니다).
-• 6개월이상 사용되지 않은 인증 토큰은 Google 서버에서 취소됩니다.
+• 6개월 이상 사용되지 않은 인증 토큰은 Google 서버에서 취소됩니다.
 • 비밀번호를 변경하거나 계정 설정에서 기기 등록을 해제하거나 앱을 삭제하면 인증 토큰을 다시 발급받아야 합니다."</string>
-    <string name="revanced_spoof_streaming_data_sign_in_android_vr_about_title">Android VR에 로그인하기</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_about_title">Android VR에 로그인</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_about_summary">Android VR에 로그인하는 방법을 보려면 여기를 탭하세요.</string>
-    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_title">Android VR에 로그인하기</string>
-    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_message">"Android VR (YouTube VR)에 로그인하기는 Google에서 제공하는 가이드라인 (Google 계정 승인 - TV 및 입력 제한 기기 애플리케이션을 위한 OAuth 2.0)을 따릅니다:
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_title">Android VR에 로그인</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_message">"Android VR (YouTube VR)에 로그인은 Google에서 제공하는 가이드라인 (Google 계정 승인 - TV 및 입력 제한 기기 애플리케이션을 위한 OAuth 2.0)을 따릅니다:
 
 1. '활성화 코드 받기'를 탭하여 활성화 코드를 생성합니다.
 2. '웹사이트 열기'를 탭하여 'https://yt.be/activate'로 이동합니다.
 3. 활성화 코드를 입력합니다.
 4. 로그인이 요청되면 로그인합니다. 여러 Google 계정이 있는 경우에는 YouTube에 사용하는 계정을 선택합니다. 이미 로그인된 상태라면 다음 단계로 건너뜁니다.
-5. 로그인 후에 RVX로 돌아가서 'Android VR에 로그인하기'를 다시 탭합니다.
+5. 로그인 후에 RVX로 돌아가서 'Android VR에 로그인'을 다시 탭합니다.
 6. '승인 토큰 받기'를 탭하여 승인 토큰을 받습니다.
 
 ※ 인증 토큰 또는 활성화 코드를 삭제하려면 '초기화'를 탭하세요."</string>
@@ -569,7 +582,7 @@ YouTube Premium 사용자라면 이 설정은 필요하지 않을 수 있습니�
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_get_authorization_token_text">승인 토큰 받기</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_reset_text">초기화</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_failed">인증 토큰을 발급할 수 없습니다.</string>
-    <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_failed_suggestion">초기화를 탭하여 다시 시도하세요.</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_failed_suggestion">초기화를 탭하고 다시 시도하세요.</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_reset">인증 토큰과 활성화 코드를 초기화하였습니다.</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_success_dialog_title">로그인을 하였습니다</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_success_dialog_message">"인증 토큰을 저장하였습니다.
@@ -584,12 +597,12 @@ YouTube Premium 사용자라면 이 설정은 필요하지 않을 수 있습니�
 1. '웹사이트 열기'를 탭하여 'https://yt.be/activate'로 이동합니다.
 2. 활성화 코드를 입력합니다.
 3. 로그인이 요청되면 로그인합니다. 여러 Google 계정이 있는 경우에는 YouTube에서 사용하는 계정을 선택합니다. 이미 로그인된 상태라면 다음 단계로 건너뜁니다.
-4. 로그인 후에 RVX로 돌아가서 'Android VR에 로그인하기'를 다시 탭합니다.
+4. 로그인 후에 RVX로 돌아가서 'Android VR에 로그인'을 다시 탭합니다.
 5. '승인 토큰 받기'를 탭하여 승인 토큰을 받습니다."</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_dialog_open_website_text">웹사이트 열기</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_toast_copy">활성화 코드를 클립보드에 복사하였습니다: %s.</string>
     <string name="revanced_spoof_streaming_data_failed_forbidden">클라이언트 스트림을 가져올 수 없습니다.</string>
-    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">VPN을 사용 중이라면 다른 국가로 변경하거나 기본 클라이언트를 TV로 변경해 보세요.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">기본 클라이언트를 TV Simply로 변경해 보세요.</string>
     <string name="revanced_watch_history_type_title">시청 기록 유형</string>
     <string name="revanced_watch_history_type_summary">"• 원본: Google 계정의 시청 기록 설정을 따르지만 DNS 또는 VPN으로 인하여 시청 기록이 작동되지 않을 수 있습니다.
 • 도메인 변경: Google 계정의 시청 기록 설정을 따릅니다.

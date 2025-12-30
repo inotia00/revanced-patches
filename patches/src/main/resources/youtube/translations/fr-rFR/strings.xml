@@ -275,9 +275,11 @@ Description
     <string name="revanced_hide_web_search_results_title">Masquer les résultats web</string>
     <string name="revanced_hide_web_search_results_summary_on">Les résultats web sont masqués.</string>
     <string name="revanced_hide_web_search_results_summary_off">Les résultats web sont affichés.</string>
-    <string name="revanced_hide_get_premium_title">Masquer les pubs pour YouTube Premium</string>
-    <string name="revanced_hide_get_premium_summary_on">Les publicités pour YouTube Premium sont masquées.</string>
-    <string name="revanced_hide_get_premium_summary_off">Publicités pour YouTube Premium affichées.</string>
+    <string name="revanced_hide_youtube_premium_promotion_title">Masquer la promotion YouTube Premium</string>
+    <string name="revanced_hide_youtube_premium_promotion_summary_on">"La promotion YouTube Premium est masquée.
+
+Problème connu : lorsque ce paramètre est activé, les Doodles YouTube ne sont pas cliquables."</string>
+    <string name="revanced_hide_youtube_premium_promotion_summary_off">La promotion YouTube Premium est affichée.</string>
     <!-- PreferenceScreen: Alternative thumbnails -->
     <string name="revanced_preference_screen_alt_thumbnails_title">Miniatures alternatives</string>
     <string name="revanced_alt_thumbnail_home_title">Onglet \'Accueil\'</string>
@@ -625,7 +627,6 @@ Les modifications incluent :
     <string name="revanced_disable_translucent_status_bar_title">Désactiver la barre de notification translucide</string>
     <string name="revanced_disable_translucent_status_bar_summary_on">La barre de notification est opaque.</string>
     <string name="revanced_disable_translucent_status_bar_summary_off">La barre de notification est opaque ou translucide.</string>
-    <string name="revanced_disable_translucent_status_bar_user_dialog_message">Pour certaines ROMs de fabricants fonctionnant sous Android 12 ou supérieur, l\'activation de cette fonctionnalité peut rendre la barre de navigation du système transparente.</string>
     <string name="revanced_fix_hype_button_icon_title">Corriger l\'icône du bouton \'Booster\'</string>
     <string name="revanced_fix_hype_button_icon_summary_on">L\'icône du bouton \'Booster\' est affichée.</string>
     <string name="revanced_fix_hype_button_icon_summary_off">L\'icône du bouton \'Booster\' est masquée.</string>
@@ -812,7 +813,9 @@ Pour afficher le bouton de téléchargement de playlist natif, activez l'option 
     <string name="revanced_replace_navigation_button_target_entry_subscriptions">Abonnements</string>
     <string name="revanced_replace_navigation_button_target_entry_notifications">Notifications</string>
     <string name="revanced_enable_translucent_navigation_bar_title">Activer la barre de navigation translucide</string>
-    <string name="revanced_enable_translucent_navigation_bar_summary_on">La barre de navigation est translucide.</string>
+    <string name="revanced_enable_translucent_navigation_bar_summary_on">"La barre de navigation est translucide.
+
+Problème connu : la barre de navigation du système peut être translucide."</string>
     <string name="revanced_enable_translucent_navigation_bar_summary_off">La barre de navigation est opaque.</string>
     <string name="revanced_hide_navigation_bar_title">Masquer la barre de navigation</string>
     <string name="revanced_hide_navigation_bar_summary_on">La barre de navigation est masqué.</string>
@@ -1584,12 +1587,12 @@ Cette fonction fonctionne mieux avec une connexion internet très rapide."</stri
     <string name="revanced_hide_explore_podcast_section_title">Masquer la section \'Découvrir le podcast\'</string>
     <string name="revanced_hide_explore_podcast_section_summary_on">La section \'Découvrir le podcast\' est masquée.</string>
     <string name="revanced_hide_explore_podcast_section_summary_off">La section \'Découvrir le podcast\' est affichée.</string>
-    <string name="revanced_hide_featured_links_section_title">Masquer la section des liens en vedette</string>
-    <string name="revanced_hide_featured_links_section_summary_on">La section des liens en vedette est masquée.</string>
-    <string name="revanced_hide_featured_links_section_summary_off">La section des liens en vedette est affichée.</string>
-    <string name="revanced_hide_featured_videos_section_title">Masquer la section des vidéos en vedette</string>
-    <string name="revanced_hide_featured_videos_section_summary_on">La section des vidéos en vedette est masquée.</string>
-    <string name="revanced_hide_featured_videos_section_summary_off">La section des vidéos en vedette est affichée.</string>
+    <string name="revanced_hide_featured_links_section_title">Masquer la section des liens sélectionnés</string>
+    <string name="revanced_hide_featured_links_section_summary_on">La section des liens sélectionnés est masquée.</string>
+    <string name="revanced_hide_featured_links_section_summary_off">La section des liens sélectionnés est affichée.</string>
+    <string name="revanced_hide_featured_videos_section_title">Masquer la section \'Vidéo sélectionnée\'</string>
+    <string name="revanced_hide_featured_videos_section_summary_on">La section \'Vidéo sélectionnée\' est masquée.</string>
+    <string name="revanced_hide_featured_videos_section_summary_off">La section \'Vidéo sélectionnée\' est affichée.</string>
     <string name="revanced_hide_how_this_was_made_section_title">Masquer la section \'Comment la vidéo a été créée\'</string>
     <string name="revanced_hide_how_this_was_made_section_summary_on">La section \'Comment la vidéo a été créée\' est masquée.</string>
     <string name="revanced_hide_how_this_was_made_section_summary_off">La section \'Comment la vidéo a été créée\' est affiché.</string>
@@ -2376,7 +2379,7 @@ Cela peut être utilisé pour tester quelque chose sur le MainThread."</string>
     <string name="revanced_settings_import">Importer</string>
     <string name="revanced_settings_import_copy">Copier</string>
     <string name="revanced_settings_import_failed">Échec de l\'importation des paramètres.</string>
-    <string name="revanced_settings_import_reset">Les paramètres ont étés réinitialisés.</string>
+    <string name="revanced_settings_import_reset">Les paramètres ont étés réinitialisés par défaut.</string>
     <string name="revanced_settings_import_success">Les paramètres ont été importés avec succès.</string>
     <string name="revanced_share_copy_settings_success">Paramètres copiés dans le presse-papier.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
@@ -2406,7 +2409,8 @@ Si vous êtes un utilisateur YouTube Premium, ce paramètre n'est peut-être pas
 • L'option 'Désactiver les pistes audio auto forcées' n'est pas disponible.
 • Le volume stable n'est pas disponible.
 • Les vidéos pour enfants peuvent ne pas se lire en mode déconnecté ou en navigation privée.
-• Les résolutions 1080p+, AV1 et HDR ne sont pas prises en charge."</string>
+• Les résolutions 1080p+, AV1 et HDR ne sont pas prises en charge.
+• Le mode VR 360° immersif n'est pas dispo."</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_no_sdk">• La vidéo peut s\'arrêter à 1:00 ou ne pas être disponible dans certaines régions.</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Le menu des pistes audio est manquant.
 • Le volume stable n'est pas disponible.
@@ -2414,13 +2418,11 @@ Si vous êtes un utilisateur YouTube Premium, ce paramètre n'est peut-être pas
     <string name="revanced_spoof_streaming_data_side_effects_tv">"• Le menu des pistes audio est manquant.
 • En cas d'échec du déchiffrement, la lecture peut échouer.
 • Parfois, la vidéo ne se lance pas même après 10 secondes, auquel cas vous devrez cliquer sur le bouton de rechargement de la vidéo.
-• La vidéo peut démarrer avec du retard."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_tv_simply">"• Si la désobfuscation échoue, la lecture peut être interrompue.
-• Certains comptes peuvent nécessiter un token PoToken ; dans ce cas, la lecture échouera.
-• Il arrive que la vidéo ne se lance pas, même après 10 secondes. Dans ce cas, cliquez sur le bouton 'Recharger la vidéo'.
-• La vidéo peut démarrer avec un léger retard."</string>
+• La vidéo peut démarrer avec du retard.
+• Le mode VR 360° immersif n'est pas dispo."</string>
     <string name="revanced_spoof_streaming_data_side_effects_visionos">"• Le menu des pistes audio est manquant.
 • Les vidéos pour enfants peuvent ne pas se lire en mode déconnecté ou en navigation privée.
+• Le mode VR 360° immersif n'est pas dispo.
 • Étant donné qu'il s'agit d'un client non publié, il peut cesser de fonctionner à tout moment."</string>
     <string name="revanced_spoof_streaming_data_side_effects_unknown">• Inconnu</string>
     <string name="revanced_spoof_streaming_data_prioritize_video_quality_title">Prioriser la qualité vidéo</string>
@@ -2463,9 +2465,9 @@ Exemple 2 :
     <string name="revanced_spoof_streaming_data_reload_video_button_always_show_title">Toujours afficher le bouton rechargement de la vidéo</string>
     <string name="revanced_spoof_streaming_data_reload_video_button_always_show_summary_on">Le bouton rechargement de la vidéo est toujours affiché.</string>
     <string name="revanced_spoof_streaming_data_reload_video_button_always_show_summary_off">Le bouton rechargement de la vidéo est affiché uniquement quand la vidéo ne charge pas.</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Afficher dans \'Statistiques pour les nerds\'</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Le client utilisé pour récupérer les données de lecture en direct est affiché dans \'Statistiques pour les nerds\'.</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Le client utilisé pour récupérer les données de lecture en direct est masqué dans \'Statistiques pour les nerds\'.</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Afficher dans \'Statistiques avancées\'</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Le client utilisé pour récupérer les données de lecture en direct est affiché dans \'Statistiques avancées\'.</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Le client utilisé pour récupérer les données de lecture en direct est masqué dans \'Statistiques avancées\'.</string>
     <string name="revanced_spoof_streaming_data_failed_forbidden">Impossible de récupérer les flux du client.</string>
     <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Essayez de changer le client par défaut en TV.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: Android VR -->

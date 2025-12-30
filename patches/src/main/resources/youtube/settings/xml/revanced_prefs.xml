@@ -16,7 +16,7 @@
         <SwitchPreference android:title="@string/revanced_hide_video_ads_title" android:key="revanced_hide_video_ads" android:summaryOn="@string/revanced_hide_video_ads_summary_on" android:summaryOff="@string/revanced_hide_video_ads_summary_off" />
         <SwitchPreference android:title="@string/revanced_hide_view_products_title" android:key="revanced_hide_view_products" android:summaryOn="@string/revanced_hide_view_products_summary_on" android:summaryOff="@string/revanced_hide_view_products_summary_off" />
         <SwitchPreference android:title="@string/revanced_hide_web_search_results_title" android:key="revanced_hide_web_search_results" android:summaryOn="@string/revanced_hide_web_search_results_summary_on" android:summaryOff="@string/revanced_hide_web_search_results_summary_off" />
-        <SwitchPreference android:title="@string/revanced_hide_get_premium_title" android:key="revanced_hide_get_premium" android:summaryOn="@string/revanced_hide_get_premium_summary_on" android:summaryOff="@string/revanced_hide_get_premium_summary_off" />
+        <SwitchPreference android:title="@string/revanced_hide_youtube_premium_promotion_title" android:key="revanced_hide_youtube_premium_promotion" android:summaryOn="@string/revanced_hide_youtube_premium_promotion_summary_on" android:summaryOff="@string/revanced_hide_youtube_premium_promotion_summary_off" />
     </PreferenceScreen>PREFERENCE_SCREEN: ADS -->
 
 

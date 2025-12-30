@@ -25,8 +25,6 @@ object YouTubeClient {
     private const val CLIENT_REFERER_FORMAT_WEB = "https://www.youtube.com/watch?v=%s"
     private const val CLIENT_REFERER_FORMAT_MWEB = "https://m.youtube.com/watch?v=%s"
 
-    private const val DEVICE_MAKE_APPLE = "Apple"
-
 
     // ANDROID
     /**
@@ -42,16 +40,10 @@ object YouTubeClient {
 
     // ANDROID (NO SDK)
     /**
-     * Video not playable: None.
-     * Note: Clients other than Android YouTube (com.google.android.youtube) require an OAuth2 token.
-     *
-     * According to TeamNewPipe in 2022, if the 'androidSdkVersion' field is missing, the GVS did not return a valid response:
-     * [NewPipe#8713 (comment)](https://github.com/TeamNewPipe/NewPipe/issues/8713#issuecomment-1207443550).
-     * According to the latest commit in yt-dlp, the GVS returns a valid response even if the 'androidSdkVersion' field is missing:
-     * [yt-dlp#14693](https://github.com/yt-dlp/yt-dlp/pull/14693).
-     *
-     * For some reason, PoToken is not required.
-     * Tested on YouTube 20+ only.
+     * Video not playable in YouTube: None.
+     * Video not playable in YouTube Music (Auth): None.
+     * Video not playable in YouTube Music (No Auth): Paid, Movie, Private, Age-restricted.
+     * Uses adaptive bitrate.
      */
     private const val CLIENT_VERSION_ANDROID_NO_SDK = "20.05.46"
     private const val DEVICE_MODEL_ANDROID_NO_SDK = ""
@@ -64,17 +56,12 @@ object YouTubeClient {
 
     // ANDROID_MUSIC (NO SDK)
     /**
-     * Video not playable: All videos other than music.
-     *
-     * According to TeamNewPipe in 2022, if the 'androidSdkVersion' field is missing, the GVS did not return a valid response:
-     * [NewPipe#8713 (comment)](https://github.com/TeamNewPipe/NewPipe/issues/8713#issuecomment-1207443550).
-     * According to the latest commit in yt-dlp, the GVS returns a valid response even if the 'androidSdkVersion' field is missing:
-     * [yt-dlp#14693](https://github.com/yt-dlp/yt-dlp/pull/14693).
-     *
-     * For some reason, PoToken is not required.
+     * Video not playable in YouTube: All videos (This client requires login, but cannot log in with YouTube's access token).
+     * Video not playable in YouTube Music: None.
+     * Uses non adaptive bitrate.
      */
     private const val PACKAGE_NAME_ANDROID_MUSIC = "com.google.android.apps.youtube.music"
-    private const val CLIENT_VERSION_ANDROID_MUSIC_NO_SDK = "6.20.51"
+    private const val CLIENT_VERSION_ANDROID_MUSIC_NO_SDK = "7.12.52"
     private const val DEVICE_MODEL_ANDROID_MUSIC_NO_SDK = ""
     private const val DEVICE_MAKE_ANDROID_MUSIC_NO_SDK = ""
     private val OS_VERSION_ANDROID_MUSIC_NO_SDK = Build.VERSION.RELEASE
@@ -85,10 +72,9 @@ object YouTubeClient {
 
     // ANDROID VR
     /**
-     * Video not playable: Kids / Paid / Movie / Private / Age-restricted.
-     * Note: Audio track is not available.
-     *
-     * This client can only be used when logged out.
+     * Video not playable (Auth): Kids.
+     * Video not playable (No Auth): Kids, Paid, Movie, Private, Age-restricted.
+     * Uses non adaptive bitrate.
      *
      * Package name for YouTube VR (Google DayDream): com.google.android.apps.youtube.vr (Deprecated)
      * Package name for YouTube VR (Meta Quests): com.google.android.apps.youtube.vr.oculus
@@ -107,21 +93,17 @@ object YouTubeClient {
     private val CLIENT_VERSION_ANDROID_VR = if (useAV1())
         // Lowest version that supports AV1.
         // According to the changelog, only Quest 3 supports the AV1 codec in this version.
-        // SABR is not used.
         // Cronet version: 122.0.6238.3
         "1.54.20"
     else
-        // SABR is not used.
         // Cronet version: 113.0.5672.24
         "1.47.48"
 
-    /**
-     * The device machine id for the Meta Quest 3, used to get opus codec with the Android VR client.
-     * See [this GitLab](https://dumps.tadiphone.dev/dumps/oculus/eureka) for more information.
-     */
     private val DEVICE_MODEL_ANDROID_VR = if (useAV1())
+        // https://dumps.tadiphone.dev/dumps/oculus/eureka
         "Quest 3"
     else
+        // https://dumps.tadiphone.dev/dumps/oculus/monterey
         "Quest"
     private const val DEVICE_MAKE_ANDROID_VR = "Oculus"
     private val OS_VERSION_ANDROID_VR = if (useAV1())
@@ -148,8 +130,10 @@ object YouTubeClient {
 
     // ANDROID CREATOR
     /**
-     * Video not playable: Livestream / HDR.
-     * Note: Audio track is not available.
+     * Video not playable: Livestream.
+     * Uses non adaptive bitrate.
+     * AV1 codec and HDR codec are not available, and the maximum resolution is 720p.
+     * 360° VR immersive mode is not available.
      */
     private const val PACKAGE_NAME_ANDROID_CREATOR = "com.google.android.apps.youtube.creator"
     private const val CLIENT_VERSION_ANDROID_CREATOR = "24.01.000"
@@ -175,7 +159,7 @@ object YouTubeClient {
 
     // VISION OS
     private const val CLIENT_VERSION_VISIONOS = "0.1"
-    private const val DEVICE_MAKE_VISIONOS = DEVICE_MAKE_APPLE
+    private const val DEVICE_MAKE_VISIONOS = "Apple"
     private const val DEVICE_MODEL_VISIONOS = "RealityDevice14,1"
     private const val OS_NAME_VISIONOS = "visionOS"
     private const val OS_VERSION_VISIONS = "1.3.21O771"
@@ -186,14 +170,11 @@ object YouTubeClient {
     // TVHTML5
     /**
      * Video not playable: None.
-     * Note: Both 'Authorization' and 'Set-Cookie' are supported.
+     * 360° VR immersive mode is not available.
      */
-    private const val CLIENT_VERSION_TVHTML5 = "7.20251209.09.00"
-    /**
-     * authenticatedConfig.flags.attest_botguard_on_tvhtml5: false.
-     */
+    private const val CLIENT_VERSION_TVHTML5 = "7.20251217.19.00"
     private const val USER_AGENT_TVHTML5 =
-        "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0; Xbox)"
+        "Mozilla/5.0 (SMART-TV; Linux; Tizen 8.0) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/7.0 Chrome/108.0.5359.1 TV Safari/537.36"
 
 
     // TVHTML5 (Downgraded)
@@ -218,7 +199,7 @@ object YouTubeClient {
     // TVHTML5 SIMPLY
     /**
      * Video not playable: None.
-     * Note: Only 'Authorization' is supported.
+     * 360° VR immersive mode is not available.
      */
     private const val CLIENT_VERSION_TVHTML5_SIMPLY = "1.1"
     /**
@@ -231,7 +212,7 @@ object YouTubeClient {
     // TVHTML5 EMBEDDED
     /**
      * Only embeddable videos available.
-     * Note: Both 'Authorization' and 'Set-Cookie' are supported.
+     * 360° VR immersive mode is not available.
      */
     private const val CLIENT_VERSION_TVHTML5_EMBEDDED = "2.0"
 
@@ -253,9 +234,8 @@ object YouTubeClient {
 
     // MWEB
     /**
-     * Video not playable: Paid / Movie / Private / Age-restricted.
-     * Note: Audio track is not available.
-     * Note: Only 'Set-Cookie' is supported.
+     * Video not playable: Paid, Movie, Private, Age-restricted.
+     * 360° VR immersive mode is not available.
      */
     private const val CLIENT_VERSION_MWEB = "2.20251105.03.00"
     private const val USER_AGENT_MWEB =
@@ -486,7 +466,7 @@ object YouTubeClient {
         TV(
             id = 7,
             clientVersion = CLIENT_VERSION_TVHTML5,
-            clientPlatform = CLIENT_PLATFORM_GAME_CONSOLE,
+            clientPlatform = CLIENT_PLATFORM_TV,
             userAgent = USER_AGENT_TVHTML5,
             requireJS = true,
             refererFormat = CLIENT_REFERER_FORMAT_TV,
@@ -514,14 +494,14 @@ object YouTubeClient {
             supportsMultiAudioTracks = true,
             clientName = "TVHTML5_SIMPLY",
             refererFormat = CLIENT_REFERER_FORMAT_TV,
-            friendlyName = "TV Simply No PoToken"
+            friendlyName = "TV Simply"
         ),
 
         // Unused client.
         TV_EMBEDDED(
             id = 85,
             clientVersion = CLIENT_VERSION_TVHTML5_EMBEDDED,
-            clientPlatform = CLIENT_PLATFORM_GAME_CONSOLE,
+            clientPlatform = CLIENT_PLATFORM_TV,
             clientScreen = CLIENT_SCREEN_EMBED,
             userAgent = USER_AGENT_TVHTML5,
             requireJS = true,
@@ -531,12 +511,7 @@ object YouTubeClient {
             friendlyName = "TV Embedded"
         ),
 
-        /**
-         * PoToken client is currently not working.
-         * Mobile Web / Web has been temporarily removed from the available clients.
-         *
-         * TODO: Content PoToken must be generated using the '/att/get' endpoint.
-         */
+        // Unused client.
         MWEB(
             id = 2,
             clientVersion = CLIENT_VERSION_MWEB,
@@ -550,12 +525,7 @@ object YouTubeClient {
             friendlyName = "Mobile Web"
         ),
 
-        /**
-         * PoToken client is currently not working.
-         * Mobile Web / Web has been temporarily removed from the available clients.
-         *
-         * TODO: Content PoToken must be generated using the '/att/get' endpoint.
-         */
+        // Unused client.
         WEB_LEGACY(
             id = 1,
             clientVersion = CLIENT_VERSION_WEB_LEGACY,

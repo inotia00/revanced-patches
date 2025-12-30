@@ -286,9 +286,11 @@ Description
     <string name="revanced_hide_web_search_results_title">Hide web search results</string>
     <string name="revanced_hide_web_search_results_summary_on">Web search results are hidden.</string>
     <string name="revanced_hide_web_search_results_summary_off">Web search results are shown.</string>
-    <string name="revanced_hide_get_premium_title">Hide YouTube Premium promotion</string>
-    <string name="revanced_hide_get_premium_summary_on">YouTube Premium promotion is hidden.</string>
-    <string name="revanced_hide_get_premium_summary_off">YouTube Premium promotion is shown.</string>
+    <string name="revanced_hide_youtube_premium_promotion_title">Hide YouTube Premium promotion</string>
+    <string name="revanced_hide_youtube_premium_promotion_summary_on">"YouTube Premium promotion is hidden.
+
+Known issue: When this setting is enabled, YouTube Doodles are not clickable."</string>
+    <string name="revanced_hide_youtube_premium_promotion_summary_off">YouTube Premium promotion is shown.</string>
 
 
     <!-- PreferenceScreen: Alternative thumbnails -->
@@ -598,7 +600,7 @@ Limitation: Back button on the toolbar may not work."</string>
 
 This may not work for some users, if it doesn't work for you:
 1. Go to Settings - RVX - Miscellaneous - Spoof streaming data, and turn on 'Use JavaScript client'.
-2. Go to Settings - RVX - Miscellaneous - Spoof streaming data, and change 'Default client' to 'TV'."</string>
+2. Go to Settings - RVX - Miscellaneous - Spoof streaming data, and change 'Default client' to 'TV Simply'."</string>
     <string name="revanced_disable_auto_audio_tracks_summary_off">"Forced auto audio tracks are enabled.
 
 Info: In some accounts, the original audio track is used."</string>
@@ -662,7 +664,6 @@ Changes include:
     <string name="revanced_disable_translucent_status_bar_title">Disable translucent status bar</string>
     <string name="revanced_disable_translucent_status_bar_summary_on">Status bar is opaque.</string>
     <string name="revanced_disable_translucent_status_bar_summary_off">Status bar is opaque or translucent.</string>
-    <string name="revanced_disable_translucent_status_bar_user_dialog_message">For some manufacturer ROMs running Android 12+, enabling this feature may make the system navigation bar transparent.</string>
 
     <string name="revanced_fix_hype_button_icon_title">Fix Hype button icon</string>
     <string name="revanced_fix_hype_button_icon_summary_on">Hype button icon is shown.</string>
@@ -864,7 +865,9 @@ To show the native playlist download button, turn on \'Spoof app version\' and c
     <string name="revanced_replace_navigation_button_target_entry_notifications">Notifications</string>
 
     <string name="revanced_enable_translucent_navigation_bar_title">Enable translucent navigation bar</string>
-    <string name="revanced_enable_translucent_navigation_bar_summary_on">Navigation bar is translucent.</string>
+    <string name="revanced_enable_translucent_navigation_bar_summary_on">"Navigation bar is translucent.
+
+Known issue: System navigation bar may be translucent."</string>
     <string name="revanced_enable_translucent_navigation_bar_summary_off">Navigation bar is opaque.</string>
     <string name="revanced_hide_navigation_bar_title">Hide navigation bar</string>
     <string name="revanced_hide_navigation_bar_summary_on">Navigation bar is hidden.</string>
@@ -1286,7 +1289,7 @@ Limitation: Some highlighted search links that do not have a default text style 
 
 To show the Audio track menu:
 1. Go to Settings - RVX - Miscellaneous - Spoof streaming data, and turn on 'Use JavaScript client'.
-2. Go to Settings - RVX - Miscellaneous - Spoof streaming data, and change 'Default client' to 'TV'."</string>
+2. Go to Settings - RVX - Miscellaneous - Spoof streaming data, and change 'Default client' to 'TV Simply'."</string>
     <string name="revanced_hide_player_flyout_menu_captions_title">Hide Captions menu</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_on">Captions menu is hidden.</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_off">Captions menu is shown.</string>
@@ -2565,7 +2568,8 @@ If you are a YouTube Premium user, this setting may not be necessary."</string>
 • Disable forced auto audio tracks may not be available.
 • Stable volume is not available.
 • Kids videos may not play when logged out or in incognito mode.
-• 1080p+, AV1, and HDR are not supported."</string>
+• 1080p+, AV1, and HDR are not supported.
+• 360° VR immersive mode is not available."</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_no_sdk">• Video may stop at 1:00, or may not be available in some regions.</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Audio track menu is missing.
 • Disable forced auto audio tracks may not be available.
@@ -2573,13 +2577,11 @@ If you are a YouTube Premium user, this setting may not be necessary."</string>
 • Kids videos may not play when logged out or in incognito mode."</string>
     <string name="revanced_spoof_streaming_data_side_effects_tv">"• If deobfuscation fails, playback may fail.
 • Sometimes the video will not play even after 10 seconds, in which case you'll need to click the reload video button.
-• Video may start late."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_tv_simply">"• If deobfuscation fails, playback may fail.
-• Some accounts may require a PoToken, in which case the playback will fail.
-• Sometimes the video will not play even after 10 seconds, in which case you'll need to click the reload video button.
-• Video may start late."</string>
+• Video may start late.
+• 360° VR immersive mode is not available."</string>
     <string name="revanced_spoof_streaming_data_side_effects_visionos">"• Audio track menu is missing.
 • Kids videos may not play when logged out or in incognito mode.
+• 360° VR immersive mode is not available.
 • Since this is an unreleased client, it may stop working at any time."</string>
     <string name="revanced_spoof_streaming_data_side_effects_unknown">• Unknown</string>
     <string name="revanced_spoof_streaming_data_prioritize_video_quality_title">Prioritize video quality</string>
@@ -2626,7 +2628,7 @@ Example 2:
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Client used to fetch streaming data is shown in Stats for nerds.</string>
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Client used to fetch streaming data is hidden in Stats for nerds.</string>
     <string name="revanced_spoof_streaming_data_failed_forbidden">Could not fetch any client streams.</string>
-    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Try changing the default client to TV.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Try changing the default client to TV Simply.</string>
 
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: Android VR -->
     <string name="revanced_preference_category_android_vr">Android VR</string>
@@ -2688,7 +2690,7 @@ This can be easily resolved by clicking the 'Reload video button' in the player 
 
 (Prerequisites: Both 'Show reload video button' and 'Always show reload video button' are enabled)
 
-Among JavaScript clients, the recommended client is TV."</string>
+Among JavaScript clients, the recommended client is TV Simply."</string>
     <string name="revanced_spoof_streaming_data_use_js_all_title">Use JavaScript client for all videos</string>
     <string name="revanced_spoof_streaming_data_use_js_all_summary_on">"JavaScript client is used regardless of video type.
 

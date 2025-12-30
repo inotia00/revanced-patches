@@ -275,9 +275,12 @@
     <string name="revanced_hide_web_search_results_title">Результаты веб поиска</string>
     <string name="revanced_hide_web_search_results_summary_on">Результаты веб поиска скрыты.</string>
     <string name="revanced_hide_web_search_results_summary_off">Результаты веб поиска отображены.</string>
-    <string name="revanced_hide_get_premium_title">Реклама YouTube Premium</string>
-    <string name="revanced_hide_get_premium_summary_on">Реклама YouTube Premium скрыта.</string>
-    <string name="revanced_hide_get_premium_summary_off">Реклама YouTube Premium отображена.</string>
+    <string name="revanced_hide_youtube_premium_promotion_title">Продвижение YouTube Premium</string>
+    <string name="revanced_hide_youtube_premium_promotion_summary_on">"Продвижение YouTube Premium скрыто.
+
+Известная проблема:
+Когда этот параметр включен, YouTube Doodles не кликабельны."</string>
+    <string name="revanced_hide_youtube_premium_promotion_summary_off">Продвижение YouTube Premium отображено.</string>
     <!-- PreferenceScreen: Alternative thumbnails -->
     <string name="revanced_preference_screen_alt_thumbnails_title">Альтернативные миниатюры</string>
     <string name="revanced_alt_thumbnail_home_title">Главная</string>
@@ -634,7 +637,6 @@ Shorts
     <string name="revanced_disable_translucent_status_bar_title">Полупрозрачность строки состояния</string>
     <string name="revanced_disable_translucent_status_bar_summary_on">Полупрозрачность включена.</string>
     <string name="revanced_disable_translucent_status_bar_summary_off">Полупрозрачность отключена.</string>
-    <string name="revanced_disable_translucent_status_bar_user_dialog_message">Для прошивок некоторых разработчиков Android 12+, включение этой функции может сделать панель навигации системы прозрачной.</string>
     <string name="revanced_fix_hype_button_icon_title">Исправить значок кнопки \"Шумиха\"</string>
     <string name="revanced_fix_hype_button_icon_summary_on">Значок кнопки \"Шумиха\" отображается.</string>
     <string name="revanced_fix_hype_button_icon_summary_off">Значок кнопки \"Шумиха\" скрыт.</string>
@@ -821,7 +823,7 @@ Shorts
     <string name="revanced_replace_navigation_button_target_entry_subscriptions">Подписки</string>
     <string name="revanced_replace_navigation_button_target_entry_notifications">Уведомления</string>
     <string name="revanced_enable_translucent_navigation_bar_title">Полупрозрачность панели навигации</string>
-    <string name="revanced_enable_translucent_navigation_bar_summary_on">Полупрозрачность включена.</string>
+    <string name="revanced_enable_translucent_navigation_bar_summary_on">"Полупрозрачность включена."</string>
     <string name="revanced_enable_translucent_navigation_bar_summary_off">Полупрозрачность отключена.</string>
     <string name="revanced_hide_navigation_bar_title">Панель навигации</string>
     <string name="revanced_hide_navigation_bar_summary_on">Панель навигации скрыта.</string>
@@ -1175,6 +1177,9 @@ Shorts
     <string name="revanced_hide_comments_highlighted_search_links_title">Подсвеченные ссылки поиска</string>
     <string name="revanced_hide_comments_highlighted_search_links_summary_on">"Подсвеченные ссылки поиска скрыты."</string>
     <string name="revanced_hide_comments_highlighted_search_links_summary_off">Подсвеченные ссылки поиска отображены.</string>
+    <string name="revanced_hide_comments_information_button_title">Кнопка \"Информация\"</string>
+    <string name="revanced_hide_comments_information_button_summary_on">Скрыта.</string>
+    <string name="revanced_hide_comments_information_button_summary_off">Отображена.</string>
     <string name="revanced_hide_live_chat_messages_title">Сообщения чата трансляции</string>
     <string name="revanced_hide_live_chat_messages_summary_on">Сообщения онлайн чата скрыты.\n\nТакже применимо к трансляциям в Shorts.</string>
     <string name="revanced_hide_live_chat_messages_summary_off">Сообщения онлайн чата отображены.\n\nТакже применимо к трансляциям в Shorts.</string>
@@ -2391,10 +2396,12 @@ Shorts
 <small>(Требуется вход)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_no_sdk">"Android
 <small>(без SDK)</small>"</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_vr">Android VR</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">ТВ
 <small>(В разработке)</small></string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">"TV
 <small>(Старый)</small>"</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_simply">TV Простой</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">Встроенный ТВ
 <small>(В разработке)</small></string>
     <string name="revanced_spoof_streaming_data_client_entry_visionos">"visionOS
@@ -2459,6 +2466,49 @@ VP9 более продвинутый кодек, чем AVC, но некото�
     <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Возможно, Вы не вошли в систему.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: Android VR -->
     <string name="revanced_preference_category_android_vr">Android VR</string>
+    <string name="revanced_spoof_streaming_data_android_vr_enable_av1_codec_title">Включить AV1 кодек</string>
+    <string name="revanced_spoof_streaming_data_android_vr_enable_av1_codec_summary_on">"Видео кодек AVC (H.264), VP9 или AV1.
+
+Проигрывание может запинаться или будут потери кадров."</string>
+    <string name="revanced_spoof_streaming_data_android_vr_enable_av1_codec_summary_off">Видео кодек AVC (H.264) или VP9.</string>
+    <string name="revanced_spoof_streaming_data_android_vr_enable_av1_codec_user_dialog_message">"При включении используется программный кодек AV1.
+
+Проигрывание может запинаться или будут потери кадров."</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_about_title">Войти в Android VR</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_about_summary">Нажмите здесь, чтобы увидеть, как войти в Android VR.</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_title">Войти в Android VR</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_message">"Для получения токена авторизации Android VR, войдите в YouTube VR, используя код активации:
+
+1. Нажмите \"Получить код активации\" для генерации кода активации.
+2. Нажмите 'Открыть веб-сайт', чтобы перейти на 'https://yt.be/activate' и введите код активации.
+3. Когда появится запрос войдите в аккаунт Google, который используете для YouTube. Если вход уже выполнен, перейдите к следующему шагу.
+4. После входа вернитесь к RVX и снова нажмите \"О Android VR авторизации\".
+5. Нажмите 'Получить токен авторизации'.
+
+※ нажмите 'Сброс', чтобы удалить токен аутентификации или код активации."</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_get_activation_code_text">Получить код активации</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_get_authorization_token_text">Получить токен авторизации</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_reset_text">Сброс</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_failed">Не удалось присвоить токен аутентификации.</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_failed_suggestion">Нажмите Сброс и попробуйте еще раз.</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_reset">Токен аутентификации и код активации сброшены.</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_success_dialog_title">Вы вошли</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_success_dialog_message">"Токен аутентификации сохранен.
+
+- Токен может быть использован только в YouTube VR (В RVX, используется для получения потоковых данных с YouTube VR).
+- Токен не использованый за 6 месяцев будет отозван серверами Google.
+- При смене пароля, отключении устройства в учетной записи или удалении приложения, вам нужно будет повторно получить токен."</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_dialog_title">Код активации</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_dialog_message">"Код активации:
+%s
+
+1. Нажмите 'Открыть веб-сайт', чтобы перейти к 'https://yt.be/activate'.
+2. Введите код активации.
+3. Войдите в аккаунт Google, используемый с YouTube. Если вход уже выполнен, перейдите к следующему шагу.
+4. После вернитесь в RVX и нажмите 'О Android VR авторизации' снова.
+5. Нажмите 'Получить токен авторизации', чтобы получить его."</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_dialog_open_website_text">Открыть сайт</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_toast_copy">Код активации скопирован в буфер обмена: %s.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: JavaScript -->
     <string name="revanced_preference_category_js">JavaScript (В разработке)</string>
     <string name="revanced_spoof_streaming_data_use_js_title">Использовать клиент JavaScript</string>

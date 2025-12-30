@@ -9,6 +9,7 @@ import app.revanced.extension.shared.requests.Requester
 import app.revanced.extension.shared.settings.AppLanguage
 import app.revanced.extension.shared.utils.Logger
 import app.revanced.extension.shared.utils.Utils
+import app.revanced.extension.shared.utils.Utils.isSDKAbove
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
@@ -43,7 +44,7 @@ class PlaylistRequest private constructor(
         }
 
         // Only expired if the fetch failed (API null response).
-        return (fetchCompleted() && stream.isEmpty())
+        return (fetchCompleted() && songId.isEmpty())
     }
 
     /**
@@ -53,24 +54,24 @@ class PlaylistRequest private constructor(
         return future.isDone
     }
 
-    val stream: String
+    val songId: String
         get() {
             try {
                 return future[MAX_MILLISECONDS_TO_WAIT_FOR_FETCH, TimeUnit.MILLISECONDS]
             } catch (ex: TimeoutException) {
                 Logger.printInfo(
-                    { "getStream timed out" },
+                    { "getSongId timed out" },
                     ex
                 )
             } catch (ex: InterruptedException) {
                 Logger.printException(
-                    { "getStream interrupted" },
+                    { "getSongId interrupted" },
                     ex
                 )
                 Thread.currentThread().interrupt() // Restore interrupt status flag.
             } catch (ex: ExecutionException) {
                 Logger.printException(
-                    { "getStream failure" },
+                    { "getSongId failure" },
                     ex
                 )
             }
@@ -98,11 +99,23 @@ class PlaylistRequest private constructor(
             Objects.requireNonNull(videoId)
             synchronized(cache) {
                 val now = System.currentTimeMillis()
-                cache.values.removeIf { request: PlaylistRequest ->
-                    val expired = request.isExpired(now)
-                    if (expired) Logger.printDebug { "Removing expired stream: " + request.videoId }
-                    expired
+                if (isSDKAbove(24)) {
+                    cache.values.removeIf { request ->
+                        val expired = request.isExpired(now)
+                        if (expired) Logger.printDebug { "Removing expired song id: " + request.videoId }
+                        expired
+                    }
+                } else {
+                    val itr = cache.entries.iterator()
+                    while (itr.hasNext()) {
+                        val request = itr.next().value
+                        if (request.isExpired(now)) {
+                            Logger.printDebug { "Removing expired song id: " + request.videoId }
+                            itr.remove()
+                        }
+                    }
                 }
+
                 if (!cache.containsKey(videoId)) {
                     cache[videoId] = PlaylistRequest(
                         videoId,

@@ -1,6 +1,7 @@
 package app.revanced.patches.music.actionbar.components
 
 import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
+import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.removeInstruction
@@ -16,6 +17,7 @@ import app.revanced.patches.music.utils.playservice.is_7_17_or_greater
 import app.revanced.patches.music.utils.playservice.is_7_25_or_greater
 import app.revanced.patches.music.utils.playservice.is_7_33_or_greater
 import app.revanced.patches.music.utils.playservice.versionCheckPatch
+import app.revanced.patches.music.utils.resourceid.elementsLottieAnimationViewTagId
 import app.revanced.patches.music.utils.resourceid.likeDislikeContainer
 import app.revanced.patches.music.utils.resourceid.sharedResourceIdPatch
 import app.revanced.patches.music.utils.settings.CategoryType
@@ -29,11 +31,15 @@ import app.revanced.patches.shared.litho.lithoFilterPatch
 import app.revanced.patches.shared.textcomponent.hookSpannableString
 import app.revanced.patches.shared.textcomponent.textComponentPatch
 import app.revanced.util.fingerprint.injectLiteralInstructionBooleanCall
+import app.revanced.util.fingerprint.legacyFingerprint
 import app.revanced.util.fingerprint.matchOrThrow
 import app.revanced.util.fingerprint.methodOrThrow
 import app.revanced.util.getReference
 import app.revanced.util.indexOfFirstInstructionOrThrow
+import app.revanced.util.indexOfFirstInstructionReversedOrThrow
 import app.revanced.util.indexOfFirstLiteralInstructionOrThrow
+import app.revanced.util.or
+import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
@@ -196,6 +202,51 @@ val actionBarComponentsPatch = bytecodePatch(
             )
         }
 
+        val (abstractClass, lottieAnimationUrlMethodName) =
+            with (lottieAnimationViewTagFingerprint.methodOrThrow()) {
+                val literalIndex =
+                    indexOfFirstLiteralInstructionOrThrow(elementsLottieAnimationViewTagId)
+                val lottieAnimationUrlIndex =
+                    indexOfFirstInstructionReversedOrThrow(literalIndex) {
+                        val reference = getReference<MethodReference>()
+                        opcode == Opcode.INVOKE_INTERFACE &&
+                                reference?.returnType == "Ljava/lang/String;" &&
+                                reference.parameterTypes.isEmpty()
+                    }
+
+                val lottieAnimationUrlMethodReference =
+                    getInstruction<ReferenceInstruction>(lottieAnimationUrlIndex).reference as MethodReference
+
+                Pair(
+                    lottieAnimationUrlMethodReference.definingClass,
+                    lottieAnimationUrlMethodReference.name,
+                )
+            }
+
+        val lottieAnimationUrlFingerprint = legacyFingerprint(
+            name = "lottieAnimationUrlFingerprint",
+            returnType = "Ljava/lang/String;",
+            accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
+            parameters = emptyList(),
+            customFingerprint = { method, classDef ->
+                classDef.interfaces.contains(abstractClass) &&
+                        method.name == lottieAnimationUrlMethodName &&
+                        classDef.fields.find { it.type.endsWith("Lcom/google/android/libraries/elements/adl/UpbMiniTable;") } == null
+            }
+        )
+
+        lottieAnimationUrlFingerprint.methodOrThrow().apply {
+            val index = implementation!!.instructions.lastIndex
+            val register = getInstruction<OneRegisterInstruction>(index).registerA
+
+            addInstructions(
+                index, """
+                    invoke-static { v$register }, $ACTIONBAR_CLASS_DESCRIPTOR->replaceLikeButton(Ljava/lang/String;)Ljava/lang/String;
+                    move-result-object v$register
+                    """
+            )
+        }
+
         addSwitchPreference(
             CategoryType.ACTION_BAR,
             "revanced_hide_action_button_like_dislike",
@@ -255,6 +306,17 @@ val actionBarComponentsPatch = bytecodePatch(
             CategoryType.ACTION_BAR,
             "revanced_external_downloader_package_name",
             "revanced_external_downloader_action"
+        )
+        addSwitchPreference(
+            CategoryType.ACTION_BAR,
+            "revanced_replace_action_button_like",
+            "false"
+        )
+        addSwitchPreference(
+            CategoryType.ACTION_BAR,
+            "revanced_replace_action_button_like_type",
+            "false",
+            "revanced_replace_action_button_like"
         )
 
         updatePatchStatus(HIDE_ACTION_BAR_COMPONENTS)

@@ -228,9 +228,11 @@ public class WebViewHostActivity extends Activity {
         toolbar.setNavigationIcon(BaseThemeUtils.getBackButtonDrawable(false));
         toolbar.setNavigationOnClickListener(view -> this.finish());
         toolbar.setTitle(toolbarLabel);
-        final int margin = Utils.dipToPixels(16);
-        toolbar.setTitleMarginStart(margin);
-        toolbar.setTitleMarginEnd(margin);
+        if (isSDKAbove(24)) {
+            final int margin = Utils.dipToPixels(16);
+            toolbar.setTitleMarginStart(margin);
+            toolbar.setTitleMarginEnd(margin);
+        }
         TextView textView = Utils.getChildView(toolbar, view -> view instanceof TextView);
         if (textView != null) {
             textView.setTextColor(Color.BLACK);

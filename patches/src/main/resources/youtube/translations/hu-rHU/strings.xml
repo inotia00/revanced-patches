@@ -275,9 +275,11 @@ Leírás
     <string name="revanced_hide_web_search_results_title">Webes keresési találatok elrejtése</string>
     <string name="revanced_hide_web_search_results_summary_on">A webes keresési találatok el vannak rejtve.</string>
     <string name="revanced_hide_web_search_results_summary_off">A webes keresési találatok láthatóak.</string>
-    <string name="revanced_hide_get_premium_title">YouTube Prémium promóció elrejtése</string>
-    <string name="revanced_hide_get_premium_summary_on">A YouTube Prémium promóció el van rejtve.</string>
-    <string name="revanced_hide_get_premium_summary_off">A YouTube Prémium promóció látható.</string>
+    <string name="revanced_hide_youtube_premium_promotion_title">YouTube Prémium promóció elrejtése</string>
+    <string name="revanced_hide_youtube_premium_promotion_summary_on">"A YouTube Premium promóció rejtett.
+
+Ismert probléma: Ha ez a beállítás engedélyezve van, a YouTube Doodle-ok nem kattinthatók."</string>
+    <string name="revanced_hide_youtube_premium_promotion_summary_off">A YouTube Prémium promóció látható.</string>
     <!-- PreferenceScreen: Alternative thumbnails -->
     <string name="revanced_preference_screen_alt_thumbnails_title">Alternatív miniatűrök</string>
     <string name="revanced_alt_thumbnail_home_title">Kezdőlap fül</string>
@@ -623,7 +625,6 @@ A változások a következők:
     <string name="revanced_disable_translucent_status_bar_title">Átlátszó állapotsor letiltása</string>
     <string name="revanced_disable_translucent_status_bar_summary_on">Az állapotsor nem átlátszó.</string>
     <string name="revanced_disable_translucent_status_bar_summary_off">Az állapotsor nem átlátszó vagy átlátszó.</string>
-    <string name="revanced_disable_translucent_status_bar_user_dialog_message">Egyes, Android 12 vagy újabb rendszert futtató gyártói ROM-ok esetében ennek a funkciónak az engedélyezése átlátszóvá teheti a rendszer navigációs sávját.</string>
     <string name="revanced_fix_hype_button_icon_title">Hype gomb ikonjának kijavítása</string>
     <string name="revanced_fix_hype_button_icon_summary_on">A Hype gomb ikonja látható.</string>
     <string name="revanced_fix_hype_button_icon_summary_off">A Hype gomb ikonja rejtett.</string>
@@ -817,7 +818,7 @@ A natív lejátszási lista letöltése gomb megjelenítéséhez kapcsolja be a 
     <string name="revanced_replace_navigation_button_target_entry_subscriptions">Feliratkozások</string>
     <string name="revanced_replace_navigation_button_target_entry_notifications">Értesítések</string>
     <string name="revanced_enable_translucent_navigation_bar_title">Átlátszó navigációs sáv engedélyezése</string>
-    <string name="revanced_enable_translucent_navigation_bar_summary_on">A navigációs sáv átlátszó.</string>
+    <string name="revanced_enable_translucent_navigation_bar_summary_on">"A navigációs sáv átlátszó."</string>
     <string name="revanced_enable_translucent_navigation_bar_summary_off">A navigációs sáv nem átlátszó.</string>
     <string name="revanced_hide_navigation_bar_title">Navigációs sáv elrejtése</string>
     <string name="revanced_hide_navigation_bar_summary_on">A navigációs sáv el van rejtve.</string>
@@ -1177,6 +1178,9 @@ Korlátozások:
     <string name="revanced_hide_comments_highlighted_search_links_title">Kiemelt keresési hivatkozások elrejtése</string>
     <string name="revanced_hide_comments_highlighted_search_links_summary_on">"A kiemelt keresési hivatkozások rejtettek."</string>
     <string name="revanced_hide_comments_highlighted_search_links_summary_off">A kiemelt keresési hivatkozások láthatóak.</string>
+    <string name="revanced_hide_comments_information_button_title">Információ gomb elrejtése</string>
+    <string name="revanced_hide_comments_information_button_summary_on">Az információ gomb rejtett.</string>
+    <string name="revanced_hide_comments_information_button_summary_off">Az információ gomb látható.</string>
     <string name="revanced_hide_live_chat_messages_title">Élő csevegés üzeneteinek elrejtése</string>
     <string name="revanced_hide_live_chat_messages_summary_on">Az élő csevegés üzenetei el vannak rejtve.\n\nEz a beállítás a Shorts élő videókra is vonatkozik.</string>
     <string name="revanced_hide_live_chat_messages_summary_off">Az élő csevegés üzenetei láthatóak.</string>
@@ -2390,9 +2394,11 @@ Ha YouTube Premium felhasználó vagy, akkor ez a beállítás nem feltétlenül
 <small>(Belépés szükséges)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_no_sdk">"Android
 <small>(Nincs SDK)</small>"</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_vr">Android VR</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">"TV
 <small>(Örökölt)</small>"</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_simply">TV egyszerű</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">TV beágyazott</string>
     <string name="revanced_spoof_streaming_data_client_entry_visionos">"visionOS
 <small>(Kiadatlan)</small>"</string>
@@ -2460,6 +2466,40 @@ Ha ez a beállítás engedélyezve van, a szerver válaszából származó legma
     <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Próbálja meg az alapértelmezett klienst TV-re módosítani.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: Android VR -->
     <string name="revanced_preference_category_android_vr">Android VR</string>
+    <string name="revanced_spoof_streaming_data_android_vr_enable_av1_codec_title">AV1 kodek engedélyezése</string>
+    <string name="revanced_spoof_streaming_data_android_vr_enable_av1_codec_summary_on">"A videó kodek AVC (H.264), VP9 vagy AV1.
+
+A lejátszás akadozhat vagy kimaradhatnak képkockák."</string>
+    <string name="revanced_spoof_streaming_data_android_vr_enable_av1_codec_summary_off">A videó kodek AVC (H.264) vagy VP9.</string>
+    <string name="revanced_spoof_streaming_data_android_vr_enable_av1_codec_user_dialog_message">"Ennek a beállításnak az engedélyezése szoftveres AV1 dekódolást eredményezhet.
+
+A lejátszás akadozhat vagy kimaradhatnak képkockák."</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_about_title">Be kell jelentkezni az Android VR-hoz</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_about_summary">Kattintson ide az Android VR-ba való bejelentkezéshez.</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_title">Android VR bejelentkezés</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_message">"Az Android VR (YouTube VR) szolgáltatásba való bejelentkezés a Google által megadott irányelveket követi (Google-fiók hitelesítése - OAuth 2.0 TV-hez és korlátozott beviteli eszközalkalmazásokhoz):
+
+1. Kattintson az 'Aktiválási kód beszerzése' gombra az aktiválási kód létrehozásához.
+2. Kattintson a 'Webhely megnyitása' gombra a 'https://yt.be/activate' oldal eléréséhez.
+3. Adja meg az aktiválási kódot.
+4. Jelentkezzen be, amikor a rendszer kéri. Ha több Google-fiókja van, válassza ki a YouTube-bal használt fiókot. Ha már be van jelentkezve, ugorjon a következő lépésre.
+5. Miután bejelentkezett, térjen vissza az RVX-be, és kattintson ismét a 'Android VR bejelentkezés' gombra.
+6. Kattintson az 'Aktiváló kód beszerzése' gombra az engedélyezési token beszerzéséhez.
+
+※ Kattintson a 'Visszaállítás' gombra a hitelesítési token vagy aktiválási kód eltávolításához."</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_get_activation_code_text">Aktiváló kód beszerzése</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_get_authorization_token_text">Hitelesítési token beszerzése</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_reset_text">Visszaállítás</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_failed">Nem sikerült hitelesítési tokent kiállítani.</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_failed_suggestion">Kattintson a Visszaállítás gombra, és próbálja újra.</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_reset">Hitelesítési token és aktiválási kód visszaállítása.</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_success_dialog_title">Bejelentkezve</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_success_dialog_message">"Hitelesítési token mentése.
+
+- Az ezen a folyamaton keresztül kiállított hitelesítési token csak a YouTube VR-ben használható (RVX-ben a YouTube VR-ből származó streamelési adatok lekérésére szolgál).
+- A 6 hónapnál hosszabb ideig fel nem használt hitelesítési tokent a Google szerverei visszavonják.
+- Ha megváltoztatod a jelszavadat, vagy törlöd az eszköz regisztrációját a fiókbeállításaidban, vagy eltávolítod az alkalmazást, akkor újra ki kell állítanod a hitelesítési tokent."</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_dialog_title">Aktivációs kód</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: JavaScript -->
     <string name="revanced_preference_category_js">JavaScript</string>
     <string name="revanced_spoof_streaming_data_use_js_title">JavaScript kliens használata</string>

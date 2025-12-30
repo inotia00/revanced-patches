@@ -359,6 +359,17 @@ internal val smoothTransitionAnimationFingerprint = legacyFingerprint(
     literals = listOf(SMOOTH_TRANSITION_ANIMATION_FEATURE_FLAG),
 )
 
+internal val smoothTransitionAnimationInvertedParentFingerprint = legacyFingerprint(
+    name = "smoothTransitionAnimationInvertedParentFingerprint",
+    returnType = "V",
+    accessFlags = AccessFlags.PRIVATE or AccessFlags.FINAL,
+    parameters = listOf("F", "F", "F", "F", "F"),
+    opcodes = listOf(
+        Opcode.INVOKE_STATIC,
+        Opcode.RETURN_VOID,
+    )
+)
+
 internal val swipeToCloseFingerprint = legacyFingerprint(
     name = "swipeToCloseFingerprint",
     returnType = "Z",

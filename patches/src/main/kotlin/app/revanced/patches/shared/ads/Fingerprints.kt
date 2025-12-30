@@ -1,9 +1,13 @@
 package app.revanced.patches.shared.ads
 
+import app.revanced.patches.shared.extension.Constants.PATCHES_PATH
 import app.revanced.util.fingerprint.legacyFingerprint
 import app.revanced.util.or
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
+
+internal const val EXTENSION_CLASS_DESCRIPTOR =
+    "$PATCHES_PATH/FullscreenAdsPatch;"
 
 internal val interstitialsContainerFingerprint = legacyFingerprint(
     name = "interstitialsContainerFingerprint",

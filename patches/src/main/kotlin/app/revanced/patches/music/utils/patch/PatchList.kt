@@ -149,6 +149,10 @@ internal enum class PatchList(
         "Spoof app version",
         "Adds options to spoof the YouTube Music client version. This can be used to restore old UI elements and features."
     ),
+    SPOOF_APP_VERSION_FOR_LYRICS(
+        "Spoof app version for lyrics",
+        "Adds options to spoof the YouTube Music client version. This can be used to restore old lyrics UI."
+    ),
     TRANSLATIONS_FOR_YOUTUBE_MUSIC(
         "Translations for YouTube Music",
         "Add translations or remove string resources."

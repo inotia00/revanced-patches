@@ -36,6 +36,8 @@ var designBottomSheetDialog = -1L
     private set
 var elementsContainer = -1L
     private set
+var elementsLottieAnimationViewTagId = -1L
+    private set
 var endButtonsContainer = -1L
     private set
 var floatingLayout = -1L
@@ -137,6 +139,8 @@ internal val sharedResourceIdPatch = resourcePatch(
         darkBackground = getResourceId(ID, "dark_background")
         designBottomSheetDialog = getResourceId(LAYOUT, "design_bottom_sheet_dialog")
         elementsContainer = getResourceId(ID, "elements_container")
+        elementsLottieAnimationViewTagId =
+            getResourceId(ID, "elements_lottie_animation_view_tag_id")
         endButtonsContainer = getResourceId(ID, "end_buttons_container")
         floatingLayout = getResourceId(ID, "floating_layout")
         historyMenuItem = getResourceId(ID, "history_menu_item")

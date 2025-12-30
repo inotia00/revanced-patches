@@ -16,6 +16,24 @@ internal const val ANDROID_AUTOMOTIVE_STRING = "Android Automotive"
 internal const val CLIENT_INFO_CLASS_DESCRIPTOR =
     "Lcom/google/protos/youtube/api/innertube/InnertubeContext\$ClientInfo;"
 
+internal val authenticationChangeListenerFingerprint = legacyFingerprint(
+    name = "authenticationChangeListenerFingerprint",
+    returnType = "V",
+    accessFlags = AccessFlags.PRIVATE or AccessFlags.FINAL,
+    strings = listOf("Authentication changed while request was being made"),
+    customFingerprint = { method, _ ->
+        indexOfMessageLiteBuilderReference(method) >= 0
+    }
+)
+
+internal fun indexOfMessageLiteBuilderReference(method: Method, type: String = "L") =
+    method.indexOfFirstInstruction {
+        val reference = getReference<MethodReference>()
+        opcode == Opcode.INVOKE_VIRTUAL &&
+                reference?.parameterTypes?.isEmpty() == true &&
+                reference.returnType.startsWith(type)
+    }
+
 internal val autoMotiveFingerprint = legacyFingerprint(
     name = "autoMotiveFingerprint",
     opcodes = listOf(

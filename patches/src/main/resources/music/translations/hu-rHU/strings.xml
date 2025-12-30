@@ -255,9 +255,9 @@ Lehetőség szerint használj sötét színeket, mivel az alkalmazás nem támog
     <string name="revanced_enable_forced_miniplayer_title">Kényszerített minilejátszó engedélyezése</string>
     <string name="revanced_enable_forced_miniplayer_summary">Engedélyezi a kényszerített minilejátszót új számra váltáskor.</string>
     <string name="revanced_enable_smooth_transition_animation_title">Sima átmenet animáció engedélyezése</string>
-    <string name="revanced_enable_smooth_transition_animation_summary">"Sima animációt engedélyez, amikor a minilejátszót a minimalizált állapotból maximalizálják.
+    <string name="revanced_enable_smooth_transition_animation_summary">Sima animációt engedélyez, amikor a minilejátszót a minimalizált állapotból maximalizálják.
 
-Korlátozások: A valós idejű dalszöveg felület néhány felhasználónál hibásan működhet."</string>
+Korlátozások: A valós idejű dalszöveg felület néhány felhasználónál hibásan működhet.</string>
     <string name="revanced_enable_swipe_to_dismiss_miniplayer_title">Csúsztatás a minilejátszó bezárásához</string>
     <string name="revanced_enable_swipe_to_dismiss_miniplayer_summary">Engedélyezi a lefelé csúsztatást a minilejátszó bezárásához.</string>
     <string name="revanced_enable_comments_scroll_top_title">Görgetés a tetejére a hozzászólásokban</string>

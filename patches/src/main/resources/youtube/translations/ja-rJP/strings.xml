@@ -275,9 +275,11 @@
     <string name="revanced_hide_web_search_results_title">ウェブの検索結果を非表示</string>
     <string name="revanced_hide_web_search_results_summary_on">検索フィードからウェブの検索結果を非表示にします。</string>
     <string name="revanced_hide_web_search_results_summary_off">検索フィードからウェブの検索結果を非表示にします。</string>
-    <string name="revanced_hide_get_premium_title">YouTube Premium のバナーを非表示</string>
-    <string name="revanced_hide_get_premium_summary_on">プレーヤーと動画の説明の間に表示される YouTube Premium のプロモーションバナーを非表示にします。</string>
-    <string name="revanced_hide_get_premium_summary_off">プレーヤーと動画の説明の間に表示される YouTube Premium のプロモーションバナーを非表示にします。</string>
+    <string name="revanced_hide_youtube_premium_promotion_title">YouTube Premium プロモーションを非表示</string>
+    <string name="revanced_hide_youtube_premium_promotion_summary_on">"[ホーム] タブから YouTube Premium のプロモーション広告を非表示にします。
+
+既知の問題: この設定を有効にすると、YouTube Doodle がタップできなくなります。"</string>
+    <string name="revanced_hide_youtube_premium_promotion_summary_off">[ホーム] タブから YouTube Premium のプロモーション広告を非表示にします。\n\n既知の問題: この設定を有効にすると、YouTube Doodle がタップできなくなります。</string>
     <!-- PreferenceScreen: Alternative thumbnails -->
     <string name="revanced_preference_screen_alt_thumbnails_title">代替サムネイル</string>
     <string name="revanced_alt_thumbnail_home_title">[ホーム] タブ</string>
@@ -627,7 +629,6 @@ DeArrow について詳しく知るには、ここをタップしてください
     <string name="revanced_disable_translucent_status_bar_title">半透明なステータスバーを無効化</string>
     <string name="revanced_disable_translucent_status_bar_summary_on">ステータスバーを不透明にします。</string>
     <string name="revanced_disable_translucent_status_bar_summary_off">ステータスバーを不透明にします。</string>
-    <string name="revanced_disable_translucent_status_bar_user_dialog_message">Android 12 以降を実行している一部のメーカーの ROM では、この機能を有効にすると、システムナビゲーションバーが透明になる可能性があります。</string>
     <string name="revanced_fix_hype_button_icon_title">[ハイプ] ボタンのアイコンを修正</string>
     <string name="revanced_fix_hype_button_icon_summary_on">[ハイプ] ボタンのアイコンを修正します。</string>
     <string name="revanced_fix_hype_button_icon_summary_off">[ハイプ] ボタンのアイコンを修正します。</string>
@@ -814,8 +815,10 @@ Cookie の使用は万能薬ではありません。
     <string name="revanced_replace_navigation_button_target_entry_subscriptions">登録チャンネル</string>
     <string name="revanced_replace_navigation_button_target_entry_notifications">通知</string>
     <string name="revanced_enable_translucent_navigation_bar_title">半透明のナビゲーションバーを有効化</string>
-    <string name="revanced_enable_translucent_navigation_bar_summary_on">ナビゲーションバー ([ホーム]、[登録チャンネル] などのボタン) を半透明にします。</string>
-    <string name="revanced_enable_translucent_navigation_bar_summary_off">ナビゲーションバー ([ホーム]、[登録チャンネル] などのボタン) を半透明にします。</string>
+    <string name="revanced_enable_translucent_navigation_bar_summary_on">"ナビゲーションバー ([ホーム]、[登録チャンネル] などのボタン) を半透明にします。
+
+既知の問題: システムナビゲーションバーが半透明になる可能性があります。"</string>
+    <string name="revanced_enable_translucent_navigation_bar_summary_off">ナビゲーションバー ([ホーム]、[登録チャンネル] などのボタン) を半透明にします。\n\n既知の問題: システムナビゲーションバーが半透明になる可能性があります。</string>
     <string name="revanced_hide_navigation_bar_title">ナビゲーションバーを非表示</string>
     <string name="revanced_hide_navigation_bar_summary_on">ナビゲーションバー ([ホーム]、[登録チャンネル] などのボタン) を非表示にします。</string>
     <string name="revanced_hide_navigation_bar_summary_off">ナビゲーションバー ([ホーム]、[登録チャンネル] などのボタン) を非表示にします。</string>
@@ -1180,6 +1183,9 @@ Cookie の使用は万能薬ではありません。
 
 注意: デフォルトのテキストスタイルを持たない強調表示された検索リンクの一部は非表示にならない場合があります。"</string>
     <string name="revanced_hide_comments_highlighted_search_links_summary_off">コメント欄の強調表示された検索リンク (虫眼鏡マークが付いている水色の文字) を非表示にします。\n\n注意: デフォルトのテキストスタイルを持たない強調表示された検索リンクの一部は非表示にならない場合があります。</string>
+    <string name="revanced_hide_comments_information_button_title">[ｉ⃝] ボタンを非表示</string>
+    <string name="revanced_hide_comments_information_button_summary_on">コメントセクションから [ｉ⃝] ボタンを非表示にします。</string>
+    <string name="revanced_hide_comments_information_button_summary_off">コメントセクションから [ｉ⃝] ボタンを非表示にします。</string>
     <string name="revanced_hide_live_chat_messages_title">ライブチャットのコメントを非表示</string>
     <string name="revanced_hide_live_chat_messages_summary_on">ライブチャットのコメントを非表示にします。\n\nこの設定はショートのライブ配信にも適用されます。</string>
     <string name="revanced_hide_live_chat_messages_summary_off">ライブチャットのコメントを非表示にします。\n\nこの設定はショートのライブ配信にも適用されます。</string>
@@ -2399,7 +2405,8 @@ YouTube Premium に加入している場合は、この設定は必要ない可�
 ・[音声トラックの強制を無効化] は利用できない可能性があります。
 ・[一定音量] は利用できません。
 ・ログインしていない場合やシークレットモードでは、子ども向け動画は再生できない可能性があります。
-・1080p+、AV1、HDR には対応していません。"</string>
+・1080p+、AV1、HDR には対応していません。
+・360° VR 没入モードは利用できません。"</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_no_sdk">・動画が 01:00 で停止する、または一部の地域では利用できない可能性があります。</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_vr">"・[音声トラック] メニューは表示されません。
 ・[音声トラックの強制を無効化] は利用できない可能性があります。
@@ -2407,13 +2414,11 @@ YouTube Premium に加入している場合は、この設定は必要ない可�
 ・ログインしていない場合やシークレットモードでは、子ども向け動画は再生できない可能性があります。"</string>
     <string name="revanced_spoof_streaming_data_side_effects_tv">"・難読化の解除に失敗すると、動画の再生に失敗する可能性があります。
 ・10 秒経っても動画が再生されない可能性があります。その場合は、動画の再読み込みボタンをタップする必要があります。
-・動画の再生開始に時間がかかる可能性があります。"</string>
-    <string name="revanced_spoof_streaming_data_side_effects_tv_simply">"・難読化の解除に失敗した場合、動画の再生に失敗する可能性があります。
-・一部のアカウントでは PoToken が必要になる可能性があり、その場合は動画の再生ができません。
-・10 秒経っても動画が再生されない可能性があります。その場合は、動画の再読み込みボタンをタップする必要があります。
-・動画の再生開始に時間がかかる可能性があります。"</string>
+・動画の再生開始に時間がかかる可能性があります。
+・360° VR 没入モードは利用できません。"</string>
     <string name="revanced_spoof_streaming_data_side_effects_visionos">"・[音声トラック] メニューは表示されません。
 ・ログインしていない場合やシークレットモードでは、子ども向け動画は再生できない可能性があります。
+・360° VR 没入モードは利用できません。
 ・これは未リリースのクライアントであるため、いつでも動作しなくなる可能性があります。"</string>
     <string name="revanced_spoof_streaming_data_side_effects_unknown">・不明</string>
     <string name="revanced_spoof_streaming_data_prioritize_video_quality_title">動画の画質を優先</string>
@@ -2474,19 +2479,21 @@ VP9 は AVC よりも高度なコーデックですが、利用者によって�
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_about_title">Android VR にログイン</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_about_summary">Android VR にログインする方法については、ここをタップしてください。</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_title">Android VR にログイン</string>
-    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_message">"Android VR (YouTube VR) へのログインは、Google が提供するガイドライン「Google アカウント認証 - TV および入力機能が限られたデバイスアプリケーション用の OAuth 2.0」に従います。
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_message">"Android VR (YouTube VR) へのログインは、Google が提供するガイドライン (Google アカウント認証 - TV および入力機能が限られたデバイスアプリケーション用の OAuth 2.0) に従います。
 
-1. 「アクティベーションコードを取得」をタップしてアクティベーションコードを生成します。
-2. 「ウェブサイトを開く」をタップして、「https://yt.be/activate」に移動します。
+1. [アクティベーションコードを取得] をタップしてアクティベーションコードを生成します。
+2. [ウェブサイトを開く] をタップして、「https://yt.be/activate」に移動します。
 3. アクティベーションコードを入力します。
 4. プロンプトが表示されたらログインします。複数の Google アカウントを持っている場合は、YouTube で使用しているアカウントを選択してください。すでにログインしている場合は、次の手順に進んでください。
-5. ログインしたら、RVX に戻り、もう一度「Android VR にログイン」をタップします。
-6. 「認証トークンを取得」をタップして認証トークンを取得します。
+5. ログインしたら RVX に戻り、もう一度 [Android VR にログイン] をタップします。
+6. [認証トークンを取得] をタップして認証トークンを取得します。
 
-※認証トークンまたはアクティベーションコードを削除するには、「リセット」をタップします。"</string>
+※認証トークンまたはアクティベーションコードを削除するには、[リセット] をタップします。"</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_get_activation_code_text">アクティベーションコードを取得</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_get_authorization_token_text">認証トークンを取得</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_reset_text">リセット</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_failed">認証トークンを発行できませんでした。</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_failed_suggestion">[リセット] をタップして再試行してください。</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_reset">認証トークンとアクティベーションコードをリセットします。</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_success_dialog_title">ログインしました</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_success_dialog_message">"認証トークンを保存しました。
@@ -2497,11 +2504,11 @@ VP9 は AVC よりも高度なコーデックですが、利用者によって�
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_dialog_title">アクティベーションコード</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_dialog_message">"アクティベーションコード: %s
 
-1.「ウェブサイトを開く」をタップして、「https://yt.be/activate」に移動します。
+1.[ウェブサイトを開く] をタップして、「https://yt.be/activate」に移動します。
 2. アクティベーションコードを入力します。
 3. プロンプトが表示されたらログインします。複数の Google アカウントを持っている場合は、YouTube で使用しているアカウントを選択してください。すでにログインしている場合は、次の手順に進んでください。
-4. ログインしたら、RVX に戻り、もう一度「Android VR の認証について」をタップします。
-5. 「認証トークンを取得」をタップして認証トークンを取得します。"</string>
+4. ログインしたら RVX に戻り、もう一度 [Android VR にログイン] をタップします。
+5. [認証トークンを取得] をタップして認証トークンを取得します。"</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_dialog_open_website_text">ウェブサイトを開く</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_toast_copy">アクティベーションコードをクリップボードにコピーしました: %s</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: JavaScript -->

@@ -22,7 +22,7 @@
     <string name="revanced_settings_search_no_results_summary">Prueba con otra palabra clave.</string>
     <string name="revanced_settings_search_recent_searches">Búsquedas recientes</string>
     <string name="revanced_settings_search_remove_message">¿Eliminar del historial de búsqueda?</string>
-    <string name="revanced_settings_search_clear_history">Borrar historial de busqueda</string>
+    <string name="revanced_settings_search_clear_history">Borrar historial de búsqueda</string>
     <string name="revanced_settings_search_clear_history_message">¿Realmente quieres borrar todo el historial de búsqueda?</string>
     <string name="revanced_settings_search_tips_title">Consejos de búsqueda</string>
     <string name="revanced_settings_search_tips_summary">"• Toque una ruta para navegar hasta ella.
@@ -275,9 +275,11 @@ Descripción
     <string name="revanced_hide_web_search_results_title">Ocultar resultados de búsqueda web</string>
     <string name="revanced_hide_web_search_results_summary_on">Los resultados de la búsqueda web están ocultos.</string>
     <string name="revanced_hide_web_search_results_summary_off">Los resultados de la búsqueda web están visibles.</string>
-    <string name="revanced_hide_get_premium_title">Ocultar promoción de YouTube Premium</string>
-    <string name="revanced_hide_get_premium_summary_on">La promoción de YouTube Premium está oculta.</string>
-    <string name="revanced_hide_get_premium_summary_off">La promoción de YouTube Premium está visible.</string>
+    <string name="revanced_hide_youtube_premium_promotion_title">Ocultar promoción de YouTube Premium</string>
+    <string name="revanced_hide_youtube_premium_promotion_summary_on">"La promoción de YouTube Premium está oculta.
+
+Problema conocido: Cuando este ajuste está activado, no se puede pulsar en los Doodles de YouTube."</string>
+    <string name="revanced_hide_youtube_premium_promotion_summary_off">La promoción de YouTube Premium está visible.</string>
     <!-- PreferenceScreen: Alternative thumbnails -->
     <string name="revanced_preference_screen_alt_thumbnails_title">Miniaturas alternativas</string>
     <string name="revanced_alt_thumbnail_home_title">Pestaña de inicio</string>
@@ -620,7 +622,6 @@ Los cambios incluyen:
     <string name="revanced_disable_translucent_status_bar_title">Desactivar barra de estado translúcida</string>
     <string name="revanced_disable_translucent_status_bar_summary_on">La barra de estado es opaca.</string>
     <string name="revanced_disable_translucent_status_bar_summary_off">La barra de estado es opaca o translúcida.</string>
-    <string name="revanced_disable_translucent_status_bar_user_dialog_message">Para algunas ROM de fabricantes que ejecutan Android 12+, activar esta función puede hacer que la barra de navegación del sistema sea transparente.</string>
     <string name="revanced_fix_hype_button_icon_title">Corregir icono del botón Hypear</string>
     <string name="revanced_fix_hype_button_icon_summary_on">El icono del botón Hypear está visible.</string>
     <string name="revanced_fix_hype_button_icon_summary_off">El icono del botón Hypear está oculto.</string>
@@ -807,7 +808,7 @@ Para mostrar el botón de descarga de la lista de reproducción nativa, activa \
     <string name="revanced_replace_navigation_button_target_entry_subscriptions">Suscripciones</string>
     <string name="revanced_replace_navigation_button_target_entry_notifications">Notificaciones</string>
     <string name="revanced_enable_translucent_navigation_bar_title">Activar barra de navegación translúcida</string>
-    <string name="revanced_enable_translucent_navigation_bar_summary_on">La barra de navegación es translúcida.</string>
+    <string name="revanced_enable_translucent_navigation_bar_summary_on">"La barra de navegación es translúcida."</string>
     <string name="revanced_enable_translucent_navigation_bar_summary_off">La barra de navegación es opaca.</string>
     <string name="revanced_hide_navigation_bar_title">Ocultar barra de navegación</string>
     <string name="revanced_hide_navigation_bar_summary_on">La barra de navegación está oculta.</string>
@@ -1161,6 +1162,9 @@ Limitaciones:
     <string name="revanced_hide_comments_highlighted_search_links_title">Ocultar enlaces de búsqueda destacados</string>
     <string name="revanced_hide_comments_highlighted_search_links_summary_on">"Los enlaces de búsqueda destacados están ocultos."</string>
     <string name="revanced_hide_comments_highlighted_search_links_summary_off">Los enlaces de búsqueda destacados están visibles.</string>
+    <string name="revanced_hide_comments_information_button_title">Ocultar botón de información</string>
+    <string name="revanced_hide_comments_information_button_summary_on">El botón de información está oculto.</string>
+    <string name="revanced_hide_comments_information_button_summary_off">El botón de información está visible.</string>
     <string name="revanced_hide_live_chat_messages_title">Ocultar mensajes de chat en directo</string>
     <string name="revanced_hide_live_chat_messages_summary_on">Los mensajes de chat en directo están ocultos.\n\nEste ajuste se aplica también a los vídeos en directo de Shorts.</string>
     <string name="revanced_hide_live_chat_messages_summary_off">Los mensajes de chat en directo están visibles.\n\nEste ajuste se aplica también a los vídeos en directo de Shorts.</string>
@@ -2386,10 +2390,6 @@ Esto se puede utilizar al probar algo en el MainThread."</string>
 • Si la desofuscación falla, la reproducción puede fallar.
 • A veces, el vídeo no se reproducirá incluso después de 10 segundos, en cuyo caso deberás pulsar en el botón de recargar vídeo.
 • El vídeo puede comenzar tarde."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_tv_simply">"• Si la desofuscación falla, la reproducción puede fallar.
-• Algunas cuentas pueden requerir un PoToken, en cuyo caso la reproducción fallará.
-• A veces, el vídeo no se reproducirá incluso después de 10 segundos, en cuyo caso deberás pulsar en el botón de recargar vídeo.
-• El vídeo puede comenzar tarde."</string>
     <string name="revanced_spoof_streaming_data_side_effects_visionos">"• Falta el menú de la pista de audio.
 • Es posible que los vídeos para niños no se reproduzcan cuando se cierra la sesión o en modo incógnito.
 • Dado que se trata de un cliente no publicado, puede dejar de funcionar en cualquier momento."</string>
@@ -2465,6 +2465,8 @@ La reproducción se puede atascar o perder fotogramas."</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_get_activation_code_text">Obtener código de activación</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_get_authorization_token_text">Obtener token de autorización</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_reset_text">Restablecer</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_failed">Error al emitir un token de autenticación.</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_failed_suggestion">Pulsa en \"Restablecer\" e inténtalo de nuevo.</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_reset">Token de autenticación y código de activación restablecidos.</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_success_dialog_title">Sesión iniciada</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_success_dialog_message">"Token de autenticación guardado.

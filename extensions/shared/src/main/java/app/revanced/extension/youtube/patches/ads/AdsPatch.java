@@ -18,8 +18,9 @@ public class AdsPatch {
             Settings.HIDE_END_SCREEN_STORE_BANNER.get();
     private static final boolean HIDE_GENERAL_ADS =
             Settings.HIDE_GENERAL_ADS.get();
+    // https://github.com/ReVanced/revanced-patches/issues/1091
     private static final boolean HIDE_GET_PREMIUM =
-            Settings.HIDE_GET_PREMIUM.get();
+            Settings.HIDE_YOUTUBE_PREMIUM_PROMOTION.get();
     private static final boolean HIDE_VIDEO_ADS =
             Settings.HIDE_VIDEO_ADS.get();
 

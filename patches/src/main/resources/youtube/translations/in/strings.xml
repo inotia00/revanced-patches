@@ -175,9 +175,6 @@ Deskripsi
     <string name="revanced_hide_web_search_results_title">Sembunyikan hasil pencarian web</string>
     <string name="revanced_hide_web_search_results_summary_on">Hasil pencarian web ditunjukkan.</string>
     <string name="revanced_hide_web_search_results_summary_off">Hasil pencarian web ditunjukkan.</string>
-    <string name="revanced_hide_get_premium_title">Sembunyikan promosi YouTube Premium</string>
-    <string name="revanced_hide_get_premium_summary_on">Promosi YouTube Premium disembunyikan.</string>
-    <string name="revanced_hide_get_premium_summary_off">Promosi YouTube Premium ditunjukkan.</string>
     <!-- PreferenceScreen: Alternative thumbnails -->
     <string name="revanced_preference_screen_alt_thumbnails_title">Thumbnail alternatif</string>
     <string name="revanced_alt_thumbnail_home_title">Tab beranda</string>

@@ -3,8 +3,6 @@ package app.revanced.patches.music.ads.general
 import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.replaceInstruction
-import app.revanced.patcher.patch.Option
-import app.revanced.patcher.patch.booleanOption
 import app.revanced.patches.music.navigation.components.navigationBarComponentsPatch
 import app.revanced.patches.music.utils.compatibility.Constants.COMPATIBLE_PACKAGE
 import app.revanced.patches.music.utils.extension.Constants.ADS_PATH
@@ -49,8 +47,6 @@ private const val PREMIUM_PROMOTION_POP_UP_CLASS_DESCRIPTOR =
 private const val PREMIUM_PROMOTION_BANNER_CLASS_DESCRIPTOR =
     "$ADS_PATH/PremiumRenewalPatch;"
 
-lateinit var hideFullscreenAds: Option<Boolean>
-
 @Suppress("unused")
 val adsPatch = adsPatch(
     block = {
@@ -65,24 +61,9 @@ val adsPatch = adsPatch(
             versionCheckPatch,
             mainActivityResolvePatch,
         )
-
-        hideFullscreenAds = booleanOption(
-            key = "hideFullscreenAds",
-            default = false,
-            title = "Hide fullscreen ads",
-            description = """
-                Add an option to hide fullscreen ads.
-                
-                This setting may not completely hide fullscreen ads due to server-side changes, and support for this is not provided.
-                
-                This setting may cause the app to become unusable, and users may need to clear app data.
-                """.trimIndent(),
-            required = true,
-        )
     },
     classDescriptor = "$ADS_PATH/MusicAdsPatch;",
     methodDescriptor = "hideMusicAds",
-    hideFullscreenAdsOption = { hideFullscreenAds },
     executeBlock = {
         // region patch for hide premium promotion popup
 
@@ -191,13 +172,11 @@ val adsPatch = adsPatch(
 
         // endregion
 
-        if (hideFullscreenAds.value == true) {
-            addSwitchPreference(
-                CategoryType.ADS,
-                "revanced_hide_fullscreen_ads",
-                "false"
-            )
-        }
+        addSwitchPreference(
+            CategoryType.ADS,
+            "revanced_hide_fullscreen_ads",
+            "true"
+        )
         addSwitchPreference(
             CategoryType.ADS,
             "revanced_hide_general_ads",

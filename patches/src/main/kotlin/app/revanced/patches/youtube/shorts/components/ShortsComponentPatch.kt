@@ -84,6 +84,7 @@ import app.revanced.util.findMethodOrThrow
 import app.revanced.util.findMutableMethodOf
 import app.revanced.util.fingerprint.injectLiteralInstructionBooleanCall
 import app.revanced.util.fingerprint.matchOrThrow
+import app.revanced.util.fingerprint.methodCall
 import app.revanced.util.fingerprint.methodOrThrow
 import app.revanced.util.fingerprint.resolvable
 import app.revanced.util.getReference
@@ -461,18 +462,6 @@ private val shortsRepeatPatch = bytecodePatch(
         )
 
         val endScreenReference = with(reelEnumConstructorFingerprint.methodOrThrow()) {
-            val insertIndex = indexOfFirstInstructionOrThrow(Opcode.RETURN_VOID)
-
-            addInstructions(
-                insertIndex,
-                """
-                    # Pass the first enum value to extension.
-                    # Any enum value of this type will work.
-                    sget-object v0, $definingClass->a:$definingClass
-                    invoke-static { v0 }, $EXTENSION_REPEAT_STATE_CLASS_DESCRIPTOR->setYTShortsRepeatEnum(Ljava/lang/Enum;)V
-                    """,
-            )
-
             val endScreenStringIndex =
                 indexOfFirstStringInstructionOrThrow("REEL_LOOP_BEHAVIOR_END_SCREEN")
             val endScreenReferenceIndex =
@@ -510,7 +499,18 @@ private val shortsRepeatPatch = bytecodePatch(
             }
         }
 
-        val enumMethod = reelEnumStaticFingerprint.methodOrThrow(reelEnumConstructorFingerprint)
+        val enumMethod =
+            reelEnumStaticFingerprint.methodOrThrow(reelEnumConstructorFingerprint)
+
+        findMethodOrThrow(EXTENSION_REPEAT_STATE_CLASS_DESCRIPTOR) {
+            name == "getShortsLoopBehaviorEnum"
+        }.addInstructions(
+            0, """
+                invoke-static/range { p0 .. p0 }, $enumMethod
+                move-result-object p0
+                return-object p0
+                """
+        )
 
         insertMethod.apply {
             implementation!!.instructions

@@ -10,6 +10,8 @@ import androidx.annotation.Nullable;
 
 import com.facebook.litho.ComponentHost;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.Map;
 
 import app.revanced.extension.music.settings.Settings;
@@ -17,7 +19,7 @@ import app.revanced.extension.music.utils.VideoUtils;
 import app.revanced.extension.shared.utils.Logger;
 import app.revanced.extension.shared.utils.PackageUtils;
 
-@SuppressWarnings("unused")
+@SuppressWarnings({"unused", "deprecation"})
 public class ActionBarPatch {
     private static final boolean CHANGE_ACTION_BAR_POSITION =
             Settings.CHANGE_ACTION_BAR_POSITION.get();
@@ -27,8 +29,18 @@ public class ActionBarPatch {
             Settings.HIDE_ACTION_BUTTON_LIKE_DISLIKE.get() || PackageUtils.getAppVersionName().compareTo("7.25.00") >= 0;
     private static final boolean EXTERNAL_DOWNLOADER_ACTION_BUTTON =
             Settings.EXTERNAL_DOWNLOADER_ACTION_BUTTON.get();
+    private static final boolean REPLACE_ACTION_BUTTON_LIKE =
+            Settings.REPLACE_ACTION_BUTTON_LIKE.get();
+    private static final boolean REPLACE_ACTION_BUTTON_LIKE_TYPE =
+            Settings.REPLACE_ACTION_BUTTON_LIKE_TYPE.get();
     private static final boolean SETTINGS_INITIALIZED =
             Settings.SETTINGS_INITIALIZED.get();
+    private static final String LOTTIE_ANIMATION_JSON_LEGACY_ICON_RESIZED_URL =
+            "https://cdn.jsdelivr.net/gh/inotia00/revanced-patches@dev/patches/src/main/resources/music/actionbar/assets/animated_like_icon_dark_v4.json";
+    private static final String LOTTIE_ANIMATION_JSON_LEGACY_ICON_ORIGINAL_URL =
+            "http://www.gstatic.com/youtube/img/lottie/animated_like_icon/animated_like_icon_dark_v4.json";
+    private static final String LOTTIE_ANIMATION_JSON_EXPERIMENTAL_ICON_PREFIX =
+            "https://www.gstatic.com/youtube/img/lottie/custom_animated_like_icon/animated_like_music_dark";
     private static final String ELEMENTS_SENDER_VIEW =
             "com.google.android.libraries.youtube.rendering.elements.sender_view";
     private static final String EXTERNAL_DOWNLOADER_LAUNCHED =
@@ -65,6 +77,17 @@ public class ActionBarPatch {
                 HIDE_ACTION_BUTTON_LIKE_DISLIKE,
                 view
         );
+    }
+
+    public static String replaceLikeButton(String original) {
+        if (REPLACE_ACTION_BUTTON_LIKE &&
+                StringUtils.startsWith(original, LOTTIE_ANIMATION_JSON_EXPERIMENTAL_ICON_PREFIX)) {
+            return REPLACE_ACTION_BUTTON_LIKE_TYPE
+                    ? LOTTIE_ANIMATION_JSON_LEGACY_ICON_ORIGINAL_URL
+                    : LOTTIE_ANIMATION_JSON_LEGACY_ICON_RESIZED_URL;
+        }
+
+        return original;
     }
 
     public static void inAppDownloadButtonOnClick(View view) {

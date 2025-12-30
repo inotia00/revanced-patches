@@ -1,5 +1,7 @@
 package app.revanced.extension.music.patches.utils;
 
+import static app.revanced.extension.music.utils.ExtendedUtils.IS_7_25_OR_GREATER;
+
 @SuppressWarnings("unused")
 public class PatchStatus {
     public static boolean DarkTheme() {
@@ -8,6 +10,6 @@ public class PatchStatus {
     }
 
     public static String SpoofAppVersionDefaultString() {
-        return "6.42.55";
+        return IS_7_25_OR_GREATER ? "6.42.55" : "6.35.52";
     }
 }

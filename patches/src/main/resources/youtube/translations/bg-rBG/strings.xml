@@ -52,9 +52,6 @@
     <string name="revanced_hide_web_search_results_title">Скриване на резултатите от уеб търсенето</string>
     <string name="revanced_hide_web_search_results_summary_on">Резултатите от уеб търсенето са скрити.</string>
     <string name="revanced_hide_web_search_results_summary_off">Резултатите от уеб търсенето са показани.</string>
-    <string name="revanced_hide_get_premium_title">Скриване на YouTube Premium промоциите</string>
-    <string name="revanced_hide_get_premium_summary_on">YouTube Premium промоциите са скрити.</string>
-    <string name="revanced_hide_get_premium_summary_off">YouTube Premium промоциите се показват.</string>
     <!-- PreferenceScreen: Alternative thumbnails -->
     <string name="revanced_preference_screen_alt_thumbnails_title">Алтернативни миниатюри</string>
     <string name="revanced_alt_thumbnail_home_title">Начало /Home/</string>
@@ -373,7 +370,7 @@
     <string name="revanced_switch_create_with_notifications_button_title">Разменете бутоните „Създаване“ с „Известия“</string>
     <string name="revanced_switch_create_with_notifications_button_summary_off">Бутоните \"Създаване\" и \"Известия\" не са разменени.</string>
     <string name="revanced_enable_translucent_navigation_bar_title">Полупрозрачна лента за навигация</string>
-    <string name="revanced_enable_translucent_navigation_bar_summary_on">Навигационната лента е полупрозрачна.</string>
+    <string name="revanced_enable_translucent_navigation_bar_summary_on">"Навигационната лента е полупрозрачна."</string>
     <string name="revanced_enable_translucent_navigation_bar_summary_off">Навигационната лента е непрозрачна.</string>
     <string name="revanced_hide_navigation_bar_title">Скриване лентата за навигация</string>
     <string name="revanced_hide_navigation_bar_summary_on">Навигационната лента е скрита.</string>

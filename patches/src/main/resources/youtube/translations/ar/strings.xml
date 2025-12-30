@@ -259,9 +259,11 @@
     <string name="revanced_hide_web_search_results_title">إخفاء نتائج بحث الويب</string>
     <string name="revanced_hide_web_search_results_summary_on">تم إخفاء نتائج البحث على الويب.</string>
     <string name="revanced_hide_web_search_results_summary_off">يتم عرض نتائج البحث على الويب.</string>
-    <string name="revanced_hide_get_premium_title">إخفاء الترقية إلى YouTube Premium</string>
-    <string name="revanced_hide_get_premium_summary_on">تم إخفاء الترقية لـ YouTube Premium.</string>
-    <string name="revanced_hide_get_premium_summary_off">يتم عرض الترقية لـ YouTube Premium.</string>
+    <string name="revanced_hide_youtube_premium_promotion_title">إخفاء الترقية إلى YouTube Premium</string>
+    <string name="revanced_hide_youtube_premium_promotion_summary_on">"تم إخفاء الترقية لـ YouTube Premium.
+
+مشكلة معروفة: عند تمكين هذا الإعداد، لا يمكن النقر على رسومات YouTube."</string>
+    <string name="revanced_hide_youtube_premium_promotion_summary_off">يتم عرض الترقية لـ YouTube Premium.</string>
     <!-- PreferenceScreen: Alternative thumbnails -->
     <string name="revanced_preference_screen_alt_thumbnails_title">مصغرات فيديو بديلة</string>
     <string name="revanced_alt_thumbnail_home_title">علامة تبويب الصفحة الرئيسية</string>
@@ -608,7 +610,6 @@
     <string name="revanced_disable_translucent_status_bar_title">تعطيل شريط الحالة الشفاف</string>
     <string name="revanced_disable_translucent_status_bar_summary_on">شريط الحالة غير شفاف.</string>
     <string name="revanced_disable_translucent_status_bar_summary_off">شريط الحالة معتم أو شفاف.</string>
-    <string name="revanced_disable_translucent_status_bar_user_dialog_message">بالنسبة لبعض الـ ROM الخاصة بالشركة المصنعة التي تعمل بنظام Android 12 أو أحدث، قد يؤدي تمكين هذه الميزة إلى جعل شريط التنقل في النظام شفافًا.</string>
     <string name="revanced_fix_hype_button_icon_title">إصلاح أيقونة زر التشجيع</string>
     <string name="revanced_fix_hype_button_icon_summary_on">يتم عرض أيقونة زر التشجيع.</string>
     <string name="revanced_fix_hype_button_icon_summary_off">تم إخفاء أيقونة زر التشجيع.</string>
@@ -794,7 +795,9 @@
     <string name="revanced_replace_navigation_button_target_entry_subscriptions">الاشتراكات</string>
     <string name="revanced_replace_navigation_button_target_entry_notifications">الإشعارات</string>
     <string name="revanced_enable_translucent_navigation_bar_title">تمكين شريط التنقل الشفاف</string>
-    <string name="revanced_enable_translucent_navigation_bar_summary_on">شريط التنقل شفاف.</string>
+    <string name="revanced_enable_translucent_navigation_bar_summary_on">"شريط التنقل شفاف.
+
+مشكلة معروفة: قد يكون شريط تنقل النظام شفافًا."</string>
     <string name="revanced_enable_translucent_navigation_bar_summary_off">شريط التنقل غير شفاف.</string>
     <string name="revanced_hide_navigation_bar_title">إخفاء شريط التنقل</string>
     <string name="revanced_hide_navigation_bar_summary_on">تم إخفاء شريط التنقل.</string>
@@ -2388,7 +2391,8 @@
 • قد لا يتوفر تعطيل المقطع الصوتي التلقائي المفروض.
 • مستوى الصوت الثابت غير متاح.
 • قد لا يتم تشغيل الفيديوهات المخصصة للأطفال عند تسجيل الخروج أو في وضع التصفح المتخفي.
-• 1080p+, AV1, و HDR غير مدعومة."</string>
+• 1080p+, AV1, و HDR غير مدعومة.
+• وضع الواقع الافتراضي الغامر 360° غير متوفر."</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_no_sdk">• قد يتوقف الفيديو عند الدقيقة 1:00، أو قد لا يكون متاحًا في بعض المناطق.</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• قائمة المقطع الصوتي مفقودة.
 • قد لا يتوفر تعطيل المقطع الصوتي التلقائي المفروض.
@@ -2396,13 +2400,11 @@
 • قد لا يتم تشغيل الفيديوهات المخصصة للأطفال عند تسجيل الخروج أو في وضع التصفح المتخفي."</string>
     <string name="revanced_spoof_streaming_data_side_effects_tv">"• في حال فشل إزالة التشويش، قد يفشل التشغيل.
 • في بعض الأحيان، قد لا يعمل الفيديو حتى بعد 10 ثوانٍ، وفي هذه الحالة، ستحتاج إلى الضغط على زر إعادة تحميل الفيديو.
-• قد يبدأ الفيديو متأخرًا."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_tv_simply">"• في حال فشل إزالة التشويش، قد يفشل التشغيل.
-• قد تتطلب بعض الحسابات رمز PoToken، وفي هذه الحالة سوف تفشل عملية التشغيل.
-• في بعض الأحيان، قد لا يعمل الفيديو حتى بعد 10 ثوانٍ، وفي هذه الحالة، ستحتاج إلى الضغط على زر إعادة تحميل الفيديو.
-• قد يبدأ الفيديو متأخرًا."</string>
+• قد يبدأ الفيديو متأخرًا.
+• وضع الواقع الافتراضي الغامر 360° غير متوفر."</string>
     <string name="revanced_spoof_streaming_data_side_effects_visionos">"• قائمة المقطع الصوتي مفقودة.
 • قد لا يتم تشغيل الفيديوهات المخصصة للأطفال عند تسجيل الخروج أو في وضع التصفح المتخفي.
+• وضع الواقع الافتراضي الغامر 360° غير متوفر.
 • بما أن هذا عميل غير مُصدر بعد، فمن الممكن أن يتوقف عن العمل في أي وقت."</string>
     <string name="revanced_spoof_streaming_data_side_effects_unknown">• غير معروف</string>
     <string name="revanced_spoof_streaming_data_prioritize_video_quality_title">إعطاء الأولوية لجودة الفيديو</string>

@@ -22,18 +22,9 @@ import app.revanced.extension.youtube.settings.Settings;
 public final class AdsFilter extends Filter {
 
     private final ByteArrayFilterGroup creatorStoreShelfBuffer;
-    private final ByteArrayFilterGroup statementBannerException;
     private final StringFilterGroup creatorStoreShelf;
-    private final StringFilterGroup statementBanner;
 
     public AdsFilter() {
-        // YouTube Doodle includes this buffer (Not tested).
-        // https://github.com/inotia00/ReVanced_Extended/issues/3298
-        statementBannerException = new ByteArrayFilterGroup(
-                null,
-                "gstatic.com"
-        );
-
         // Identifiers.
 
         final StringFilterGroup alertBannerPromo = new StringFilterGroup(
@@ -87,6 +78,11 @@ public final class AdsFilter extends Filter {
                 "shopping_carousel"
         );
 
+        final StringFilterGroup promotionBanner = new StringFilterGroup(
+                Settings.HIDE_YOUTUBE_PREMIUM_PROMOTION,
+                "statement_banner"
+        );
+
         final StringFilterGroup selfSponsor = new StringFilterGroup(
                 Settings.HIDE_SELF_SPONSOR_CARDS,
                 "cta_shelf_card"
@@ -95,11 +91,6 @@ public final class AdsFilter extends Filter {
         final StringFilterGroup shoppingLinks = new StringFilterGroup(
                 Settings.HIDE_SHOPPING_LINKS,
                 "shopping_description_shelf"
-        );
-
-        statementBanner = new StringFilterGroup(
-                Settings.HIDE_GENERAL_ADS,
-                "statement_banner"
         );
 
         final StringFilterGroup viewProducts = new StringFilterGroup(
@@ -119,9 +110,9 @@ public final class AdsFilter extends Filter {
                 alertBannerPromo,
                 generalAdsIdentifier,
                 merchandise,
+                promotionBanner,
                 selfSponsor,
                 shoppingLinks,
-                statementBanner,
                 viewProducts,
                 webSearchPanel
         );
@@ -172,8 +163,6 @@ public final class AdsFilter extends Filter {
                               StringFilterGroup matchedGroup, FilterContentType contentType, int contentIndex) {
         if (matchedGroup == creatorStoreShelf) {
             return contentIndex == 0 && creatorStoreShelfBuffer.check(buffer).isFiltered();
-        } else if (matchedGroup == statementBanner) {
-            return !statementBannerException.check(buffer).isFiltered();
         }
         return true;
     }

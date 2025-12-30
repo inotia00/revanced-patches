@@ -257,9 +257,9 @@
     <string name="revanced_enable_forced_miniplayer_title">切換歌曲時維持迷你播放器</string>
     <string name="revanced_enable_forced_miniplayer_summary">切換到新歌曲時強制啟用迷你播放器。</string>
     <string name="revanced_enable_smooth_transition_animation_title">啟用流暢的線性動畫</string>
-    <string name="revanced_enable_smooth_transition_animation_summary">"當迷你播放器從最小化狀態最大化時，使其能夠流暢的動畫。
+    <string name="revanced_enable_smooth_transition_animation_summary">當迷你播放器從最小化狀態最大化時，使其能夠流暢的動畫。
 
-限制：對某些使用者來說，動態歌詞介面可能會被破壞。"</string>
+限制：對某些使用者來說，動態歌詞介面可能會被破壞。</string>
     <string name="revanced_enable_swipe_to_dismiss_miniplayer_title">啟用滑動來關閉迷你播放器</string>
     <string name="revanced_enable_swipe_to_dismiss_miniplayer_summary">啟用向下滑動以關閉迷你播放器。</string>
     <string name="revanced_enable_comments_scroll_top_title">在留言中啟用滾動到頂部</string>

@@ -274,9 +274,11 @@ Descrizione
     <string name="revanced_hide_web_search_results_title">Nascondi i risultati di ricerca del web</string>
     <string name="revanced_hide_web_search_results_summary_on">I risultati di ricerca del web sono nascosti.</string>
     <string name="revanced_hide_web_search_results_summary_off">I risultati di ricerca del web sono visibili.</string>
-    <string name="revanced_hide_get_premium_title">Nascondi la promozione di YouTube Premium</string>
-    <string name="revanced_hide_get_premium_summary_on">La promozione di YouTube Premium è nascosta.</string>
-    <string name="revanced_hide_get_premium_summary_off">La promozione di YouTube Premium è visibile.</string>
+    <string name="revanced_hide_youtube_premium_promotion_title">Nascondi la promozione di YouTube Premium</string>
+    <string name="revanced_hide_youtube_premium_promotion_summary_on">"La promozione di YouTube Premium è nascosta.
+
+Nota: il doodle di YouTube non è toccabile."</string>
+    <string name="revanced_hide_youtube_premium_promotion_summary_off">La promozione di YouTube Premium è visibile.</string>
     <!-- PreferenceScreen: Alternative thumbnails -->
     <string name="revanced_preference_screen_alt_thumbnails_title">Thumbnails alternativi</string>
     <string name="revanced_alt_thumbnail_home_title">Scheda Home</string>
@@ -568,7 +570,7 @@ Nota: il pulsante Indietro della barra degli strumenti potrebbe non funzionare."
     <string name="revanced_disable_auto_audio_tracks_summary_on">La traccia audio automatica forzata è disattivata.</string>
     <string name="revanced_disable_auto_audio_tracks_summary_on_disclaimer">"La traccia audio automatica forzata è disattivata.
 
-Nota: questa impostazione potrebbe non funzionare per alcuni utenti. Se non funziona, vai alle impostazioni → RVX → Varie → Camuffa i dati in streaming → Mostra i client JavaScript tra i client disponibili e cambia il client predefinito in TV."</string>
+Nota: questa impostazione potrebbe non funzionare per alcuni utenti. Se non funziona, vai alle impostazioni → RVX → Varie → Camuffa i dati in streaming → Mostra i client JavaScript tra i client disponibili e cambia il client predefinito in TV Simply."</string>
     <string name="revanced_disable_auto_audio_tracks_summary_off">"La traccia audio automatica forzata è attivata."</string>
     <string name="revanced_disable_auto_captions_title">Disattiva i sottotitoli automatici forzati</string>
     <string name="revanced_disable_auto_captions_summary_on">I sottotitoli automatici forzati sono disattivati.</string>
@@ -626,7 +628,6 @@ Le modifiche includono:
     <string name="revanced_disable_translucent_status_bar_title">Disattiva la barra di stato traslucida</string>
     <string name="revanced_disable_translucent_status_bar_summary_on">La barra di stato è opaca.</string>
     <string name="revanced_disable_translucent_status_bar_summary_off">La barra di stato è opaca o traslucida.</string>
-    <string name="revanced_disable_translucent_status_bar_user_dialog_message">Per alcune ROM con Android 12+, l\'attivazione di questa impostazione potrebbe rendere trasparente la barra di navigazione del sistema.</string>
     <string name="revanced_fix_hype_button_icon_title">Mostra l\'icona del pulsante Dai Hype</string>
     <string name="revanced_fix_hype_button_icon_summary_on">L\'icona del pulsante Dai Hype è visibile.</string>
     <string name="revanced_fix_hype_button_icon_summary_off">L\'icona del pulsante Dai Hype è nascosta.</string>
@@ -799,7 +800,9 @@ Per mostrare il pulsante Scarica Playlist nativo, attiva il camuffamento della v
     <string name="revanced_replace_navigation_button_target_entry_subscriptions">Iscrizioni</string>
     <string name="revanced_replace_navigation_button_target_entry_notifications">Notifiche</string>
     <string name="revanced_enable_translucent_navigation_bar_title">Attiva la barra di navigazione traslucida</string>
-    <string name="revanced_enable_translucent_navigation_bar_summary_on">La barra di navigazione è traslucida.</string>
+    <string name="revanced_enable_translucent_navigation_bar_summary_on">"La barra di navigazione è traslucida.
+
+Nota: anche la barra di navigazione del sistema potrebbe essere traslucida."</string>
     <string name="revanced_enable_translucent_navigation_bar_summary_off">La barra di navigazione è opaca.</string>
     <string name="revanced_hide_navigation_bar_title">Nascondi la barra di navigazione</string>
     <string name="revanced_hide_navigation_bar_summary_on">La barra di navigazione è nascosta.</string>
@@ -923,7 +926,7 @@ Perciò segui questi percorsi per accedere alle impostazioni:
     <string name="revanced_hide_toolbar_search_button_title">Nascondi il pulsante Cerca</string>
     <string name="revanced_hide_toolbar_search_button_summary_on">"Il pulsante Cerca è nascosto.
 
-Nota: questa impostazione potrebbe non funzionare se la barra di ricerca estesa è attivata."</string>
+Nota: potrebbe non funzionare se la barra di ricerca estesa è attivata."</string>
     <string name="revanced_hide_toolbar_search_button_summary_off">Il pulsante Cerca è visibile.</string>
     <string name="revanced_hide_search_term_thumbnail_title">Nascondi i thumbnails nella cronologia delle ricerche</string>
     <string name="revanced_hide_search_term_thumbnail_summary_on">I thumbnails nella cronologia delle ricerche sono nascosti.</string>
@@ -1161,6 +1164,9 @@ Note:
 
 Nota: alcuni link di ricerca evidenziati che non hanno uno stile di testo predefinito potrebbero non essere nascosti."</string>
     <string name="revanced_hide_comments_highlighted_search_links_summary_off">I link di ricerca evidenziati sono visibili.</string>
+    <string name="revanced_hide_comments_information_button_title">Nascondi il pulsante Informazioni</string>
+    <string name="revanced_hide_comments_information_button_summary_on">Il pulsante Informazioni è nascosto.</string>
+    <string name="revanced_hide_comments_information_button_summary_off">Il pulsante Informazioni è visibile.</string>
     <string name="revanced_hide_live_chat_messages_title">Nascondi i messaggi della chat live</string>
     <string name="revanced_hide_live_chat_messages_summary_on">I messaggi della chat live sono nascosti.\n\nNota: anche i messaggi della chat live degli Shorts saranno nascosti.</string>
     <string name="revanced_hide_live_chat_messages_summary_off">I messaggi della chat live sono visibili.</string>
@@ -1190,7 +1196,7 @@ Nota: alcuni link di ricerca evidenziati che non hanno uno stile di testo predef
     <string name="revanced_hide_player_flyout_menu_audio_track_summary_off">Il menù Traccia Audio è visibile.</string>
     <string name="revanced_hide_player_flyout_menu_audio_track_not_available">"Il menù Traccia Audio è nascosto.
 
-Nota: per mostrare il menù Traccia Audio, vai alle impostazioni → RVX → Varie → Camuffa i dati in streaming → Mostra i client JavaScript tra i client disponibili e cambia il client predefinito in TV."</string>
+Nota: per mostrare il menù Traccia Audio, vai alle impostazioni → RVX → Varie → Camuffa i dati in streaming → Mostra i client JavaScript tra i client disponibili e cambia il client predefinito in TV Simply."</string>
     <string name="revanced_hide_player_flyout_menu_captions_title">Nascondi il menù Sottotitoli</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_on">Il menù Sottotitoli è nascosto.</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_off">Il menù Sottotitoli è visibile.</string>
@@ -2381,21 +2387,20 @@ Nota: questa impostazione potrebbe non essere necessaria se sei un utente YouTub
 • Il menù Volume Stabile è nascosto.
 • La disattivazione della traccia audio automatica forzata potrebbe non funzionare.
 • I video per bambini potrebbero non essere riprodotti se si è disconnessi o in incognito.
-• 1080p+, AV1 e HDR non funzionano."</string>
+• 1080p+, AV1 e HDR non funzionano.
+• La modalità immersiva a 360° di YouTube VR non funziona."</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_no_sdk">• I video potrebbero interrompersi a 1:00 o non essere disponibili in alcune regioni.</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Il menù Traccia Audio è nascosto.
 • Il menù Volume Stabile è nascosto.
 • La disattivazione della traccia audio automatica forzata potrebbe non funzionare.
 • I video per bambini potrebbero non essere riprodotti se si è disconnessi o in incognito."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_tv">"• Se il deoffuscamento fallisce, la riproduzione potrebbe non funzionare.
-• I video potrebbero iniziare in ritardo.
-• A volte i video non vengono riprodotti neanche dopo 10 secondi, in tal caso è necessario toccare il pulsante \"Ricarica Video\"."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_tv_simply">"• Se il deoffuscamento fallisce, la riproduzione potrebbe non funzionare.
-• Alcuni account potrebbero richiedere un PoToken, in tal caso la riproduzione non funzionerà.
+    <string name="revanced_spoof_streaming_data_side_effects_tv">"• La modalità immersiva a 360° di YouTube VR non funziona.
+• Se il deoffuscamento fallisce, la riproduzione potrebbe non funzionare.
 • I video potrebbero iniziare in ritardo.
 • A volte i video non vengono riprodotti neanche dopo 10 secondi, in tal caso è necessario toccare il pulsante \"Ricarica Video\"."</string>
     <string name="revanced_spoof_streaming_data_side_effects_visionos">"• Il menù Traccia Audio è nascosto.
 • I video per bambini potrebbero non essere riprodotti se si è disconnessi o in incognito.
+• La modalità immersiva a 360° di YouTube VR non funziona.
 • Poichè si tratta di un client non ancora rilasciato, potrebbe smettere di funzionare in qualsiasi momento."</string>
     <string name="revanced_spoof_streaming_data_side_effects_unknown">• Sconosciuti</string>
     <string name="revanced_spoof_streaming_data_prioritize_video_quality_title">Cambia cosa dare priorità nei video</string>
@@ -2411,7 +2416,7 @@ Questo è il comportamento previsto dall'app YouTube per Android, ed è il motiv
 
 Sebbene VP9 sia un codec più avanzato di AVC, alcuni utenti potrebbero preferire 1080p AVC a 360p VP9.
 
-Se questa impostazione è attivata, verrà usata la massima qualità video disponibile dalla risposta del server, indipendentemente dal codec video.
+Verrà usata la massima qualità video disponibile dalla risposta del server, indipendentemente dal codec video.
 Esempio 1:
 • AVC 1080p
 • AVC 720p
@@ -2433,7 +2438,7 @@ Esempio 2:
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Il client usato per recuperare i dati in streaming è visibile nelle statistiche per nerd.</string>
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Il client usato per recuperare i dati in streaming è nascosto nelle statistiche per nerd.</string>
     <string name="revanced_spoof_streaming_data_failed_forbidden">Non è stato possibile recuperare alcun flusso client</string>
-    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Prova a cambiare il client predefinito in TV</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Prova a cambiare il client predefinito in TV Simply</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: Android VR -->
     <string name="revanced_preference_category_android_vr">Android VR</string>
     <string name="revanced_spoof_streaming_data_android_vr_enable_av1_codec_title">Attiva il codec AV1</string>
@@ -2447,7 +2452,7 @@ Nota: la riproduzione potrebbe avere rallentamenti o perdite di fotogrammi."</st
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_about_title">Accedi ad Android VR</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_about_summary">Tocca qui per vedere come accedere ad Android VR.</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_title">Accedi ad Android VR</string>
-    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_message">"L'accesso ad Android VR (YouTube VR) segue le linee guida fornite da Google: \"Autorizzazione dell'Account Google - OAuth 2.0 per applicazioni TV e di dispositivi con input limitato\":
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_message">"L'accesso ad Android VR (YouTube VR) segue le linee guida fornite da Google (Autorizzazione dell'Account Google - OAuth 2.0 per applicazioni TV e di dispositivi con input limitato):
 1. Tocca \"Ottieni un codice di attivazione\" per generare un codice.
 2. Tocca \"Apri sito\" per andare su \"https://yt.be/activate\".
 3. Inserisci il codice di attivazione.
@@ -2459,6 +2464,8 @@ Nota: tocca \"Ripristina\" per rimuovere un token di accesso o un codice di atti
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_get_activation_code_text">Ottieni un codice di attivazione</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_get_authorization_token_text">Ottieni un token di accesso</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_reset_text">Ripristina</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_failed">Emissione di un token di accesso non riuscita</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_failed_suggestion">Tocca \"Ripristina\" e riprova</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_reset">Token di accesso e codice di attivazione ripristinati</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_success_dialog_title">Accesso effettuato</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_success_dialog_message">"Il token di accesso è stato salvato.
@@ -2474,7 +2481,7 @@ Note:
 1. Tocca \"Apri sito\" per andare su \"https://yt.be/activate\".
 2. Inserisci il codice di attivazione.
 3. Accedi quando richiesto. Se hai più account Google, seleziona l'account che usi con YouTube. Se hai già effettuato l'accesso, vai al passaggio successivo.
-4. Una volta effettuato l'accesso, torna su RVX e tocca nuovamente \"Informazioni su Android VR (Accesso richiesto)\".
+4. Una volta effettuato l'accesso, torna su RVX e tocca \"Accedi ad Android VR\".
 5. Tocca \"Ottieni un token di accesso\" per ottenere un token."</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_dialog_open_website_text">Apri sito</string>
     <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_toast_copy">Codice di attivazione copiato negli appunti (%s)</string>
@@ -2489,7 +2496,7 @@ Questo problema può essere facilmente risolto toccando il pulsante \"Ricarica V
 
 Prerequisiti: devono essere sono attivati sia \"Mostra il pulsante Ricarica Video\" che \"Mostra sempre il pulsante Ricarica Video\".
 
-Tra i client JavaScript, il client consigliato è TV."</string>
+Tra i client JavaScript, il client consigliato è TV Simply."</string>
     <string name="revanced_spoof_streaming_data_use_js_all_title">Usa il client JavaScript per tutti i video</string>
     <string name="revanced_spoof_streaming_data_use_js_all_summary_on">"Il client JavaScript viene usato indipendentemente dal tipo di video.
 

@@ -33,7 +33,7 @@ public class YouTubeVRAuthPatch {
     /**
      * Access token expiration time.
      */
-    private static long accessTokenExpiration = 3600 * 1000L;
+    private static long accessTokenExpiration = 1770 * 1000L;
 
     public static void checkAccessToken() {
         if (isRefreshTokenAvailable()) {
@@ -45,7 +45,7 @@ public class YouTubeVRAuthPatch {
         saveDeviceCode("");
         saveRefreshToken("");
         lastTimeAccessTokenUpdated = 0L;
-        accessTokenExpiration = 3600 * 1000L;
+        accessTokenExpiration = 1770 * 1000L;
         authorization = "";
 
         Utils.showToastShort(str("revanced_spoof_streaming_data_sign_in_android_vr_toast_reset"));
@@ -144,7 +144,9 @@ public class YouTubeVRAuthPatch {
                 String accessToken = jsonObject.getString("access_token");
 
                 lastTimeAccessTokenUpdated = System.currentTimeMillis();
-                accessTokenExpiration = jsonObject.getInt("expires_in") * 1000L;
+                int expiresIn = jsonObject.getInt("expires_in");
+                // Set the access token lifetime to 1770 seconds (00:29:30) instead of 3599 seconds (00:59:59)
+                accessTokenExpiration = (expiresIn - 60) / 2 * 1000L;
                 authorization = "Bearer " + accessToken;
 
                 if (mContext != null) {

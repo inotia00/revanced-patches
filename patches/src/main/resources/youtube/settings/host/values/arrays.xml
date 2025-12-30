@@ -98,14 +98,14 @@
     </string-array>
     <string-array name="revanced_change_shorts_repeat_state_entries">
         <item>@string/revanced_change_shorts_repeat_state_entry_default</item>
-        <item>@string/revanced_change_shorts_repeat_state_entry_repeat</item>
         <item>@string/revanced_change_shorts_repeat_state_entry_auto_play</item>
+        <item>@string/revanced_change_shorts_repeat_state_entry_repeat</item>
         <item>@string/revanced_change_shorts_repeat_state_entry_pause</item>
     </string-array>
     <string-array name="revanced_change_shorts_repeat_state_entry_values">
         <item>UNKNOWN</item>
-        <item>REPEAT</item>
         <item>SINGLE_PLAY</item>
+        <item>REPEAT</item>
         <item>END_SCREEN</item>
     </string-array>
     <string-array name="revanced_custom_playback_speed_menu_type_entries">

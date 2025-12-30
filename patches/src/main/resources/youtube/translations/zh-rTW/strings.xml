@@ -275,9 +275,11 @@
     <string name="revanced_hide_web_search_results_title">隱藏網頁搜尋結果</string>
     <string name="revanced_hide_web_search_results_summary_on">網頁搜尋結果已隱藏</string>
     <string name="revanced_hide_web_search_results_summary_off">網頁搜尋結果已顯示</string>
-    <string name="revanced_hide_get_premium_title">隱藏 YouTube Premium 推廣</string>
-    <string name="revanced_hide_get_premium_summary_on">YouTube Premium 推廣已隱藏</string>
-    <string name="revanced_hide_get_premium_summary_off">YouTube Premium 推廣已顯示</string>
+    <string name="revanced_hide_youtube_premium_promotion_title">隱藏 YouTube Premium 推廣</string>
+    <string name="revanced_hide_youtube_premium_promotion_summary_on">"YouTube Premium推廣活動已隱藏。
+
+已知問題：啟用此設定後，YouTube塗鴉將無法點擊。"</string>
+    <string name="revanced_hide_youtube_premium_promotion_summary_off">YouTube Premium 推廣已顯示。</string>
     <!-- PreferenceScreen: Alternative thumbnails -->
     <string name="revanced_preference_screen_alt_thumbnails_title">替換縮略圖</string>
     <string name="revanced_alt_thumbnail_home_title">首頁分頁</string>
@@ -625,7 +627,6 @@
     <string name="revanced_disable_translucent_status_bar_title">停用半透明狀態列</string>
     <string name="revanced_disable_translucent_status_bar_summary_on">狀態列不透明。</string>
     <string name="revanced_disable_translucent_status_bar_summary_off">狀態列是不透明或半透明的。</string>
-    <string name="revanced_disable_translucent_status_bar_user_dialog_message">對於一些運行 Android 12 以上版本的製造商 ROM，啟用此功能可能會使系統導覽列變得透明。</string>
     <string name="revanced_fix_hype_button_icon_title">修復熱門按鈕圖標</string>
     <string name="revanced_fix_hype_button_icon_summary_on">熱門按鈕圖示已顯示。</string>
     <string name="revanced_fix_hype_button_icon_summary_off">熱門按鈕圖示已隱藏。</string>
@@ -813,7 +814,7 @@
     <string name="revanced_replace_navigation_button_target_entry_subscriptions">訂閱</string>
     <string name="revanced_replace_navigation_button_target_entry_notifications">通知</string>
     <string name="revanced_enable_translucent_navigation_bar_title">啟用半透明導覽列</string>
-    <string name="revanced_enable_translucent_navigation_bar_summary_on">導覽列是半透明的。</string>
+    <string name="revanced_enable_translucent_navigation_bar_summary_on">"導覽列是半透明的。"</string>
     <string name="revanced_enable_translucent_navigation_bar_summary_off">導覽列不透明。</string>
     <string name="revanced_hide_navigation_bar_title">隱藏導覽列</string>
     <string name="revanced_hide_navigation_bar_summary_on">導覽列已隱藏。</string>
@@ -1177,6 +1178,9 @@
 
 限制：某些沒有預設文字樣式的高亮搜尋連結可能無法隱藏。"</string>
     <string name="revanced_hide_comments_highlighted_search_links_summary_off">高亮搜尋連結已顯示。</string>
+    <string name="revanced_hide_comments_information_button_title">隱藏訊息按鈕</string>
+    <string name="revanced_hide_comments_information_button_summary_on">訊息按鈕已隱藏。</string>
+    <string name="revanced_hide_comments_information_button_summary_off">訊息按鈕已顯示。</string>
     <string name="revanced_hide_live_chat_messages_title">隱藏即時聊天訊息</string>
     <string name="revanced_hide_live_chat_messages_summary_on">直播聊天訊息已隱藏。\n\n這項設定也適用於短影音直播影片。</string>
     <string name="revanced_hide_live_chat_messages_summary_off">直播聊天訊息已顯示。\n\n這項設定也適用於短影音直播影片。</string>
@@ -1227,7 +1231,7 @@
     <string name="revanced_hide_player_flyout_menu_quality_header_title">隱藏畫質選單標題</string>
     <string name="revanced_hide_player_flyout_menu_quality_header_summary_on">畫質選單標題已隱藏。</string>
     <string name="revanced_hide_player_flyout_menu_quality_header_summary_off">顯示畫質選單標題。</string>
-    <string name="revanced_hide_player_flyout_menu_quality_footer_title">隱藏畫質選單頁腳</string>
+    <string name="revanced_hide_player_flyout_menu_quality_footer_title">隱藏畫質選單標題</string>
     <string name="revanced_hide_player_flyout_menu_quality_footer_summary_on">畫質選單頁腳已隱藏</string>
     <string name="revanced_hide_player_flyout_menu_quality_footer_summary_off">顯示畫質選單頁腳。</string>
     <string name="revanced_hide_player_flyout_menu_report_title">隱藏舉報選單</string>
@@ -1508,7 +1512,7 @@
     <string name="revanced_append_time_stamp_information_summary_on">"添加時間戳訊息已顯示"</string>
     <string name="revanced_append_time_stamp_information_summary_off">添加時間戳訊息已關閉</string>
     <string name="revanced_append_time_stamp_information_type_title">添加訊息類型</string>
-    <string name="revanced_append_time_stamp_information_type_summary_on">附加影片畫質。</string>
+    <string name="revanced_append_time_stamp_information_type_summary_on">顯示影片解析度</string>
     <string name="revanced_append_time_stamp_information_type_summary_off">附加播放速度。</string>
     <string name="revanced_append_time_stamp_information_playback_speed_menu_type_title">播放速度選單類型</string>
     <string name="revanced_append_time_stamp_information_video_quality_menu_type_title">影片畫質選單類型</string>
@@ -2383,10 +2387,12 @@
 <small>(需要登入)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_no_sdk">"Android
 <small>(無 SDK)</small>"</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_vr">Android VR</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">電視
 <small>(開發中)</small></string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">"電視
 <small>(舊版)</small>"</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_simply">TV Simply</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">電視內嵌功能
 <small>(開發中)</small></string>
     <string name="revanced_spoof_streaming_data_client_entry_visionos">"visionOS
@@ -2456,6 +2462,49 @@
     <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">您可能尚未登入。</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: Android VR -->
     <string name="revanced_preference_category_android_vr">Android VR</string>
+    <string name="revanced_spoof_streaming_data_android_vr_enable_av1_codec_title">啟用 AV1 編解碼器</string>
+    <string name="revanced_spoof_streaming_data_android_vr_enable_av1_codec_summary_on">"影片編碼格式為​​ AVC (H.264)、VP9 或 AV1。
+
+播放時可能會出現卡頓或丟幀現象。"</string>
+    <string name="revanced_spoof_streaming_data_android_vr_enable_av1_codec_summary_off">影片編解碼器為 AVC (H.264) 或 VP9。</string>
+    <string name="revanced_spoof_streaming_data_android_vr_enable_av1_codec_user_dialog_message">"啟用此設定可能會使用軟體 AV1 解碼。
+
+播放可能會出現卡頓或丟幀現象。"</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_about_title">登入 Android VR</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_about_summary">點這裡查看如何登入 Android VR。</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_title">登入 Android VR</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_message">"登入 Android VR（YouTube VR）需遵循 Google 提供的指南（Google 帳戶授權 - 適用於電視和輸入限制裝置應用程式的 OAuth 2.0）：
+
+1. 點選「取得啟動碼」產生啟動碼。
+2. 點選「開啟網站」前往「https://yt.be/activate」。
+3. 輸入啟動碼。
+4. 出現提示時登入。如果您有多個 Google 帳戶，請選擇您用於 YouTube 的帳戶。如果您已登錄，請跳至下一步。
+5. 登入後，返回 RVX 並再次點選「登入 Android VR」。
+6. 點選「取得授權令牌」以取得授權令牌。
+※ 點選「重置」可移除授權令牌或啟動碼。"</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_get_activation_code_text">取得啟動碼</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_get_authorization_token_text">取得授權令牌</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_reset_text">重置</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_failed">頒發身份驗證令牌失敗。</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_failed_suggestion">點選重置按鈕然後重試。</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_reset">身份驗證令牌和啟動碼重置。</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_success_dialog_title">已登入</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_success_dialog_message">"身份驗證令牌已儲存。
+
+- 透過此流程頒發的身份驗證令牌只能在 YouTube VR 中使用（在 RVX 中，它用於從 YouTube VR 獲取串流資料）。
+- 超過 6 個月未使用的驗證令牌將被 Google 伺服器撤銷。
+- 如果您變更密碼、在帳戶設定中登出裝置或卸載應用，則需要重新頒發身分驗證令牌。"</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_dialog_title">啟動碼</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_dialog_message">"啟動碼：
+%s
+
+1. 點選「開啟網站」前往「https://yt.be/activate」。
+2. 輸入啟動碼。
+3. 出現提示時登入。如果您有多個 Google 帳戶，請選擇您用於 YouTube 的帳戶。如果您已登錄，請跳至下一步。
+4. 登入後，返回 RVX 並再次點擊「關於 Android VR 驗證」。
+5. 點選「取得授權令牌」以取得授權令牌。"</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_dialog_open_website_text">打開網站</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_toast_copy">啟動碼已複製到剪貼簿: %s。</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: JavaScript -->
     <string name="revanced_preference_category_js">JavaScript(開發中)</string>
     <string name="revanced_spoof_streaming_data_use_js_title">使用 JavaScript 用戶端</string>

@@ -294,9 +294,9 @@ Se possibile usa colori scuri, poiché l'app non supporta temi chiari."</string>
     <string name="revanced_enable_forced_miniplayer_title">Abilita miniplayer forzato</string>
     <string name="revanced_enable_forced_miniplayer_summary">Abilita il miniplayer forzato quando si passa a una nuova traccia.</string>
     <string name="revanced_enable_smooth_transition_animation_title">Abilita animazione transizione fluida</string>
-    <string name="revanced_enable_smooth_transition_animation_summary">"Abilita animazione fluida quando il miniplayer viene massimizzato dallo stato minimizzato.
+    <string name="revanced_enable_smooth_transition_animation_summary">Abilita animazione fluida quando il miniplayer viene massimizzato dallo stato minimizzato.
 
-Limitazioni: L'interfaccia utente dei testi in tempo reale potrebbe essere danneggiata per alcuni utenti."</string>
+Limitazioni: L\'interfaccia utente dei testi in tempo reale potrebbe essere danneggiata per alcuni utenti.</string>
     <string name="revanced_enable_swipe_to_dismiss_miniplayer_title">Abilita lo scorrimento per chiudere il miniplayer</string>
     <string name="revanced_enable_swipe_to_dismiss_miniplayer_summary">Abilita lo scorrimento verso il basso per chiudere il miniplayer.</string>
     <string name="revanced_enable_comments_scroll_top_title">Abilita lo scorrimento verso l\'alto nei commenti</string>

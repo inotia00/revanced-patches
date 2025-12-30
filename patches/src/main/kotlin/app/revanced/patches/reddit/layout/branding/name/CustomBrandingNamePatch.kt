@@ -3,6 +3,7 @@ package app.revanced.patches.reddit.layout.branding.name
 import app.revanced.patcher.patch.resourcePatch
 import app.revanced.patcher.patch.stringOption
 import app.revanced.patches.reddit.utils.compatibility.Constants.COMPATIBLE_PACKAGE
+import app.revanced.patches.reddit.utils.fix.signature.spoofSignaturePatch
 import app.revanced.patches.reddit.utils.patch.PatchList.CUSTOM_BRANDING_NAME_FOR_REDDIT
 import app.revanced.patches.reddit.utils.settings.updatePatchStatus
 import app.revanced.util.Utils.printInfo
@@ -20,6 +21,8 @@ val customBrandingNamePatch = resourcePatch(
     false,
 ) {
     compatibleWith(COMPATIBLE_PACKAGE)
+
+    dependsOn(spoofSignaturePatch)
 
     val appNameOption = stringOption(
         key = "appName",

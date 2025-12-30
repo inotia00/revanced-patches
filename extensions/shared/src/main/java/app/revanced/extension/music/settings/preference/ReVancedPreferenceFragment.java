@@ -18,6 +18,7 @@ import static app.revanced.extension.music.settings.Settings.RETURN_YOUTUBE_USER
 import static app.revanced.extension.music.settings.Settings.SB_API_URL;
 import static app.revanced.extension.music.settings.Settings.SETTINGS_IMPORT_EXPORT;
 import static app.revanced.extension.music.settings.Settings.SPOOF_APP_VERSION_TARGET;
+import static app.revanced.extension.music.settings.Settings.SPOOF_APP_VERSION_FOR_LYRICS_TARGET;
 import static app.revanced.extension.music.settings.Settings.SPOOF_STREAMING_DATA_DEFAULT_CLIENT;
 import static app.revanced.extension.music.settings.Settings.SPOOF_STREAMING_DATA_SIGN_IN_ANDROID_NO_SDK_ABOUT;
 import static app.revanced.extension.music.settings.Settings.SPOOF_STREAMING_DATA_SIGN_IN_ANDROID_VR_ABOUT;
@@ -156,7 +157,8 @@ public class ReVancedPreferenceFragment extends PreferenceFragment {
                     ExternalDownloaderPreference.showDialog(mActivity);
                 } else if (settings.equals(SB_API_URL)) {
                     SponsorBlockApiUrlPreference.showDialog(mActivity);
-                } else if (settings.equals(SPOOF_APP_VERSION_TARGET)) {
+                } else if (settings.equals(SPOOF_APP_VERSION_TARGET)
+                        || settings.equals(SPOOF_APP_VERSION_FOR_LYRICS_TARGET)) {
                     ResettableListPreference.showDialog(mActivity, stringSetting, 0);
                 } else {
                     Logger.printDebug(() -> "Failed to find the right value: " + dataString);

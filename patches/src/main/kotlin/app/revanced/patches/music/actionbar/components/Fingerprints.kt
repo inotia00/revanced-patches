@@ -1,5 +1,6 @@
 package app.revanced.patches.music.actionbar.components
 
+import app.revanced.patches.music.utils.resourceid.elementsLottieAnimationViewTagId
 import app.revanced.patches.music.utils.resourceid.likeDislikeContainer
 import app.revanced.util.fingerprint.legacyFingerprint
 import app.revanced.util.or
@@ -27,6 +28,17 @@ internal val likeDislikeContainerFingerprint = legacyFingerprint(
     returnType = "V",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.CONSTRUCTOR,
     literals = listOf(likeDislikeContainer)
+)
+
+internal val lottieAnimationViewTagFingerprint = legacyFingerprint(
+    name = "lottieAnimationViewTagFingerprint",
+    returnType = "V",
+    accessFlags = AccessFlags.PROTECTED or AccessFlags.FINAL,
+    opcodes = listOf(
+        Opcode.INVOKE_INTERFACE,
+        Opcode.MOVE_RESULT_OBJECT,
+    ),
+    literals = listOf(elementsLottieAnimationViewTagId)
 )
 
 internal val commandResolverFingerprint = legacyFingerprint(

@@ -132,14 +132,17 @@ fun ResourcePatchContext.copyAdaptiveIcon(
     }
 }
 
-fun ResourcePatchContext.appendAppVersion(appVersion: String) {
+fun ResourcePatchContext.appendAppVersion(
+    appVersion: String,
+    key: String = "revanced_spoof_app_version_target"
+) {
     addEntryValues(
-        "revanced_spoof_app_version_target_entries",
-        "@string/revanced_spoof_app_version_target_entry_" + appVersion.replace(".", "_"),
+        "${key}_entries",
+        "@string/${key}_entry_" + appVersion.replace(".", "_"),
         prepend = false
     )
     addEntryValues(
-        "revanced_spoof_app_version_target_entry_values",
+        "${key}_entry_values",
         appVersion,
         prepend = false
     )

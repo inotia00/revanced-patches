@@ -61,8 +61,8 @@ private val spoofAppVersionBytecodePatch = bytecodePatch(
 
 @Suppress("unused")
 val spoofAppVersionPatch = resourcePatch(
-    SPOOF_APP_VERSION.title,
-    SPOOF_APP_VERSION.summary,
+    // SPOOF_APP_VERSION.title,
+    // SPOOF_APP_VERSION.summary,
 ) {
     compatibleWith(
         YOUTUBE_MUSIC_PACKAGE_NAME(

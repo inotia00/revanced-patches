@@ -276,9 +276,9 @@ Preferiblemente colores oscuros, la aplicación no soporta temas claros."</strin
     <string name="revanced_enable_forced_miniplayer_title">Activar el minireproductor forzado</string>
     <string name="revanced_enable_forced_miniplayer_summary">Habilita que se fuerce el minireproductor cuando se cambia a una nueva pista.</string>
     <string name="revanced_enable_smooth_transition_animation_title">Activar animación suave de transición</string>
-    <string name="revanced_enable_smooth_transition_animation_summary">"Activa una animación suave, cuando el mini reproductor se expande después de estar minimizado.
+    <string name="revanced_enable_smooth_transition_animation_summary">Activa una animación suave, cuando el mini reproductor se expande después de estar minimizado.
 
-Limitaciones: La interfaz de letras sincronizadas puede estar rota para algunos usuarios."</string>
+Limitaciones: La interfaz de letras sincronizadas puede estar rota para algunos usuarios.</string>
     <string name="revanced_enable_swipe_to_dismiss_miniplayer_title">Habilitar el gesto de descarte del minireproductor</string>
     <string name="revanced_enable_swipe_to_dismiss_miniplayer_summary">Habilita que se pueda deslizar hacia abajo en el minireproductor para descartarlo.</string>
     <string name="revanced_enable_comments_scroll_top_title">Habilitar acción para desplazarse hasta arriba en los comentarios</string>

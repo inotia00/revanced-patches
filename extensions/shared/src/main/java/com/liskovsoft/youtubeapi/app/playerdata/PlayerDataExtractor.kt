@@ -15,6 +15,7 @@ internal class PlayerDataExtractor(playerJS: String, playerJSIdentifier: String)
             initialized = true
 
             V8ChallengeProvider.setPlayerJS(playerJS, playerJSIdentifier)
+            V8ChallengeProvider.warmup()
 
             checkAllData()
         }

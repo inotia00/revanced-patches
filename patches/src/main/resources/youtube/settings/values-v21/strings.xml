@@ -3,4 +3,5 @@
     <!-- Translation Exception -->
     <string name="revanced_spoof_streaming_data_side_effects_tv_embedded">@string/revanced_spoof_streaming_data_side_effects_tv</string>
     <string name="revanced_spoof_streaming_data_side_effects_tv_legacy">@string/revanced_spoof_streaming_data_side_effects_tv</string>
+    <string name="revanced_spoof_streaming_data_side_effects_tv_simply">@string/revanced_spoof_streaming_data_side_effects_tv</string>
 </resources>

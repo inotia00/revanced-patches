@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import org.apache.commons.lang3.StringUtils;
+
 import app.revanced.extension.music.settings.Settings;
 import app.revanced.extension.shared.utils.PackageUtils;
 import app.revanced.extension.shared.utils.ResourceUtils;
@@ -24,6 +26,10 @@ public class GeneralPatch {
     private static final boolean SPOOF_APP_VERSION_WATCH_NEXT_ENDPOINT =
             SPOOF_APP_VERSION &&
                     PackageUtils.isVersionToLessThan(SPOOF_APP_VERSION_TARGET, "7.17.00");
+    private static final boolean SPOOF_APP_VERSION_FOR_LYRICS =
+            Settings.SPOOF_APP_VERSION_FOR_LYRICS.get();
+    private static final String SPOOF_APP_VERSION_FOR_LYRICS_TARGET =
+            Settings.SPOOF_APP_VERSION_FOR_LYRICS_TARGET.get();
     private static final String APP_VERSION =
             PackageUtils.getAppVersionName();
     private static final boolean SETTINGS_INITIALIZED =
@@ -202,6 +208,18 @@ public class GeneralPatch {
         return SPOOF_APP_VERSION
                 ? SPOOF_APP_VERSION_TARGET
                 : version;
+    }
+
+    private static boolean spoofLyricsAppVersionEnabled(String browseId) {
+        return SPOOF_APP_VERSION_FOR_LYRICS &&
+                StringUtils.isNotEmpty(browseId) &&
+                browseId.startsWith("MPLY"); // lyrics browseId
+    }
+
+    public static String getLyricsVersionOverride(String browseId) {
+        return spoofLyricsAppVersionEnabled(browseId)
+                ? SPOOF_APP_VERSION_FOR_LYRICS_TARGET
+                : PackageUtils.getAppVersionName();
     }
 
     // endregion

@@ -1,9 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Shared -->
-    <string name="revanced_settings_title"></string>
-    <string name="revanced_settings_search_title"></string>
+    <string name="revanced_settings_title">RVX</string>
+    <string name="revanced_settings_search_title">Ara %s</string>
+    <string name="revanced_reset_to_default_toast">Varsayılan değerlere sıfırla.</string>
+    <string name="revanced_webview_contextual_menu_get_cookies">Çerezleri getir</string>
+    <string name="revanced_webview_contextual_menu_get_data_sync_id">Veri Senkronizasyon Kimliğini getir</string>
+    <string name="revanced_webview_contextual_menu_get_visitor_data">Ziyaretçi Verilerini getir</string>
+    <string name="revanced_webview_contextual_menu_refresh">Yenile</string>
+    <string name="revanced_webview_cookies">Çerezler</string>
+    <string name="revanced_webview_data_sync_id">Veri Senkronizasyon Kimliği</string>
+    <string name="revanced_webview_visitor_data">Ziyaretçi Verileri</string>
+    <string name="revanced_webview_copy">Kopyala</string>
+    <string name="revanced_webview_toast_copy_success">%s Panoya kopyalandı.</string>
+    <string name="revanced_webview_toast_empty">%s boş.</string>
+    <string name="revanced_webview_toast_no_network">Lütfen ağ bağlantınızı kontrol edin.</string>
+    <string name="revanced_webview_toast_unavailable">WebView kullanılamıyor.</string>
     <!-- Shared Category -->
+    <string name="revanced_restart_first_run">Düzeni normal şekilde yüklemek için yeniden başlatın</string>
+    <string name="revanced_restart_message">Yenile ve yeniden başlat</string>
+    <string name="revanced_settings_search_hint">Arama ayarları</string>
+    <string name="revanced_settings_search_no_results_title">\'%s\' için hiçbir sonuç bulunamadı.</string>
+    <string name="revanced_settings_search_no_results_summary">Başka bir anahtar kelime deneyin.</string>
+    <string name="revanced_settings_search_recent_searches">Son aramalar</string>
+    <string name="revanced_settings_search_remove_message">Arama geçmişinden kaldırılsın mı?</string>
+    <string name="revanced_settings_search_clear_history">Arama geçmişini temizle</string>
+    <string name="revanced_settings_search_clear_history_message">Tüm arama geçmişini silmek istediğinizden emin misiniz?</string>
+    <string name="revanced_settings_search_tips_title">Arama İpuçları</string>
+    <string name="revanced_settings_search_tips_summary">"• Bir yola gitmek için o yola dokunun.
+
+• Bir ayara gitmek için uzun süre basılı tutun.
+
+• Bir arama sorgusunu geçmişe kaydetmek için Giriş tuşuna basın.
+
+• Arama büyük/küçük harf ve noktalama işaretlerini dikkate almaz.
+
+• Üst ayarlar, devre dışı bırakılmış alt ayarların üzerinde görünür."</string>
+    <string name="revanced_settings_search_empty_history_title">Arama geçmişi boş</string>
+    <string name="revanced_settings_search_empty_history_summary">Arama geçmişini kaydetmek için bir arama sorgusu yazın ve Giriş tuşuna basın.</string>
+    <string name="revanced_settings_search_history_title">Ayarlar arama geçmişini göster</string>
+    <string name="revanced_settings_search_history_summary_on">Ayarlar arama geçmişi görüntüleniyor.</string>
+    <string name="revanced_settings_search_history_summary_off">Ayarlar arama geçmişi gösterilmiyor.</string>
     <!-- PreferenceScreen: Account -->
     <string name="revanced_preference_screen_account_title">Hesap</string>
     <string name="revanced_hide_account_menu_title">Hesap menüsünü gizle</string>
@@ -105,6 +142,7 @@ Bilinen sorunlar:
     <string name="revanced_hide_flyout_menu_remove_from_library_title">Kitaplıktan kaldır menüsünü gizle</string>
     <string name="revanced_hide_flyout_menu_remove_from_playlist_title">\"Oynatma listesinden kaldır\" menüsünü gizle</string>
     <string name="revanced_hide_flyout_menu_report_title">Rapor menüsünü gizle</string>
+    <string name="revanced_hide_flyout_menu_save_episode_for_later_save_to_library_title">Bölümü daha sonra izlemek üzere kaydet ve Kitaplığa kaydet menülerini gizle</string>
     <string name="revanced_hide_flyout_menu_save_to_playlist_title">Oynatma listesine kaydet menüsünü gizle</string>
     <string name="revanced_hide_flyout_menu_share_title">Paylaş menüsünü gizle</string>
     <string name="revanced_hide_flyout_menu_shuffle_play_title">Karışık çal menüsünü gizle</string>
@@ -143,6 +181,9 @@ Bilinen sorunlar:
     <string name="revanced_disable_cairo_splash_animation_summary">Uygulama açılışındaki Kahire açılış animasyonunu devre dışı bırakır.</string>
     <string name="revanced_disable_dislike_redirection_title">Beğenmeme yönlendirmesini devre dışı bırak</string>
     <string name="revanced_disable_dislike_redirection_summary">Beğenmedim düğmesine tıklandığında sonraki parçaya yönlendirmeyi devre dışı bırakır.</string>
+    <string name="revanced_disable_auto_audio_tracks_title">Zorunlu otomatik ses parçalarını devre dışı bırak</string>
+    <string name="revanced_disable_auto_audio_tracks_summary">"Podcast'ler için zorunlu otomatik ses parçalarını devre dışı bırakın.
+Sınırlama: 'Akış verilerini taklit et' etkinleştirilmiş ise ve varsayılan istemci 'Android VR Kimlik Doğrulaması' ise, bu çalışmayabilir."</string>
     <string name="revanced_disable_auto_captions_title">Altyazıların kendiliğinden açılmasını kapat</string>
     <string name="revanced_disable_auto_captions_summary">Altyazıların kendiliğinden açılmasını devre dışı bırakır.</string>
     <string name="revanced_enable_landscape_mode_title">Yatay Modu Etkinleştir</string>
@@ -257,9 +298,9 @@ Uygulama açık temaları desteklemediğinden mümkünse koyu renkler kullanın.
     <string name="revanced_enable_forced_miniplayer_title">Zorunlu mini oynatıcıyı etkinleştir</string>
     <string name="revanced_enable_forced_miniplayer_summary">Yeni bir parçaya geçerken zorunlu mini oynatıcıyı etkinleştirir.</string>
     <string name="revanced_enable_smooth_transition_animation_title">Yumuşak geçiş animasyonunu etkinleştir</string>
-    <string name="revanced_enable_smooth_transition_animation_summary">"Mini oynatıcı simge durumuna küçültülmüş durumdan büyütüldüğünde akıcı animasyon sağlar.
+    <string name="revanced_enable_smooth_transition_animation_summary">Mini oynatıcı simge durumuna küçültülmüş durumdan büyütüldüğünde akıcı animasyon sağlar.
 
-Sınırlamalar: Gerçek zamanlı şarkı sözü kullanıcı arayüzü bazı kullanıcılar için bozuk olabilir."</string>
+Sınırlamalar: Gerçek zamanlı şarkı sözü kullanıcı arayüzü bazı kullanıcılar için bozuk olabilir.</string>
     <string name="revanced_enable_swipe_to_dismiss_miniplayer_title">Mini oynatıcıyı kapatmak için kaydırmayı etkinleştir</string>
     <string name="revanced_enable_swipe_to_dismiss_miniplayer_summary">Mini oynatıcıyı kapatmak için aşağı kaydırmayı etkinleştirir.</string>
     <string name="revanced_enable_comments_scroll_top_title">Yorumlarda en üste kaydırmayı etkinleştir</string>
@@ -282,6 +323,8 @@ Sınırlamalar: SponsorBlock segmentleri arama çubuğunda gösterilmiyor."</str
     <string name="revanced_hide_comment_timestamp_and_emoji_buttons_summary">Yorum yazarken zaman damgası ve emoji düğmelerini gizle.</string>
     <string name="revanced_hide_fullscreen_share_button_title">Tam ekran\'daki paylaş butonunu gizle</string>
     <string name="revanced_hide_fullscreen_share_button_summary">Tam ekran oynatıcısındaki paylaş butonunu gizler.</string>
+    <string name="revanced_hide_comments_information_button_title">Bilgileri Gizle düğmesi</string>
+    <string name="revanced_hide_comments_information_button_summary">Yorumlar panelindeki Bilgi düğmesini gizler.</string>
     <string name="revanced_hide_lyrics_share_button_title">Şarkı sözlerini gizle Paylaş düğmesi</string>
     <string name="revanced_hide_lyrics_share_button_summary">Şarkı sözlerindeki Paylaş düğmesini gizler.</string>
     <string name="revanced_hide_song_video_toggle_title">Şarkıyı / Videoyu Gizle geçişi</string>
@@ -444,6 +487,19 @@ APl anahtarının nasıl verileceğini görmek için tıklayın."</string>
     <string name="revanced_sb_about_api">sponsor.ajay.app</string>
     <!-- PreferenceScreen: Miscellaneous -->
     <string name="revanced_preference_screen_misc_title">Diğer ayarlar</string>
+    <string name="revanced_settings_import_export_title">İçe aktarma / Dışa aktarma ayarları</string>
+    <string name="revanced_settings_import_export_summary">RVX Müzik ayarlarını içe / dışa aktarma.</string>
+    <string name="revanced_settings_export_as_file">Ayarları dosyaya aktar</string>
+    <string name="revanced_settings_import_as_file">Ayarları dosyadan içe aktar</string>
+    <string name="revanced_settings_import_export_as_text">Ayarları metin olarak içe/dışa aktar</string>
+    <string name="revanced_settings_export_failed">Ayarlar dışa aktarılamadı.</string>
+    <string name="revanced_settings_export_success">Ayarlar başarıyla dışa aktarıldı.</string>
+    <string name="revanced_settings_import">İçe aktar</string>
+    <string name="revanced_settings_import_copy">Kopyala</string>
+    <string name="revanced_settings_import_failed">İçe aktarma başarısız oldu: %s.</string>
+    <string name="revanced_settings_import_reset">Ayarlar varsayılan değerlere sıfırlandı.</string>
+    <string name="revanced_settings_import_success">%d ayarları içe aktarıldı.</string>
+    <string name="revanced_settings_reset">Sıfırla</string>
     <string name="revanced_share_copy_settings_success">Ayarlar panoya kopyalandı</string>
     <string name="revanced_bypass_image_region_restrictions_title">Resimlerin bölge kısıtlamalarını atla</string>
     <string name="revanced_bypass_image_region_restrictions_summary">Bazı bölgelerde engellenen alan adını değiştirerek oynatma listesi küçük resimlerinin, kanal avatarlarının vb. alınabilmesini sağlar.</string>
@@ -479,9 +535,85 @@ YouTube Premium kullanıcısıysanız bu ayar gerekli olmayabilir."</string>
 
 Bilinen Sorunlar:
 • Oynatma sırasında ses aralıklı olarak takılabilir.</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_no_sdk">Android SDK gerektirme</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_music_no_sdk">Android Müzik için SDK Gerektirme</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_vr">Android VR</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">İlkel TV altyapısı</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_simply">Basit TV</string>
     <string name="revanced_spoof_streaming_data_client_entry_visionos">vizyon işletim sistemi</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_no_sdk_about_title">Android SDK olmadan oturum açın</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_no_sdk_about_summary">Android SDK olmadan nasıl giriş yapacağınızı görmek için buraya tıklayın.</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_no_sdk_dialog_title">Android SDK olmadan oturum açın</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_no_sdk_dialog_message">"SDK kullanmadan Android'e (YouTube) giriş yapmak, Google tarafından sağlanan yönergeleri (Google hesabı yetkilendirmesi - Android uygulamaları için OAuth 2,0) izler:
+
+1. WebView'de giriş sayfasını açmak için 'Yetkilendirme anahtarı al' seçeneğine tıklayın.
+
+2. Google Hesabınıza giriş yapın.
+
+3. Giriş sonuçları 5 saniye içinde gösterilecektir.
+
+※ Kimlik doğrulama anahtarını kaldırmak için 'Sıfırla' seçeneğine tıklayın."</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_no_sdk_dialog_get_authorization_token_text">Yetkilendirme anahtarı alın</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_no_sdk_dialog_reset_text">Sıfırla</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_no_sdk_toast_reset">Kimlik doğrulama anahtarı sıfırlandı.</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_no_sdk_success_dialog_title">Giriş yapıldı</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_no_sdk_success_dialog_message">"Kimlik doğrulama anahtarı kaydedildi.
+
+- Bu işlemle verilen kimlik doğrulama anahtarı yalnızca YouTube'da kullanılabilir (RVX'te YouTube'dan akış verilerini almak için kullanılır).
+
+- 6 aydan fazla kullanılmayan kimlik doğrulama anahtarı Google sunucuları tarafından iptal edilecektir.
+
+- Parolanızı değiştirirseniz, hesap ayarlarından bir cihazın kaydını silerseniz veya uygulamayı kaldırırsanız, kimlik doğrulama anahtarını yeniden oluşturmanız gerekecektir."</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_about_title">Android VR\'a giriş yapın</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_about_summary">Android VR\'a nasıl giriş yapacağınızı görmek için buraya tıklayın.</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_title">Android VR\'a giriş yapın</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_message">"Android VR'a (YouTube VR) giriş yapmak, Google tarafından sağlanan yönergeleri (Google hesabı yetkilendirmesi - TV ve sınırlı giriş cihazı uygulamaları için OAuth 2,0) izler:
+
+1. Etkinleştirme kodu oluşturmak için 'Etkinleştirme kodunu al' seçeneğine tıklayın.
+
+2. 'Web sitesini aç' seçeneğine tıklayarak 'https://yt.be/activate' adresine gidin.
+
+3. Etkinleştirme kodunu girin.
+
+4. İstendiğinde oturum açın. Birden fazla Google Hesabınız varsa, YouTube ile kullandığınız hesabı seçin. Zaten oturum açtıysanız, bir sonraki adıma geçin.
+
+5. Oturum açtıktan sonra RVX'e geri dönün ve tekrar 'Android VR'a giriş yap' seçeneğine tıklayın.
+
+6. Yetkilendirme anahtarı almak için 'Yetkilendirme anahtarı al' seçeneğine tıklayın.
+
+※ Kimlik doğrulama anahtarını veya etkinleştirme kodunu kaldırmak için 'Sıfırla' seçeneğine tıklayın."</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_get_activation_code_text">Etkinleştirme kodunu alın</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_get_authorization_token_text">Yetkilendirme anahtarı alın</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_reset_text">Sıfırla</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_failed">Kimlik doğrulama anahtarı oluşturulamadı.</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_failed_suggestion">Sıfırla butonuna tıklayın ve tekrar deneyin.</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_reset">Kimlik doğrulama anahtarı ve etkinleştirme kodu sıfırlandı.</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_success_dialog_title">Giriş yapıldı</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_success_dialog_message">"Kimlik doğrulama anahtarı kaydedildi.
+
+- Bu işlemle verilen kimlik doğrulama anahtarı yalnızca YouTube VR'da kullanılabilir (RVX'te, YouTube VR'dan akış verilerini almak için kullanılır).
+
+- 6 aydan fazla kullanılmayan kimlik doğrulama anahtarı Google sunucuları tarafından iptal edilecektir.
+
+- Parolanızı değiştirirseniz, hesap ayarlarında bir cihazın kaydını silerseniz veya uygulamayı kaldırırsanız, kimlik doğrulama anahtarını yeniden oluşturmanız gerekecektir."</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_dialog_title">Etkinleştirme kodu</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_dialog_message">"Etkinleştirme kodu:
+%s
+
+1. 'https://yt.be/activate' adresine gitmek için 'Web sitesini aç' seçeneğine tıklayın.
+
+2. Etkinleştirme kodunu girin.
+
+3. İstendiğinde oturum açın. Birden fazla Google Hesabınız varsa, YouTube ile kullandığınız hesabı seçin. Zaten oturum açtıysanız, bir sonraki adıma geçin.
+
+4. Oturum açtıktan sonra, RVX'e geri dönün ve tekrar 'Android VR'ye giriş yap' seçeneğine tıklayın.
+
+5. Yetkilendirme belirteci almak için 'Yetkilendirme anahtarı al' seçeneğine tıklayın."</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_dialog_open_website_text">Web sitesini aç</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_toast_copy">Etkinleştirme kodu panoya kopyalandı: %s.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden">İstemci akışlarından hiçbiri alınamadı.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Varsayılan istemciyi TV olarak değiştirmeyi deneyin.</string>
     <string name="revanced_watch_history_type_title">İzleme geçmişi türü</string>
     <string name="revanced_watch_history_type_summary">"- Orijinal: Google hesabının izleme geçmişi ayarlarını takip eder, ancak izleme geçmişi DNS veya VPN nedeniyle çalışmayabilir.
 - Alan adını değiştir: Google hesabının izleme geçmişi ayarlarını takip eder.

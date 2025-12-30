@@ -97,7 +97,7 @@ public class AlbumMusicVideoPatch {
             if (request == null) {
                 return;
             }
-            String songId = request.getStream();
+            String songId = request.getSongId();
             if (songId.isEmpty()) {
                 Logger.printDebug(() -> "Official song not found, videoId: " + videoId);
                 return;

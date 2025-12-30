@@ -9,10 +9,12 @@ import app.revanced.patcher.patch.bytecodePatch
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import app.revanced.patches.shared.ANDROID_AUTOMOTIVE_STRING
 import app.revanced.patches.shared.CLIENT_INFO_CLASS_DESCRIPTOR
+import app.revanced.patches.shared.authenticationChangeListenerFingerprint
 import app.revanced.patches.shared.autoMotiveFingerprint
 import app.revanced.patches.shared.clientTypeFingerprint
 import app.revanced.patches.shared.createPlayerRequestBodyWithModelFingerprint
 import app.revanced.patches.shared.indexOfClientInfoInstruction
+import app.revanced.patches.shared.indexOfMessageLiteBuilderReference
 import app.revanced.util.fingerprint.matchOrThrow
 import app.revanced.util.fingerprint.methodOrThrow
 import app.revanced.util.getReference

@@ -69,7 +69,7 @@ public class ThrottlingParameterUtils {
      * User-agent.
      */
     private static final String USER_AGENT =
-            "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0; Xbox)";
+            "Mozilla/5.0 (SMART-TV; Linux; Tizen 8.0) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/7.0 Chrome/108.0.5359.1 TV Safari/537.36";
     /**
      * Client config Json Object.
      */

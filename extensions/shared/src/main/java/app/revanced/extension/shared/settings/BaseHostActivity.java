@@ -3,6 +3,7 @@ package app.revanced.extension.shared.settings;
 import static app.revanced.extension.shared.utils.ResourceUtils.getIdIdentifier;
 import static app.revanced.extension.shared.utils.ResourceUtils.getLayoutIdentifier;
 import static app.revanced.extension.shared.utils.ResourceUtils.getStringIdentifier;
+import static app.revanced.extension.shared.utils.Utils.isSDKAbove;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -109,9 +110,11 @@ public abstract class BaseHostActivity extends Activity {
         toolbar.setNavigationOnClickListener(getNavigationClickListener(this));
         toolbar.setTitle(STRING_REVANCED_SETTINGS_TITLE);
 
-        final int margin = Utils.dipToPixels(16);
-        toolbar.setTitleMarginStart(margin);
-        toolbar.setTitleMarginEnd(margin);
+        if (isSDKAbove(24)) {
+            final int margin = Utils.dipToPixels(16);
+            toolbar.setTitleMarginStart(margin);
+            toolbar.setTitleMarginEnd(margin);
+        }
         TextView toolbarTextView = Utils.getChildView(toolbar, false, view -> view instanceof TextView);
         if (toolbarTextView != null) {
             toolbarTextView.setTextColor(BaseThemeUtils.getAppForegroundColor());

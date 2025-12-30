@@ -10,8 +10,28 @@ public final class app/revanced/patches/all/misc/display/edgetoedge/EdgeToEdgeDi
 	public static final fun getEdgeToEdgeDisplayPatch ()Lapp/revanced/patcher/patch/ResourcePatch;
 }
 
+public final class app/revanced/patches/all/misc/installer/ChangeInstallerPackageNamePatchKt {
+	public static final fun getChangeInstallerPackageNamePatch ()Lapp/revanced/patcher/patch/BytecodePatch;
+}
+
 public final class app/revanced/patches/all/misc/network/OverrideCertificatePinningPatchKt {
 	public static final fun getOverrideCertificatePinningPatch ()Lapp/revanced/patcher/patch/ResourcePatch;
+}
+
+public final class app/revanced/patches/all/misc/signature/AppInfo {
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getCertificateData ()Ljava/lang/String;
+	public final fun getPackageName ()Ljava/lang/String;
+}
+
+public final class app/revanced/patches/all/misc/signature/BaseSpoofSignaturePatchKt {
+	public static final fun baseSpoofSignaturePatch (Lkotlin/jvm/functions/Function0;)Lapp/revanced/patcher/patch/BytecodePatch;
+}
+
+public final class app/revanced/patches/all/misc/signature/SpoofSignaturePatchKt {
+	public static final fun getSpoofSignaturePatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
 public abstract interface class app/revanced/patches/all/misc/transformation/IMethodCall {
@@ -44,10 +64,7 @@ public final class app/revanced/patches/music/actionbar/components/ActionBarComp
 }
 
 public final class app/revanced/patches/music/ads/general/AdsPatchKt {
-	public static field hideFullscreenAds Lapp/revanced/patcher/patch/Option;
 	public static final fun getAdsPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
-	public static final fun getHideFullscreenAds ()Lapp/revanced/patcher/patch/Option;
-	public static final fun setHideFullscreenAds (Lapp/revanced/patcher/patch/Option;)V
 }
 
 public final class app/revanced/patches/music/flyoutmenu/components/FlyoutMenuComponentsPatchKt {
@@ -90,6 +107,10 @@ public final class app/revanced/patches/music/general/redirection/DislikeRedirec
 
 public final class app/revanced/patches/music/general/splash/CairoSplashAnimationPatchKt {
 	public static final fun getCairoSplashAnimationPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
+}
+
+public final class app/revanced/patches/music/general/spoofappversion/SpoofAppVersionForLyricsPatchKt {
+	public static final fun getSpoofAppVersionForLyricsPatch ()Lapp/revanced/patcher/patch/ResourcePatch;
 }
 
 public final class app/revanced/patches/music/general/spoofappversion/SpoofAppVersionPatchKt {
@@ -252,10 +273,13 @@ public final class app/revanced/patches/music/utils/playservice/VersionCheckPatc
 	public static final fun is_7_33_or_greater ()Z
 	public static final fun is_8_03_or_greater ()Z
 	public static final fun is_8_05_or_greater ()Z
+	public static final fun is_8_07_or_greater ()Z
 	public static final fun is_8_12_or_greater ()Z
 	public static final fun is_8_15_or_greater ()Z
 	public static final fun is_8_28_or_greater ()Z
 	public static final fun is_8_29_or_greater ()Z
+	public static final fun is_8_30_or_greater ()Z
+	public static final fun is_8_33_or_greater ()Z
 }
 
 public final class app/revanced/patches/music/utils/resourceid/SharedResourceIdPatchKt {
@@ -271,6 +295,7 @@ public final class app/revanced/patches/music/utils/resourceid/SharedResourceIdP
 	public static final fun getDarkBackground ()J
 	public static final fun getDesignBottomSheetDialog ()J
 	public static final fun getElementsContainer ()J
+	public static final fun getElementsLottieAnimationViewTagId ()J
 	public static final fun getEndButtonsContainer ()J
 	public static final fun getFloatingLayout ()J
 	public static final fun getHistoryMenuItem ()J
@@ -474,6 +499,10 @@ public final class app/revanced/patches/reddit/utils/extension/SharedExtensionPa
 	public static final fun getSharedExtensionPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
+public final class app/revanced/patches/reddit/utils/fix/signature/SpoofSignaturePatchKt {
+	public static final fun getSpoofSignaturePatch ()Lapp/revanced/patcher/patch/BytecodePatch;
+}
+
 public final class app/revanced/patches/reddit/utils/resourceid/SharedResourceIdPatchKt {
 	public static final fun getNsfwDialogTitle ()J
 }
@@ -499,8 +528,8 @@ public final class app/revanced/patches/shared/FingerprintsKt {
 }
 
 public final class app/revanced/patches/shared/ads/AdsPatchKt {
-	public static final fun adsPatch (Lkotlin/jvm/functions/Function1;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)Lapp/revanced/patcher/patch/BytecodePatch;
-	public static synthetic fun adsPatch$default (Lkotlin/jvm/functions/Function1;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lapp/revanced/patcher/patch/BytecodePatch;
+	public static final fun adsPatch (Lkotlin/jvm/functions/Function1;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function1;)Lapp/revanced/patcher/patch/BytecodePatch;
+	public static synthetic fun adsPatch$default (Lkotlin/jvm/functions/Function1;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lapp/revanced/patcher/patch/BytecodePatch;
 	public static final fun getInterstitialsContainer ()J
 	public static final fun getSlidingDialogAnimation ()J
 }
@@ -643,6 +672,10 @@ public final class app/revanced/patches/shared/spans/InclusiveSpanPatchKt {
 
 public final class app/revanced/patches/shared/spoof/appversion/BaseSpoofAppVersionPatchKt {
 	public static final fun baseSpoofAppVersionPatch (Ljava/lang/String;)Lapp/revanced/patcher/patch/BytecodePatch;
+}
+
+public final class app/revanced/patches/shared/spoof/browse/SpoofClientBrowseEndpointPatchKt {
+	public static final fun getSpoofClientBrowseEndpointPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
 public final class app/revanced/patches/shared/spoof/guide/SpoofClientGuideEndpointPatchKt {
@@ -1470,7 +1503,8 @@ public final class app/revanced/util/ResourceUtilsKt {
 	public static final fun addEntryValues (Lapp/revanced/patcher/patch/ResourcePatchContext;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 	public static synthetic fun addEntryValues$default (Lapp/revanced/patcher/patch/ResourcePatchContext;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)V
 	public static final fun adoptChild (Lorg/w3c/dom/Node;Ljava/lang/String;Lkotlin/jvm/functions/Function1;)V
-	public static final fun appendAppVersion (Lapp/revanced/patcher/patch/ResourcePatchContext;Ljava/lang/String;)V
+	public static final fun appendAppVersion (Lapp/revanced/patcher/patch/ResourcePatchContext;Ljava/lang/String;Ljava/lang/String;)V
+	public static synthetic fun appendAppVersion$default (Lapp/revanced/patcher/patch/ResourcePatchContext;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)V
 	public static final fun cloneNodes (Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;)V
 	public static final fun copyAdaptiveIcon (Lapp/revanced/patcher/patch/ResourcePatchContext;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;)V
 	public static synthetic fun copyAdaptiveIcon$default (Lapp/revanced/patcher/patch/ResourcePatchContext;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;ILjava/lang/Object;)V

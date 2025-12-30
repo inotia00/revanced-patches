@@ -256,7 +256,7 @@ YouTube Music の検索や設定などのアクティビティは公開されて
     <string name="revanced_enable_forced_miniplayer_title">ミニプレイヤーの強制</string>
     <string name="revanced_enable_forced_miniplayer_summary">新しいトラックに切り替えたときに強制的にミニプレーヤーを有効にします。</string>
     <string name="revanced_enable_smooth_transition_animation_title">スムーズな遷移アニメーションを有効化</string>
-    <string name="revanced_enable_smooth_transition_animation_summary">"ミニプレイヤーを最大化したときのスムーズなアニメーションを有効にします。"</string>
+    <string name="revanced_enable_smooth_transition_animation_summary">ミニプレイヤーを最大化したときのスムーズなアニメーションを有効にします。</string>
     <string name="revanced_enable_swipe_to_dismiss_miniplayer_title">スワイプしてミニプレーヤーを閉じる</string>
     <string name="revanced_enable_swipe_to_dismiss_miniplayer_summary">下にスワイプしてミニプレーヤーを閉じられるようにします。</string>
     <string name="revanced_enable_comments_scroll_top_title">コメントの最上部へのスクロールを有効化</string>

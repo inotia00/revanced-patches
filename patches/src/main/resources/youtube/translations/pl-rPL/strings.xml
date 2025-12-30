@@ -275,9 +275,11 @@ Opis
     <string name="revanced_hide_web_search_results_title">Wyniki wyszukiwania stron internetowych</string>
     <string name="revanced_hide_web_search_results_summary_on">Ukryte</string>
     <string name="revanced_hide_web_search_results_summary_off">Widoczne</string>
-    <string name="revanced_hide_get_premium_title">Promocje YouTube Premium</string>
-    <string name="revanced_hide_get_premium_summary_on">Ukryte</string>
-    <string name="revanced_hide_get_premium_summary_off">Widoczne</string>
+    <string name="revanced_hide_youtube_premium_promotion_title">Promocje YouTube Premium</string>
+    <string name="revanced_hide_youtube_premium_promotion_summary_on">"Ukryte
+
+Znany problem: gdy opcja jest włączona, YouTube Doodles stają się nieklikalne."</string>
+    <string name="revanced_hide_youtube_premium_promotion_summary_off">Widoczne</string>
     <!-- PreferenceScreen: Alternative thumbnails -->
     <string name="revanced_preference_screen_alt_thumbnails_title">Alternatywne miniaturki</string>
     <string name="revanced_alt_thumbnail_home_title">Na stronie głównej</string>
@@ -625,7 +627,6 @@ Zmiany zawierają:
     <string name="revanced_disable_translucent_status_bar_title">Półprzezroczystość paska statusu</string>
     <string name="revanced_disable_translucent_status_bar_summary_on">Wyłączona</string>
     <string name="revanced_disable_translucent_status_bar_summary_off">Włączona</string>
-    <string name="revanced_disable_translucent_status_bar_user_dialog_message">Dla większości producentów ROM-ów bazujących na Androidzie 12 i wzwyż, włączenie tej opcji spowoduje stanie się systemowego paska nawigacji przezroczystym.</string>
     <string name="revanced_fix_hype_button_icon_title">Napraw widoczność ikony podbijania</string>
     <string name="revanced_fix_hype_button_icon_summary_on">Tak</string>
     <string name="revanced_fix_hype_button_icon_summary_off">Nie</string>
@@ -812,7 +813,9 @@ Stuknij tutaj, by pobrać YouTube Music.</string>
     <string name="revanced_replace_navigation_button_target_entry_subscriptions">Subskrypcje</string>
     <string name="revanced_replace_navigation_button_target_entry_notifications">Powiadomienia</string>
     <string name="revanced_enable_translucent_navigation_bar_title">Wygląd paska nawigacji</string>
-    <string name="revanced_enable_translucent_navigation_bar_summary_on">Półprzezroczysty</string>
+    <string name="revanced_enable_translucent_navigation_bar_summary_on">"Półprzezroczysty
+
+Znany problem: systemowy pasek nawigacji może być również półprzezroczysty."</string>
     <string name="revanced_enable_translucent_navigation_bar_summary_off">Nieprzezroczysty</string>
     <string name="revanced_hide_navigation_bar_title">Pasek nawigacji</string>
     <string name="revanced_hide_navigation_bar_summary_on">Ukryty</string>
@@ -2405,20 +2408,20 @@ Jeśli jesteś użytkownikiem YouTube Premium, to ustawienie te nie jest koniecz
 • wyłączenie wymuszania ścieżki dźwiękowej może nie być dostępne
 • stabilna głośność nie jest dostępna
 • filmy dla dzieci mogą się nie odtwarzać będąc zalogowanym lub w trybie incognito
-• 1080p+, AV1 i HDR nie są wspierane"</string>
+• 1080p+, AV1 i HDR nie są wspierane
+• tryb immersyjny 360° VR nie jest dostępny"</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_no_sdk">• film może się zatrzymać na równo minucie lub być niedostępny w niektórych regionach</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• brakuje menu od ścieżki dźwiękowej
+• wyłączenie wymuszania ścieżki dźwiękowej może nie być dostępne
 • stabilna głośność nie jest dostępna
 • filmy dla dzieci mogą się nie odtwarzać będąc zalogowanym lub w trybie incognito"</string>
     <string name="revanced_spoof_streaming_data_side_effects_tv">"• jeśli odszyfrowywanie się nie powiedzie, odtwarzanie może się nie powieść
 • czasem film nie odtwarza się nawet po 10 sekundach, dlatego należy kliknąć przycisk od odświeżenia filmu
-• filmy mogą zacząć się z opóźnieniem"</string>
-    <string name="revanced_spoof_streaming_data_side_effects_tv_simply">"• jeśli odszyfrowywanie się nie uda, odtwarzanie może się nie powieść
-• niektóre konto wymagają PoToken, w rezultacie czego odtwarzanie może się nie powieść
-• czasem film nie odtwarza się nawet po 10 sekundach, dlatego należy kliknąć przycisk od odświeżenia filmu
-• filmy mogą zacząć się z opóźnieniem"</string>
+• filmy mogą zacząć się z opóźnieniem
+• tryb immersyjny 360° VR nie jest dostępny"</string>
     <string name="revanced_spoof_streaming_data_side_effects_visionos">"• brakuje menu od ścieżki dźwiękowej
 • filmy dla dzieci mogą się nie odtwarzać będąc zalogowanym lub w trybie incognito
+• tryb immersyjny 360° VR nie jest dostępny
 • jako, że jest to niewydany klient, może przestać działać w każdej chwili"</string>
     <string name="revanced_spoof_streaming_data_side_effects_unknown">• Nieznane</string>
     <string name="revanced_spoof_streaming_data_prioritize_video_quality_title">Priorytet w filmie</string>
@@ -2468,6 +2471,50 @@ Przykład 2:
     <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Spróbuj zmienić domyślnego klienta na TV.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: Android VR -->
     <string name="revanced_preference_category_android_vr">Android VR</string>
+    <string name="revanced_spoof_streaming_data_android_vr_enable_av1_codec_title">Używanie kodeka AV1</string>
+    <string name="revanced_spoof_streaming_data_android_vr_enable_av1_codec_summary_on">"Włączone
+
+Podczas odtwarzania film może się zacinać lub pomijać klatki."</string>
+    <string name="revanced_spoof_streaming_data_android_vr_enable_av1_codec_summary_off">Wyłączone</string>
+    <string name="revanced_spoof_streaming_data_android_vr_enable_av1_codec_user_dialog_message">"Włączenie tego ustawienia może używać dekodowania oprogramowania AV1.
+
+Podczas odtwarzania film może się zacinać lub pomijać klatki."</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_about_title">Zaloguj się do Android VR</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_about_summary">Kliknij tutaj, by zobaczyć jak zalogować się do Android VR.</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_title">Zaloguj się do Android VR</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_message">"Logowanie się do Android VR (YouTube VR) jest zgodne z wytycznymi dostarczonymi przez Google (autoryzacja konta Google - OAuth 2.0 na potrzeby aplikacji telewizyjnych i urządzeń o ograniczonych wejściach):
+
+1. Kliknij 'Uzyskaj token uwierzytelniający', by wygenerować kod aktywacyjny
+2. Kliknij 'Otwórz stronę', aby przejść do 'https://yt.be/activate'
+3. Wprowadź kod aktywacyjny
+4. Zaloguj się, gdy pojawi się monit. Jeśli masz wiele kont Google, użyj tego, którego używasz w YouTube. Jeśli jesteś już zalogowany, przejdź do następnego kroku
+5. Po zalogowaniu się, wróć do RVX i kliknij ponownie 'O Android VR z autoryzacją'
+6. Kliknij 'Uzyskaj token uwierzytelniający', by go zdobyć
+
+※ Kliknij 'Zresetuj', by usunąć token uwierzytelniający lub kod aktywacyjny."</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_get_activation_code_text">Uzyskaj kod aktywacyjny</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_get_authorization_token_text">Uzyskaj token uwierzytelniający</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_reset_text">Zresetuj</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_failed">Nie udało się wygenerować tokenu uwierzytelniającego.</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_failed_suggestion">Kliknij przycisk zresetuj i spróbuj ponownie.</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_reset">Zresetowano token uwierzytelniający i kod aktywacyjny.</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_success_dialog_title">Zalogowano</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_success_dialog_message">"Zapisano token uwierzytelniający.
+
+- token uwierzytelniający wydany w ramach tego procesu może być używany wyłącznie w serwisie YouTube VR (w RVX służy do pobierania danych strumieniowych z serwisu YouTube VR)
+- token uwierzytelniający, który nie był używany przez ponad 6 miesięcy, zostanie unieważniony przez serwery Google
+- w przypadku zmiany hasła, wyrejestrowania urządzenia w ustawieniach konta lub odinstalowania aplikacji konieczne będzie ponowne wygenerowanie tokenu uwierzytelniającego"</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_dialog_title">Kod aktywacyjny</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_dialog_message">"Kod aktywacyjny:
+%s
+
+1. Kliknij 'Otwórz stronę', aby przejść do 'https://yt.be/activate'
+2. Wprowadź kod aktywacyjny
+3. Zaloguj się, gdy pojawi się monit. Jeśli masz wiele kont Google, użyj tego, którego używasz w YouTube. Jeśli jesteś już zalogowany, przejdź do następnego kroku
+4. Po zalogowaniu się, wróć do RVX i kliknij ponownie 'Zaloguj się do Android VR'
+5. Kliknij 'Uzyskaj token uwierzytelniający', by go zdobyć"</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_dialog_open_website_text">Otwórz stronę</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_toast_copy">Skopiowano kod aktywacyjny do schowka: %s.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: JavaScript -->
     <string name="revanced_preference_category_js">JavaScript</string>
     <string name="revanced_spoof_streaming_data_use_js_title">Włącz klienta JavaScript</string>

@@ -3,6 +3,7 @@ package app.revanced.patches.reddit.layout.branding.packagename
 import app.revanced.patcher.patch.resourcePatch
 import app.revanced.patcher.patch.stringOption
 import app.revanced.patches.reddit.utils.compatibility.Constants.COMPATIBLE_PACKAGE
+import app.revanced.patches.reddit.utils.fix.signature.spoofSignaturePatch
 import app.revanced.patches.reddit.utils.patch.PatchList.CHANGE_PACKAGE_NAME
 import app.revanced.patches.reddit.utils.settings.updatePatchStatus
 import app.revanced.util.Utils.printInfo
@@ -22,6 +23,8 @@ val changePackageNamePatch = resourcePatch(
     false,
 ) {
     compatibleWith(COMPATIBLE_PACKAGE)
+
+    dependsOn(spoofSignaturePatch)
 
     val packageNameRedditOption = stringOption(
         key = "packageNameReddit",

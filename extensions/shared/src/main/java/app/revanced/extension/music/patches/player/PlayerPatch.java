@@ -192,6 +192,12 @@ public class PlayerPatch {
                 : original;
     }
 
+    public static boolean enableSmoothTransitionAnimationInverted(boolean original) {
+        return SETTINGS_INITIALIZED
+                ? !ENABLE_SMOOTH_TRANSITION_ANIMATION
+                : original;
+    }
+
     public static boolean enableSwipeToDismissMiniPlayer() {
         return ENABLE_SWIPE_TO_DISMISS_MINIPLAYER;
     }

@@ -275,9 +275,11 @@
     <string name="revanced_hide_web_search_results_title">Αποτελέσματα αναζήτησης στο διαδίκτυο</string>
     <string name="revanced_hide_web_search_results_summary_on">Κρυμμένα.</string>
     <string name="revanced_hide_web_search_results_summary_off">Εμφανίζονται.</string>
-    <string name="revanced_hide_get_premium_title">Προωθήσεις YouTube Premium</string>
-    <string name="revanced_hide_get_premium_summary_on">Κρυμμένες.</string>
-    <string name="revanced_hide_get_premium_summary_off">Εμφανίζονται.</string>
+    <string name="revanced_hide_youtube_premium_promotion_title">Προωθήσεις YouTube Premium</string>
+    <string name="revanced_hide_youtube_premium_promotion_summary_on">"Κρυμμένες.
+
+Γνωστό θέμα: Όταν αυτή η ρύθμιση είναι ενεργοποιημένη, τα YouTube Doodles δε γίνεται να πατηθούν."</string>
+    <string name="revanced_hide_youtube_premium_promotion_summary_off">Εμφανίζονται.</string>
     <!-- PreferenceScreen: Alternative thumbnails -->
     <string name="revanced_preference_screen_alt_thumbnails_title">Εναλλακτικές μικρογραφίες</string>
     <string name="revanced_alt_thumbnail_home_title">Καρτέλα «Αρχική»</string>
@@ -619,7 +621,6 @@ Playlists
     <string name="revanced_disable_translucent_status_bar_title">Απενεργοποίηση διαφανούς γραμμής κατάστασης</string>
     <string name="revanced_disable_translucent_status_bar_summary_on">Η γραμμή κατάστασης δεν είναι διαφανής.</string>
     <string name="revanced_disable_translucent_status_bar_summary_off">Η διαφάνεια της γραμμής κατάστασης ορίζεται αυτόματα.</string>
-    <string name="revanced_disable_translucent_status_bar_user_dialog_message">Σε ορισμένες εργοστασιακές ROM που τρέχουν Android 12+, η ενεργοποίηση αυτής της λειτουργίας μπορεί να κάνει τη γραμμή πλοήγησης του συστήματος διαφανή.</string>
     <string name="revanced_fix_hype_button_icon_title">Διόρθωση εικονιδίου κουμπιού Hype</string>
     <string name="revanced_fix_hype_button_icon_summary_on">Το εικονίδιο του κουμπί «Hype» εμφανίζεται.</string>
     <string name="revanced_fix_hype_button_icon_summary_off">Το εικονίδιο του κουμπί «Hype» δεν εμφανίζεται.</string>
@@ -805,7 +806,9 @@ Playlists
     <string name="revanced_replace_navigation_button_target_entry_subscriptions">Εγγραφές</string>
     <string name="revanced_replace_navigation_button_target_entry_notifications">Ειδοποιήσεις</string>
     <string name="revanced_enable_translucent_navigation_bar_title">Διαφανή γραμμή πλοήγησης</string>
-    <string name="revanced_enable_translucent_navigation_bar_summary_on">Η γραμμή πλοήγησης είναι διαφανής.</string>
+    <string name="revanced_enable_translucent_navigation_bar_summary_on">"Η γραμμή πλοήγησης είναι διαφανής.
+
+Γνωστό θέμα: Η γραμμή πλοήγησης του συστήματος μπορεί να είναι επίσης διαφανής."</string>
     <string name="revanced_enable_translucent_navigation_bar_summary_off">Η γραμμή πλοήγησης δεν είναι διαφανής.</string>
     <string name="revanced_hide_navigation_bar_title">Γραμμή πλοήγησης</string>
     <string name="revanced_hide_navigation_bar_summary_on">Κρυμμένη.</string>
@@ -1171,6 +1174,9 @@ Playlists
 
 Περιορισμός: Ορισμένοι επισημασμένοι σύνδεσμοι αναζήτησης που δεν έχουν προεπιλεγμένο στυλ κειμένου μπορεί να εξακολουθούν να εμφανίζονται."</string>
     <string name="revanced_hide_comments_highlighted_search_links_summary_off">Εμφανίζονται.</string>
+    <string name="revanced_hide_comments_information_button_title">Κουμπί πληροφοριών</string>
+    <string name="revanced_hide_comments_information_button_summary_on">Κρυμμένο.</string>
+    <string name="revanced_hide_comments_information_button_summary_off">Εμφανίζεται.</string>
     <string name="revanced_hide_live_chat_messages_title">Μηνύματα ζωντανής συζήτησης</string>
     <string name="revanced_hide_live_chat_messages_summary_on">Κρυμμένα.\n\nΑυτή η ρύθμιση ισχύει και για τις ζωντανές μεταδόσεις Shorts.</string>
     <string name="revanced_hide_live_chat_messages_summary_off">Εμφανίζονται.</string>
@@ -2393,9 +2399,11 @@ Playlists
 <small>(Απαιτείται σύνδεση)</small>"</string>
     <string name="revanced_spoof_streaming_data_client_entry_android_no_sdk">"Android
 <small>(No SDK)</small>"</string>
+    <string name="revanced_spoof_streaming_data_client_entry_android_vr">Android VR</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv">TV</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_legacy">"TV
 <small>(Παλιό)</small>"</string>
+    <string name="revanced_spoof_streaming_data_client_entry_tv_simply">TV Simply</string>
     <string name="revanced_spoof_streaming_data_client_entry_tv_embedded">TV Embedded</string>
     <string name="revanced_spoof_streaming_data_client_entry_visionos">"visionOS
 <small>(Ακυκλοφόρητο)</small>"</string>
@@ -2404,16 +2412,20 @@ Playlists
 • O εξαναγκασμός αρχικής γλώσσας ήχου δεν είναι διαθέσιμoς.
 • Η λειτουργία «Σταθερή ένταση» δεν είναι διαθέσιμη.
 • Τα βίντεο για παιδιά ενδέχεται να μην αναπαράγονται αν είστε αποσυνδεμένοι ή σε λειτουργία ανώνυμης περιήγησης.
-• Η ποιότητα 1080p+, HDR, και ο κωδικοποιητής AV1 δεν υποστηρίζονται."</string>
+• Η ποιότητα 1080p+, HDR, και ο κωδικοποιητής AV1 δεν υποστηρίζονται.
+• Η λειτουργία 360° VR δεν είναι διαθέσιμη."</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_no_sdk">• Το βίντεο μπορεί να σταματάει στο 1:00, ή να μην είναι διαθέσιμο σε ορισμένες περιοχές.</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Το μενού «Κομμάτι ήχου» λείπει.
+• Η ρύθμιση «Απενεργοποίηση υποχρεωτικών κομματιών ήχου» δεν είναι διαθέσιμη.
 • Η λειτουργία «Σταθερή ένταση» δεν είναι διαθέσιμη.
 • Τα βίντεο για παιδιά ενδέχεται να μην αναπαράγονται αν είστε αποσυνδεμένοι ή σε λειτουργία ανώνυμης περιήγησης."</string>
     <string name="revanced_spoof_streaming_data_side_effects_tv">"• Αν η αποσυσκότιση αποτύχει, θα αποτύχει και η αναπαραγωγή.
+• Αν το βίντεο δεν ξεκινήσει εντός 10 δευτερολέπτων, πατήστε το κουμπί επαναφόρτωσης βίντεο.
 • Η αναπαραγωγή ενδέχεται να ξεκινάει με καθυστέρηση.
-• Αν το βίντεο δεν ξεκινήσει εντός 10 δευτερολέπτων, πατήστε το κουμπί επαναφόρτωσης βίντεο."</string>
+• Η λειτουργία 360° VR δεν είναι διαθέσιμη."</string>
     <string name="revanced_spoof_streaming_data_side_effects_visionos">"• Το μενού «Κομμάτι ήχου» λείπει.
 • Τα βίντεο για παιδιά ενδέχεται να μην αναπαράγονται αν είστε αποσυνδεμένοι ή σε λειτουργία ανώνυμης περιήγησης.
+• Η λειτουργία 360° VR δεν είναι διαθέσιμη.
 • Πρόκεται για ένα ακυκλοφόρητο πρόγραμμα πελάτη, οπότε μπορεί να σταματήσει να λειτουργεί ανά πάσα στιγμή."</string>
     <string name="revanced_spoof_streaming_data_side_effects_unknown">• Άγνωστες</string>
     <string name="revanced_spoof_streaming_data_prioritize_video_quality_title">Προτεραιοποίηση ποιότητας βίντεο</string>
@@ -2462,6 +2474,50 @@ Playlists
     <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Δοκιμάστε να αλλάξετε το προεπιλεγμένο πρόγραμμα πελάτη παραποίησης δεδομένων ροής σε TV.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: Android VR -->
     <string name="revanced_preference_category_android_vr">Android VR</string>
+    <string name="revanced_spoof_streaming_data_android_vr_enable_av1_codec_title">Ενεργοποίηση κωδικοποιητή AV1</string>
+    <string name="revanced_spoof_streaming_data_android_vr_enable_av1_codec_summary_on">"Ο κωδικοποιητής βίντεο είναι ο AVC (H.264), ο VP9 ή ο AV1.
+
+Η αναπαραγωγή μπορεί να κομπιάζει ή να χάνει καρέ."</string>
+    <string name="revanced_spoof_streaming_data_android_vr_enable_av1_codec_summary_off">Ο κωδικοποιητής βίντεο είναι ο AVC (H.264) ή ο VP9.</string>
+    <string name="revanced_spoof_streaming_data_android_vr_enable_av1_codec_user_dialog_message">"Η ενεργοποίηση αυτής της ρύθμισης ενδέχεται να έχει ως αποτέλεσμα τη χρήση αποκωδικοποίησης AV1.
+
+Η αναπαραγωγή μπορεί να κομπιάζει ή να χάνει καρέ."</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_about_title">Σύνδεση στο Android VR</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_about_summary">Πατήστε για να δείτε πως να συνδεθείτε στο Android VR.</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_title">Σύνδεση στο Android VR</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_message">"Η σύνδεση στο Android VR (YouTube VR) γίνεται σύμφωνα με τις οδηγίες της Google (Google account authorization - OAuth 2.0 for TV and Limited-Input Device Applications):
+
+1. Πατήστε «Λήψη κωδικού ενεργοποίησης» για να δημιουργήσετε έναν κωδικό ενεργοποίησης.
+2. Πατήστε «Άνοιγμα ιστοσελίδας» για να μεταβείτε στο 'https://yt.be/activate'.
+3. Εισάγετε τον κωδικό ενεργοποίησης.
+4. Συνδεθείτε όταν σας ζητηθεί. Αν έχετε πολλαπλούς λογαριασμούς Google, επιλέξτε τον λογαριασμό που χρησιμοποιείτε με το YouTube. Αν έχετε συνδεθεί ήδη, συνεχίστε στο επόμενο βήμα.
+5. Μόλις συνδεθείτε, επιστρέψτε στο RVX και πατήστε το «Σχετικά με το Android VR (με σύνδεση χρήστη)» ξανά.
+6. Πατήστε «Λήψη διακριτικού εξουσιοδότησης» για να λάβετε διακριτικό εξουσιοδότησης.
+
+※ Πατήστε «Επαναφορά» για να καταργήσετε το διακριτικό εξουσιοδότησης ή τον κωδικό ενεργοποίησης."</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_get_activation_code_text">Λήψη κωδικού ενεργοποίησης</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_get_authorization_token_text">Λήψη διακριτικού εξουσιοδότησης</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_dialog_reset_text">Επαναφορά</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_failed">Αποτυχία έκδοσης διακριτικού εξουσιοδότησης.</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_failed_suggestion">Πατήστε «Επαναφορά» και προσπαθήστε ξανά.</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_toast_reset">Το διακριτικό και ο κωδικός επαναφέρθηκαν.</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_success_dialog_title">Συνδεθήκατε!</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_success_dialog_message">"Το διακριτικό εξουσιοδότησης αποθηκεύτηκε.
+
+- Το διακριτικό εξουσιοδότησης που εκδίδεται μέσω αυτής της διαδικασίας μπορεί να χρησιμοποιηθεί μόνο στο YouTube VR (Στο RVX, χρησιμοποιείται για τη λήψη δεδομένων ροής από το YouTube VR).
+- Τα διακριτικά εξουσιοδότησης που δεν χρησιμοποιούνται για περισσότερο από 6 μήνες θα ανακληθούν από τους διακομιστές της Google.
+- Εάν αλλάξετε τον κωδικό πρόσβασής σας, ή καταργήσετε την εγγραφή μιας συσκευής στις ρυθμίσεις του λογαριασμού σας, ή απεγκαταστήστε την εφαρμογή, θα πρέπει να επανεκδώσετε το διακριτικό εξουσιοδότησης."</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_dialog_title">Κωδικός ενεργοποίησης</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_dialog_message">"Κωδικός ενεργοποίησης:
+%s
+
+1. Πατήστε «Άνοιγμα ιστοσελίδας» για να μεταβείτε στο 'https://yt.be/activate'.
+2. Εισάγετε τον κωδικό ενεργοποίησης.
+3. Συνδεθείτε όταν σας ζητηθεί. Αν έχετε πολλαπλούς λογαριασμούς Google, επιλέξτε τον λογαριασμό που χρησιμοποιείτε με το YouTube. Αν έχετε συνδεθεί ήδη, συνεχίστε στο επόμενο βήμα.
+4. Μόλις συνδεθείτε, επιστρέψτε στο RVX και πατήστε το «Σύνδεση στο Android VR» ξανά.
+5. Πατήστε «Λήψη διακριτικού εξουσιοδότησης» για να λάβετε διακριτικό εξουσιοδότησης."</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_dialog_open_website_text">Άνοιγμα ιστοσελίδας</string>
+    <string name="revanced_spoof_streaming_data_sign_in_android_vr_activation_code_toast_copy">Ο κωδικός αντιγράφηκε στο πρόχειρο: %s.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: JavaScript -->
     <string name="revanced_preference_category_js">JavaScript</string>
     <string name="revanced_spoof_streaming_data_use_js_title">Χρήση προγράμματος πελάτη JavaScript</string>

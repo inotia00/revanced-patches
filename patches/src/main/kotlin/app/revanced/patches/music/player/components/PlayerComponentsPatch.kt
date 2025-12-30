@@ -8,6 +8,7 @@ import app.revanced.patcher.extensions.InstructionExtensions.removeInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.replaceInstruction
 import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.patch.ResourcePatchContext
+import app.revanced.patcher.patch.booleanOption
 import app.revanced.patcher.patch.bytecodePatch
 import app.revanced.patcher.patch.resourcePatch
 import app.revanced.patcher.util.proxy.mutableTypes.MutableField.Companion.toMutable
@@ -57,6 +58,7 @@ import app.revanced.util.findInstructionIndicesReversed
 import app.revanced.util.findMethodOrThrow
 import app.revanced.util.fingerprint.injectLiteralInstructionBooleanCall
 import app.revanced.util.fingerprint.injectLiteralInstructionViewCall
+import app.revanced.util.fingerprint.legacyFingerprint
 import app.revanced.util.fingerprint.matchOrNull
 import app.revanced.util.fingerprint.matchOrThrow
 import app.revanced.util.fingerprint.methodCall
@@ -203,6 +205,18 @@ val playerComponentsPatch = bytecodePatch(
         mainActivityResolvePatch,
         videoTypeHookPatch,
         commentsPanelPatch,
+    )
+
+    val swipeToDismissMiniPlayer by booleanOption(
+        key = "swipeToDismissMiniPlayer",
+        default = true,
+        title = "Swipe to dismiss miniplayer",
+        description = """
+            Adds an option to enable swipe to dismiss the miniplayer.
+            
+            If this patch option is enabled, the empty miniplayer may not show when the miniplayer is dismissed.
+            """.trimIndent(),
+        required = true
     )
 
     execute {
@@ -622,10 +636,43 @@ val playerComponentsPatch = bytecodePatch(
                 "$PLAYER_CLASS_DESCRIPTOR->enableSmoothTransitionAnimation(Z)Z"
             )
 
+            val smoothTransitionAnimationMethod =
+                smoothTransitionAnimationFingerprint.methodCall()
+
+            fun indexOfSmoothTransitionAnimation(method: Method) =
+                method.indexOfFirstInstruction {
+                    opcode == Opcode.INVOKE_VIRTUAL &&
+                            getReference<MethodReference>()?.toString() == smoothTransitionAnimationMethod
+                }
+
+            val smoothTransitionAnimationInvertedFingerprint = legacyFingerprint(
+                name = "smoothTransitionAnimationInvertedFingerprint",
+                returnType = "V",
+                accessFlags = AccessFlags.PUBLIC.value,
+                parameters = emptyList(),
+                customFingerprint = { method, _ ->
+                    indexOfSmoothTransitionAnimation(method) >= 0
+                }
+            )
+
+            smoothTransitionAnimationInvertedFingerprint
+                .methodOrThrow(smoothTransitionAnimationInvertedParentFingerprint)
+                .apply {
+                    val index = indexOfSmoothTransitionAnimation(this)
+                    val register = getInstruction<OneRegisterInstruction>(index + 1).registerA
+
+                    addInstructions(
+                        index + 2, """
+                            invoke-static {v$register}, $PLAYER_CLASS_DESCRIPTOR->enableSmoothTransitionAnimationInverted(Z)Z
+                            move-result v$register
+                            """
+                    )
+                }
+
             addSwitchPreference(
                 CategoryType.PLAYER,
                 "revanced_enable_smooth_transition_animation",
-                "false"
+                "true"
             )
         }
 
@@ -633,168 +680,169 @@ val playerComponentsPatch = bytecodePatch(
 
         // region patch for enable swipe to dismiss miniplayer
 
-        if (!is_6_42_or_greater) {
-            swipeToCloseFingerprint.methodOrThrow().apply {
-                val insertIndex = implementation!!.instructions.lastIndex
-                val targetRegister =
-                    getInstruction<OneRegisterInstruction>(insertIndex).registerA
-
-                addInstructions(
-                    insertIndex, """
-                        invoke-static {v$targetRegister}, $PLAYER_CLASS_DESCRIPTOR->enableSwipeToDismissMiniPlayer(Z)Z
-                        move-result v$targetRegister
-                        """
-                )
-            }
-        } else {
-
-            // region dismiss mini player by swiping down
-
-            val swipeToDismissSGetObjectReference =
-                with(interactionLoggingEnumFingerprint.methodOrThrow()) {
-                    val stringIndex =
-                        indexOfFirstStringInstructionOrThrow("INTERACTION_LOGGING_GESTURE_TYPE_SWIPE")
-                    val sPutObjectIndex =
-                        indexOfFirstInstructionOrThrow(stringIndex, Opcode.SPUT_OBJECT)
-
-                    getInstruction<ReferenceInstruction>(sPutObjectIndex).reference
-                }
-
-            val musicActivityWidgetMethod =
-                musicActivityWidgetFingerprint.methodOrThrow()
-
-            val swipeToDismissWidgetIndex =
-                musicActivityWidgetMethod.indexOfFirstLiteralInstructionOrThrow(79500L)
-
-            fun getSwipeToDismissReference(
-                opcode: Opcode,
-                reversed: Boolean
-            ) = with(musicActivityWidgetMethod) {
-                val targetIndex = if (reversed)
-                    indexOfFirstInstructionReversedOrThrow(swipeToDismissWidgetIndex, opcode)
-                else
-                    indexOfFirstInstructionOrThrow(swipeToDismissWidgetIndex, opcode)
-
-                getInstruction<ReferenceInstruction>(targetIndex).reference
-            }
-
-            val swipeToDismissIGetObjectReference =
-                getSwipeToDismissReference(Opcode.IGET_OBJECT, true)
-            val swipeToDismissInvokeInterfacePrimaryReference =
-                getSwipeToDismissReference(Opcode.INVOKE_INTERFACE, true)
-            val swipeToDismissCheckCastReference =
-                getSwipeToDismissReference(Opcode.CHECK_CAST, true)
-            val swipeToDismissNewInstanceReference =
-                getSwipeToDismissReference(Opcode.NEW_INSTANCE, true)
-            val swipeToDismissInvokeStaticReference =
-                getSwipeToDismissReference(Opcode.INVOKE_STATIC, false)
-            val swipeToDismissInvokeDirectReference =
-                getSwipeToDismissReference(Opcode.INVOKE_DIRECT, false)
-            val swipeToDismissInvokeInterfaceSecondaryReference =
-                getSwipeToDismissReference(Opcode.INVOKE_INTERFACE, false)
-
-            handleSignInEventFingerprint.matchOrThrow(handleSearchRenderedFingerprint).let {
-                val dismissBehaviorMethod =
-                    it.getWalkerMethod(it.patternMatch!!.startIndex)
-
-                dismissBehaviorMethod.apply {
-                    val insertIndex = indexOfFirstInstructionOrThrow {
-                        getReference<FieldReference>()?.type == "Ljava/util/concurrent/atomic/AtomicBoolean;"
-                    }
-                    val primaryRegister =
-                        getInstruction<TwoRegisterInstruction>(insertIndex).registerB
-                    val secondaryRegister = primaryRegister + 1
-                    val tertiaryRegister = secondaryRegister + 1
-
-                    val freeRegister = implementation!!.registerCount - parameters.size - 2
-
-                    addInstructionsWithLabels(
-                        insertIndex, """
-                            invoke-static {}, $PLAYER_CLASS_DESCRIPTOR->enableSwipeToDismissMiniPlayer()Z
-                            move-result v$freeRegister
-                            if-nez v$freeRegister, :dismiss
-                            iget-object v$primaryRegister, v$primaryRegister, $swipeToDismissIGetObjectReference
-                            invoke-interface {v$primaryRegister}, $swipeToDismissInvokeInterfacePrimaryReference
-                            move-result-object v$primaryRegister
-                            check-cast v$primaryRegister, $swipeToDismissCheckCastReference
-                            sget-object v$secondaryRegister, $swipeToDismissSGetObjectReference
-                            new-instance v$tertiaryRegister, $swipeToDismissNewInstanceReference
-                            const p0, 0x878b
-                            invoke-static {p0}, $swipeToDismissInvokeStaticReference
-                            move-result-object p0
-                            invoke-direct {v$tertiaryRegister, p0}, $swipeToDismissInvokeDirectReference
-                            const/4 p0, 0x0
-                            invoke-interface {v$primaryRegister, v$secondaryRegister, v$tertiaryRegister, p0}, $swipeToDismissInvokeInterfaceSecondaryReference
-                            return-void
-                            """, ExternalLabel("dismiss", getInstruction(insertIndex))
-                    )
-                }
-            }
-
-            // endregion
-
-            // region hides default text display when the app is cold started
-
-            miniPlayerDefaultTextFingerprint.matchOrThrow().let {
-                it.method.apply {
-                    val insertIndex = it.patternMatch!!.endIndex
-                    val insertRegister =
-                        getInstruction<TwoRegisterInstruction>(insertIndex).registerB
+        if (swipeToDismissMiniPlayer == true) {
+            if (!is_6_42_or_greater) {
+                swipeToCloseFingerprint.methodOrThrow().apply {
+                    val insertIndex = implementation!!.instructions.lastIndex
+                    val targetRegister =
+                        getInstruction<OneRegisterInstruction>(insertIndex).registerA
 
                     addInstructions(
                         insertIndex, """
-                            invoke-static {v$insertRegister}, $PLAYER_CLASS_DESCRIPTOR->enableSwipeToDismissMiniPlayer(Ljava/lang/Object;)Ljava/lang/Object;
-                            move-result-object v$insertRegister
+                            invoke-static {v$targetRegister}, $PLAYER_CLASS_DESCRIPTOR->enableSwipeToDismissMiniPlayer(Z)Z
+                            move-result v$targetRegister
                             """
                     )
                 }
-            }
+            } else {
 
-            // endregion
+                // region dismiss mini player by swiping down
 
-            // region hides default text display after dismissing the mini player
+                val swipeToDismissSGetObjectReference =
+                    with(interactionLoggingEnumFingerprint.methodOrThrow()) {
+                        val stringIndex =
+                            indexOfFirstStringInstructionOrThrow("INTERACTION_LOGGING_GESTURE_TYPE_SWIPE")
+                        val sPutObjectIndex =
+                            indexOfFirstInstructionOrThrow(stringIndex, Opcode.SPUT_OBJECT)
 
-            miniPlayerDefaultViewVisibilityFingerprint.mutableClassOrThrow().let {
-                it.methods.find { method ->
-                    method.parameters == listOf("Landroid/view/View;", "I")
-                }?.apply {
-                    val bottomSheetBehaviorIndex = indexOfFirstInstructionOrThrow {
-                        val reference = getReference<MethodReference>()
-                        opcode == Opcode.INVOKE_VIRTUAL &&
-                                reference?.definingClass == "Lcom/google/android/material/bottomsheet/BottomSheetBehavior;" &&
-                                reference.parameterTypes.first() == "Z"
+                        getInstruction<ReferenceInstruction>(sPutObjectIndex).reference
                     }
-                    val freeRegister =
-                        getInstruction<FiveRegisterInstruction>(bottomSheetBehaviorIndex).registerD
 
-                    val getFieldIndex = bottomSheetBehaviorIndex - 2
-                    val getFieldReference =
-                        getInstruction<ReferenceInstruction>(getFieldIndex).reference
-                    val getFieldInstruction = getInstruction<TwoRegisterInstruction>(getFieldIndex)
+                val musicActivityWidgetMethod =
+                    musicActivityWidgetFingerprint.methodOrThrow()
 
-                    addInstructionsWithLabels(
-                        getFieldIndex + 1,
-                        """
-                            invoke-static {}, $PLAYER_CLASS_DESCRIPTOR->enableSwipeToDismissMiniPlayer()Z
-                            move-result v$freeRegister
-                            if-nez v$freeRegister, :dismiss
-                            iget-object v${getFieldInstruction.registerA}, v${getFieldInstruction.registerB}, $getFieldReference
-                            """,
-                        ExternalLabel("dismiss", getInstruction(bottomSheetBehaviorIndex + 1))
-                    )
-                    removeInstruction(getFieldIndex)
-                } ?: throw PatchException("Could not find targetMethod")
+                val swipeToDismissWidgetIndex =
+                    musicActivityWidgetMethod.indexOfFirstLiteralInstructionOrThrow(79500L)
+
+                fun getSwipeToDismissReference(
+                    opcode: Opcode,
+                    reversed: Boolean
+                ) = with(musicActivityWidgetMethod) {
+                    val targetIndex = if (reversed)
+                        indexOfFirstInstructionReversedOrThrow(swipeToDismissWidgetIndex, opcode)
+                    else
+                        indexOfFirstInstructionOrThrow(swipeToDismissWidgetIndex, opcode)
+
+                    getInstruction<ReferenceInstruction>(targetIndex).reference
+                }
+
+                val swipeToDismissIGetObjectReference =
+                    getSwipeToDismissReference(Opcode.IGET_OBJECT, true)
+                val swipeToDismissInvokeInterfacePrimaryReference =
+                    getSwipeToDismissReference(Opcode.INVOKE_INTERFACE, true)
+                val swipeToDismissCheckCastReference =
+                    getSwipeToDismissReference(Opcode.CHECK_CAST, true)
+                val swipeToDismissNewInstanceReference =
+                    getSwipeToDismissReference(Opcode.NEW_INSTANCE, true)
+                val swipeToDismissInvokeStaticReference =
+                    getSwipeToDismissReference(Opcode.INVOKE_STATIC, false)
+                val swipeToDismissInvokeDirectReference =
+                    getSwipeToDismissReference(Opcode.INVOKE_DIRECT, false)
+                val swipeToDismissInvokeInterfaceSecondaryReference =
+                    getSwipeToDismissReference(Opcode.INVOKE_INTERFACE, false)
+
+                handleSignInEventFingerprint.matchOrThrow(handleSearchRenderedFingerprint).let {
+                    val dismissBehaviorMethod =
+                        it.getWalkerMethod(it.patternMatch!!.startIndex)
+
+                    dismissBehaviorMethod.apply {
+                        val insertIndex = indexOfFirstInstructionOrThrow {
+                            getReference<FieldReference>()?.type == "Ljava/util/concurrent/atomic/AtomicBoolean;"
+                        }
+                        val primaryRegister =
+                            getInstruction<TwoRegisterInstruction>(insertIndex).registerB
+                        val secondaryRegister = primaryRegister + 1
+                        val tertiaryRegister = secondaryRegister + 1
+
+                        val freeRegister = implementation!!.registerCount - parameters.size - 2
+
+                        addInstructionsWithLabels(
+                            insertIndex, """
+                                invoke-static {}, $PLAYER_CLASS_DESCRIPTOR->enableSwipeToDismissMiniPlayer()Z
+                                move-result v$freeRegister
+                                if-nez v$freeRegister, :dismiss
+                                iget-object v$primaryRegister, v$primaryRegister, $swipeToDismissIGetObjectReference
+                                invoke-interface {v$primaryRegister}, $swipeToDismissInvokeInterfacePrimaryReference
+                                move-result-object v$primaryRegister
+                                check-cast v$primaryRegister, $swipeToDismissCheckCastReference
+                                sget-object v$secondaryRegister, $swipeToDismissSGetObjectReference
+                                new-instance v$tertiaryRegister, $swipeToDismissNewInstanceReference
+                                const p0, 0x878b
+                                invoke-static {p0}, $swipeToDismissInvokeStaticReference
+                                move-result-object p0
+                                invoke-direct {v$tertiaryRegister, p0}, $swipeToDismissInvokeDirectReference
+                                const/4 p0, 0x0
+                                invoke-interface {v$primaryRegister, v$secondaryRegister, v$tertiaryRegister, p0}, $swipeToDismissInvokeInterfaceSecondaryReference
+                                return-void
+                                """, ExternalLabel("dismiss", getInstruction(insertIndex))
+                        )
+                    }
+                }
+
+                // endregion
+
+                // region hides default text display when the app is cold started
+
+                miniPlayerDefaultTextFingerprint.matchOrThrow().let {
+                    it.method.apply {
+                        val insertIndex = it.patternMatch!!.endIndex
+                        val insertRegister =
+                            getInstruction<TwoRegisterInstruction>(insertIndex).registerB
+
+                        addInstructions(
+                            insertIndex, """
+                                invoke-static {v$insertRegister}, $PLAYER_CLASS_DESCRIPTOR->enableSwipeToDismissMiniPlayer(Ljava/lang/Object;)Ljava/lang/Object;
+                                move-result-object v$insertRegister
+                                """
+                        )
+                    }
+                }
+
+                // endregion
+
+                // region hides default text display after dismissing the mini player
+
+                miniPlayerDefaultViewVisibilityFingerprint.mutableClassOrThrow().let {
+                    it.methods.find { method ->
+                        method.parameters == listOf("Landroid/view/View;", "I")
+                    }?.apply {
+                        val bottomSheetBehaviorIndex = indexOfFirstInstructionOrThrow {
+                            val reference = getReference<MethodReference>()
+                            opcode == Opcode.INVOKE_VIRTUAL &&
+                                    reference?.definingClass == "Lcom/google/android/material/bottomsheet/BottomSheetBehavior;" &&
+                                    reference.parameterTypes.first() == "Z"
+                        }
+                        val freeRegister =
+                            getInstruction<FiveRegisterInstruction>(bottomSheetBehaviorIndex).registerD
+
+                        val getFieldIndex = bottomSheetBehaviorIndex - 2
+                        val getFieldReference =
+                            getInstruction<ReferenceInstruction>(getFieldIndex).reference
+                        val getFieldInstruction = getInstruction<TwoRegisterInstruction>(getFieldIndex)
+
+                        addInstructionsWithLabels(
+                            getFieldIndex + 1, """
+                                invoke-static {}, $PLAYER_CLASS_DESCRIPTOR->enableSwipeToDismissMiniPlayer()Z
+                                move-result v$freeRegister
+                                if-nez v$freeRegister, :dismiss
+                                iget-object v${getFieldInstruction.registerA}, v${getFieldInstruction.registerB}, $getFieldReference
+                                """,
+                            ExternalLabel("dismiss", getInstruction(bottomSheetBehaviorIndex + 1))
+                        )
+                        removeInstruction(getFieldIndex)
+                    } ?: throw PatchException("Could not find targetMethod")
+                }
+
+                // endregion
+
             }
 
-            // endregion
-
+            addSwitchPreference(
+                CategoryType.PLAYER,
+                "revanced_enable_swipe_to_dismiss_miniplayer",
+                "true"
+            )
         }
-
-        addSwitchPreference(
-            CategoryType.PLAYER,
-            "revanced_enable_swipe_to_dismiss_miniplayer",
-            "true"
-        )
 
         // endregion
 
@@ -812,7 +860,7 @@ val playerComponentsPatch = bytecodePatch(
             addSwitchPreference(
                 CategoryType.PLAYER,
                 "revanced_enable_thick_seekbar",
-                "false"
+                "true"
             )
         }
 

@@ -1,7 +1,7 @@
 package app.revanced.patches.music.utils.fix.timedlyrics
 
 import app.revanced.patcher.patch.bytecodePatch
-import app.revanced.patches.music.utils.playservice.is_8_28_or_greater
+import app.revanced.patches.music.utils.playservice.is_8_33_or_greater
 import app.revanced.patches.music.utils.playservice.versionCheckPatch
 import app.revanced.util.fingerprint.injectLiteralInstructionBooleanCall
 
@@ -11,7 +11,7 @@ val timedLyricsPatch = bytecodePatch(
     dependsOn(versionCheckPatch)
 
     execute {
-        if (!is_8_28_or_greater) {
+        if (!is_8_33_or_greater) {
             return@execute
         }
 
