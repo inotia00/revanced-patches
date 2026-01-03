@@ -765,11 +765,12 @@ Disclaimer: Cookies issued without signing in may be invalid or may take time to
 
     <!-- PreferenceScreen: General, PreferenceCategory: General, PreferenceScreen: Account menu -->
     <string name="revanced_preference_screen_account_menu_title">Account menu</string>
-    <string name="revanced_preference_screen_account_menu_summary">Hide or show elements in account menu and You tab.</string>
+    <string name="revanced_preference_screen_account_menu_summary">Hide or show account menu and You tab components.</string>
 
     <string name="revanced_hide_account_menu_title">Hide account menu</string>
-    <string name="revanced_hide_account_menu_summary">"Hide elements of the account menu and You tab.
+    <string name="revanced_hide_account_menu_summary_on">"Account menu and You tab components are hidden.
 Some components may not be hidden."</string>
+    <string name="revanced_hide_account_menu_summary_off">Account menu and You tab components are shown.</string>
     <string name="revanced_hide_account_menu_filter_type_title">Account menu filter type</string>
     <string name="revanced_hide_account_menu_filter_type_summary_on">Filter if contains.&lt;br>&lt;br>To hide the &lt;b>\'Get YouTube Premium\'&lt;/b> menu, you can use &lt;b>\'YouTube Premium\'&lt;/b> or &lt;b>\'Premium\'&lt;/b> as keywords.</string>
     <string name="revanced_hide_account_menu_filter_type_summary_off">Filter if matches.&lt;br>&lt;br>To hide the &lt;b>\'Get YouTube Premium\'&lt;/b> menu, you can only use &lt;b>\'Get YouTube Premium\'&lt;/b> as keywords.</string>
@@ -2115,16 +2116,16 @@ Info:
     <string name="revanced_default_video_quality_mobile_title">Default video quality on mobile network</string>
     <string name="revanced_default_video_quality_wifi_title">Default video quality on Wi-Fi network</string>
     <string name="revanced_remember_video_quality_last_selected_title">Remember video quality changes</string>
-    <string name="revanced_remember_video_quality_last_selected_summary_on">Quality changes apply to all videos.</string>
-    <string name="revanced_remember_video_quality_last_selected_summary_off">Quality changes only apply to the current video.</string>
+    <string name="revanced_remember_video_quality_last_selected_summary_on">Video quality changes apply to all videos.</string>
+    <string name="revanced_remember_video_quality_last_selected_summary_off">Video quality changes only apply to the current video.</string>
     <string name="revanced_remember_video_quality_last_selected_toast_title">Show a toast</string>
     <string name="revanced_remember_video_quality_last_selected_toast_summary_on">A toast will be shown when changing the default video quality.</string>
     <string name="revanced_remember_video_quality_last_selected_toast_summary_off">A toast will not be shown when changing the default video quality.</string>
     <string name="revanced_default_video_quality_mobile_shorts_title">Default Shorts quality on mobile network</string>
     <string name="revanced_default_video_quality_wifi_shorts_title">Default Shorts quality on Wi-Fi network</string>
     <string name="revanced_remember_video_quality_shorts_last_selected_title">Remember Shorts quality changes</string>
-    <string name="revanced_remember_video_quality_shorts_last_selected_summary_on">Quality changes apply to all Shorts.</string>
-    <string name="revanced_remember_video_quality_shorts_last_selected_summary_off">Quality changes only apply to the current Short.</string>
+    <string name="revanced_remember_video_quality_shorts_last_selected_summary_on">Shorts quality changes apply to all Shorts.</string>
+    <string name="revanced_remember_video_quality_shorts_last_selected_summary_off">Shorts quality changes only apply to the current Short.</string>
     <string name="revanced_remember_video_quality_shorts_last_selected_toast_title">Show a toast</string>
     <string name="revanced_remember_video_quality_shorts_last_selected_toast_summary_on">A toast will be shown when changing the default Shorts quality.</string>
     <string name="revanced_remember_video_quality_shorts_last_selected_toast_summary_off">A toast will not be shown when changing the default Shorts quality.</string>
