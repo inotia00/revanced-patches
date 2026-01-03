@@ -135,7 +135,7 @@
 
         <!-- SETTINGS: HIDE_LAYOUT_COMPONENTS
         <PreferenceScreen android:title="@string/revanced_preference_screen_account_menu_title" android:key="revanced_preference_screen_account_menu" android:summary="@string/revanced_preference_screen_account_menu_summary">
-            <SwitchPreference android:title="@string/revanced_hide_account_menu_title" android:key="revanced_hide_account_menu" android:summary="@string/revanced_hide_account_menu_summary" />
+            <SwitchPreference android:title="@string/revanced_hide_account_menu_title" android:key="revanced_hide_account_menu" android:summaryOn="@string/revanced_hide_account_menu_summary_on" android:summaryOff="@string/revanced_hide_account_menu_summary_off" />
             <app.revanced.extension.shared.settings.preference.HtmlSwitchPreference android:title="@string/revanced_hide_account_menu_filter_type_title" android:key="revanced_hide_account_menu_filter_type" android:summaryOn="@string/revanced_hide_account_menu_filter_type_summary_on" android:summaryOff="@string/revanced_hide_account_menu_filter_type_summary_off" />
             <app.revanced.extension.shared.settings.preference.ResettableEditTextPreference android:title="@string/revanced_hide_account_menu_filter_strings_title" android:key="revanced_hide_account_menu_filter_strings" android:summary="@string/revanced_hide_account_menu_filter_strings_summary" android:inputType="textMultiLine" />
             <SwitchPreference android:title="@string/revanced_hide_handle_title" android:key="revanced_hide_handle" android:summaryOn="@string/revanced_hide_handle_summary_on" android:summaryOff="@string/revanced_hide_handle_summary_off" />

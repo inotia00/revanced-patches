@@ -677,8 +677,8 @@ If you turn off this setting, the Hype icon may not show in the video action bar
 ※ Even if this setting is turned off, the Hype button may not be hidden."</string>
 
     <string name="revanced_spoof_app_version_title">Spoof app version</string>
-    <string name="revanced_spoof_app_version_summary_on">Version spoofed</string>
-    <string name="revanced_spoof_app_version_summary_off">Version not spoofed</string>
+    <string name="revanced_spoof_app_version_summary_on">App version is spoofed to an older version.</string>
+    <string name="revanced_spoof_app_version_summary_off">App version is not spoofed.</string>
     <string name="revanced_spoof_app_version_user_dialog_message">"App version will be spoofed to an older version of YouTube.
 
 This will change the appearance and features of the app, but unknown side effects may occur.
@@ -765,11 +765,12 @@ Disclaimer: Cookies issued without signing in may be invalid or may take time to
 
     <!-- PreferenceScreen: General, PreferenceCategory: General, PreferenceScreen: Account menu -->
     <string name="revanced_preference_screen_account_menu_title">Account menu</string>
-    <string name="revanced_preference_screen_account_menu_summary">Hide or show elements in account menu and You tab.</string>
+    <string name="revanced_preference_screen_account_menu_summary">Hide or show account menu and You tab components.</string>
 
     <string name="revanced_hide_account_menu_title">Hide account menu</string>
-    <string name="revanced_hide_account_menu_summary">"Hide elements of the account menu and You tab.
+    <string name="revanced_hide_account_menu_summary_on">"Account menu and You tab components are hidden.
 Some components may not be hidden."</string>
+    <string name="revanced_hide_account_menu_summary_off">Account menu and You tab components are shown.</string>
     <string name="revanced_hide_account_menu_filter_type_title">Account menu filter type</string>
     <string name="revanced_hide_account_menu_filter_type_summary_on">Filter if contains.&lt;br>&lt;br>To hide the &lt;b>\'Get YouTube Premium\'&lt;/b> menu, you can use &lt;b>\'YouTube Premium\'&lt;/b> or &lt;b>\'Premium\'&lt;/b> as keywords.</string>
     <string name="revanced_hide_account_menu_filter_type_summary_off">Filter if matches.&lt;br>&lt;br>To hide the &lt;b>\'Get YouTube Premium\'&lt;/b> menu, you can only use &lt;b>\'Get YouTube Premium\'&lt;/b> as keywords.</string>
@@ -2072,8 +2073,8 @@ Info:
 • VP9 codec is still used for HDR video."</string>
     <string name="revanced_disable_vp9_codec_summary_off">VP9 codec is enabled.</string>
     <string name="revanced_enable_opus_codec_title">Enable OPUS codec</string>
-    <string name="revanced_enable_opus_codec_summary">Enables the OPUS codec if the player response includes it.</string>
-
+    <string name="revanced_enable_opus_codec_summary_on">OPUS codec is enabled if the player response includes it.</string>
+    <string name="revanced_enable_opus_codec_summary_off">OPUS codec is disabled.</string>
     <!-- PreferenceScreen: Video, PreferenceCategory: Playback speed -->
     <string name="revanced_preference_category_playback_speed">Playback speed</string>
     <string name="revanced_default_playback_speed_title">Default playback speed</string>
@@ -2115,16 +2116,16 @@ Info:
     <string name="revanced_default_video_quality_mobile_title">Default video quality on mobile network</string>
     <string name="revanced_default_video_quality_wifi_title">Default video quality on Wi-Fi network</string>
     <string name="revanced_remember_video_quality_last_selected_title">Remember video quality changes</string>
-    <string name="revanced_remember_video_quality_last_selected_summary_on">Quality changes apply to all videos.</string>
-    <string name="revanced_remember_video_quality_last_selected_summary_off">Quality changes only apply to the current video.</string>
+    <string name="revanced_remember_video_quality_last_selected_summary_on">Video quality changes apply to all videos.</string>
+    <string name="revanced_remember_video_quality_last_selected_summary_off">Video quality changes only apply to the current video.</string>
     <string name="revanced_remember_video_quality_last_selected_toast_title">Show a toast</string>
     <string name="revanced_remember_video_quality_last_selected_toast_summary_on">A toast will be shown when changing the default video quality.</string>
     <string name="revanced_remember_video_quality_last_selected_toast_summary_off">A toast will not be shown when changing the default video quality.</string>
     <string name="revanced_default_video_quality_mobile_shorts_title">Default Shorts quality on mobile network</string>
     <string name="revanced_default_video_quality_wifi_shorts_title">Default Shorts quality on Wi-Fi network</string>
     <string name="revanced_remember_video_quality_shorts_last_selected_title">Remember Shorts quality changes</string>
-    <string name="revanced_remember_video_quality_shorts_last_selected_summary_on">Quality changes apply to all Shorts.</string>
-    <string name="revanced_remember_video_quality_shorts_last_selected_summary_off">Quality changes only apply to the current Short.</string>
+    <string name="revanced_remember_video_quality_shorts_last_selected_summary_on">Shorts quality changes apply to all Shorts.</string>
+    <string name="revanced_remember_video_quality_shorts_last_selected_summary_off">Shorts quality changes only apply to the current Short.</string>
     <string name="revanced_remember_video_quality_shorts_last_selected_toast_title">Show a toast</string>
     <string name="revanced_remember_video_quality_shorts_last_selected_toast_summary_on">A toast will be shown when changing the default Shorts quality.</string>
     <string name="revanced_remember_video_quality_shorts_last_selected_toast_summary_off">A toast will not be shown when changing the default Shorts quality.</string>
@@ -2176,8 +2177,8 @@ Limitation: Dislikes may not appear if the user is not logged in or in incognito
     <string name="revanced_ryd_estimated_like_summary_on">Videos with disabled likes show an estimated likes count.</string>
     <string name="revanced_ryd_estimated_like_summary_off">Estimated likes are not shown.</string>
     <string name="revanced_ryd_toast_on_connection_error_title">Show a toast if API is unavailable</string>
-    <string name="revanced_ryd_toast_on_connection_error_summary_on">Toast is shown if Return YouTube Dislike is unavailable.</string>
-    <string name="revanced_ryd_toast_on_connection_error_summary_off">Toast is not shown if Return YouTube Dislike is unavailable.</string>
+    <string name="revanced_ryd_toast_on_connection_error_summary_on">Toast is shown if the Return YouTube Dislike API is unavailable.</string>
+    <string name="revanced_ryd_toast_on_connection_error_summary_off">Toast is not shown if the Return YouTube Dislike API is unavailable.</string>
 
     <!-- PreferenceScreen: Return YouTube Dislike, PreferenceCategory: About -->
     <string name="revanced_ryd_about">About</string>
@@ -2340,8 +2341,8 @@ Click to see how to issue an API key."</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: General -->
     <string name="revanced_sb_general">General</string>
     <string name="revanced_sb_toast_on_connection_error">Show a toast if API is unavailable</string>
-    <string name="revanced_sb_toast_on_connection_error_sum_on">Toast is shown if SponsorBlock is unavailable.</string>
-    <string name="revanced_sb_toast_on_connection_error_sum_off">Toast is not shown if SponsorBlock is unavailable.</string>
+    <string name="revanced_sb_toast_on_connection_error_sum_on">Toast is shown if the SponsorBlock API is unavailable.</string>
+    <string name="revanced_sb_toast_on_connection_error_sum_off">Toast is not shown if the SponsorBlock API is unavailable.</string>
     <string name="revanced_sb_general_skipcount">Enable skip count tracking</string>
     <string name="revanced_sb_general_skipcount_sum_on">Lets the SponsorBlock leaderboard know how much time is saved. A message is sent to the leaderboard each time a segment is skipped.</string>
     <string name="revanced_sb_general_skipcount_sum_off">Skip count tracking is not enabled.</string>
@@ -2448,7 +2449,8 @@ Click to see how to issue an API key."</string>
     <string name="revanced_open_links_externally_summary_on">Opens links in external browser.</string>
     <string name="revanced_open_links_externally_summary_off">Opens links in in-app browser.</string>
     <string name="revanced_sanitize_sharing_links_title">Sanitize sharing links</string>
-    <string name="revanced_sanitize_sharing_links_summary">Sanitizes sharing links by removing tracking query parameters.</string>
+    <string name="revanced_sanitize_sharing_links_summary_on">Tracking query parameter is removed from shared links.</string>
+    <string name="revanced_sanitize_sharing_links_summary_off">Tracking query parameter is not removed from shared links.</string>
 
     <string name="revanced_default_app_settings_title">Open default app settings</string>
     <string name="revanced_default_app_settings_summary">To open YouTube links in RVX, enable Open supported links and enable all the Supported web addresses.</string>
