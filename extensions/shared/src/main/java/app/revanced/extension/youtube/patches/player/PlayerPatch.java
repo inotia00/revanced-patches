@@ -668,6 +668,13 @@ public class PlayerPatch {
         );
     }
 
+    public static void hidePlayerFlyoutMenuCaptionsHeader(View view) {
+        Utils.hideViewUnderCondition(
+                Settings.HIDE_PLAYER_FLYOUT_MENU_CAPTIONS_HEADER.get(),
+                view
+        );
+    }
+
     public static void hidePlayerFlyoutMenuQualityFooter(View view) {
         Utils.hideViewUnderCondition(
                 Settings.HIDE_PLAYER_FLYOUT_MENU_QUALITY_FOOTER.get(),

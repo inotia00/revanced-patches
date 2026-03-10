@@ -41,6 +41,11 @@ public final class PlayerFlyoutMenuFilter extends Filter {
 
         addIdentifierCallbacks(captionsSheet);
 
+        final StringFilterGroup captionsHeader = new StringFilterGroup(
+                Settings.HIDE_PLAYER_FLYOUT_MENU_CAPTIONS_HEADER,
+                "bottom_sheet_header."
+        );
+
         final StringFilterGroup captionsFooter = new StringFilterGroup(
                 Settings.HIDE_PLAYER_FLYOUT_MENU_CAPTIONS_FOOTER,
                 "|ContainerType|ContainerType|ContainerType|TextType|",
@@ -63,6 +68,7 @@ public final class PlayerFlyoutMenuFilter extends Filter {
         // Using pathFilterGroupList due to new flyout panel(A/B)
         addPathCallbacks(
                 captionsFooter,
+                captionsHeader,
                 qualityFooter,
                 qualityHeader,
                 playerFlyoutMenu
