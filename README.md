@@ -3,6 +3,7 @@
 
     
 ## 🧩 ReVanced Extended Patches
+
 ReVanced Extended Patches. 
     
 [![Static Badge](https://img.shields.io/badge/RVX_Documentation-gray?style=flat-square&logo=github)](https://github.com/inotia00/revanced-documentation#readme)   [![Static Badge](https://img.shields.io/badge/Reddit-gray?style=flat-square&logo=reddit)](https://reddit.com/r/revancedextended)   [![Static Badge](https://img.shields.io/badge/Discord-gray?style=flat-square&logo=discord)](https://discord.gg/yMnc3EywRZ)
@@ -15,7 +16,30 @@ ReVanced Extended Patches.
 
 See the [documentation](https://github.com/inotia00/revanced-documentation#readme) to learn how to apply patches and build ReVanced Extended apps.
 
-Report issues [here](https://github.com/inotia00/ReVanced_Extended).
+~~Report issues [here](https://github.com/inotia00/ReVanced_Extended).~~
+
+## ⚠️ DEPRECATED
+
+This project is **deprecated** and no longer actively maintained.
+
+- No further features, fixes, or updates will be provided.
+- Issues and pull requests are no longer monitored.
+- The repository remains available for reference and forking.
+
+**See [Announcement](https://github.com/inotia00/ReVanced_Extended/issues/3334) for more info**.
+
+## 🔀 Recommended Alternatives
+
+- **[Morphe](https://github.com/MorpheApp) (Recommended)**: This project is an alternative to ReVanced, which no longer has an active maintainer. Considering its future sustainability, I recommend it as a long-term successor project. I will continue to contribute as a member of the Morphe Team.
+- [RVX by Anddea](https://github.com/anddea/revanced-patches): This is a fork of RVX that has been maintained for about 2 years.
+
+For immediate compatibility, [RVX by Anddea](https://github.com/anddea/revanced-patches) is available; however, for sustainable support, I recommend migrating to **[Morphe](https://github.com/MorpheApp)**.
+
+## 🤝 A Final Note of Thanks
+
+It has been an incredible journey over the past 3.5 years. I am deeply grateful to the community for all the support and contributions that made this project possible.
+
+While this repository is now archived, its spirit continues in [Morphe](https://github.com/MorpheApp). Thank you for being part of the ride!
 
 ## 📋 List of patches in this repository
 
