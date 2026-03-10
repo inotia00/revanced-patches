@@ -26,6 +26,8 @@ This project is **deprecated** and no longer actively maintained.
 - Issues and pull requests are no longer monitored.
 - The repository remains available for reference and forking.
 
+**See [Announcement](https://github.com/inotia00/ReVanced_Extended/issues/3334) for more info**.
+
 ## 🔀 Recommended Alternatives
 
 - **[Morphe](https://github.com/MorpheApp) (Recommended)**: This project is an alternative to ReVanced, which no longer has an active maintainer. Considering its future sustainability, I recommend it as a long-term successor project. I will continue to contribute as a member of the Morphe Team.
