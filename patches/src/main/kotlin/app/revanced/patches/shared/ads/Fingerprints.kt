@@ -2,12 +2,47 @@ package app.revanced.patches.shared.ads
 
 import app.revanced.patches.shared.extension.Constants.PATCHES_PATH
 import app.revanced.util.fingerprint.legacyFingerprint
+import app.revanced.util.getReference
+import app.revanced.util.indexOfFirstInstruction
 import app.revanced.util.or
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
+import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 
 internal const val EXTENSION_CLASS_DESCRIPTOR =
     "$PATCHES_PATH/FullscreenAdsPatch;"
+
+internal val customDialogOnBackPressedParentFingerprint = legacyFingerprint(
+    name = "customDialogOnBackPressedParentFingerprint",
+    parameters = listOf("L"),
+    returnType = "V",
+    customFingerprint = { method, classDef ->
+        classDef.superclass == "Landroid/app/Dialog;" &&
+                method.indexOfFirstInstruction {
+                    opcode == Opcode.INVOKE_SUPER &&
+                            getReference<MethodReference>()?.toString() == "Landroid/app/Dialog;->onBackPressed()V"
+                } >= 0
+    }
+)
+
+internal val customDialogOnBackPressedFingerprint = legacyFingerprint(
+    name = "customDialogOnBackPressedFingerprint",
+    accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
+    parameters = emptyList(),
+    returnType = "V",
+    customFingerprint = { method, _ ->
+        method.name == "onBackPressed"
+    }
+)
+
+internal val fullscreenAdsPatchFingerprint = legacyFingerprint(
+    name = "fullscreenAdsPatchFingerprint",
+    accessFlags = AccessFlags.PRIVATE or AccessFlags.STATIC,
+    customFingerprint = { method, _ ->
+        method.definingClass == EXTENSION_CLASS_DESCRIPTOR
+                && method.name == "closeDialog"
+    }
+)
 
 internal val interstitialsContainerFingerprint = legacyFingerprint(
     name = "interstitialsContainerFingerprint",

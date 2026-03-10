@@ -275,6 +275,7 @@
     <string name="revanced_hide_web_search_results_title">隐藏网络搜索结果</string>
     <string name="revanced_hide_web_search_results_summary_on">已隐藏网络搜索结果。</string>
     <string name="revanced_hide_web_search_results_summary_off">已显示网络搜索结果。</string>
+    <string name="revanced_hide_youtube_premium_promotion_title">隐藏 YouTube Premium 推广</string>
     <!-- PreferenceScreen: Alternative thumbnails -->
     <string name="revanced_preference_screen_alt_thumbnails_title">备选缩略图</string>
     <string name="revanced_alt_thumbnail_home_title">主页标签页</string>
@@ -604,7 +605,6 @@
     <string name="revanced_disable_translucent_status_bar_title">禁用半透明状态栏</string>
     <string name="revanced_disable_translucent_status_bar_summary_on">状态栏为不透明。</string>
     <string name="revanced_disable_translucent_status_bar_summary_off">状态栏为不透明或半透明。</string>
-    <string name="revanced_disable_translucent_status_bar_user_dialog_message">对于某些运行 Android 12 以上的制造商 ROM，启用此功能可能会使系统导航栏变透明。</string>
     <string name="revanced_fix_hype_button_icon_title">修复热门按钮图标</string>
     <string name="revanced_fix_hype_button_icon_summary_on">已显示热门按钮图标。</string>
     <string name="revanced_fix_hype_button_icon_summary_off">已隐藏热门按钮图标。</string>
@@ -780,7 +780,7 @@
     <string name="revanced_switch_create_with_notifications_button_title">交换创建和通知按钮</string>
     <string name="revanced_switch_create_with_notifications_button_summary_off">创建按钮未替换为通知按钮</string>
     <string name="revanced_enable_translucent_navigation_bar_title">启用半透明导航栏</string>
-    <string name="revanced_enable_translucent_navigation_bar_summary_on">导航栏为半透明。</string>
+    <string name="revanced_enable_translucent_navigation_bar_summary_on">"导航栏为半透明。"</string>
     <string name="revanced_enable_translucent_navigation_bar_summary_off">导航栏为不透明。</string>
     <string name="revanced_hide_navigation_bar_title">隐藏导航栏</string>
     <string name="revanced_hide_navigation_bar_summary_on">导航栏已隐藏</string>

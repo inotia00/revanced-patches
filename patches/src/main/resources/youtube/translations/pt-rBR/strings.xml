@@ -622,7 +622,6 @@ Alterações incluem:
     <string name="revanced_disable_translucent_status_bar_title">Desativar barra de status transparente</string>
     <string name="revanced_disable_translucent_status_bar_summary_on">A barra de status está opaca.</string>
     <string name="revanced_disable_translucent_status_bar_summary_off">A barra de status está opaca ou transparente.</string>
-    <string name="revanced_disable_translucent_status_bar_user_dialog_message">Para as ROMs de alguns fabricantes rodando o Android 12+, ativar este recurso pode tornar a barra de navegação do sistema transparente.</string>
     <string name="revanced_fix_hype_button_icon_title">Corrigir ícone do botão ‘hype’</string>
     <string name="revanced_fix_hype_button_icon_summary_on">O ícone do botão Hypar será exibido.</string>
     <string name="revanced_fix_hype_button_icon_summary_off">O ícone do botão Hypar está oculto.</string>
@@ -809,7 +808,7 @@ Para exibir o botão nativo para baixar a lista de reprodução, ative 'Falsific
     <string name="revanced_replace_navigation_button_target_entry_subscriptions">Assinaturas</string>
     <string name="revanced_replace_navigation_button_target_entry_notifications">Notificações</string>
     <string name="revanced_enable_translucent_navigation_bar_title">Ativar barra de navegação transparente</string>
-    <string name="revanced_enable_translucent_navigation_bar_summary_on">A barra de navegação está transparente.</string>
+    <string name="revanced_enable_translucent_navigation_bar_summary_on">"A barra de navegação está transparente."</string>
     <string name="revanced_enable_translucent_navigation_bar_summary_off">A barra de navegação está opaca.</string>
     <string name="revanced_hide_navigation_bar_title">Ocultar barra de navegação</string>
     <string name="revanced_hide_navigation_bar_summary_on">A barra de navegação está oculta.</string>

@@ -637,7 +637,6 @@ Shorts
     <string name="revanced_disable_translucent_status_bar_title">Полупрозрачность строки состояния</string>
     <string name="revanced_disable_translucent_status_bar_summary_on">Полупрозрачность включена.</string>
     <string name="revanced_disable_translucent_status_bar_summary_off">Полупрозрачность отключена.</string>
-    <string name="revanced_disable_translucent_status_bar_user_dialog_message">Для прошивок некоторых разработчиков Android 12+, включение этой функции может сделать панель навигации системы прозрачной.</string>
     <string name="revanced_fix_hype_button_icon_title">Исправить значок кнопки \"Шумиха\"</string>
     <string name="revanced_fix_hype_button_icon_summary_on">Значок кнопки \"Шумиха\" отображается.</string>
     <string name="revanced_fix_hype_button_icon_summary_off">Значок кнопки \"Шумиха\" скрыт.</string>
@@ -824,7 +823,7 @@ Shorts
     <string name="revanced_replace_navigation_button_target_entry_subscriptions">Подписки</string>
     <string name="revanced_replace_navigation_button_target_entry_notifications">Уведомления</string>
     <string name="revanced_enable_translucent_navigation_bar_title">Полупрозрачность панели навигации</string>
-    <string name="revanced_enable_translucent_navigation_bar_summary_on">Полупрозрачность включена.</string>
+    <string name="revanced_enable_translucent_navigation_bar_summary_on">"Полупрозрачность включена."</string>
     <string name="revanced_enable_translucent_navigation_bar_summary_off">Полупрозрачность отключена.</string>
     <string name="revanced_hide_navigation_bar_title">Панель навигации</string>
     <string name="revanced_hide_navigation_bar_summary_on">Панель навигации скрыта.</string>

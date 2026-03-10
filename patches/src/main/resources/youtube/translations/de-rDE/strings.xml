@@ -604,7 +604,6 @@ Einige serverseitige Layouts werden möglicherweise nicht zurückgesetzt.
     <string name="revanced_disable_translucent_status_bar_title">Transparente Statusleiste deaktivieren</string>
     <string name="revanced_disable_translucent_status_bar_summary_on">Statusleiste ist undurchsichtig.</string>
     <string name="revanced_disable_translucent_status_bar_summary_off">Die Statusleiste ist undurchsichtig oder durchscheinend.</string>
-    <string name="revanced_disable_translucent_status_bar_user_dialog_message">Bei einigen HerstellerROMs mit Android 12+ kann das Aktivieren dieser Funktion die Navigationsleiste des Systems transparent machen.</string>
     <string name="revanced_fix_hype_button_icon_title">Fix Hype Button Symbol</string>
     <string name="revanced_fix_hype_button_icon_summary_on">Hype Button Symbol wird angezeigt.</string>
     <string name="revanced_fix_hype_button_icon_summary_off">Hype Button Symbol ist ausgeblendet.</string>
@@ -781,7 +780,7 @@ Um den Download-Button der nativen Wiedergabeliste anzuzeigen, aktivieren Sie 'S
     <string name="revanced_switch_create_with_notifications_button_title">Erstellungs- und Benachrichtigungs-Buttons tauschen</string>
     <string name="revanced_switch_create_with_notifications_button_summary_off">Erstellen-Button ist nicht mit Benachrichtigungs-Button getauscht.</string>
     <string name="revanced_enable_translucent_navigation_bar_title">Transparente Navigationsleiste aktivieren</string>
-    <string name="revanced_enable_translucent_navigation_bar_summary_on">Navigationsleiste ist transparent.</string>
+    <string name="revanced_enable_translucent_navigation_bar_summary_on">"Navigationsleiste ist transparent."</string>
     <string name="revanced_enable_translucent_navigation_bar_summary_off">Navigationsleiste ist nicht transparent.</string>
     <string name="revanced_hide_navigation_bar_title">Navigationsleiste ausblenden</string>
     <string name="revanced_hide_navigation_bar_summary_on">Navigationsleiste ist ausgeblendet.</string>

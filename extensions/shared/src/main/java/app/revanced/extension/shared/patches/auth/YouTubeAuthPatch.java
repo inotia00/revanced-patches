@@ -22,7 +22,7 @@ public class YouTubeAuthPatch {
     /**
      * Access token expiration time.
      */
-    private static long accessTokenExpiration = 3540 * 1000L;
+    private static long accessTokenExpiration = 1770 * 1000L;
 
     public static void checkAccessToken() {
         if (!IS_YOUTUBE && isEmailAvailable() && isRefreshTokenAvailable()) {
@@ -34,7 +34,7 @@ public class YouTubeAuthPatch {
         saveEmail("");
         saveRefreshToken("");
         lastTimeAccessTokenUpdated = 0L;
-        accessTokenExpiration = 3540 * 1000L;
+        accessTokenExpiration = 1770 * 1000L;
         authorization = "";
 
         Utils.showToastShort(str("revanced_spoof_streaming_data_sign_in_android_no_sdk_toast_reset"));

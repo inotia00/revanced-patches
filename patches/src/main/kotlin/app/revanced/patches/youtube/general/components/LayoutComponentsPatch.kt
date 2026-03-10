@@ -102,10 +102,15 @@ val layoutComponentsPatch = bytecodePatch(
         // region patch for disable translucent status bar
 
         if (is_19_25_or_greater) {
-            translucentStatusBarFeatureFlagFingerprint.injectLiteralInstructionBooleanCall(
-                TRANSLUCENT_STATUS_BAR_FEATURE_FLAG,
-                "$GENERAL_CLASS_DESCRIPTOR->disableTranslucentStatusBar(Z)Z"
-            )
+            mapOf(
+                translucentStatusBarPrimaryFeatureFlagFingerprint to TRANSLUCENT_STATUS_BAR_PRIMARY_FEATURE_FLAG,
+                translucentStatusBarSecondaryFeatureFlagFingerprint to TRANSLUCENT_STATUS_BAR_SECONDARY_FEATURE_FLAG,
+            ).forEach { (fingerprint, literal) ->
+                fingerprint.injectLiteralInstructionBooleanCall(
+                    literal,
+                    "$GENERAL_CLASS_DESCRIPTOR->disableTranslucentStatusBar(Z)Z"
+                )
+            }
 
             settingArray += "PREFERENCE_CATEGORY: GENERAL_EXPERIMENTAL_FLAGS"
             settingArray += "SETTINGS: DISABLE_TRANSLUCENT_STATUS_BAR"

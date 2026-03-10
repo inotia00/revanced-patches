@@ -4,10 +4,11 @@ revanced-patcher = "21.0.0"
 #noinspection GradleDependency
 smali = "3.0.5"
 gson = "2.13.2"
-agp = "8.2.2"
+agp = "8.13.2"
 annotation = "1.9.1"
 collections4 = "4.5.0"
 desugar = "2.1.5"
+hiddenapi = "6.1"
 lang3 = "3.20.0"
 okhttp3 = "4.12.0"
 protobuf = "0.9.5"
@@ -19,6 +20,7 @@ annotation = { module = "androidx.annotation:annotation", version.ref = "annotat
 collections4 = { module = "org.apache.commons:commons-collections4", version.ref = "collections4" }
 desugar-jdk-libs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugar" }
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+hiddenapi = { module = "org.lsposed.hiddenapibypass:hiddenapibypass", version.ref = "hiddenapi" }
 lang3 = { module = "org.apache.commons:commons-lang3", version.ref = "lang3" }
 okhttp3 = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp3" }
 preference = { module = "androidx.preference:preference", version.ref = "preference" }

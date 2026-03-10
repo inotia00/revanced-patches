@@ -172,12 +172,9 @@ object YouTubeClient {
      * Video not playable: None.
      * 360° VR immersive mode is not available.
      */
-    private const val CLIENT_VERSION_TVHTML5 = "7.20251209.09.00"
-    /**
-     * authenticatedConfig.flags.attest_botguard_on_tvhtml5: false.
-     */
+    private const val CLIENT_VERSION_TVHTML5 = "7.20251217.19.00"
     private const val USER_AGENT_TVHTML5 =
-        "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0; Xbox)"
+        "Mozilla/5.0 (SMART-TV; Linux; Tizen 8.0) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/7.0 Chrome/108.0.5359.1 TV Safari/537.36"
 
 
     // TVHTML5 (Downgraded)
@@ -469,7 +466,7 @@ object YouTubeClient {
         TV(
             id = 7,
             clientVersion = CLIENT_VERSION_TVHTML5,
-            clientPlatform = CLIENT_PLATFORM_GAME_CONSOLE,
+            clientPlatform = CLIENT_PLATFORM_TV,
             userAgent = USER_AGENT_TVHTML5,
             requireJS = true,
             refererFormat = CLIENT_REFERER_FORMAT_TV,
@@ -504,7 +501,7 @@ object YouTubeClient {
         TV_EMBEDDED(
             id = 85,
             clientVersion = CLIENT_VERSION_TVHTML5_EMBEDDED,
-            clientPlatform = CLIENT_PLATFORM_GAME_CONSOLE,
+            clientPlatform = CLIENT_PLATFORM_TV,
             clientScreen = CLIENT_SCREEN_EMBED,
             userAgent = USER_AGENT_TVHTML5,
             requireJS = true,
@@ -555,9 +552,9 @@ object YouTubeClient {
                 VISIONOS,
                 ANDROID_VR,
                 ANDROID_CREATOR,
-                TV,
                 TV_SIMPLY,
                 TV_LEGACY,
+                TV,
             )
             val CLIENT_ORDER_TO_USE_YOUTUBE_MUSIC: Array<ClientType> = arrayOf(
                 ANDROID_MUSIC_NO_SDK,
@@ -570,9 +567,9 @@ object YouTubeClient {
                 ANDROID_NO_SDK,
                 VISIONOS,
                 ANDROID_VR,
-                TV,
                 TV_SIMPLY,
                 TV_LEGACY,
+                TV,
             )
         }
     }

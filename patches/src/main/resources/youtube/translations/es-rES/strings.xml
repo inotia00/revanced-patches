@@ -622,7 +622,6 @@ Los cambios incluyen:
     <string name="revanced_disable_translucent_status_bar_title">Desactivar barra de estado translúcida</string>
     <string name="revanced_disable_translucent_status_bar_summary_on">La barra de estado es opaca.</string>
     <string name="revanced_disable_translucent_status_bar_summary_off">La barra de estado es opaca o translúcida.</string>
-    <string name="revanced_disable_translucent_status_bar_user_dialog_message">Para algunas ROM de fabricantes que ejecutan Android 12+, activar esta función puede hacer que la barra de navegación del sistema sea transparente.</string>
     <string name="revanced_fix_hype_button_icon_title">Corregir icono del botón Hypear</string>
     <string name="revanced_fix_hype_button_icon_summary_on">El icono del botón Hypear está visible.</string>
     <string name="revanced_fix_hype_button_icon_summary_off">El icono del botón Hypear está oculto.</string>
@@ -809,7 +808,7 @@ Para mostrar el botón de descarga de la lista de reproducción nativa, activa \
     <string name="revanced_replace_navigation_button_target_entry_subscriptions">Suscripciones</string>
     <string name="revanced_replace_navigation_button_target_entry_notifications">Notificaciones</string>
     <string name="revanced_enable_translucent_navigation_bar_title">Activar barra de navegación translúcida</string>
-    <string name="revanced_enable_translucent_navigation_bar_summary_on">La barra de navegación es translúcida.</string>
+    <string name="revanced_enable_translucent_navigation_bar_summary_on">"La barra de navegación es translúcida."</string>
     <string name="revanced_enable_translucent_navigation_bar_summary_off">La barra de navegación es opaca.</string>
     <string name="revanced_hide_navigation_bar_title">Ocultar barra de navegación</string>
     <string name="revanced_hide_navigation_bar_summary_on">La barra de navegación está oculta.</string>

@@ -625,7 +625,6 @@ A változások a következők:
     <string name="revanced_disable_translucent_status_bar_title">Átlátszó állapotsor letiltása</string>
     <string name="revanced_disable_translucent_status_bar_summary_on">Az állapotsor nem átlátszó.</string>
     <string name="revanced_disable_translucent_status_bar_summary_off">Az állapotsor nem átlátszó vagy átlátszó.</string>
-    <string name="revanced_disable_translucent_status_bar_user_dialog_message">Egyes, Android 12 vagy újabb rendszert futtató gyártói ROM-ok esetében ennek a funkciónak az engedélyezése átlátszóvá teheti a rendszer navigációs sávját.</string>
     <string name="revanced_fix_hype_button_icon_title">Hype gomb ikonjának kijavítása</string>
     <string name="revanced_fix_hype_button_icon_summary_on">A Hype gomb ikonja látható.</string>
     <string name="revanced_fix_hype_button_icon_summary_off">A Hype gomb ikonja rejtett.</string>
@@ -819,7 +818,7 @@ A natív lejátszási lista letöltése gomb megjelenítéséhez kapcsolja be a 
     <string name="revanced_replace_navigation_button_target_entry_subscriptions">Feliratkozások</string>
     <string name="revanced_replace_navigation_button_target_entry_notifications">Értesítések</string>
     <string name="revanced_enable_translucent_navigation_bar_title">Átlátszó navigációs sáv engedélyezése</string>
-    <string name="revanced_enable_translucent_navigation_bar_summary_on">A navigációs sáv átlátszó.</string>
+    <string name="revanced_enable_translucent_navigation_bar_summary_on">"A navigációs sáv átlátszó."</string>
     <string name="revanced_enable_translucent_navigation_bar_summary_off">A navigációs sáv nem átlátszó.</string>
     <string name="revanced_hide_navigation_bar_title">Navigációs sáv elrejtése</string>
     <string name="revanced_hide_navigation_bar_summary_on">A navigációs sáv el van rejtve.</string>

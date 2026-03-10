@@ -168,6 +168,16 @@
     "options": []
   },
   {
+    "name": "Change installer package name",
+    "description": "Spoof the installer package name to make it appear that the app was installed from the Google Play Store.",
+    "use": false,
+    "dependencies": [
+      "BytecodePatch"
+    ],
+    "compatiblePackages": null,
+    "options": []
+  },
+  {
     "name": "Change live ring click action",
     "description": "Adds an option to open the channel instead of the live stream when clicking on the live ring.",
     "use": true,
@@ -193,7 +203,9 @@
     "name": "Change package name",
     "description": "Changes the package name for Reddit to the name specified in patch options.",
     "use": false,
-    "dependencies": [],
+    "dependencies": [
+      "BytecodePatch"
+    ],
     "compatiblePackages": {
       "com.reddit.frontpage": [
         "2024.17.0",
@@ -500,7 +512,9 @@
     "name": "Custom branding name for Reddit",
     "description": "Changes the Reddit app name to the name specified in patch options.",
     "use": false,
-    "dependencies": [],
+    "dependencies": [
+      "BytecodePatch"
+    ],
     "compatiblePackages": {
       "com.reddit.frontpage": [
         "2024.17.0",
@@ -2307,7 +2321,9 @@
     "name": "Premium icon",
     "description": "Unlocks premium app icons.",
     "use": true,
-    "dependencies": [],
+    "dependencies": [
+      "BytecodePatch"
+    ],
     "compatiblePackages": {
       "com.reddit.frontpage": [
         "2024.17.0",
@@ -2643,6 +2659,7 @@
     "description": "Applies mandatory patches to implement ReVanced Extended settings into the application.",
     "use": true,
     "dependencies": [
+      "BytecodePatch",
       "BytecodePatch",
       "BytecodePatch"
     ],
@@ -3010,6 +3027,35 @@
       ]
     },
     "options": []
+  },
+  {
+    "name": "Spoof signature",
+    "description": "Spoofs the signature of the app.",
+    "use": false,
+    "dependencies": [
+      "BytecodePatch"
+    ],
+    "compatiblePackages": null,
+    "options": [
+      {
+        "key": "packageName",
+        "title": "Package name",
+        "description": "Package name.",
+        "required": false,
+        "type": "kotlin.String",
+        "default": "",
+        "values": null
+      },
+      {
+        "key": "certificateData",
+        "title": "Certificate data",
+        "description": "Base64-encoded string of the certificate.",
+        "required": false,
+        "type": "kotlin.String",
+        "default": "",
+        "values": null
+      }
+    ]
   },
   {
     "name": "Swipe controls",

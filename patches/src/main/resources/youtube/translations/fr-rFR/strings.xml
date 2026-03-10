@@ -627,7 +627,6 @@ Les modifications incluent :
     <string name="revanced_disable_translucent_status_bar_title">Désactiver la barre de notification translucide</string>
     <string name="revanced_disable_translucent_status_bar_summary_on">La barre de notification est opaque.</string>
     <string name="revanced_disable_translucent_status_bar_summary_off">La barre de notification est opaque ou translucide.</string>
-    <string name="revanced_disable_translucent_status_bar_user_dialog_message">Pour certaines ROMs de fabricants fonctionnant sous Android 12 ou supérieur, l\'activation de cette fonctionnalité peut rendre la barre de navigation du système transparente.</string>
     <string name="revanced_fix_hype_button_icon_title">Corriger l\'icône du bouton \'Booster\'</string>
     <string name="revanced_fix_hype_button_icon_summary_on">L\'icône du bouton \'Booster\' est affichée.</string>
     <string name="revanced_fix_hype_button_icon_summary_off">L\'icône du bouton \'Booster\' est masquée.</string>
@@ -814,7 +813,9 @@ Pour afficher le bouton de téléchargement de playlist natif, activez l'option 
     <string name="revanced_replace_navigation_button_target_entry_subscriptions">Abonnements</string>
     <string name="revanced_replace_navigation_button_target_entry_notifications">Notifications</string>
     <string name="revanced_enable_translucent_navigation_bar_title">Activer la barre de navigation translucide</string>
-    <string name="revanced_enable_translucent_navigation_bar_summary_on">La barre de navigation est translucide.</string>
+    <string name="revanced_enable_translucent_navigation_bar_summary_on">"La barre de navigation est translucide.
+
+Problème connu : la barre de navigation du système peut être translucide."</string>
     <string name="revanced_enable_translucent_navigation_bar_summary_off">La barre de navigation est opaque.</string>
     <string name="revanced_hide_navigation_bar_title">Masquer la barre de navigation</string>
     <string name="revanced_hide_navigation_bar_summary_on">La barre de navigation est masqué.</string>

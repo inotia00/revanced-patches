@@ -96,10 +96,7 @@ Veuillez télécharger %2$s à partir du site web."</string>
     <!-- PreferenceScreen: Ads -->
     <string name="revanced_preference_screen_ads_title">Publicités</string>
     <string name="revanced_hide_fullscreen_ads_title">Masquer les publicités en plein écran</string>
-    <string name="revanced_hide_fullscreen_ads_summary">"Masque les publicités en plein écran.
-
-Limitations :
-• Il est possible que vous voyiez parfois un écran noir vide au lieu du flux d'accueil."</string>
+    <string name="revanced_hide_fullscreen_ads_summary">"Masque les publicités en plein écran."</string>
     <string name="revanced_fullscreen_ads_closed_toast">Les publicités plein écran sont fermées.</string>
     <string name="revanced_hide_general_ads_title">Masquer les publicités générales</string>
     <string name="revanced_hide_general_ads_summary">Masque les publicités générales.</string>

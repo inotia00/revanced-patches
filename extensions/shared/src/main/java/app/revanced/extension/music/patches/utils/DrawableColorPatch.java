@@ -1,5 +1,7 @@
 package app.revanced.extension.music.patches.utils;
 
+import static app.revanced.extension.shared.utils.Utils.isSDKAbove;
+
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
@@ -55,7 +57,7 @@ public class DrawableColorPatch {
         // headerGradient is litho, so this view is sometimes used elsewhere, like the button of the action bar.
         // In order to prevent the gradient to be applied to the button of the action bar,
         // Add a layout listener to the ImageView.
-        if (headerGradient != null && gradientView.getForeground() == null) {
+        if (isSDKAbove(23) && headerGradient != null && gradientView.getForeground() == null) {
             gradientView.setForeground(headerGradient);
             gradientView.getViewTreeObserver().addOnGlobalLayoutListener(() -> {
                 if (gradientView.getParent() instanceof View view &&

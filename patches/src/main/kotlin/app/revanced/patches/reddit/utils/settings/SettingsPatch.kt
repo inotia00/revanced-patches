@@ -11,6 +11,7 @@ import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod
 import app.revanced.patches.reddit.utils.compatibility.Constants.COMPATIBLE_PACKAGE
 import app.revanced.patches.reddit.utils.extension.Constants.EXTENSION_PATH
 import app.revanced.patches.reddit.utils.extension.sharedExtensionPatch
+import app.revanced.patches.reddit.utils.fix.signature.spoofSignaturePatch
 import app.revanced.patches.reddit.utils.patch.PatchList
 import app.revanced.patches.reddit.utils.patch.PatchList.SETTINGS_FOR_REDDIT
 import app.revanced.patches.shared.extension.Constants.EXTENSION_THEME_UTILS_CLASS_DESCRIPTOR
@@ -162,7 +163,8 @@ val settingsPatch = resourcePatch(
 
     dependsOn(
         sharedExtensionPatch,
-        settingsBytecodePatch
+        settingsBytecodePatch,
+        spoofSignaturePatch,
     )
 
     val rvxSettingsLabel = stringOption(

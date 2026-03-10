@@ -45,6 +45,17 @@ public class FullscreenAdsPatch {
     }
 
     /**
+     * Rest of the implementation added by patch.
+     */
+    private static void closeDialog(Object customDialog) {
+        // Casting customDialog to 'android.app.Dialog' and calling [dialog.onBackPressed()] also works with limitations.
+        // If the targetSDKVersion is 36+ and the device is running Android 16+, this method will most likely not work.
+        //
+        // So the patch call the 'onBackPressed()' method of the custom dialog class.
+        // The 'onBackPressed()' method of the customDialog class handles the OnBackInvokedDispatcher.
+    }
+
+    /**
      * Called after {@link #checkDialog(byte[])}
      *
      * @param customDialog Custom dialog which bound by litho
@@ -73,8 +84,14 @@ public class FullscreenAdsPatch {
                 window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
             }
 
-            // Dismiss dialog.
-            dialog.dismiss();
+            if (IS_YOUTUBE) {
+                // Dismiss dialog.
+                dialog.dismiss();
+            } else {
+                // In YouTube Music, the home feed doesn't load when the dialog is closed with [Dialog.dismiss()].
+                // Use [Dialog.onBackPressed()] to close the dialog, even with a 0.5-second delay.
+                Utils.runOnMainThreadDelayed(() -> closeDialog(customDialog), 100);
+            }
 
             if (BaseSettings.DEBUG_TOAST_ON_ERROR.get()
                     || (!IS_YOUTUBE && BaseSettings.DEBUG.get())) {

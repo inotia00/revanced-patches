@@ -84,6 +84,7 @@
     <string name="revanced_external_downloader_not_installed_dialog_message">"%1$s не встановлено.
 Будь ласка, завантажте %2$s з сайту."</string>
     <string name="revanced_external_downloader_not_installed_warning">%s не встановлено. Будь ласка, встановіть його.</string>
+    <string name="revanced_replace_action_button_like_title">Заміна кнопки \"Подобається\"</string>
     <!-- PreferenceScreen: Ads -->
     <string name="revanced_preference_screen_ads_title">Реклама</string>
     <string name="revanced_hide_fullscreen_ads_title">Приховати повноекранну рекламу</string>
@@ -235,6 +236,11 @@
     <string name="revanced_spoof_app_version_target_entry_7_16_53">7.16.53 - Відновлення старої панелі дій</string>
     <string name="revanced_spoof_app_version_target_entry_7_17_52">7.17.52 - Розділ коментарів не показується в домашній стрічці</string>
     <string name="revanced_spoof_app_version_target_invalid_toast">Невірна версія підміни: %s.</string>
+    <string name="revanced_spoof_app_version_for_lyrics_target_summary">Виберіть зі списку цільову версію для текстів.</string>
+    <string name="revanced_spoof_app_version_for_lyrics_target_entry_6_42_55">6.42.55 - Без динамічних текстів</string>
+    <string name="revanced_spoof_app_version_for_lyrics_target_entry_7_12_52">7.12.52 - З динамічним текстом</string>
+    <string name="revanced_spoof_app_version_for_lyrics_target_entry_8_06_52">8.06.52 - З динамічним текстом + кнопка \"Поділитися\"</string>
+    <string name="revanced_spoof_app_version_for_lyrics_target_entry_8_33_54">8.33.54 - З динамічним текстом + кнопка \"Поділитися\" + Кнопка \"Перекласти\" (тільки для Преміум користувачів)</string>
     <!-- PreferenceScreen: Navigation bar -->
     <string name="revanced_preference_screen_navigation_title">Панель навігації</string>
     <string name="revanced_enable_custom_navigation_bar_color_title">Увімкнути користувацький колір панелі навігації</string>

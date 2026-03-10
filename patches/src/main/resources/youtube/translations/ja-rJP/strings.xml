@@ -567,7 +567,7 @@ DeArrow について詳しく知るには、ここをタップしてください
 
 一部の環境下では機能しない可能性があります。機能しない場合は、以下の手順に従ってください:
 1. [設定] → [RVX] → [その他] → [ストリーミングデータを偽装] に移動し、[JavaScript クライアントを使用] をオンにします。
-2. [設定] → [RVX] → [その他] → [ストリーミングデータを偽装] に移動し、[偽装するクライアントを選択] で「TV」を選択します。"</string>
+2. [設定] → [RVX] → [その他] → [ストリーミングデータを偽装] に移動し、[偽装するクライアントを選択] で「TV Simply」を選択します。"</string>
     <string name="revanced_disable_auto_audio_tracks_summary_off">"音声トラックが自動で吹き替えに切り替わるのを無効にします。"</string>
     <string name="revanced_disable_auto_captions_title">字幕の強制を無効化</string>
     <string name="revanced_disable_auto_captions_summary_on">投稿者が設定している字幕の強制を無効にします。</string>
@@ -629,7 +629,6 @@ DeArrow について詳しく知るには、ここをタップしてください
     <string name="revanced_disable_translucent_status_bar_title">半透明なステータスバーを無効化</string>
     <string name="revanced_disable_translucent_status_bar_summary_on">ステータスバーを不透明にします。</string>
     <string name="revanced_disable_translucent_status_bar_summary_off">ステータスバーを不透明にします。</string>
-    <string name="revanced_disable_translucent_status_bar_user_dialog_message">Android 12 以降を実行している一部のメーカーの ROM では、この機能を有効にすると、システムナビゲーションバーが透明になる可能性があります。</string>
     <string name="revanced_fix_hype_button_icon_title">[ハイプ] ボタンのアイコンを修正</string>
     <string name="revanced_fix_hype_button_icon_summary_on">[ハイプ] ボタンのアイコンを修正します。</string>
     <string name="revanced_fix_hype_button_icon_summary_off">[ハイプ] ボタンのアイコンを修正します。</string>
@@ -816,8 +815,10 @@ Cookie の使用は万能薬ではありません。
     <string name="revanced_replace_navigation_button_target_entry_subscriptions">登録チャンネル</string>
     <string name="revanced_replace_navigation_button_target_entry_notifications">通知</string>
     <string name="revanced_enable_translucent_navigation_bar_title">半透明のナビゲーションバーを有効化</string>
-    <string name="revanced_enable_translucent_navigation_bar_summary_on">ナビゲーションバー ([ホーム]、[登録チャンネル] などのボタン) を半透明にします。</string>
-    <string name="revanced_enable_translucent_navigation_bar_summary_off">ナビゲーションバー ([ホーム]、[登録チャンネル] などのボタン) を半透明にします。</string>
+    <string name="revanced_enable_translucent_navigation_bar_summary_on">"ナビゲーションバー ([ホーム]、[登録チャンネル] などのボタン) を半透明にします。
+
+既知の問題: システムナビゲーションバーが半透明になる可能性があります。"</string>
+    <string name="revanced_enable_translucent_navigation_bar_summary_off">ナビゲーションバー ([ホーム]、[登録チャンネル] などのボタン) を半透明にします。\n\n既知の問題: システムナビゲーションバーが半透明になる可能性があります。</string>
     <string name="revanced_hide_navigation_bar_title">ナビゲーションバーを非表示</string>
     <string name="revanced_hide_navigation_bar_summary_on">ナビゲーションバー ([ホーム]、[登録チャンネル] などのボタン) を非表示にします。</string>
     <string name="revanced_hide_navigation_bar_summary_off">ナビゲーションバー ([ホーム]、[登録チャンネル] などのボタン) を非表示にします。</string>
@@ -1216,7 +1217,7 @@ Cookie の使用は万能薬ではありません。
 
 [音声トラック] メニューを表示するには:
 1. [設定] → [RVX] → [その他] → [ストリーミングデータを偽装] に移動し、[JavaScript クライアントを使用] をオンにします。
-2. [設定] → [RVX] → [その他] → [ストリーミングデータを偽装] に移動し、[偽装するクライアントを選択] で「TV」を選択します。"</string>
+2. [設定] → [RVX] → [その他] → [ストリーミングデータを偽装] に移動し、[偽装するクライアントを選択] で「TV Simply」を選択します。"</string>
     <string name="revanced_hide_player_flyout_menu_captions_title">[字幕] メニューを非表示</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_on">[字幕] メニューを非表示にします。</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_off">[字幕] メニューを非表示にします。</string>
@@ -2464,7 +2465,7 @@ VP9 は AVC よりも高度なコーデックですが、利用者によって�
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">統計情報に偽装したクライアントを表示します。</string>
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">統計情報に偽装したクライアントを表示します。</string>
     <string name="revanced_spoof_streaming_data_failed_forbidden">クライアントストリームを取得できませんでした。</string>
-    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">偽装するクライアントを「TV」に変更してみてください。</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">偽装するクライアントを「TV Simply」に変更してみてください。</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: Android VR -->
     <string name="revanced_preference_category_android_vr">Android VR</string>
     <string name="revanced_spoof_streaming_data_android_vr_enable_av1_codec_title">AV1 コーデックを有効化</string>
@@ -2521,7 +2522,7 @@ VP9 は AVC よりも高度なコーデックですが、利用者によって�
 
 この問題は、プレーヤーの「リロードボタン」をタップして動画を再読み込みすることで簡単に解決できます (前提条件:「リロードボタンを表示」と「リロードボタンを常に表示」の両方が有効になっていること)。
 
-JavaScript クライアントの中では、「TV」が推奨されます。"</string>
+JavaScript クライアントの中では、「TV Simply」が推奨されます。"</string>
     <string name="revanced_spoof_streaming_data_use_js_all_title">すべての動画に JavaScript クライアントを使用</string>
     <string name="revanced_spoof_streaming_data_use_js_all_summary_on">"現在の設定: 動画の種類に関係なく JavaScript クライアントを使用します。
 

@@ -10,8 +10,28 @@ public final class app/revanced/patches/all/misc/display/edgetoedge/EdgeToEdgeDi
 	public static final fun getEdgeToEdgeDisplayPatch ()Lapp/revanced/patcher/patch/ResourcePatch;
 }
 
+public final class app/revanced/patches/all/misc/installer/ChangeInstallerPackageNamePatchKt {
+	public static final fun getChangeInstallerPackageNamePatch ()Lapp/revanced/patcher/patch/BytecodePatch;
+}
+
 public final class app/revanced/patches/all/misc/network/OverrideCertificatePinningPatchKt {
 	public static final fun getOverrideCertificatePinningPatch ()Lapp/revanced/patcher/patch/ResourcePatch;
+}
+
+public final class app/revanced/patches/all/misc/signature/AppInfo {
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getCertificateData ()Ljava/lang/String;
+	public final fun getPackageName ()Ljava/lang/String;
+}
+
+public final class app/revanced/patches/all/misc/signature/BaseSpoofSignaturePatchKt {
+	public static final fun baseSpoofSignaturePatch (Lkotlin/jvm/functions/Function0;)Lapp/revanced/patcher/patch/BytecodePatch;
+}
+
+public final class app/revanced/patches/all/misc/signature/SpoofSignaturePatchKt {
+	public static final fun getSpoofSignaturePatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
 public abstract interface class app/revanced/patches/all/misc/transformation/IMethodCall {
@@ -477,6 +497,10 @@ public final class app/revanced/patches/reddit/misc/tracking/url/SanitizeUrlQuer
 
 public final class app/revanced/patches/reddit/utils/extension/SharedExtensionPatchKt {
 	public static final fun getSharedExtensionPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
+}
+
+public final class app/revanced/patches/reddit/utils/fix/signature/SpoofSignaturePatchKt {
+	public static final fun getSpoofSignaturePatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
 public final class app/revanced/patches/reddit/utils/resourceid/SharedResourceIdPatchKt {

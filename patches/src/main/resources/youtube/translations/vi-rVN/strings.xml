@@ -631,7 +631,6 @@ Các thay đổi bao gồm:
     <string name="revanced_disable_translucent_status_bar_title">Vô hiệu hoá thanh trạng thái trong suốt</string>
     <string name="revanced_disable_translucent_status_bar_summary_on">Thanh trạng thái không còn trong suốt.</string>
     <string name="revanced_disable_translucent_status_bar_summary_off">Thanh trạng thái có thể trong suốt hoặc không.</string>
-    <string name="revanced_disable_translucent_status_bar_user_dialog_message">Trên một số ROM tùy chỉnh chạy Android 12+, bật tính năng này có thể làm cho thanh điều hướng hệ thống trở nên trong suốt.</string>
     <string name="revanced_fix_hype_button_icon_title">Sữa lỗi nút Khuấy động</string>
     <string name="revanced_fix_hype_button_icon_summary_on">Biểu tượng nút Khuấy động đã được hiển thị.</string>
     <string name="revanced_fix_hype_button_icon_summary_off">Biểu tượng nút Khuấy động đã ẩn.</string>
@@ -812,7 +811,7 @@ Một số thành phần có thể không bị ẩn."</string>
     <string name="revanced_replace_navigation_button_target_entry_subscriptions">Kênh đăng ký</string>
     <string name="revanced_replace_navigation_button_target_entry_notifications">Thông báo</string>
     <string name="revanced_enable_translucent_navigation_bar_title">Thanh điều hướng trong suốt</string>
-    <string name="revanced_enable_translucent_navigation_bar_summary_on">Thanh điều hướng đang trong suốt.</string>
+    <string name="revanced_enable_translucent_navigation_bar_summary_on">"Thanh điều hướng đang trong suốt."</string>
     <string name="revanced_enable_translucent_navigation_bar_summary_off">Thanh điều hướng như mặc định.</string>
     <string name="revanced_hide_navigation_bar_title">Ẩn thanh điều hướng</string>
     <string name="revanced_hide_navigation_bar_summary_on">Thanh điều hướng đã ẩn.</string>

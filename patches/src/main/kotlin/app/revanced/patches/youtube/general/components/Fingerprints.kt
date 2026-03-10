@@ -130,12 +130,20 @@ internal val tooltipContentViewFingerprint = legacyFingerprint(
     literals = listOf(toolTipContentView),
 )
 
-internal const val TRANSLUCENT_STATUS_BAR_FEATURE_FLAG = 45400535L
+internal const val TRANSLUCENT_STATUS_BAR_PRIMARY_FEATURE_FLAG = 45400535L
+internal const val TRANSLUCENT_STATUS_BAR_SECONDARY_FEATURE_FLAG = 45632194L
 
-internal val translucentStatusBarFeatureFlagFingerprint = legacyFingerprint(
-    name = "translucentStatusBarFeatureFlagFingerprint",
+internal val translucentStatusBarPrimaryFeatureFlagFingerprint = legacyFingerprint(
+    name = "translucentStatusBarPrimaryFeatureFlagFingerprint",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     returnType = "Z",
-    literals = listOf(TRANSLUCENT_STATUS_BAR_FEATURE_FLAG)
+    literals = listOf(TRANSLUCENT_STATUS_BAR_PRIMARY_FEATURE_FLAG)
+)
+
+internal val translucentStatusBarSecondaryFeatureFlagFingerprint = legacyFingerprint(
+    name = "translucentStatusBarSecondaryFeatureFlagFingerprint",
+    accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
+    returnType = "Z",
+    literals = listOf(TRANSLUCENT_STATUS_BAR_SECONDARY_FEATURE_FLAG)
 )
 

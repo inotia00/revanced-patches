@@ -627,7 +627,6 @@
     <string name="revanced_disable_translucent_status_bar_title">停用半透明狀態列</string>
     <string name="revanced_disable_translucent_status_bar_summary_on">狀態列不透明。</string>
     <string name="revanced_disable_translucent_status_bar_summary_off">狀態列是不透明或半透明的。</string>
-    <string name="revanced_disable_translucent_status_bar_user_dialog_message">對於一些運行 Android 12 以上版本的製造商 ROM，啟用此功能可能會使系統導覽列變得透明。</string>
     <string name="revanced_fix_hype_button_icon_title">修復熱門按鈕圖標</string>
     <string name="revanced_fix_hype_button_icon_summary_on">熱門按鈕圖示已顯示。</string>
     <string name="revanced_fix_hype_button_icon_summary_off">熱門按鈕圖示已隱藏。</string>
@@ -815,7 +814,7 @@
     <string name="revanced_replace_navigation_button_target_entry_subscriptions">訂閱</string>
     <string name="revanced_replace_navigation_button_target_entry_notifications">通知</string>
     <string name="revanced_enable_translucent_navigation_bar_title">啟用半透明導覽列</string>
-    <string name="revanced_enable_translucent_navigation_bar_summary_on">導覽列是半透明的。</string>
+    <string name="revanced_enable_translucent_navigation_bar_summary_on">"導覽列是半透明的。"</string>
     <string name="revanced_enable_translucent_navigation_bar_summary_off">導覽列不透明。</string>
     <string name="revanced_hide_navigation_bar_title">隱藏導覽列</string>
     <string name="revanced_hide_navigation_bar_summary_on">導覽列已隱藏。</string>
@@ -1232,7 +1231,7 @@
     <string name="revanced_hide_player_flyout_menu_quality_header_title">隱藏畫質選單標題</string>
     <string name="revanced_hide_player_flyout_menu_quality_header_summary_on">畫質選單標題已隱藏。</string>
     <string name="revanced_hide_player_flyout_menu_quality_header_summary_off">顯示畫質選單標題。</string>
-    <string name="revanced_hide_player_flyout_menu_quality_footer_title">隱藏畫質選單頁腳</string>
+    <string name="revanced_hide_player_flyout_menu_quality_footer_title">隱藏畫質選單標題</string>
     <string name="revanced_hide_player_flyout_menu_quality_footer_summary_on">畫質選單頁腳已隱藏</string>
     <string name="revanced_hide_player_flyout_menu_quality_footer_summary_off">顯示畫質選單頁腳。</string>
     <string name="revanced_hide_player_flyout_menu_report_title">隱藏舉報選單</string>
@@ -1513,7 +1512,7 @@
     <string name="revanced_append_time_stamp_information_summary_on">"添加時間戳訊息已顯示"</string>
     <string name="revanced_append_time_stamp_information_summary_off">添加時間戳訊息已關閉</string>
     <string name="revanced_append_time_stamp_information_type_title">添加訊息類型</string>
-    <string name="revanced_append_time_stamp_information_type_summary_on">附加影片畫質。</string>
+    <string name="revanced_append_time_stamp_information_type_summary_on">顯示影片解析度</string>
     <string name="revanced_append_time_stamp_information_type_summary_off">附加播放速度。</string>
     <string name="revanced_append_time_stamp_information_playback_speed_menu_type_title">播放速度選單類型</string>
     <string name="revanced_append_time_stamp_information_video_quality_menu_type_title">影片畫質選單類型</string>

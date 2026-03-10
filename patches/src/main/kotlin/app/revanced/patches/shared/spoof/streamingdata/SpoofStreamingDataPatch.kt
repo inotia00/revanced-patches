@@ -482,13 +482,15 @@ fun spoofStreamingDataPatch(
                 copyResources("shared/spoof/shared", resourceGroup)
             }
 
-            document("AndroidManifest.xml").use { document ->
+            if (!isYouTube()) {
                 // Fix compile error in YouTube Music.
-                val applicationNode =
-                    document
-                        .getElementsByTagName("application")
-                        .item(0) as Element
-                applicationNode.setAttribute("android:extractNativeLibs", "true")
+                document("AndroidManifest.xml").use { document ->
+                    val applicationNode =
+                        document
+                            .getElementsByTagName("application")
+                            .item(0) as Element
+                    applicationNode.setAttribute("android:extractNativeLibs", "true")
+                }
             }
         }
 
